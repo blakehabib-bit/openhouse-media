@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import CountdownTimer from "./CountdownTimer";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -34,7 +33,7 @@ export default function Hero() {
 
       <div className="container-narrow relative z-10 mx-auto px-5 pt-28 pb-20 md:px-8">
         <div className="max-w-3xl">
-          {/* Urgency badge */}
+          {/* Exclusivity badge */}
           <motion.div
             custom={0}
             variants={fadeUp}
@@ -44,7 +43,7 @@ export default function Hero() {
           >
             <span className="inline-flex items-center gap-2 rounded-full bg-amber/15 px-4 py-1.5 text-sm font-medium text-amber border border-amber/30">
               <span className="h-2 w-2 rounded-full bg-amber animate-pulse" />
-              Limited spots available this month
+              Exclusive to one agent per suburb
             </span>
           </motion.div>
 
@@ -56,8 +55,8 @@ export default function Hero() {
             animate="visible"
             className="text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
-            Stop Losing Listings to Agents{" "}
-            <span className="text-amber">Who Show Up on Video</span>
+            Become the Most Recognised Agent{" "}
+            <span className="text-amber">in Your Suburb</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -68,34 +67,41 @@ export default function Hero() {
             animate="visible"
             className="mt-6 text-lg leading-relaxed text-white/70 sm:text-xl max-w-2xl"
           >
-            We produce scroll-stopping property videos and social content that
-            position you as the go-to agent in your market — so sellers choose you
-            before they even pick up the phone.
+            We produce consistent short-form video content that makes you the
+            agent everyone knows — so when sellers are ready to list, you&apos;re
+            the only name they think of. Exclusive to one agent per suburb.
           </motion.p>
 
-          {/* Stats row */}
+          {/* Value props row */}
           <motion.div
             custom={3}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="mt-8 flex flex-wrap gap-8"
+            className="mt-8 flex flex-col gap-4 sm:flex-row sm:gap-8"
           >
             {[
-              { value: "3.2x", label: "More listing enquiries" },
-              { value: "150+", label: "Agents partnered" },
-              { value: "10M+", label: "Views generated" },
-            ].map((stat) => (
-              <div key={stat.label} className="flex flex-col">
-                <span className="text-2xl font-heading font-bold text-amber">
-                  {stat.value}
-                </span>
-                <span className="text-sm text-white/50">{stat.label}</span>
+              { label: "Suburb Exclusivity", desc: "You're the only agent we work with in your area" },
+              { label: "Done-For-You Content", desc: "We handle everything from filming to posting" },
+              { label: "Consistent Weekly Output", desc: "Show up on social every single week" },
+            ].map((item) => (
+              <div key={item.label} className="flex items-start gap-3">
+                <svg className="mt-0.5 flex-shrink-0 text-amber" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <div>
+                  <span className="block text-sm font-semibold text-white">
+                    {item.label}
+                  </span>
+                  <span className="block text-xs text-white/50">
+                    {item.desc}
+                  </span>
+                </div>
               </div>
             ))}
           </motion.div>
 
-          {/* CTA + Countdown */}
+          {/* CTA */}
           <motion.div
             custom={4}
             variants={fadeUp}
@@ -115,20 +121,6 @@ export default function Hero() {
             <span className="text-sm text-white/40">
               Free 30-min call &middot; No obligation
             </span>
-          </motion.div>
-
-          {/* Countdown */}
-          <motion.div
-            custom={5}
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            className="mt-10"
-          >
-            <p className="mb-3 text-sm font-medium text-white/50 uppercase tracking-wider">
-              Offer ends in
-            </p>
-            <CountdownTimer />
           </motion.div>
         </div>
       </div>

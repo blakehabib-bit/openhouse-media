@@ -12,9 +12,9 @@ const painPoints = [
         <line x1="15" y1="9" x2="15.01" y2="9" />
       </svg>
     ),
-    title: "Invisible online",
+    title: "Invisible Online",
     description:
-      "Your competitors are building personal brands on Instagram and TikTok. You're relying on referrals and hoping the phone rings.",
+      "Your competitors are building personal brands on social media. If you're not showing up consistently on video, you're invisible to the next generation of sellers.",
   },
   {
     icon: (
@@ -23,9 +23,9 @@ const painPoints = [
         <polyline points="12 6 12 12 16 14" />
       </svg>
     ),
-    title: "No time to create content",
+    title: "No Time to Create Content",
     description:
-      "Between open homes, appraisals, and paperwork — who has time to plan, film, and edit videos every week?",
+      "Between open homes, appraisals, and paperwork — you don't have time to plan, film, and edit videos every week. And consistency is what matters most.",
   },
   {
     icon: (
@@ -33,9 +33,9 @@ const painPoints = [
         <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
       </svg>
     ),
-    title: "DIY content looks amateur",
+    title: "DIY Content Doesn't Cut It",
     description:
-      "Shaky phone videos and poorly lit walkthroughs scream 'I don't invest in my brand' — and sellers notice.",
+      "Shaky phone videos and inconsistent posting don't build authority. Sellers notice the difference between professional content and amateur attempts.",
   },
   {
     icon: (
@@ -44,9 +44,9 @@ const painPoints = [
         <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
       </svg>
     ),
-    title: "Spending without strategy",
+    title: "Spending Without Strategy",
     description:
-      "You've tried boosting posts or hiring a one-off videographer, but without a content strategy, it's money down the drain.",
+      "Boosting random posts or hiring a one-off videographer doesn't build a brand. Without a consistent content strategy, it's wasted money.",
   },
 ];
 
@@ -66,11 +66,11 @@ export default function PainSection() {
           </span>
           <h2 className="mt-3 text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
             The Market Has Changed.{" "}
-            <span className="text-amber">Has Your Strategy?</span>
+            <span className="text-amber">Has Your Marketing?</span>
           </h2>
           <p className="mt-4 text-lg text-slate leading-relaxed">
-            87% of home sellers say they want an agent with a strong online
-            presence. If you&apos;re not showing up on video, you&apos;re not showing up
+            Sellers are choosing agents they already know and trust online. If
+            you&apos;re not showing up on video consistently, you&apos;re not showing up
             at all.
           </p>
         </motion.div>
@@ -104,7 +104,8 @@ export default function PainSection() {
         >
           You don&apos;t need another marketing gimmick.{" "}
           <span className="text-amber">
-            You need a content partner who understands real estate.
+            You need a content partner who turns up every week and makes you the
+            most recognised agent in your suburb.
           </span>
         </motion.p>
       </div>

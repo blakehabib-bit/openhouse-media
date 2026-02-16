@@ -17,8 +17,8 @@ export default function Navbar() {
     { label: "Why Video", href: "#problem" },
     { label: "Services", href: "#benefits" },
     { label: "Process", href: "#process" },
-    { label: "Results", href: "#testimonials" },
     { label: "About", href: "#about" },
+    { label: "FAQ", href: "#faq" },
   ];
 
   return (

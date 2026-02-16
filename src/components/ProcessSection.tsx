@@ -7,29 +7,29 @@ const steps = [
     number: "01",
     title: "Strategy Call",
     description:
-      "We learn your market, your strengths, and your goals. Together we build a content plan tailored to your suburb and target sellers.",
+      "We learn about your suburb, your strengths, and your goals. Together we build a content plan designed to make you the go-to agent in your area.",
     detail: "30 minutes — free, no obligation",
   },
   {
     number: "02",
     title: "Production Day",
     description:
-      "Our team comes to you. We film property showcases, agent profiles, and social content in one efficient session — minimal disruption to your day.",
-    detail: "Half-day shoot, fully managed",
+      "We come to you and film everything — property showcases, talking-head content, suburb tours, and agent profiles — in one efficient session.",
+    detail: "Minimal disruption to your day",
   },
   {
     number: "03",
-    title: "Edit & Optimise",
+    title: "Edit & Deliver",
     description:
-      "We handle all post-production: colour grading, captions, music, and platform-specific formatting. Every piece is optimised for maximum reach.",
-    detail: "48-hour turnaround on edits",
+      "Our editing team handles post-production: colour grading, captions, music, and platform-specific formatting. Content is delivered ready to post.",
+    detail: "Professional quality, every time",
   },
   {
     number: "04",
     title: "Publish & Grow",
     description:
-      "Content is delivered ready to post, with a scheduling calendar and caption copy. We track performance and refine the strategy monthly.",
-    detail: "Ongoing support & reporting",
+      "You receive a content calendar with ready-to-post videos and captions. We keep the content flowing weekly so you build momentum and recognition.",
+    detail: "Consistent weekly content",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function ProcessSection() {
           </span>
           <h2 className="mt-3 text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
             From Zero Content to{" "}
-            <span className="text-amber">Market Leader in 4 Steps</span>
+            <span className="text-amber">Suburb Domination in 4 Steps</span>
           </h2>
         </motion.div>
 
@@ -91,29 +91,6 @@ export default function ProcessSection() {
             ))}
           </div>
         </div>
-
-        {/* Guarantee badge */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="mt-16 flex flex-col items-center text-center"
-        >
-          <div className="h-20 w-20 rounded-full bg-amber/10 flex items-center justify-center mb-4">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#D4952A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              <polyline points="9 12 11 14 15 10" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-bold mb-2">
-            100% Satisfaction Guarantee
-          </h3>
-          <p className="text-slate max-w-md">
-            If you&apos;re not completely satisfied with your first content package,
-            we&apos;ll redo it at no extra cost. No questions asked.
-          </p>
-        </motion.div>
       </div>
     </section>
   );

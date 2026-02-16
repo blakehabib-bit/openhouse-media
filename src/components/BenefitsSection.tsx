@@ -6,7 +6,7 @@ const benefits = [
   {
     title: "Property Showcase Videos",
     description:
-      "Cinematic walkthrough videos that make every listing look like a premium property — and make you look like the agent who gets results.",
+      "Cinematic walkthrough videos that make every listing stand out — and make you look like the premium agent in your area.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
@@ -21,9 +21,9 @@ const benefits = [
     ),
   },
   {
-    title: "Social Media Content",
+    title: "Short-Form Social Content",
     description:
-      "Weekly scroll-stopping reels, stories, and posts designed for Instagram, TikTok, and Facebook — so you stay top of mind without lifting a finger.",
+      "Weekly scroll-stopping reels and short-form videos for Instagram, TikTok, and Facebook — designed to keep you top of mind in your suburb.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
@@ -33,9 +33,9 @@ const benefits = [
     ),
   },
   {
-    title: "Personal Brand Strategy",
+    title: "Personal Brand Content",
     description:
-      "A tailored content plan that positions you as the authority in your suburb — not just another agent competing on commission.",
+      "Talking-head videos, market updates, and community content that positions you as the local authority — not just another agent.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 20l9-5-9-5-9 5 9 5z" />
@@ -46,7 +46,7 @@ const benefits = [
   {
     title: "Agent Profile Videos",
     description:
-      "Authentic, professionally produced introduction videos that build trust with sellers before the first meeting. Let them see who you are.",
+      "Professionally produced introduction videos that build trust with sellers before you even meet them.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
@@ -55,9 +55,9 @@ const benefits = [
     ),
   },
   {
-    title: "Content Editing & Post-Production",
+    title: "Editing & Post-Production",
     description:
-      "Raw footage collecting dust on your phone? We transform it into polished, branded content with captions, music, and professional colour grading.",
+      "We handle all editing, captions, music, and platform-specific formatting. Your content is delivered ready to post.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
@@ -65,9 +65,9 @@ const benefits = [
     ),
   },
   {
-    title: "Results Tracking & Optimisation",
+    title: "Content Strategy & Scheduling",
     description:
-      "Monthly performance reports showing views, engagement, and enquiry attribution — so you know exactly what your content investment is delivering.",
+      "A tailored content calendar with posting schedule and caption copy so you always know what's going out and when.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <line x1="18" y1="20" x2="18" y2="10" />
@@ -94,11 +94,11 @@ export default function BenefitsSection() {
           </span>
           <h2 className="mt-3 text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
             Everything You Need to{" "}
-            <span className="text-amber">Dominate Your Market Online</span>
+            <span className="text-amber">Own Your Suburb Online</span>
           </h2>
           <p className="mt-4 text-lg text-slate leading-relaxed">
             We handle the entire video content lifecycle — from strategy and
-            production to editing and distribution — so you can focus on what you
+            production to editing and delivery — so you can focus on what you
             do best: selling property.
           </p>
         </motion.div>
@@ -127,7 +127,7 @@ export default function BenefitsSection() {
           ))}
         </div>
 
-        {/* Value anchor */}
+        {/* Value anchor — honest version */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -136,10 +136,10 @@ export default function BenefitsSection() {
           className="mt-16 rounded-2xl bg-navy p-8 md:p-12 text-center"
         >
           <h3 className="text-2xl font-bold text-white sm:text-3xl">
-            All of this would cost you <span className="line-through text-white/40">$5,000+/month</span> hiring separately
+            Hiring a full-time videographer and editor would cost significantly more
           </h3>
           <p className="mt-3 text-white/60 text-lg">
-            Our packages start from a fraction of that — and we handle everything.
+            And they still wouldn&apos;t have the real estate content expertise. We handle everything.
           </p>
           <a
             href="#cta"

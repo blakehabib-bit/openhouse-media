@@ -20,8 +20,8 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-white/40 max-w-xs leading-relaxed">
-              Premium video content and social media strategy for New Zealand&apos;s
-              top-performing real estate agents.
+              Short-form video content for New Zealand&apos;s most ambitious
+              real estate agents.
             </p>
           </div>
 
@@ -34,8 +34,8 @@ export default function Footer() {
               {[
                 { label: "Services", href: "#benefits" },
                 { label: "Process", href: "#process" },
-                { label: "Results", href: "#testimonials" },
                 { label: "About", href: "#about" },
+                { label: "FAQ", href: "#faq" },
               ].map((link) => (
                 <li key={link.href}>
                   <a
@@ -63,15 +63,7 @@ export default function Footer() {
                   hello@openhousemedia.co.nz
                 </a>
               </li>
-              <li>
-                <a
-                  href="tel:+6421234567"
-                  className="hover:text-amber transition-colors"
-                >
-                  021 234 567
-                </a>
-              </li>
-              <li>Auckland, New Zealand</li>
+              <li>New Plymouth, New Zealand</li>
             </ul>
           </div>
         </div>

@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import CountdownTimer from "./CountdownTimer";
 
 export default function FinalCTA() {
   return (
@@ -19,29 +18,23 @@ export default function FinalCTA() {
           <div className="absolute bottom-4 right-4 w-40 h-[90px] border border-white/5 rounded-lg" />
 
           <div className="relative z-10">
-            {/* Urgency */}
-            <span className="inline-flex items-center gap-2 rounded-full bg-amber/15 px-4 py-1.5 text-sm font-medium text-amber border border-amber/30 mb-6">
-              <span className="h-2 w-2 rounded-full bg-amber animate-pulse" />
-              Only 5 spots remaining this month
-            </span>
-
             <h2 className="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-3xl mx-auto">
-              Ready to Become the Agent{" "}
-              <span className="text-amber">Sellers Can&apos;t Ignore?</span>
+              Ready to{" "}
+              <span className="text-amber">Own Your Suburb?</span>
             </h2>
 
             <p className="mt-6 text-lg text-white/60 max-w-2xl mx-auto leading-relaxed">
-              Book a free 30-minute strategy call. We&apos;ll audit your current
-              online presence, identify quick wins, and show you exactly how
-              video content can fill your pipeline — whether you work with us
-              or not.
+              Book a free 30-minute strategy call. We&apos;ll look at your current
+              online presence, identify the biggest opportunities in your suburb,
+              and show you exactly how consistent video content can make you the
+              agent everyone knows.
             </p>
 
             {/* What you get */}
             <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/50">
               {[
                 "Free content audit",
-                "Custom strategy outline",
+                "Custom suburb strategy",
                 "No obligation",
                 "30 minutes",
               ].map((item) => (
@@ -70,19 +63,11 @@ export default function FinalCTA() {
             </div>
 
             <p className="mt-4 text-sm text-white/30">
-              Prefer to chat? Call us on{" "}
-              <a href="tel:+6421234567" className="text-amber hover:underline">
-                021 234 567
+              Prefer to chat? Email us at{" "}
+              <a href="mailto:hello@openhousemedia.co.nz" className="text-amber hover:underline">
+                hello@openhousemedia.co.nz
               </a>
             </p>
-
-            {/* Countdown */}
-            <div className="mt-10 flex flex-col items-center">
-              <p className="mb-3 text-sm font-medium text-white/40 uppercase tracking-wider">
-                This month&apos;s spots close in
-              </p>
-              <CountdownTimer />
-            </div>
 
             {/* Guarantee */}
             <div className="mt-10 flex items-center justify-center gap-3 text-white/40 text-sm">
