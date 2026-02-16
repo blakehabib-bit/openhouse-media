@@ -1,0 +1,231 @@
+{
+  "navbar": {
+    "brand": "The Digital Door Knock",
+    "links": [
+      { "label": "Suburb Exclusivity", "href": "#exclusivity" },
+      { "label": "Proof", "href": "#results" },
+      { "label": "How It Works", "href": "#process" },
+      { "label": "Investment", "href": "#investment" }
+    ],
+    "ctaText": "Book Free Suburb Audit",
+    "ctaHref": "#cta"
+  },
+  "hero": {
+    "badge": "Only 1 Agent Per Suburb • 4 Auckland Spots Left This Month",
+    "headlinePart1": "Become the ",
+    "headlineHighlight": "Only Agent",
+    "headlinePart2": " Sellers Can Find in Your Suburb",
+    "subheadline": "Or we'll refund 100% + work free until you win a listing",
+    "description": "We guarantee suburb exclusivity: you're the only agent we work with in your area. Saturate your local market with professional video content while competitors stay invisible.",
+    "stats": [
+      { "value": "3.2x", "label": "More listing enquiries within 90 days" },
+      { "value": "87%", "label": "Of sellers want an agent with strong online presence" },
+      { "value": "$2.1M", "label": "Average listings generated per agent in year 1" }
+    ],
+    "ctaPrimaryText": "Book Free Suburb Audit",
+    "ctaSecondaryText": "Check Suburb Availability",
+    "ctaFootnote": "✓ Free 30-minute audit • No pressure tactics • See if your suburb is available"
+  },
+  "suburbs": {
+    "title": "Why We Only Work with 1 Agent Per Suburb",
+    "description": "Your investment only works if you dominate your local market. We won't dilute your presence by working with your competitors.",
+    "steps": [
+      { "title": "You Own Your Territory", "description": "We guarantee no other agent in your suburb gets our service while you're active" },
+      { "title": "Saturate Your Market", "description": "16+ pieces of content per month = you're everywhere, competitors are nowhere" },
+      { "title": "Sellers See Only You", "description": "When they search \"[Your Suburb] real estate agent\" - it's your videos that appear" }
+    ],
+    "listings": [
+      { "name": "Ponsonby, Auckland", "detail": "Available • 450+ properties", "status": "OPEN" },
+      { "name": "Newmarket, Auckland", "detail": "Available • 620+ properties", "status": "OPEN" },
+      { "name": "Parnell, Auckland", "detail": "Claimed by Sarah M.", "status": "CLAIMED" },
+      { "name": "Remuera, Auckland", "detail": "Claimed by James T.", "status": "CLAIMED" }
+    ],
+    "warningTitle": "Once your suburb is claimed, it stays claimed",
+    "warningText": "We maintain exclusivity for 12 months minimum. If another agent in your area books first, you'll be added to a waitlist."
+  },
+  "socialProof": {
+    "title": "Real Agents. Real Results. Real Video.",
+    "subtitle": "Every agent featured owns their suburb exclusively through our program",
+    "testimonials": [
+      {
+        "stat": "42% Win Rate Increase",
+        "quote": "Sellers now see my videos before the appraisal. They're already convinced I'm the agent for them. My suburb is mine.",
+        "name": "Sarah Mitchell",
+        "agency": "Harcourts Ponsonby • Owns Ponsonby",
+        "image": ""
+      },
+      {
+        "stat": "15K+ Followers in 6 Months",
+        "quote": "I stopped wasting time on DIY content. Now I'm the most recognized agent in Newmarket - sellers DM me first.",
+        "name": "James Thornton",
+        "agency": "Ray White Newmarket • Owns Newmarket",
+        "image": ""
+      },
+      {
+        "stat": "$2.1M in Attributed Listings",
+        "quote": "One video generated 3 listing enquiries in a week. That's more than a month of letterbox drops used to get me.",
+        "name": "Aroha Williams",
+        "agency": "Williams Realty Tauranga • Owns Mount Maunganui",
+        "image": ""
+      }
+    ],
+    "beforeTitle": "❌ BEFORE: Lost in the crowd",
+    "beforeItems": [
+      { "text": "15+ competitors posting in your suburb" },
+      { "text": "Inconsistent, amateur phone videos" },
+      { "text": "Sellers can't distinguish you from others" },
+      { "text": "Price-shopping sellers calling multiple agents" },
+      { "text": "Competing on commission rates" }
+    ],
+    "afterTitle": "✓ AFTER: Suburb domination",
+    "afterItems": [
+      { "text": "YOU are the only professional video presence" },
+      { "text": "16+ high-quality posts per month" },
+      { "text": "Sellers know your name before calling" },
+      { "text": "Pre-qualified sellers contacting YOU first" },
+      { "text": "Premium positioning = full commission" }
+    ]
+  },
+  "investment": {
+    "title": "The Real Cost of Professional Video Content",
+    "subtitle": "If you hired these roles separately in New Zealand...",
+    "valueStack": [
+      { "role": "Professional Videographer", "detail": "$150/hr × 6 hours/month filming", "price": "$900/mo" },
+      { "role": "Video Editor", "detail": "$60/hr × 16 hours/month editing", "price": "$960/mo" },
+      { "role": "Social Media Strategist", "detail": "Content planning, scheduling, optimization", "price": "$1,200/mo" },
+      { "role": "Copywriter", "detail": "Captions, hooks, calls-to-action", "price": "$800/mo" },
+      { "role": "Performance Analytics", "detail": "Monthly reports, optimization recommendations", "price": "$640/mo" }
+    ],
+    "totalValue": "$4,500/mo",
+    "priceLabel": "Your Investment with Suburb Exclusivity",
+    "price": "$1,997",
+    "pricePeriod": "/mo",
+    "priceNote": "All-inclusive. No hidden fees. Cancel anytime after 90 days.",
+    "includes": [
+      { "text": "4-hour production day monthly" },
+      { "text": "16+ edited videos per month" },
+      { "text": "Suburb exclusivity guarantee" },
+      { "text": "Content calendar & scheduling" },
+      { "text": "Captions, music, branding" },
+      { "text": "Monthly performance reports" }
+    ],
+    "roiTitle": "The Math is Simple",
+    "monthlyInvestment": "$1,997",
+    "avgCommission": "~$12,000",
+    "breakEven": "1 every 6 months",
+    "avgListings": "3.2 additional listings",
+    "avgListingsDetail": "in the first 90 days"
+  },
+  "process": {
+    "title": "From Zero to Suburb Domination in 30 Days",
+    "subtitle": "Our proven 4-week onboarding process",
+    "steps": [
+      {
+        "week": "WEEK 1",
+        "title": "Strategy & Suburb Audit",
+        "bullets": [
+          { "text": "60-min deep-dive: your suburb demographics, competitor analysis, positioning strategy" },
+          { "text": "Content calendar customized to your suburb's selling seasons" },
+          { "text": "Production day scheduled" }
+        ]
+      },
+      {
+        "week": "WEEK 2",
+        "title": "Production Day (4 Hours)",
+        "bullets": [
+          { "text": "We film at 3-4 locations in your suburb (properties, cafes, landmarks)" },
+          { "text": "Capture enough content for 16+ finished pieces" },
+          { "text": "Professional lighting, sound, and direction included" }
+        ]
+      },
+      {
+        "week": "WEEK 3",
+        "title": "Edit, Polish & Launch",
+        "bullets": [
+          { "text": "Our editors create 16+ platform-optimized videos (IG, TikTok, YouTube, FB)" },
+          { "text": "Add captions, music, color grading, your branding" },
+          { "text": "First 4 videos published (you review and approve)" }
+        ]
+      },
+      {
+        "week": "WEEK 4 & ONGOING",
+        "title": "Optimize & Dominate",
+        "bullets": [
+          { "text": "Remaining videos published on schedule (4/week)" },
+          { "text": "Performance review: views, engagement, enquiry attribution" },
+          { "text": "Next production day scheduled (monthly recurring)" }
+        ]
+      }
+    ]
+  },
+  "qualification": {
+    "title": "This ISN'T for Everyone",
+    "subtitle": "We're selective about who we work with. Here's why:",
+    "dontApply": [
+      { "title": "You're happy with 3-5 deals per year", "description": "This is for agents who want to dominate, not just survive" },
+      { "title": "You don't want to be on camera", "description": "Personal brand = you need to show your face" },
+      { "title": "You have less than 2 years experience", "description": "Content amplifies what you already do well - you need a foundation first" },
+      { "title": "Your suburb has fewer than 500 properties", "description": "Market too small for suburb exclusivity model to work effectively" },
+      { "title": "You want instant results", "description": "This is a 90-day play. If you need listings tomorrow, this isn't it." }
+    ],
+    "perfectIf": [
+      { "title": "Close 10+ deals annually and want to double it", "description": "You have the skills, now we amplify your reach" },
+      { "title": "Understand that personal brand = premium positioning", "description": "You're ready to be THE local expert" },
+      { "title": "Want to work smarter, not harder", "description": "Let content work while you're at open homes" },
+      { "title": "Willing to commit 4 hours/month to filming", "description": "We handle everything else" }
+    ]
+  },
+  "guarantee": {
+    "badge": "ZERO-RISK GUARANTEE",
+    "title": "The 60-Day Listing Win Guarantee",
+    "subtitle": "We're so confident in suburb exclusivity, we'll put our money where our mouth is",
+    "promiseIntro": "If within 60 days of your content going live, you don't win at least ONE additional listing that you can directly attribute to your video presence, we will:",
+    "promiseSteps": [
+      { "text": "Refund 100% of your investment (every dollar you've paid)" },
+      { "text": "Continue working with you for FREE until you win a listing" },
+      { "text": "Release your suburb so you can try something else (no hard feelings)" }
+    ],
+    "attributionTitle": "What Counts as \"Attribution\"?",
+    "attributionText": "Simple: The seller says they found you through social media / saw your videos / recognized you from Instagram/TikTok during the appraisal.",
+    "attributionNote": "Most agents report 2-4 enquiries in the first 60 days specifically mentioning \"I see you everywhere\" or \"I love your videos\"",
+    "whyTitle": "Why can we offer this?",
+    "whyText": "Because suburb exclusivity works. When you're the only professional video presence in your area, sellers WILL notice. We've seen it work 150+ times."
+  },
+  "cta": {
+    "headline": "Your Suburb Won't Wait Forever",
+    "subheadline": "Another agent in your area could claim exclusivity while you're thinking about it",
+    "description": "Book a free 30-minute suburb audit. We'll analyze your area, show you who your video competitors are (hint: probably none), and determine if suburb exclusivity will work for you - no pressure, no obligation.",
+    "formTitle": "Book Your Free Suburb Audit",
+    "submitText": "Check If My Suburb Is Available →",
+    "footnote": "✓ Free 30-minute call • ✓ No pressure tactics • ✓ Instant suburb availability check",
+    "trustBadges": [
+      { "text": "150+ Agents Trust Us" },
+      { "text": "60-Day Guarantee" },
+      { "text": "Cancel Anytime After 90 Days" }
+    ]
+  },
+  "stickyCta": {
+    "text": "4 Auckland Suburbs Available This Month",
+    "buttonText": "Book Free Suburb Audit →",
+    "buttonHref": "#cta"
+  },
+  "footer": {
+    "brand": "The Digital Door Knock",
+    "tagline": "Suburb-exclusive video content for New Zealand's top real estate agents.",
+    "quickLinks": [
+      { "label": "Check Suburb Availability", "href": "#suburbs" },
+      { "label": "Client Results", "href": "#results" },
+      { "label": "Pricing", "href": "#investment" },
+      { "label": "Book Audit", "href": "#cta" }
+    ],
+    "resources": [
+      { "label": "Case Studies", "href": "#" },
+      { "label": "Video Portfolio", "href": "#" },
+      { "label": "Agent Success Stories", "href": "#" }
+    ],
+    "email": "hello@thedigitaldoorknock.co.nz",
+    "phone": "021 234 567",
+    "location": "Auckland, New Zealand",
+    "copyright": "The Digital Door Knock. All rights reserved."
+  }
+}

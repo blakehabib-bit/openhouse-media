@@ -1,89 +1,78 @@
-"use client";
+interface Link {
+  label: string;
+  href: string;
+}
 
-export default function Footer() {
+interface FooterProps {
+  brand: string;
+  tagline: string;
+  quickLinks: Link[];
+  resources: Link[];
+  email: string;
+  phone: string;
+  location: string;
+  copyright: string;
+}
+
+export default function Footer({
+  brand,
+  tagline,
+  quickLinks,
+  resources,
+  email,
+  phone,
+  location,
+  copyright,
+}: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy border-t border-white/5">
-      <div className="container-narrow mx-auto px-5 py-12 md:px-8">
-        <div className="grid gap-8 md:grid-cols-4">
-          {/* Brand */}
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="h-8 w-8 rounded-lg bg-amber flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polygon points="5 3 19 12 5 21 5 3" />
-                </svg>
-              </div>
-              <span className="text-lg font-heading font-bold text-white tracking-tight">
-                OpenHouse<span className="text-amber"> Media</span>
-              </span>
-            </div>
-            <p className="text-sm text-white/40 max-w-xs leading-relaxed">
-              Short-form video content for New Zealand&apos;s most ambitious
-              real estate agents.
-            </p>
-          </div>
-
-          {/* Quick Links */}
+    <footer className="bg-gray-900 text-gray-300 py-12">
+      <div className="container mx-auto px-6">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
-              Quick Links
-            </h4>
-            <ul className="space-y-2">
-              {[
-                { label: "Services", href: "#benefits" },
-                { label: "Process", href: "#process" },
-                { label: "About", href: "#about" },
-                { label: "FAQ", href: "#faq" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-white/40 hover:text-amber transition-colors"
-                  >
+            <div className="text-white text-2xl font-bold mb-4">{brand}</div>
+            <p className="text-sm">{tagline}</p>
+          </div>
+          <div>
+            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
+              {quickLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="hover:text-white">
                     {link.label}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Contact */}
           <div>
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
-              Get In Touch
-            </h4>
-            <ul className="space-y-2 text-sm text-white/40">
-              <li>
-                <a
-                  href="mailto:hello@openhousemedia.co.nz"
-                  className="hover:text-amber transition-colors"
-                >
-                  hello@openhousemedia.co.nz
-                </a>
-              </li>
-              <li>New Plymouth, New Zealand</li>
+            <h4 className="text-white font-semibold mb-4">Resources</h4>
+            <ul className="space-y-2 text-sm">
+              {resources.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="hover:text-white">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-white font-semibold mb-4">Contact</h4>
+            <ul className="space-y-2 text-sm">
+              <li>{email}</li>
+              <li>{phone}</li>
+              <li>{location}</li>
             </ul>
           </div>
         </div>
-
-        {/* Bottom bar */}
-        <div className="mt-10 border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/30">
-            &copy; {currentYear} OpenHouse Media. All rights reserved.
+        <div className="border-t border-gray-800 pt-8 text-sm text-center">
+          <p>
+            &copy; {currentYear} {copyright}{" "}
+            <a href="#" className="hover:text-white">Privacy Policy</a> &middot;{" "}
+            <a href="#" className="hover:text-white">Terms of Service</a>
           </p>
-          <div className="flex gap-4">
-            {["Privacy Policy", "Terms of Service"].map((text) => (
-              <a
-                key={text}
-                href="#"
-                className="text-xs text-white/30 hover:text-white/50 transition-colors"
-              >
-                {text}
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

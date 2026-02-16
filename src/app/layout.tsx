@@ -2,22 +2,22 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "OpenHouse Media | Video Content for Real Estate Agents",
+  title: "The Digital Door Knock | Own Your Suburb's Video Real Estate Market",
   description:
-    "We help real estate agents produce, edit, and strategise scroll-stopping video content that wins listings and builds personal brands. Based in New Zealand.",
+    "Suburb-exclusive video content for New Zealand's top real estate agents. We guarantee only 1 agent per suburb. Book your free suburb audit today.",
   keywords: [
     "real estate video",
-    "property video NZ",
-    "real estate social media",
+    "suburb exclusivity",
+    "real estate social media NZ",
     "agent video content",
     "real estate marketing NZ",
-    "property marketing video",
-    "OpenHouse Media",
+    "The Digital Door Knock",
+    "suburb domination",
   ],
   openGraph: {
-    title: "OpenHouse Media | Video Content for Real Estate Agents",
+    title: "The Digital Door Knock | Own Your Suburb's Video Real Estate Market",
     description:
-      "Scroll-stopping video content that positions you as the go-to agent in your market.",
+      "Become the only agent sellers can find in your suburb. Suburb-exclusive video content for NZ real estate agents.",
     type: "website",
     locale: "en_NZ",
   },
@@ -30,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="antialiased">{children}</body>
+      <body className="bg-gray-50 antialiased">{children}</body>
     </html>
   );
 }

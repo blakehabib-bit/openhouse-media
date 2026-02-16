@@ -1,33 +1,11 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import PainSection from "@/components/PainSection";
-import BenefitsSection from "@/components/BenefitsSection";
-import ProcessSection from "@/components/ProcessSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import AboutSection from "@/components/AboutSection";
-import GuaranteesSection from "@/components/GuaranteesSection";
-import FinalCTA from "@/components/FinalCTA";
-import FAQSection from "@/components/FAQSection";
-import Footer from "@/components/Footer";
-import StickyCTA from "@/components/StickyCTA";
+import { promises as fs } from "fs";
+import path from "path";
+import HomePageClient from "./home-client";
 
-export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <PainSection />
-        <BenefitsSection />
-        <ProcessSection />
-        <TestimonialsSection />
-        <AboutSection />
-        <GuaranteesSection />
-        <FinalCTA />
-        <FAQSection />
-      </main>
-      <Footer />
-      <StickyCTA />
-    </>
-  );
+export default async function Home() {
+  const filePath = path.join(process.cwd(), "content/pages/home.json");
+  const fileContent = await fs.readFile(filePath, "utf-8");
+  const pageData = JSON.parse(fileContent);
+
+  return <HomePageClient data={pageData} />;
 }

@@ -1,84 +1,131 @@
-"use client";
+interface TrustBadge {
+  text: string;
+}
 
-import { motion } from "framer-motion";
+interface FinalCTAProps {
+  headline: string;
+  subheadline: string;
+  description: string;
+  formTitle: string;
+  submitText: string;
+  footnote: string;
+  trustBadges: TrustBadge[];
+}
 
-export default function FinalCTA() {
+export default function FinalCTA({
+  headline,
+  subheadline,
+  description,
+  formTitle,
+  submitText,
+  footnote,
+  trustBadges,
+}: FinalCTAProps) {
   return (
-    <section id="cta" className="section-padding bg-cloud">
-      <div className="container-narrow mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="rounded-2xl bg-navy p-8 md:p-16 text-center relative overflow-hidden"
-        >
-          {/* Decorative frames */}
-          <div className="absolute top-4 left-4 w-32 h-18 border border-white/5 rounded-lg" />
-          <div className="absolute bottom-4 right-4 w-40 h-[90px] border border-white/5 rounded-lg" />
+    <section id="cta" className="py-20 bg-gradient-to-br from-purple-900 via-indigo-900 to-purple-800 text-white">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">{headline}</h2>
+          <p className="text-2xl mb-4 text-purple-200">{subheadline}</p>
+          <p className="text-xl mb-12 text-purple-100">{description}</p>
 
-          <div className="relative z-10">
-            <h2 className="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-3xl mx-auto">
-              Ready to{" "}
-              <span className="text-amber">Own Your Suburb?</span>
-            </h2>
+          {/* Form */}
+          <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-left">
+            <h3 className="text-3xl font-bold text-gray-900 mb-6 text-center">{formTitle}</h3>
 
-            <p className="mt-6 text-lg text-white/60 max-w-2xl mx-auto leading-relaxed">
-              Book a free 30-minute strategy call. We&apos;ll look at your current
-              online presence, identify the biggest opportunities in your suburb,
-              and show you exactly how consistent video content can make you the
-              agent everyone knows.
-            </p>
+            <form className="space-y-4">
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>
+                  <input
+                    type="text"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">Last Name *</label>
+                  <input
+                    type="text"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  />
+                </div>
+              </div>
 
-            {/* What you get */}
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/50">
-              {[
-                "Free content audit",
-                "Custom suburb strategy",
-                "No obligation",
-                "30 minutes",
-              ].map((item) => (
-                <span key={item} className="flex items-center gap-1.5">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4952A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  {item}
-                </span>
-              ))}
-            </div>
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Email *</label>
+                <input
+                  type="email"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                />
+              </div>
 
-            {/* CTA button */}
-            <div className="mt-10">
-              <a
-                href="https://calendly.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-lg bg-amber px-10 py-5 text-xl font-bold text-white shadow-xl shadow-amber/25 hover:bg-amber-600 hover:shadow-amber/40 transition-all duration-300 hover:-translate-y-1"
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Phone *</label>
+                <input
+                  type="tel"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Your Primary Suburb *</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="e.g., Ponsonby, Auckland"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">How many deals did you close last year? *</label>
+                <select
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                >
+                  <option value="">Select...</option>
+                  <option value="0-5">0-5 deals</option>
+                  <option value="6-10">6-10 deals</option>
+                  <option value="11-20">11-20 deals</option>
+                  <option value="20+">20+ deals</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Current Agency</label>
+                <input
+                  type="text"
+                  placeholder="e.g., Harcourts, Ray White, Independent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-purple-600 text-white px-8 py-5 rounded-lg font-bold text-lg hover:bg-purple-700 transition shadow-lg"
               >
-                Book Your Free Strategy Call
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
+                {submitText}
+              </button>
 
-            <p className="mt-4 text-sm text-white/30">
-              Prefer to chat? Email us at{" "}
-              <a href="mailto:hello@openhousemedia.co.nz" className="text-amber hover:underline">
-                hello@openhousemedia.co.nz
-              </a>
-            </p>
-
-            {/* Guarantee */}
-            <div className="mt-10 flex items-center justify-center gap-3 text-white/40 text-sm">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4952A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                <polyline points="9 12 11 14 15 10" />
-              </svg>
-              100% satisfaction guarantee on all content packages
-            </div>
+              <p className="text-sm text-gray-600 text-center">{footnote}</p>
+            </form>
           </div>
-        </motion.div>
+
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-purple-200">
+            {trustBadges.map((badge) => (
+              <div key={badge.text} className="flex items-center">
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>{badge.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

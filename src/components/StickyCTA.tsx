@@ -1,40 +1,42 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 
-export default function StickyCTA() {
+interface StickyCTAProps {
+  text: string;
+  buttonText: string;
+  buttonHref: string;
+}
+
+export default function StickyCTA({ text, buttonText, buttonHref }: StickyCTAProps) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
+    const handleScroll = () => {
       setVisible(window.scrollY > 800);
     };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <AnimatePresence>
-      {visible && (
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 100, opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-navy/95 backdrop-blur-md border-t border-white/10 px-4 py-3 safe-bottom"
+    <div
+      className={`fixed bottom-0 left-0 right-0 bg-purple-900 text-white py-4 shadow-2xl z-50 transition-transform duration-300 ${
+        visible ? "translate-y-0" : "translate-y-full"
+      }`}
+    >
+      <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex items-center">
+          <span className="w-3 h-3 bg-green-400 rounded-full mr-2 animate-pulse" />
+          <span className="font-semibold">{text}</span>
+        </div>
+        <a
+          href={buttonHref}
+          className="bg-white text-purple-900 px-6 py-3 rounded-lg font-bold hover:bg-purple-100 transition whitespace-nowrap"
         >
-          <a
-            href="#cta"
-            className="flex items-center justify-center gap-2 w-full rounded-lg bg-amber px-6 py-3.5 font-bold text-white shadow-lg"
-          >
-            Book Free Consultation
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
-        </motion.div>
-      )}
-    </AnimatePresence>
+          {buttonText}
+        </a>
+      </div>
+    </div>
   );
 }
