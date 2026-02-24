@@ -7,8 +7,8 @@ import SocialProof from "@/components/SocialProof";
 import InvestmentSection from "@/components/InvestmentSection";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import QualificationSection from "@/components/QualificationSection";
-import GuaranteeSection from "@/components/GuaranteeSection";
 import FinalCTA from "@/components/FinalCTA";
+import FAQ from "@/components/FAQ";
 import StickyCTA from "@/components/StickyCTA";
 import Footer from "@/components/Footer";
 
@@ -95,17 +95,9 @@ export default function HomePageClient({ data }: HomePageClientProps) {
           perfectIf={page.qualification.perfectIf}
         />
 
-        <GuaranteeSection
-          badge={page.guarantee.badge}
-          title={page.guarantee.title}
-          subtitle={page.guarantee.subtitle}
-          promiseIntro={page.guarantee.promiseIntro}
-          promiseSteps={page.guarantee.promiseSteps}
-          attributionTitle={page.guarantee.attributionTitle}
-          attributionText={page.guarantee.attributionText}
-          attributionNote={page.guarantee.attributionNote}
-          whyTitle={page.guarantee.whyTitle}
-          whyText={page.guarantee.whyText}
+        <FAQ
+          title={page.faq.title}
+          items={page.faq.items}
         />
 
         <FinalCTA
