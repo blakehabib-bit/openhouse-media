@@ -1,8 +1,41 @@
 {
+  "faq": {
+    "title": "Common Questions",
+    "items": [
+      {
+        "question": "What does 'suburb exclusivity' mean?",
+        "answer": "It means we only work with one agent per suburb. If you sign up for Fitzroy, no other agent in Fitzroy can use our service. Your content strategy stays yours alone."
+      },
+      {
+        "question": "How much time do I need to commit?",
+        "answer": "Very little. We handle strategy, filming, editing, and delivery. You'll need to be available for filming sessions (typically a half-day per month) and post the content we deliver — or we can help with that too."
+      },
+      {
+        "question": "What kind of videos do you create?",
+        "answer": "Short-form content optimised for Instagram Reels, TikTok, and Facebook — including property walkthroughs, talking-head market updates, suburb highlights, and agent brand content."
+      },
+      {
+        "question": "How quickly will I see results?",
+        "answer": "Social media is a long game — recognition builds over time. Most agents start noticing increased engagement and recognition within the first 4–8 weeks of consistent posting. The real compounding happens at 3–6 months."
+      },
+      {
+        "question": "What if I already have a videographer?",
+        "answer": "A one-off videographer shoots your listings. We build your brand. We create the consistent, strategic content that makes sellers choose you before they even need to list — that's a completely different service."
+      },
+      {
+        "question": "Do you only work in New Plymouth?",
+        "answer": "We're based in New Plymouth but work with agents across New Zealand. Production days can be arranged in your area."
+      },
+      {
+        "question": "What if I want to cancel?",
+        "answer": "We don't lock you into long-term contracts. We believe in earning your business every month through results and service quality."
+      }
+    ]
+  },
   "navbar": {
     "brand": "OpenHouse Media",
     "links": [],
-    "ctaText": "Book Free Strategy Call",
+    "ctaText": "Book Free Suburb Audit",
     "ctaHref": "#cta"
   },
   "hero": {
@@ -18,17 +51,17 @@
         "label": "Of sellers want an agent with a strong online presence"
       }
     ],
-    "ctaPrimaryText": "Book Your Free Strategy Call",
-    "ctaSecondaryText": "Check Suburb Availability",
-    "ctaFootnote": "✓ Free 30-min call · No obligation · See if your suburb is available"
+    "ctaPrimaryText": "Book Your Free Suburb Audit",
+    "ctaSecondaryText": "Check Area Availability",
+    "ctaFootnote": "✓ Free 15-min call · No obligation · See if your area is available"
   },
   "suburbs": {
-    "title": "Why We Only Work with 1 Agent Per Suburb",
+    "title": "Why We Only Work with 1 Agent Per Area",
     "description": "Your investment only works if you dominate your local market. We won't dilute your presence by working with your competitors.",
     "steps": [
       {
         "title": "You Own Your Territory",
-        "description": "We guarantee no other agent in your suburb gets our service while you're active"
+        "description": "We guarantee no other agent in your area gets our service while you're active"
       },
       {
         "title": "Saturate Your Market",
@@ -61,12 +94,12 @@
         "status": "CLAIMED"
       }
     ],
-    "warningTitle": "Once your suburb is claimed, it stays claimed",
+    "warningTitle": "Once your area is claimed, it stays claimed",
     "warningText": "We maintain exclusivity for 12 months minimum. If another agent in your area books first, you'll be added to a waitlist."
   },
   "socialProof": {
     "title": "Built for New Zealand Real Estate",
-    "subtitle": "OpenHouse Media was designed from the ground up for NZ agents — we understand the local market and what it takes to stand out in your suburb.",
+    "subtitle": "OpenHouse Media was designed from the ground up for NZ agents — we understand the local market and what it takes to stand out in your area.",
     "testimonials": [],
     "beforeTitle": "❌ BEFORE: Lost in the crowd",
     "beforeItems": [
@@ -86,7 +119,7 @@
         "text": "Competing on commission rates"
       }
     ],
-    "afterTitle": "✓ AFTER: Suburb domination",
+    "afterTitle": "✓ AFTER: Area domination",
     "afterItems": [
       {
         "text": "YOU are the only professional video presence"
@@ -133,22 +166,30 @@
         "role": "Performance Analytics",
         "detail": "Monthly reports, optimisation recommendations",
         "price": "$640/mo"
+      },
+      {
+        "role": "Real Estate Content Strategist ",
+        "detail": "Real Estate Specific, industry insights, backed by data",
+        "price": "$949"
       }
     ],
     "totalValue": "$4,500/mo",
-    "priceLabel": "Your Investment with Suburb Exclusivity",
+    "priceLabel": "Your Investment with Area Exclusivity",
     "price": "$1,997",
     "pricePeriod": "/mo",
     "priceNote": "All-inclusive. No hidden fees. Cancel anytime after 90 days.",
     "includes": [
       {
-        "text": "4-hour production day monthly"
+        "text": "Custom strategy built specifically for your area"
       },
       {
         "text": "10+ edited videos per month"
       },
       {
         "text": "Suburb exclusivity guarantee"
+      },
+      {
+        "text": "Suburb Deep Dive Strategy Session"
       },
       {
         "text": "Content calendar & scheduling"
@@ -158,6 +199,21 @@
       },
       {
         "text": "Monthly performance reports"
+      },
+      {
+        "text": "Mobile Creator Kit"
+      },
+      {
+        "text": "Competitor Content Audit"
+      },
+      {
+        "text": "Script Vault (30+ Custom Hooks)"
+      },
+      {
+        "text": "DM to appointment playbook"
+      },
+      {
+        "text": "28 more deliverables too long to add here"
       }
     ],
     "roiTitle": "The Math is Simple",
@@ -285,62 +341,56 @@
     "submitText": "Check If My Suburb Is Available →",
     "footnote": "✓ Free 30-min call · ✓ No obligation · ✓ Instant suburb availability check",
     "trustBadges": [
-      { "text": "Suburb Exclusivity Guaranteed" },
-      { "text": "Satisfaction Guarantee" },
-      { "text": "Cancel Anytime After 90 Days" }
+      {
+        "text": "Suburb Exclusivity Guaranteed"
+      },
+      {
+        "text": "Satisfaction Guarantee"
+      },
+      {
+        "text": "Cancel Anytime After 90 Days"
+      }
     ]
   },
   "stickyCta": {
-    "text": "Exclusive to One Agent Per Suburb",
-    "buttonText": "Book Free Strategy Call →",
+    "text": "Exclusive to One Agent Per Area",
+    "buttonText": "Book Free Suburb Audit →",
     "buttonHref": "#cta"
-  },
-  "faq": {
-    "title": "Common Questions",
-    "items": [
-      {
-        "question": "What does 'suburb exclusivity' mean?",
-        "answer": "It means we only work with one agent per suburb. If you sign up for Fitzroy, no other agent in Fitzroy can use our service. Your content strategy stays yours alone."
-      },
-      {
-        "question": "How much time do I need to commit?",
-        "answer": "Very little. We handle strategy, filming, editing, and delivery. You'll need to be available for filming sessions (typically a half-day per month) and post the content we deliver — or we can help with that too."
-      },
-      {
-        "question": "What kind of videos do you create?",
-        "answer": "Short-form content optimised for Instagram Reels, TikTok, and Facebook — including property walkthroughs, talking-head market updates, suburb highlights, and agent brand content."
-      },
-      {
-        "question": "How quickly will I see results?",
-        "answer": "Social media is a long game — recognition builds over time. Most agents start noticing increased engagement and recognition within the first 4–8 weeks of consistent posting. The real compounding happens at 3–6 months."
-      },
-      {
-        "question": "What if I already have a videographer?",
-        "answer": "A one-off videographer shoots your listings. We build your brand. We create the consistent, strategic content that makes sellers choose you before they even need to list — that's a completely different service."
-      },
-      {
-        "question": "Do you only work in New Plymouth?",
-        "answer": "We're based in New Plymouth but work with agents across New Zealand. Production days can be arranged in your area."
-      },
-      {
-        "question": "What if I want to cancel?",
-        "answer": "We don't lock you into long-term contracts. We believe in earning your business every month through results and service quality."
-      }
-    ]
   },
   "footer": {
     "brand": "OpenHouse Media",
     "tagline": "Suburb-exclusive video content for New Zealand's most ambitious real estate agents.",
     "quickLinks": [
-      { "label": "How It Works", "href": "#process" },
-      { "label": "Pricing", "href": "#investment" },
-      { "label": "FAQ", "href": "#faq" },
-      { "label": "Book a Call", "href": "#cta" }
+      {
+        "label": "How It Works",
+        "href": "#process"
+      },
+      {
+        "label": "Pricing",
+        "href": "#investment"
+      },
+      {
+        "label": "FAQ",
+        "href": "#faq"
+      },
+      {
+        "label": "Book a Call",
+        "href": "#cta"
+      }
     ],
     "resources": [
-      { "label": "Check Suburb Availability", "href": "#suburbs" },
-      { "label": "About Us", "href": "#" },
-      { "label": "Contact", "href": "#cta" }
+      {
+        "label": "Check Suburb Availability",
+        "href": "#suburbs"
+      },
+      {
+        "label": "About Us",
+        "href": "#"
+      },
+      {
+        "label": "Contact",
+        "href": "#cta"
+      }
     ],
     "email": "blake@openhousemedia.io",
     "phone": "+64 27 359 8087",
