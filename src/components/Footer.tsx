@@ -29,34 +29,10 @@ export default function Footer({
   return (
     <footer className="bg-gray-900 text-gray-300 py-12">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="flex flex-col md:flex-row justify-between gap-8 mb-8">
           <div>
             <div className="text-white text-2xl font-bold mb-4">{brand}</div>
             <p className="text-sm">{tagline}</p>
-          </div>
-          <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="hover:text-white">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-white font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2 text-sm">
-              {resources.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="hover:text-white">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
           </div>
           <div>
             <h4 className="text-white font-semibold mb-4">Contact</h4>

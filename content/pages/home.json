@@ -1,20 +1,7 @@
 {
   "navbar": {
     "brand": "OpenHouse Media",
-    "links": [
-      {
-        "label": "How It Works",
-        "href": "#process"
-      },
-      {
-        "label": "Pricing",
-        "href": "#investment"
-      },
-      {
-        "label": "FAQ",
-        "href": "#faq"
-      }
-    ],
+    "links": [],
     "ctaText": "Book Free Strategy Call",
     "ctaHref": "#cta"
   },
