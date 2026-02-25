@@ -173,7 +173,7 @@
         "price": "$949"
       }
     ],
-    "totalValue": "$4,500/mo",
+    "totalValue": "$5,449/mo",
     "priceLabel": "Your Investment with Area Exclusivity",
     "price": "$1,997",
     "pricePeriod": "/mo",
@@ -306,12 +306,12 @@
         "description": "Content amplifies what you already do well — you need a foundation first"
       },
       {
-        "title": "Your suburb has fewer than 500 properties",
-        "description": "Market too small for the suburb exclusivity model to work effectively"
+        "title": "Your area has fewer than 500 properties",
+        "description": "Market too small for the area exclusivity model to work effectively"
       },
       {
         "title": "You want instant results",
-        "description": "This is a 90-day play. If you need listings tomorrow, this isn't it."
+        "description": "This is a 3-6 month play. If you need listings tomorrow, this isn't it."
       }
     ],
     "perfectIf": [
@@ -328,21 +328,21 @@
         "description": "Let content work while you're at open homes"
       },
       {
-        "title": "Willing to commit 4 hours/month to filming",
+        "title": "Willing to commit 2 hours/month to filming",
         "description": "We handle everything else"
       }
     ]
   },
   "cta": {
-    "headline": "Ready to Own Your Suburb?",
+    "headline": "Ready to Own Your Area?",
     "subheadline": "Another agent in your area could claim exclusivity while you're thinking about it",
-    "description": "Book a free 30-minute strategy call. We'll look at your current online presence, identify the biggest opportunities in your suburb, and show you exactly how consistent video content can make you the agent everyone knows.",
-    "formTitle": "Book Your Free Strategy Call",
-    "submitText": "Check If My Suburb Is Available →",
-    "footnote": "✓ Free 30-min call · ✓ No obligation · ✓ Instant suburb availability check",
+    "description": "Book a free 15-minute area audit. We'll look at your current online presence, identify the biggest opportunities in your area, and show you exactly how consistent video content can make you the agent everyone knows.",
+    "formTitle": "Book Your Free Area Audit",
+    "submitText": "Check If My Area Is Available →",
+    "footnote": "✓ Free 15-min call · ✓ No obligation · ✓ Instant area availability check",
     "trustBadges": [
       {
-        "text": "Suburb Exclusivity Guaranteed"
+        "text": "Area Exclusivity Guaranteed"
       },
       {
         "text": "Satisfaction Guarantee"
@@ -394,7 +394,7 @@
     ],
     "email": "blake@openhousemedia.io",
     "phone": "+64 27 359 8087",
-    "location": "New Plymouth, New Zealand",
+    "location": "Taranaki, New Zealand",
     "copyright": "OpenHouse Media. All rights reserved."
   }
 }
