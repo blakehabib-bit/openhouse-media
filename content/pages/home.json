@@ -1,37 +1,4 @@
 {
-  "faq": {
-    "title": "Common Questions",
-    "items": [
-      {
-        "question": "What does 'suburb exclusivity' mean?",
-        "answer": "It means we only work with one agent per suburb. If you sign up for Fitzroy, no other agent in Fitzroy can use our service. Your content strategy stays yours alone."
-      },
-      {
-        "question": "How much time do I need to commit?",
-        "answer": "Very little. We handle strategy, filming, editing, and delivery. You'll need to be available for filming sessions (typically a half-day per month) and post the content we deliver — or we can help with that too."
-      },
-      {
-        "question": "What kind of videos do you create?",
-        "answer": "Short-form content optimised for Instagram Reels, TikTok, and Facebook — including property walkthroughs, talking-head market updates, suburb highlights, and agent brand content."
-      },
-      {
-        "question": "How quickly will I see results?",
-        "answer": "Social media is a long game — recognition builds over time. Most agents start noticing increased engagement and recognition within the first 4–8 weeks of consistent posting. The real compounding happens at 3–6 months."
-      },
-      {
-        "question": "What if I already have a videographer?",
-        "answer": "A one-off videographer shoots your listings. We build your brand. We create the consistent, strategic content that makes sellers choose you before they even need to list — that's a completely different service."
-      },
-      {
-        "question": "Do you only work in New Plymouth?",
-        "answer": "We're based in New Plymouth but work with agents across New Zealand. Production days can be arranged in your area."
-      },
-      {
-        "question": "What if I want to cancel?",
-        "answer": "We don't lock you into long-term contracts. We believe in earning your business every month through results and service quality."
-      }
-    ]
-  },
   "navbar": {
     "brand": "OpenHouse Media",
     "links": [],
@@ -41,17 +8,25 @@
   "hero": {
     "badge": "Exclusive to One Agent Per Suburb",
     "headlinePart1": "Become the ",
-    "headlineHighlight": "Most Recognised Agent",
-    "headlinePart2": " in Your Suburb",
+    "headlineHighlight": "Only Agent Sellers Think Of",
+    "headlinePart2": " in Your Area",
     "subheadline": "",
-    "description": "We produce consistent short-form video content that makes you the agent everyone knows — so when sellers are ready to list, you're the only name they think of. Exclusive to one agent per suburb.",
+    "description": "We produce consistent short-form video content that makes you the agent everyone knows — so when sellers are ready to list, you're the only name they think of.",
     "stats": [
       {
         "value": "87%",
         "label": "Of sellers want an agent with a strong online presence"
+      },
+      {
+        "value": "90 Days",
+        "label": "To double your organic reach and become the most visible agent in your area"
+      },
+      {
+        "value": "15 minutes",
+        "label": "Of filming per week is all it takes to become the celebrity agent in your suburb"
       }
     ],
-    "ctaPrimaryText": "Book Your Free Suburb Audit",
+    "ctaPrimaryText": "Book Your Free Area Audit",
     "ctaSecondaryText": "Check Area Availability",
     "ctaFootnote": "✓ Free 15-min call · No obligation · See if your area is available"
   },
@@ -349,6 +324,39 @@
       },
       {
         "text": "Cancel Anytime After 90 Days"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Common Questions",
+    "items": [
+      {
+        "question": "What does 'suburb exclusivity' mean?",
+        "answer": "It means we only work with one agent per suburb. If you sign up for Fitzroy, no other agent in Fitzroy can use our service. Your content strategy stays yours alone."
+      },
+      {
+        "question": "How much time do I need to commit?",
+        "answer": "Very little. We handle strategy, filming, editing, and delivery. You'll need to be available for filming sessions (typically a half-day per month) and post the content we deliver — or we can help with that too."
+      },
+      {
+        "question": "What kind of videos do you create?",
+        "answer": "Short-form content optimised for Instagram Reels, TikTok, and Facebook — including property walkthroughs, talking-head market updates, suburb highlights, and agent brand content."
+      },
+      {
+        "question": "How quickly will I see results?",
+        "answer": "Social media is a long game — recognition builds over time. Most agents start noticing increased engagement and recognition within the first 4–8 weeks of consistent posting. The real compounding happens at 3–6 months."
+      },
+      {
+        "question": "What if I already have a videographer?",
+        "answer": "A one-off videographer shoots your listings. We build your brand. We create the consistent, strategic content that makes sellers choose you before they even need to list — that's a completely different service."
+      },
+      {
+        "question": "Do you only work in New Plymouth?",
+        "answer": "We're based in New Plymouth but work with agents across New Zealand. Production days can be arranged in your area."
+      },
+      {
+        "question": "What if I want to cancel?",
+        "answer": "We don't lock you into long-term contracts. We believe in earning your business every month through results and service quality."
       }
     ]
   },
