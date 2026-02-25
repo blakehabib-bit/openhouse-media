@@ -262,33 +262,6 @@ export default defineConfig({
             ],
           },
 
-          // ── GUARANTEE ──
-          {
-            type: "object",
-            name: "guarantee",
-            label: "Guarantee Section",
-            fields: [
-              { type: "string", name: "badge", label: "Badge Text" },
-              { type: "string", name: "title", label: "Title" },
-              { type: "string", name: "subtitle", label: "Subtitle" },
-              { type: "string", name: "promiseIntro", label: "Promise Intro Text", ui: { component: "textarea" } },
-              {
-                type: "object",
-                name: "promiseSteps",
-                label: "Promise Steps",
-                list: true,
-                fields: [
-                  { type: "string", name: "text", label: "Text" },
-                ],
-              },
-              { type: "string", name: "attributionTitle", label: "Attribution Title" },
-              { type: "string", name: "attributionText", label: "Attribution Text", ui: { component: "textarea" } },
-              { type: "string", name: "attributionNote", label: "Attribution Note" },
-              { type: "string", name: "whyTitle", label: "Why We Can Offer This - Title" },
-              { type: "string", name: "whyText", label: "Why We Can Offer This - Text", ui: { component: "textarea" } },
-            ],
-          },
-
           // ── FINAL CTA ──
           {
             type: "object",
@@ -308,6 +281,26 @@ export default defineConfig({
                 list: true,
                 fields: [
                   { type: "string", name: "text", label: "Text" },
+                ],
+              },
+            ],
+          },
+
+          // ── FAQ ──
+          {
+            type: "object",
+            name: "faq",
+            label: "FAQ Section",
+            fields: [
+              { type: "string", name: "title", label: "Section Title" },
+              {
+                type: "object",
+                name: "items",
+                label: "Questions",
+                list: true,
+                fields: [
+                  { type: "string", name: "question", label: "Question" },
+                  { type: "string", name: "answer", label: "Answer", ui: { component: "textarea" } },
                 ],
               },
             ],
