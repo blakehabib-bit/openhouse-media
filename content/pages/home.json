@@ -199,66 +199,78 @@
     "avgListingsDetail": "covers 6 months of your investment"
   },
   "process": {
-    "title": "From Zero to Suburb Domination in 30 Days",
-    "subtitle": "Our proven 4-week onboarding process",
+    "title": "How We Take You From Zero to Suburb Domination in 30 Days",
+    "subtitle": "\"From 'I don't know if this will work' to 'This is actually working' in 30 days\"",
     "steps": [
       {
         "week": "WEEK 1",
-        "title": "Strategy & Suburb Audit",
+        "title": "We Build Your Suburb Domination Blueprint",
         "bullets": [
           {
-            "text": "60-min deep-dive: your area demographics, competitor analysis, positioning strategy"
+            "text": "Welcome package lands on your desk within 48 hours (you're officially locked in)"
           },
           {
-            "text": "Content calendar customised to your suburb's selling seasons"
+            "text": "60-min strategy session with Blake: we audit your suburb, analyze your top 5 competitors, and map your differentiation strategy"
           },
           {
-            "text": "Production day scheduled"
+            "text": "Custom Script Vault delivered: 30-50 proven hooks written specifically for your suburb (no other agent can use these)"
+          },
+          {
+            "text": "Quick tech call: we test your first clip and confirm you're ready (takes 15 minutes)"
           }
         ]
       },
       {
         "week": "WEEK 2",
-        "title": "Production Day (4 Hours)",
+        "title": "You Film 15 Minutes, We Do Everything Else",
         "bullets": [
           {
-            "text": "We film at 3–4 locations in your suburb (properties, cafes, landmarks)"
+            "text": "You film 3 clips in 15 minutes using Script Vault (we tell you exactly what to say)"
           },
           {
-            "text": "Capture enough content for 16+ finished pieces"
+            "text": "Send us the raw footage - you never edit, never schedule, never write captions"
           },
           {
-            "text": "Professional lighting, sound, and direction included"
+            "text": "We edit, polish, add captions/music/branding while you go back to selling"
           }
         ]
       },
       {
         "week": "WEEK 3",
-        "title": "Edit, Polish & Launch",
+        "title": "You Go Live (And Start Getting Noticed)",
         "bullets": [
           {
-            "text": "Our editors create 16+ platform-optimised videos (IG, TikTok, YouTube, FB)"
+            "text": "We edit your clips into 2-3 polished, platform-optimised videos"
           },
           {
-            "text": "Add captions, music, colour grading, your branding"
+            "text": "You review and approve each one (nothing posts without your OK)"
           },
           {
-            "text": "First 4 videos published (you review and approve)"
+            "text": "First videos go live - you're now visible on Instagram, TikTok, Facebook"
+          },
+          {
+            "text": "Residents in your suburb start seeing your name. Competitors wonder what you're doing."
           }
         ]
       },
       {
         "week": "WEEK 4 & ONGOING",
-        "title": "Optimise & Dominate",
+        "title": "You're Now the Agent Everyone Sees",
         "bullets": [
           {
-            "text": "Remaining videos published on schedule (4/week)"
+            "text": "Posting 10x/month across all platforms — you're consistent, professional, everywhere your competitors aren't"
           },
           {
-            "text": "Performance review: views, engagement, enquiry attribution"
+            "text": "DMs start flowing - our tracking shows exactly which videos are generating enquiries (you know what's working)"
           },
           {
-            "text": "Next production day scheduled (monthly recurring)"
+            "text": " LinkedIn repurposing kicks in - investors and commercial buyers see your content (2 posts/week, zero extra filming)"
+          },
+          {
+            "text": "Every Monday: 60-sec voice note tells you exactly what to film this week (no more \"what should I post?\")"
+          },
+          {
+            "text": "fter 30 days: Your first Celebrity Report arrives - proof you're outpacing your competitors, plus data from 1,200+ videos tested across our network"
           }
         ]
       }
