@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SuburbExclusivity from "@/components/SuburbExclusivity";
 import SocialProof from "@/components/SocialProof";
-import InvestmentSection from "@/components/InvestmentSection";
+// HIDDEN — uncomment to restore: import InvestmentSection from "@/components/InvestmentSection";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import QualificationSection from "@/components/QualificationSection";
 import FinalCTA from "@/components/FinalCTA";
@@ -64,6 +64,7 @@ export default function HomePageClient({ data }: HomePageClientProps) {
           afterItems={page.socialProof.afterItems}
         />
 
+        {/* HIDDEN — uncomment to restore Investment Section
         <InvestmentSection
           title={page.investment.title}
           subtitle={page.investment.subtitle}
@@ -81,6 +82,7 @@ export default function HomePageClient({ data }: HomePageClientProps) {
           avgListings={page.investment.avgListings}
           avgListingsDetail={page.investment.avgListingsDetail}
         />
+        */}
 
         <ProcessTimeline
           title={page.process.title}
