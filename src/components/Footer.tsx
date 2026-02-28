@@ -31,7 +31,17 @@ export default function Footer({
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between gap-8 mb-8">
           <div>
-            <img src="/logo.png" alt={brand} className="h-14 w-auto mix-blend-screen mb-4" />
+            <span
+              style={{
+                background: "linear-gradient(to right, #818cf8, #7c3aed)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+              className="text-4xl font-black tracking-tight"
+            >
+              DD.
+            </span>
             <p className="text-sm">{tagline}</p>
           </div>
           <div>

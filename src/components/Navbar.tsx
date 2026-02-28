@@ -15,7 +15,17 @@ interface NavbarProps {
 export default function Navbar({ brand, links, ctaText, ctaHref }: NavbarProps) {
   return (
     <nav className="container mx-auto px-6 py-6 flex justify-between items-center">
-      <img src="/logo.png" alt={brand} className="h-14 w-auto mix-blend-screen" />
+      <span
+        style={{
+          background: "linear-gradient(to right, #818cf8, #7c3aed)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+        }}
+        className="text-4xl font-black tracking-tight"
+      >
+        DD.
+      </span>
       <div className="hidden md:flex gap-8">
         {links.map((link) => (
           <a key={link.href} href={link.href} className="hover:text-purple-300">
