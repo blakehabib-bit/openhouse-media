@@ -31,7 +31,7 @@ export default function Footer({
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between gap-8 mb-8">
           <div>
-            <div className="text-white text-2xl font-bold mb-4">{brand}</div>
+            <img src="/logo.png" alt={brand} className="h-10 w-auto mb-4" />
             <p className="text-sm">{tagline}</p>
           </div>
           <div>
