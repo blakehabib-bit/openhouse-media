@@ -1,0 +1,174 @@
+fragment PageParts on Page {
+  __typename
+  navbar {
+    __typename
+    brand
+    links {
+      __typename
+      label
+      href
+    }
+    ctaText
+    ctaHref
+  }
+  hero {
+    __typename
+    badge
+    headlinePart1
+    headlineHighlight
+    headlinePart2
+    subheadline
+    description
+    stats {
+      __typename
+      value
+      label
+    }
+    ctaPrimaryText
+    ctaSecondaryText
+    ctaFootnote
+  }
+  suburbs {
+    __typename
+    title
+    description
+    steps {
+      __typename
+      title
+      description
+    }
+    listings {
+      __typename
+      name
+      detail
+      status
+    }
+    warningTitle
+    warningText
+  }
+  socialProof {
+    __typename
+    title
+    subtitle
+    testimonials {
+      __typename
+      stat
+      quote
+      name
+      agency
+      image
+    }
+    beforeTitle
+    beforeItems {
+      __typename
+      text
+    }
+    afterTitle
+    afterItems {
+      __typename
+      text
+    }
+  }
+  investment {
+    __typename
+    title
+    subtitle
+    valueStack {
+      __typename
+      role
+      detail
+      price
+    }
+    totalValue
+    priceLabel
+    price
+    pricePeriod
+    priceNote
+    includes {
+      __typename
+      text
+    }
+    roiTitle
+    monthlyInvestment
+    avgCommission
+    breakEven
+    avgListings
+    avgListingsDetail
+  }
+  process {
+    __typename
+    title
+    subtitle
+    steps {
+      __typename
+      week
+      title
+      bullets {
+        __typename
+        text
+      }
+    }
+  }
+  qualification {
+    __typename
+    title
+    subtitle
+    dontApply {
+      __typename
+      title
+      description
+    }
+    perfectIf {
+      __typename
+      title
+      description
+    }
+  }
+  cta {
+    __typename
+    headline
+    subheadline
+    description
+    formTitle
+    submitText
+    footnote
+    trustBadges {
+      __typename
+      text
+    }
+  }
+  faq {
+    __typename
+    title
+    items {
+      __typename
+      question
+      answer
+    }
+  }
+  stickyCta {
+    __typename
+    text
+    buttonText
+    buttonHref
+  }
+  footer {
+    __typename
+    brand
+    tagline
+    quickLinks {
+      __typename
+      label
+      href
+    }
+    resources {
+      __typename
+      label
+      href
+    }
+    email
+    phone
+    location
+    copyright
+  }
+}

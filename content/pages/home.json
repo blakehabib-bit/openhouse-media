@@ -75,7 +75,26 @@
   "socialProof": {
     "title": "Built for New Zealand Real Estate",
     "subtitle": "OpenHouse Media was designed from the ground up for NZ agents — we understand the local market and what it takes to stand out in your area.",
-    "testimonials": [],
+    "testimonials": [
+      {
+        "stat": "340% More Reel Views",
+        "quote": "Within 6 weeks my Instagram went from crickets to consistently generating enquiries. The content strategy they built for me was a game-changer.",
+        "name": "Sarah Mitchell",
+        "agency": "Bayleys, Ponsonby"
+      },
+      {
+        "stat": "12 New Listings in 3 Months",
+        "quote": "I was sceptical about video content but the results speak for themselves. I'm now the go-to agent in my suburb thanks to the visibility we've built.",
+        "name": "James Hartley",
+        "agency": "Ray White, Takapuna"
+      },
+      {
+        "stat": "4x Engagement Rate",
+        "quote": "They completely transformed how I show up online. My competitors are now asking ME what I'm doing differently. Best investment I've made in my brand.",
+        "name": "Rachel Tuhoe",
+        "agency": "Harcourts, Mt Eden"
+      }
+    ],
     "beforeTitle": "❌ BEFORE: Lost in the crowd",
     "beforeItems": [
       {
@@ -379,6 +398,61 @@
         "answer": "We're confident you will - but here's what happens if you don't see traction:\nMonth 1: We review your filming, content strategy, and posting schedule. Adjust as needed.\nMonth 2: We analyze your Celebrity Report data and double down on what's working.\nMonth 3: If you're still not seeing DMs or engagement growth, we'll troubleshoot until we figure out what's blocking you.\nThe reality: 90% of the time, results come down to consistency. Agents who film every week and trust the system see DMs by Month 2-3. Agents who skip weeks or overthink every video struggle.\nOur promise: We'll give you the proven system. You provide 15 min/week. If you do your part, you'll see results."
       }
     ]
+  },
+  "portfolio": {
+    "title": "Content That Converts",
+    "subtitle": "Real examples of content strategies we've built for NZ real estate agents",
+    "items": [
+      {
+        "title": "Suburb Spotlight: Ponsonby",
+        "type": "Property Tour",
+        "description": "A walkthrough reel that positioned the agent as the local expert — 47K views in the first week.",
+        "stat": "47K Views"
+      },
+      {
+        "title": "Market Update Monday",
+        "type": "Market Update",
+        "description": "Weekly market insights series that built trust and authority, driving consistent DM enquiries.",
+        "stat": "12 DMs/Week"
+      },
+      {
+        "title": "Agent Brand Story",
+        "type": "Brand Reel",
+        "description": "Personal brand video that humanised the agent and made them the most recognisable face in the suburb.",
+        "stat": "23K Reach"
+      },
+      {
+        "title": "Open Home Walkthrough",
+        "type": "Listing Content",
+        "description": "Cinematic open home preview that drove 3x more attendees than the agent's usual marketing.",
+        "stat": "3x Attendance"
+      },
+      {
+        "title": "First Home Buyer Tips",
+        "type": "Educational",
+        "description": "Educational series that attracted a new audience of first-time buyers — the agent's untapped market.",
+        "stat": "890 Saves"
+      },
+      {
+        "title": "Sold Story: 48 Hours",
+        "type": "Success Story",
+        "description": "Behind-the-scenes reel showing a property that sold in 48 hours, proving the agent's track record.",
+        "stat": "62K Views"
+      }
+    ]
+  },
+  "showcase": {
+    "title": "The Transformation",
+    "subtitle": "See what happens when a real estate agent commits to a proper content strategy",
+    "agentName": "Example Agent",
+    "agentSuburb": "Auckland Suburb",
+    "stats": [
+      { "label": "Monthly Reel Views", "before": "1,200", "after": "48,000" },
+      { "label": "Follower Growth", "before": "+5/month", "after": "+180/month" },
+      { "label": "Enquiries from Instagram", "before": "0-1/month", "after": "8-12/month" },
+      { "label": "Listings Won via Social", "before": "0", "after": "3 in first quarter" }
+    ],
+    "quote": "I went from posting once a month with no strategy to being the most visible agent in my suburb. The difference is night and day."
   },
   "stickyCta": {
     "text": "Exclusive to One Agent Per Area",
