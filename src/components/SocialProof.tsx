@@ -58,7 +58,11 @@ export default function SocialProof({
                   <div className="text-2xl font-bold text-purple-600 mb-2">{t.stat}</div>
                   <blockquote className="text-gray-700 mb-4">&ldquo;{t.quote}&rdquo;</blockquote>
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-purple-100 rounded-full mr-3" />
+                    {t.image ? (
+                      <img src={t.image} alt={t.name} className="w-12 h-12 rounded-full mr-3 object-cover" />
+                    ) : (
+                      <div className="w-12 h-12 bg-purple-100 rounded-full mr-3" />
+                    )}
                     <div>
                       <div className="font-semibold">{t.name}</div>
                       <div className="text-sm text-gray-600">{t.agency}</div>

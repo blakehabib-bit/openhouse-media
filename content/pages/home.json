@@ -108,6 +108,13 @@
         "name": "Jaron Mumby",
         "agency": "Harcourts Team Green",
         "image": "/uploads/Screenshot 2026-03-09 at 10.20.33 AM.png"
+      },
+      {
+        "stat": "5 Appraisals within the first week!",
+        "quote": "We were able to secure 5 appraisals within the first week of working with Blake - I Cannot recommend him enough!",
+        "name": "Ngaire Tito",
+        "agency": "Metcalfe Real Estate",
+        "image": "/uploads/IMG_8961.jpg"
       }
     ],
     "beforeTitle": "❌  BEFORE: Lost in the crowd",
@@ -317,10 +324,6 @@
         "description": "Personal brand = you need to show your face"
       },
       {
-        "title": "You have less than 2 years experience",
-        "description": "Content amplifies what you already do well — you need a foundation first"
-      },
-      {
         "title": "Your area has fewer than 500 properties",
         "description": "Market too small for the area exclusivity model to work effectively"
       },
@@ -343,7 +346,7 @@
         "description": "Let content work while you're at open homes"
       },
       {
-        "title": "Willing to commit 2 hours/month to filming",
+        "title": "Willing to commit 1-2 hours/month to filming",
         "description": "We handle everything else"
       }
     ]
@@ -354,18 +357,7 @@
     "description": "Book a free 15-minute area audit. We'll look at your current online presence, identify the biggest opportunities in your area, and show you exactly how consistent video content can make you the agent everyone knows.",
     "formTitle": "Book Your Free Area Audit",
     "submitText": "Check If My Area Is Available →",
-    "footnote": "✓ Free 15-min call · ✓ No obligation · ✓ Instant area availability check",
-    "trustBadges": [
-      {
-        "text": "Area Exclusivity Guaranteed"
-      },
-      {
-        "text": "Satisfaction Guarantee"
-      },
-      {
-        "text": "Cancel Anytime After 90 Days"
-      }
-    ]
+    "footnote": "✓ Free 15-min call · ✓ No obligation · ✓ Instant area availability check"
   },
   "faq": {
     "title": "Common Questions",
@@ -417,48 +409,42 @@
         "type": "Market Knowledge",
         "description": "A walkthrough reel highlighting the area that positioned the agent as the local expert.",
         "stat": "11K Views",
-        "videoFile": "/uploads/reels/DVZG64CD836.mp4",
-        "image": "/uploads/reels/DVZG64CD836-thumb.jpg"
+        "videoFile": "/uploads/reels/DVZG64CD836.mp4"
       },
       {
         "title": "Jaron Mumby Profile",
         "type": "Profile Intro",
         "description": "Cinematic profile video introducing Team Green's newest team member.",
         "stat": "16K Views",
-        "videoFile": "/uploads/reels/jaron-mumby-profile.mp4",
-        "image": "/uploads/reels/jaron-mumby-profile-thumb.jpg"
+        "videoFile": "/uploads/reels/DU6LNr_jxA0.mp4"
       },
       {
         "title": "New Listing Weekly Tour",
         "type": "Brand Reel",
         "description": "Reel showing all the new listings coming to the market with the team - shows BTS.",
         "stat": "10K Reach",
-        "videoFile": "/uploads/reels/DQ28FJDjqqB.mp4",
-        "image": "/uploads/reels/DQ28FJDjqqB-thumb.jpg"
+        "videoFile": "/uploads/reels/DQ28FJDjqqB.mp4"
       },
       {
         "title": "Walkthrough Tour",
         "type": "Listing Content",
         "description": "Cinematic property tour.",
         "stat": "11K Views",
-        "videoFile": "/uploads/reels/DPfQWYfgRNE.mp4",
-        "image": "/uploads/reels/DPfQWYfgRNE-thumb.jpg"
+        "videoFile": "/uploads/reels/DPfQWYfgRNE.mp4"
       },
       {
         "title": "SOLD - Settlement",
         "type": "Story",
         "description": "Reel that shows the sale and purchase of their vendors in one perfect story.",
         "stat": "12K Views",
-        "videoFile": "/uploads/reels/DPVydCEDNsW.mp4",
-        "image": "/uploads/reels/DPVydCEDNsW-thumb.jpg"
+        "videoFile": "/uploads/reels/DPVydCEDNsW.mp4"
       },
       {
         "title": "Sales Proof Story",
         "type": "Success Story",
         "description": "Showcase of the latest homes sold and strong CTA to introduce sellers to market.",
         "stat": "10K Views",
-        "videoFile": "/uploads/reels/DO4mzMNgiB8.mp4",
-        "image": "/uploads/reels/DO4mzMNgiB8-thumb.jpg"
+        "videoFile": "/uploads/reels/DO4mzMNgiB8.mp4"
       }
     ]
   },
