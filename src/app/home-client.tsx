@@ -5,7 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import SuburbExclusivity from "@/components/SuburbExclusivity";
 import SocialProof from "@/components/SocialProof";
 import ContentPortfolio from "@/components/ContentPortfolio";
-import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
+// HIDDEN — uncomment to restore: import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 // HIDDEN — uncomment to restore: import InvestmentSection from "@/components/InvestmentSection";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import QualificationSection from "@/components/QualificationSection";
@@ -72,6 +72,7 @@ export default function HomePageClient({ data }: HomePageClientProps) {
           items={page.portfolio.items}
         />
 
+        {/* HIDDEN — uncomment to restore Before/After Showcase
         <BeforeAfterShowcase
           title={page.showcase.title}
           subtitle={page.showcase.subtitle}
@@ -80,6 +81,7 @@ export default function HomePageClient({ data }: HomePageClientProps) {
           stats={page.showcase.stats}
           quote={page.showcase.quote}
         />
+        */}
 
         {/* HIDDEN — uncomment to restore Investment Section
         <InvestmentSection

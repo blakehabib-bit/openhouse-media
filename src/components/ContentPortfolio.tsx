@@ -4,6 +4,7 @@ interface PortfolioItem {
   description: string;
   stat: string;
   image?: string;
+  reelUrl?: string;
 }
 
 interface ContentPortfolioProps {
@@ -30,6 +31,15 @@ const TYPE_GRADIENTS: Record<string, string> = {
   "Success Story": "from-indigo-500 to-violet-600",
 };
 
+function getEmbedUrl(reelUrl: string): string {
+  // Convert Instagram reel URL to embed URL
+  // e.g. https://www.instagram.com/reel/ABC123/ → https://www.instagram.com/reel/ABC123/embed
+  let url = reelUrl.trim();
+  if (!url.endsWith("/")) url += "/";
+  if (!url.endsWith("embed/")) url += "embed/";
+  return url;
+}
+
 export default function ContentPortfolio({ title, subtitle, items }: ContentPortfolioProps) {
   return (
     <section id="portfolio" className="py-20 bg-white">
@@ -44,41 +54,58 @@ export default function ContentPortfolio({ title, subtitle, items }: ContentPort
             {items.map((item) => {
               const colorClass = TYPE_COLORS[item.type] || "bg-gray-100 text-gray-700";
               const gradient = TYPE_GRADIENTS[item.type] || "from-gray-500 to-gray-600";
+              const hasReel = item.reelUrl && item.reelUrl.includes("instagram.com");
 
               return (
                 <div
                   key={item.title}
                   className="group bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300"
                 >
-                  {/* Thumbnail placeholder */}
-                  <div className={`aspect-video bg-gradient-to-br ${gradient} relative`}>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <svg
-                        className="w-14 h-14 text-white/80 group-hover:text-white group-hover:scale-110 transition-all duration-300"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                      </svg>
-                    </div>
-                    {/* Stat badge */}
-                    <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
-                      <span className="text-sm font-bold text-gray-900">{item.stat}</span>
-                    </div>
-                    {item.image && (
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="absolute inset-0 w-full h-full object-cover"
+                  {/* Video embed or thumbnail placeholder */}
+                  {hasReel ? (
+                    <div className="aspect-[9/16] max-h-[480px] relative bg-black">
+                      <iframe
+                        src={getEmbedUrl(item.reelUrl!)}
+                        className="w-full h-full border-0"
+                        allowFullScreen
+                        loading="lazy"
                       />
-                    )}
-                  </div>
+                    </div>
+                  ) : (
+                    <div className={`aspect-video bg-gradient-to-br ${gradient} relative`}>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <svg
+                          className="w-14 h-14 text-white/80 group-hover:text-white group-hover:scale-110 transition-all duration-300"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                        </svg>
+                      </div>
+                      {/* Stat badge */}
+                      <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
+                        <span className="text-sm font-bold text-gray-900">{item.stat}</span>
+                      </div>
+                      {item.image && (
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                      )}
+                    </div>
+                  )}
 
                   <div className="p-6">
-                    {/* Type badge */}
-                    <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ${colorClass}`}>
-                      {item.type}
-                    </span>
+                    <div className="flex items-center justify-between mb-3">
+                      {/* Type badge */}
+                      <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full ${colorClass}`}>
+                        {item.type}
+                      </span>
+                      {item.stat && (
+                        <span className="text-sm font-bold text-purple-600">{item.stat}</span>
+                      )}
+                    </div>
                     <h3 className="text-lg font-bold mb-2">{item.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
                   </div>

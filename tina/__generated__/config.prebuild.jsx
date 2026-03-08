@@ -307,7 +307,8 @@ var config_default = defineConfig({
                   { type: "string", name: "type", label: "Content Type (e.g. Property Tour, Brand Reel)" },
                   { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
                   { type: "string", name: "stat", label: "Key Stat (e.g. 47K Views)" },
-                  { type: "image", name: "image", label: "Thumbnail Image" }
+                  { type: "string", name: "reelUrl", label: "Instagram Reel URL (paste full URL e.g. https://www.instagram.com/reel/ABC123/)" },
+                  { type: "image", name: "image", label: "Thumbnail Image (fallback if no reel URL)" }
                 ]
               }
             ]

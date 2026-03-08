@@ -394,40 +394,46 @@
     "subtitle": "Real examples of content strategies we've built for NZ real estate agents",
     "items": [
       {
-        "title": "Suburb Spotlight: Ponsonby",
-        "type": "Property Tour",
-        "description": "A walkthrough reel that positioned the agent as the local expert — 47K views in the first week.",
-        "stat": "47K Views"
+        "title": "Suburb Spotlight: Fitzroy/Strandon",
+        "type": "Market Knowledge",
+        "description": "A walkthrough reel highlighting the area that positioned the agent as the local expert.",
+        "stat": "11K Views",
+        "reelUrl": "https://www.instagram.com/reel/DVZG64CD836/"
       },
       {
-        "title": "Market Update Monday",
-        "type": "Market Update",
-        "description": "Weekly market insights series that built trust and authority, driving consistent DM enquiries.",
-        "stat": "12 DMs/Week"
+        "title": "Jaron Mumby Profile",
+        "type": "Profile Intro",
+        "description": "Cinematic profile video introducing Team Green's newest team member.",
+        "stat": "16K Views",
+        "reelUrl": "https://www.instagram.com/reel/DU6LNr_jxA0/"
       },
       {
-        "title": "Agent Brand Story",
+        "title": "New Listing Weekly Tour",
         "type": "Brand Reel",
-        "description": "Personal brand video that humanised the agent and made them the most recognisable face in the suburb.",
-        "stat": "23K Reach"
+        "description": "Reel showing all the new listings coming to the market with the team - shows BTS.",
+        "stat": "10K Reach",
+        "reelUrl": "https://www.instagram.com/reel/DQ28FJDjqqB/"
       },
       {
-        "title": "Open Home Walkthrough",
+        "title": "Walkthrough Tour",
         "type": "Listing Content",
-        "description": "Cinematic open home preview that drove 3x more attendees than the agent's usual marketing.",
-        "stat": "3x Attendance"
+        "description": "Cinematic property tour. ",
+        "stat": "11K Views",
+        "reelUrl": "https://www.instagram.com/reel/DPfQWYfgRNE/"
       },
       {
-        "title": "First Home Buyer Tips",
-        "type": "Educational",
-        "description": "Educational series that attracted a new audience of first-time buyers — the agent's untapped market.",
-        "stat": "890 Saves"
+        "title": "SOLD - Settlement",
+        "type": "Story",
+        "description": "Reel that shows the sale and purchase of their vendors in one perfect story.",
+        "stat": "12K Views",
+        "reelUrl": "https://www.instagram.com/reel/DPVydCEDNsW/"
       },
       {
-        "title": "Sold Story: 48 Hours",
+        "title": "Sales Proof Story",
         "type": "Success Story",
-        "description": "Behind-the-scenes reel showing a property that sold in 48 hours, proving the agent's track record.",
-        "stat": "62K Views"
+        "description": "Showcase of the latest homes sold and strong CTA to introduce sellers to market.",
+        "stat": "10K Views",
+        "reelUrl": "https://www.instagram.com/reel/DO4mzMNgiB8/"
       }
     ]
   },

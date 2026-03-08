@@ -156,6 +156,7 @@ fragment PageParts on Page {
       type
       description
       stat
+      reelUrl
       image
     }
   }
