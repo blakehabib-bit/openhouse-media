@@ -1,3 +1,7 @@
+"use client";
+
+import { useRef, useState } from "react";
+
 interface PortfolioItem {
   title: string;
   type: string;
@@ -5,6 +9,7 @@ interface PortfolioItem {
   stat: string;
   image?: string;
   reelUrl?: string;
+  videoFile?: string;
 }
 
 interface ContentPortfolioProps {
@@ -16,28 +21,64 @@ interface ContentPortfolioProps {
 const TYPE_COLORS: Record<string, string> = {
   "Property Tour": "bg-purple-100 text-purple-700",
   "Market Update": "bg-blue-100 text-blue-700",
+  "Market Knowledge": "bg-blue-100 text-blue-700",
   "Brand Reel": "bg-pink-100 text-pink-700",
+  "Profile Intro": "bg-pink-100 text-pink-700",
   "Listing Content": "bg-green-100 text-green-700",
   "Educational": "bg-amber-100 text-amber-700",
   "Success Story": "bg-indigo-100 text-indigo-700",
+  "Story": "bg-indigo-100 text-indigo-700",
 };
 
 const TYPE_GRADIENTS: Record<string, string> = {
   "Property Tour": "from-purple-500 to-indigo-600",
   "Market Update": "from-blue-500 to-cyan-600",
+  "Market Knowledge": "from-blue-500 to-cyan-600",
   "Brand Reel": "from-pink-500 to-rose-600",
+  "Profile Intro": "from-pink-500 to-rose-600",
   "Listing Content": "from-green-500 to-emerald-600",
   "Educational": "from-amber-500 to-orange-600",
   "Success Story": "from-indigo-500 to-violet-600",
+  "Story": "from-indigo-500 to-violet-600",
 };
 
-function getEmbedUrl(reelUrl: string): string {
-  // Convert Instagram reel URL to embed URL
-  // e.g. https://www.instagram.com/reel/ABC123/ → https://www.instagram.com/reel/ABC123/embed
-  let url = reelUrl.trim();
-  if (!url.endsWith("/")) url += "/";
-  if (!url.endsWith("embed/")) url += "embed/";
-  return url;
+function VideoCard({ item }: { item: PortfolioItem }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlay = () => {
+    if (!videoRef.current) return;
+    if (isPlaying) {
+      videoRef.current.pause();
+    } else {
+      videoRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  return (
+    <div className="aspect-[9/16] max-h-[520px] relative bg-black rounded-t-xl overflow-hidden cursor-pointer" onClick={togglePlay}>
+      <video
+        ref={videoRef}
+        src={item.videoFile}
+        className="w-full h-full object-cover"
+        playsInline
+        loop
+        preload="metadata"
+        onEnded={() => setIsPlaying(false)}
+      />
+      {/* Play button overlay */}
+      {!isPlaying && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+          <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+            <svg className="w-7 h-7 text-gray-900 ml-1" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+            </svg>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default function ContentPortfolio({ title, subtitle, items }: ContentPortfolioProps) {
@@ -54,23 +95,15 @@ export default function ContentPortfolio({ title, subtitle, items }: ContentPort
             {items.map((item) => {
               const colorClass = TYPE_COLORS[item.type] || "bg-gray-100 text-gray-700";
               const gradient = TYPE_GRADIENTS[item.type] || "from-gray-500 to-gray-600";
-              const hasReel = item.reelUrl && item.reelUrl.includes("instagram.com");
+              const hasVideo = !!item.videoFile;
 
               return (
                 <div
                   key={item.title}
                   className="group bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300"
                 >
-                  {/* Video embed or thumbnail placeholder */}
-                  {hasReel ? (
-                    <div className="aspect-[9/16] max-h-[480px] relative bg-black">
-                      <iframe
-                        src={getEmbedUrl(item.reelUrl!)}
-                        className="w-full h-full border-0"
-                        allowFullScreen
-                        loading="lazy"
-                      />
-                    </div>
+                  {hasVideo ? (
+                    <VideoCard item={item} />
                   ) : (
                     <div className={`aspect-video bg-gradient-to-br ${gradient} relative`}>
                       <div className="absolute inset-0 flex items-center justify-center">
@@ -82,7 +115,6 @@ export default function ContentPortfolio({ title, subtitle, items }: ContentPort
                           <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
                         </svg>
                       </div>
-                      {/* Stat badge */}
                       <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
                         <span className="text-sm font-bold text-gray-900">{item.stat}</span>
                       </div>
@@ -98,7 +130,6 @@ export default function ContentPortfolio({ title, subtitle, items }: ContentPort
 
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
-                      {/* Type badge */}
                       <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full ${colorClass}`}>
                         {item.type}
                       </span>

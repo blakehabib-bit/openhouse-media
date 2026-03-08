@@ -253,6 +253,7 @@ type PagePortfolioItems {
   type: String
   description: String
   stat: String
+  videoFile: String
   reelUrl: String
   image: String
 }
@@ -504,6 +505,7 @@ input PagePortfolioItemsFilter {
   type: StringFilter
   description: StringFilter
   stat: StringFilter
+  videoFile: StringFilter
   reelUrl: StringFilter
   image: ImageFilter
 }
@@ -768,6 +770,7 @@ input PagePortfolioItemsMutation {
   type: String
   description: String
   stat: String
+  videoFile: String
   reelUrl: String
   image: String
 }
