@@ -93,21 +93,21 @@
   },
   "socialProof": {
     "title": "Built for the Kiwi + Aussie Real Estate Market",
-    "subtitle": "TDDK was designed from the ground up for Kiwi and Aussie agents - we understand the local market and what it takes to stand out in your area.",
+    "subtitle": "TDDK was designed for Kiwi and Aussie agents - we've spent 10 years in your market so we understand what it takes to stand out. ",
     "testimonials": [
       {
         "stat": "0 - 3.3K Followers ",
-        "quote": "Went from having no social media accounts to becoming the most followed agent in their region.",
-        "name": "Glenn Green",
-        "agency": "Harcourts Team Green",
-        "image": "/uploads/Screenshot 2026-03-07 at 6.14.13 PM.png"
-      },
-      {
-        "stat": "Grew their agent count by 50%",
-        "quote": "Team Green started with 4 agents, but with the reach of social media and the compounding effect of content, have grown to 6.",
+        "quote": "Before working with Blake, we had zero social media presence. I went from nothing to 3,300 followers, our team grew from four agents to six, and we started getting listing enquiries from people who found us through video content. The ROI speaks for itself.",
         "name": "Glenn Green",
         "agency": "Harcourts Team Green",
         "image": "/uploads/IMG_8961.jpg"
+      },
+      {
+        "stat": "First Listings in 3 weeks",
+        "quote": "Profile introduction video managed to secure first listing within 3 weeks of posting.",
+        "name": "Jaron Mumby",
+        "agency": "Harcourts Team Green",
+        "image": "/uploads/Screenshot 2026-03-09 at 10.20.33 AM.png"
       }
     ],
     "beforeTitle": "❌  BEFORE: Lost in the crowd",
@@ -417,42 +417,48 @@
         "type": "Market Knowledge",
         "description": "A walkthrough reel highlighting the area that positioned the agent as the local expert.",
         "stat": "11K Views",
-        "videoFile": "/uploads/reels/DVZG64CD836.mp4"
+        "videoFile": "/uploads/reels/DVZG64CD836.mp4",
+        "image": "/uploads/reels/DVZG64CD836-thumb.jpg"
       },
       {
         "title": "Jaron Mumby Profile",
         "type": "Profile Intro",
         "description": "Cinematic profile video introducing Team Green's newest team member.",
         "stat": "16K Views",
-        "videoFile": "/uploads/reels/DU6LNr_jxA0.mp4"
+        "videoFile": "/uploads/reels/jaron-mumby-profile.mp4",
+        "image": "/uploads/reels/jaron-mumby-profile-thumb.jpg"
       },
       {
         "title": "New Listing Weekly Tour",
         "type": "Brand Reel",
         "description": "Reel showing all the new listings coming to the market with the team - shows BTS.",
         "stat": "10K Reach",
-        "videoFile": "/uploads/reels/DQ28FJDjqqB.mp4"
+        "videoFile": "/uploads/reels/DQ28FJDjqqB.mp4",
+        "image": "/uploads/reels/DQ28FJDjqqB-thumb.jpg"
       },
       {
         "title": "Walkthrough Tour",
         "type": "Listing Content",
         "description": "Cinematic property tour.",
         "stat": "11K Views",
-        "videoFile": "/uploads/reels/DPfQWYfgRNE.mp4"
+        "videoFile": "/uploads/reels/DPfQWYfgRNE.mp4",
+        "image": "/uploads/reels/DPfQWYfgRNE-thumb.jpg"
       },
       {
         "title": "SOLD - Settlement",
         "type": "Story",
         "description": "Reel that shows the sale and purchase of their vendors in one perfect story.",
         "stat": "12K Views",
-        "videoFile": "/uploads/reels/DPVydCEDNsW.mp4"
+        "videoFile": "/uploads/reels/DPVydCEDNsW.mp4",
+        "image": "/uploads/reels/DPVydCEDNsW-thumb.jpg"
       },
       {
         "title": "Sales Proof Story",
         "type": "Success Story",
         "description": "Showcase of the latest homes sold and strong CTA to introduce sellers to market.",
         "stat": "10K Views",
-        "videoFile": "/uploads/reels/DO4mzMNgiB8.mp4"
+        "videoFile": "/uploads/reels/DO4mzMNgiB8.mp4",
+        "image": "/uploads/reels/DO4mzMNgiB8-thumb.jpg"
       }
     ]
   },

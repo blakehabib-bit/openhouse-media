@@ -61,6 +61,7 @@ function VideoCard({ item }: { item: PortfolioItem }) {
       <video
         ref={videoRef}
         src={item.videoFile}
+        poster={item.image || undefined}
         className="w-full h-full object-cover"
         playsInline
         loop
