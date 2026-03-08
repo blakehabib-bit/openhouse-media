@@ -100,21 +100,24 @@
         "quote": "Before working with Blake, we had zero social media presence. I went from nothing to 3,300 followers, our team grew from four agents to six, and we started getting listing enquiries from people who found us through video content. The ROI speaks for itself.",
         "name": "Glenn Green",
         "agency": "Harcourts Team Green",
-        "image": "/uploads/IMG_8961.jpg"
+        "image": "/uploads/IMG_8961.jpg",
+        "headshot": ""
       },
       {
         "stat": "First Listings in 3 weeks",
         "quote": "Profile introduction video managed to secure first listing within 3 weeks of posting.",
         "name": "Jaron Mumby",
         "agency": "Harcourts Team Green",
-        "image": "/uploads/Screenshot 2026-03-09 at 10.20.33 AM.png"
+        "image": "/uploads/jaron-mumby-headshot.png",
+        "headshot": ""
       },
       {
         "stat": "5 Appraisals within the first week!",
         "quote": "We were able to secure 5 appraisals within the first week of working with Blake - I Cannot recommend him enough!",
         "name": "Ngaire Tito",
         "agency": "Metcalfe Real Estate",
-        "image": "/uploads/IMG_8961.jpg"
+        "image": "",
+        "headshot": ""
       }
     ],
     "beforeTitle": "❌  BEFORE: Lost in the crowd",

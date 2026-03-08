@@ -4,6 +4,7 @@ interface Testimonial {
   name: string;
   agency: string;
   image?: string;
+  headshot?: string;
 }
 
 interface ListItem {
@@ -58,8 +59,8 @@ export default function SocialProof({
                   <div className="text-2xl font-bold text-purple-600 mb-2">{t.stat}</div>
                   <blockquote className="text-gray-700 mb-4">&ldquo;{t.quote}&rdquo;</blockquote>
                   <div className="flex items-center">
-                    {t.image ? (
-                      <img src={t.image} alt={t.name} className="w-12 h-12 rounded-full mr-3 object-cover" />
+                    {(t.headshot || t.image) ? (
+                      <img src={t.headshot || t.image} alt={t.name} className="w-12 h-12 rounded-full mr-3 object-cover" />
                     ) : (
                       <div className="w-12 h-12 bg-purple-100 rounded-full mr-3" />
                     )}
