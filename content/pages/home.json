@@ -72,6 +72,25 @@
     "warningTitle": "Once your area is claimed, it stays claimed",
     "warningText": "We maintain exclusivity for 12 months minimum. If another agent in your area books first, you'll be added to a waitlist."
   },
+  "aboutBlake": {
+    "title": "Built by an Agent, for Agents",
+    "description": "",
+    "videoFile": "",
+    "stats": [
+      {
+        "value": "3,000+",
+        "label": "Videos produced for NZ agents"
+      },
+      {
+        "value": "6 Years",
+        "label": "In real estate media"
+      },
+      {
+        "value": "18-22",
+        "label": "Licensed real estate agent"
+      }
+    ]
+  },
   "socialProof": {
     "title": "Built for the Kiwi + Aussie Real Estate Market",
     "subtitle": "TDDK was designed from the ground up for Kiwi and Aussie agents - we understand the local market and what it takes to stand out in your area.",
@@ -405,7 +424,7 @@
         "type": "Profile Intro",
         "description": "Cinematic profile video introducing Team Green's newest team member.",
         "stat": "16K Views",
-        "videoFile": "/uploads/reels/jaron-mumby-profile.mp4"
+        "videoFile": "/uploads/reels/DU6LNr_jxA0.mp4"
       },
       {
         "title": "New Listing Weekly Tour",
@@ -472,43 +491,11 @@
     "buttonHref": "#cta"
   },
   "footer": {
-    "brand": "OpenHouse Media",
+    "brand": "The Digital Door Knock",
     "tagline": "Suburb-exclusive video content for New Zealand's most ambitious real estate agents.",
-    "quickLinks": [
-      {
-        "label": "How It Works",
-        "href": "#process"
-      },
-      {
-        "label": "Pricing",
-        "href": "#investment"
-      },
-      {
-        "label": "FAQ",
-        "href": "#faq"
-      },
-      {
-        "label": "Book a Call",
-        "href": "#cta"
-      }
-    ],
-    "resources": [
-      {
-        "label": "Check Suburb Availability",
-        "href": "#suburbs"
-      },
-      {
-        "label": "About Us",
-        "href": "#"
-      },
-      {
-        "label": "Contact",
-        "href": "#cta"
-      }
-    ],
     "email": "blake@openhousemedia.io",
     "phone": "+64 27 359 8087",
-    "location": "Taranaki, New Zealand",
-    "copyright": "OpenHouse Media. All rights reserved."
+    "location": "",
+    "copyright": "The Digital Door Knock. All rights reserved."
   }
 }

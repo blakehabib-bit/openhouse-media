@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SuburbExclusivity from "@/components/SuburbExclusivity";
+import AboutBlake from "@/components/AboutBlake";
 import SocialProof from "@/components/SocialProof";
 import ContentPortfolio from "@/components/ContentPortfolio";
 // HIDDEN — uncomment to restore: import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
@@ -54,6 +55,13 @@ export default function HomePageClient({ data }: HomePageClientProps) {
           listings={page.suburbs.listings}
           warningTitle={page.suburbs.warningTitle}
           warningText={page.suburbs.warningText}
+        />
+
+        <AboutBlake
+          title={page.aboutBlake.title}
+          description={page.aboutBlake.description}
+          videoFile={page.aboutBlake.videoFile}
+          stats={page.aboutBlake.stats}
         />
 
         <SocialProof
