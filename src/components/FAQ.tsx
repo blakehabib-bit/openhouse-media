@@ -39,7 +39,7 @@ export default function FAQ({ title, items }: FAQProps) {
                   </svg>
                 </button>
                 {openIndex === i && (
-                  <div className="px-6 pb-5 text-gray-600 leading-relaxed">
+                  <div className="px-6 pb-5 text-gray-600 leading-relaxed whitespace-pre-line">
                     {item.answer}
                   </div>
                 )}
