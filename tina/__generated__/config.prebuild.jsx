@@ -71,6 +71,27 @@ var config_default = defineConfig({
               { type: "string", name: "ctaFootnote", label: "Footnote under buttons" }
             ]
           },
+          // ── ABOUT BLAKE ──
+          {
+            type: "object",
+            name: "aboutBlake",
+            label: "About Blake Section",
+            fields: [
+              { type: "string", name: "title", label: "Section Title" },
+              { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
+              { type: "string", name: "videoFile", label: "Video File Path (e.g. /uploads/blake-intro.mp4)" },
+              {
+                type: "object",
+                name: "stats",
+                label: "Stats",
+                list: true,
+                fields: [
+                  { type: "string", name: "value", label: "Value (e.g. 3,000+)" },
+                  { type: "string", name: "label", label: "Label" }
+                ]
+              }
+            ]
+          },
           // ── SUBURB EXCLUSIVITY ──
           {
             type: "object",

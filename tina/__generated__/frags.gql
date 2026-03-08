@@ -28,6 +28,17 @@ fragment PageParts on Page {
     ctaSecondaryText
     ctaFootnote
   }
+  aboutBlake {
+    __typename
+    title
+    description
+    videoFile
+    stats {
+      __typename
+      value
+      label
+    }
+  }
   suburbs {
     __typename
     title

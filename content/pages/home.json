@@ -14,8 +14,8 @@
     "description": "We produce consistent short-form video content that makes you the agent everyone knows - so when sellers are ready to list, you're the only name they think of.",
     "stats": [
       {
-        "value": "87%",
-        "label": "Of sellers look for an agent with a strong online presence"
+        "value": "3,000+",
+        "label": "Videos produced for Agents in NZ"
       },
       {
         "value": "90 Days",
@@ -29,6 +29,25 @@
     "ctaPrimaryText": "Book Your Free Area Audit",
     "ctaSecondaryText": "Check Area Availability",
     "ctaFootnote": "✓ Free 15-min call · No obligation "
+  },
+  "aboutBlake": {
+    "title": "Built by an Agent, for Agents",
+    "description": "",
+    "videoFile": "",
+    "stats": [
+      {
+        "value": "3,000+",
+        "label": "Videos produced for NZ agents"
+      },
+      {
+        "value": "6 Years",
+        "label": "In real estate media"
+      },
+      {
+        "value": "18-22",
+        "label": "Licensed real estate agent"
+      }
+    ]
   },
   "suburbs": {
     "title": "Why We Only Work with 1 Agent Per Area",
@@ -71,25 +90,6 @@
     ],
     "warningTitle": "Once your area is claimed, it stays claimed",
     "warningText": "We maintain exclusivity for 12 months minimum. If another agent in your area books first, you'll be added to a waitlist."
-  },
-  "aboutBlake": {
-    "title": "Built by an Agent, for Agents",
-    "description": "",
-    "videoFile": "",
-    "stats": [
-      {
-        "value": "3,000+",
-        "label": "Videos produced for NZ agents"
-      },
-      {
-        "value": "6 Years",
-        "label": "In real estate media"
-      },
-      {
-        "value": "18-22",
-        "label": "Licensed real estate agent"
-      }
-    ]
   },
   "socialProof": {
     "title": "Built for the Kiwi + Aussie Real Estate Market",
@@ -372,7 +372,7 @@
     "items": [
       {
         "question": "What does 'suburb exclusivity' mean?",
-        "answer": "We only work with one agent per suburb. When you sign up, we lock down your territory and turn away every other agent who operates in that area - even if they're the top producer."
+        "answer": "We only work with one agent per suburb. When you sign up, we lock down your territory and turn away every other agent who operates in that area."
       },
       {
         "question": "How much time do I need to commit?",
@@ -380,7 +380,7 @@
       },
       {
         "question": "How quickly will I see results?",
-        "answer": "Week 1: First videos go live (you're now visible)\nWeek 2-3: Residents start recognising you (\"I saw your video about [ABC Listing]\")\nWeek 4: First DMs arrive from people asking about listings\nMonth 2-3: Consistent enquiries (our attribution tracking shows which videos are working)\nMonth 6+: You're the agent everyone knows in your suburb"
+        "answer": "Week 1: First videos go live (you're now visible)\nWeek 2-3: Residents start recognising you (\"I saw your video about 1 Blake Street\")\nWeek 4: First DMs arrive from people asking about listings\nMonth 2-3: Consistent enquiries (our attribution tracking shows which videos are working)\nMonth 6+: You're the agent everyone knows in your suburb"
       },
       {
         "question": "What kind of videos do you create?",
@@ -388,7 +388,7 @@
       },
       {
         "question": "I already post videos myself / I already have a videographer. Why do I need this?",
-        "answer": "If you're posting yourself:\n\nYou're guessing what content works (we test 1,200+ videos/month and give you the winning formulas)\nYou're spending 3-4 hours/week editing (we do it in 15 min/week from you)\nYou don't have attribution tracking (we show you which videos generate DMs)\n\nIf you have a videographer:\n\nThey film and edit, but who's doing strategy? (We provide monthly data showing what's working across our network)\nAre they posting consistently for you? (We ghost-post 10x/month — you never touch the apps)\nDo they have suburb exclusivity? (Anyone can hire them, including your competitors)"
+        "answer": "If you're posting yourself:\n\nYou're guessing what content works (we test videos/month and give you the winning formulas)\nYou're spending 3-4 hours/week editing (we do it in 15 min/week from you)\nYou don't have attribution tracking (we show you which videos generate DMs)\n\nIf you have a videographer:\n\nThey film and edit, but who's doing strategy? (We provide monthly data showing what's working across our network)\nAre they posting consistently for you? (We ghost-post 10x/month — you never touch the apps)\nDo they have suburb exclusivity? (Anyone can hire them, including your competitors)"
       },
       {
         "question": "What if I'm camera shy / not good on camera?",
@@ -492,9 +492,9 @@
   },
   "footer": {
     "brand": "The Digital Door Knock",
-    "tagline": "Suburb-exclusive video content for New Zealand's most ambitious real estate agents.",
-    "email": "blake@openhousemedia.io",
-    "phone": "+64 27 359 8087",
+    "tagline": "Suburb-exclusive video content for Australasia's most ambitious real estate agents.",
+    "email": "blake@thedigitaldoorknock.com",
+    "phone": "",
     "location": "",
     "copyright": "The Digital Door Knock. All rights reserved."
   }

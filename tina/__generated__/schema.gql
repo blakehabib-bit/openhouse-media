@@ -117,6 +117,18 @@ type PageHero {
   ctaFootnote: String
 }
 
+type PageAboutBlakeStats {
+  value: String
+  label: String
+}
+
+type PageAboutBlake {
+  title: String
+  description: String
+  videoFile: String
+  stats: [PageAboutBlakeStats]
+}
+
 type PageSuburbsSteps {
   title: String
   description: String
@@ -309,6 +321,7 @@ type PageFooter {
 type Page implements Node & Document {
   navbar: PageNavbar
   hero: PageHero
+  aboutBlake: PageAboutBlake
   suburbs: PageSuburbs
   socialProof: PageSocialProof
   investment: PageInvestment
@@ -360,6 +373,18 @@ input PageHeroFilter {
   ctaPrimaryText: StringFilter
   ctaSecondaryText: StringFilter
   ctaFootnote: StringFilter
+}
+
+input PageAboutBlakeStatsFilter {
+  value: StringFilter
+  label: StringFilter
+}
+
+input PageAboutBlakeFilter {
+  title: StringFilter
+  description: StringFilter
+  videoFile: StringFilter
+  stats: PageAboutBlakeStatsFilter
 }
 
 input PageSuburbsStepsFilter {
@@ -561,6 +586,7 @@ input PageFooterFilter {
 input PageFilter {
   navbar: PageNavbarFilter
   hero: PageHeroFilter
+  aboutBlake: PageAboutBlakeFilter
   suburbs: PageSuburbsFilter
   socialProof: PageSocialProofFilter
   investment: PageInvestmentFilter
@@ -632,6 +658,18 @@ input PageHeroMutation {
   ctaPrimaryText: String
   ctaSecondaryText: String
   ctaFootnote: String
+}
+
+input PageAboutBlakeStatsMutation {
+  value: String
+  label: String
+}
+
+input PageAboutBlakeMutation {
+  title: String
+  description: String
+  videoFile: String
+  stats: [PageAboutBlakeStatsMutation]
 }
 
 input PageSuburbsStepsMutation {
@@ -826,6 +864,7 @@ input PageFooterMutation {
 input PageMutation {
   navbar: PageNavbarMutation
   hero: PageHeroMutation
+  aboutBlake: PageAboutBlakeMutation
   suburbs: PageSuburbsMutation
   socialProof: PageSocialProofMutation
   investment: PageInvestmentMutation
