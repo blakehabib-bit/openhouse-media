@@ -146,6 +146,33 @@ fragment PageParts on Page {
       answer
     }
   }
+  portfolio {
+    __typename
+    title
+    subtitle
+    items {
+      __typename
+      title
+      type
+      description
+      stat
+      image
+    }
+  }
+  showcase {
+    __typename
+    title
+    subtitle
+    agentName
+    agentSuburb
+    stats {
+      __typename
+      label
+      before
+      after
+    }
+    quote
+  }
   stickyCta {
     __typename
     text

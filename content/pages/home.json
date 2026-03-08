@@ -11,11 +11,11 @@
     "headlineHighlight": "Only Agent Sellers Think Of",
     "headlinePart2": " in Your Area",
     "subheadline": "",
-    "description": "We produce consistent short-form video content that makes you the agent everyone knows — so when sellers are ready to list, you're the only name they think of.",
+    "description": "We produce consistent short-form video content that makes you the agent everyone knows - so when sellers are ready to list, you're the only name they think of.",
     "stats": [
       {
         "value": "87%",
-        "label": "Of sellers want an agent with a strong online presence"
+        "label": "Of sellers look for an agent with a strong online presence"
       },
       {
         "value": "90 Days",
@@ -40,11 +40,11 @@
       },
       {
         "title": "Saturate Your Market",
-        "description": "10+ pieces of content per month = you're everywhere, competitors are nowhere"
+        "description": "14+ pieces of content per month = you're everywhere, competitors are nowhere"
       },
       {
         "title": "Sellers See Only You",
-        "description": "When they search \"[Your Suburb] real estate agent\" — it's your videos that appear"
+        "description": "When they search \"[Your Suburb] real estate agent\" it's your videos that appear"
       }
     ],
     "listings": [
@@ -73,35 +73,28 @@
     "warningText": "We maintain exclusivity for 12 months minimum. If another agent in your area books first, you'll be added to a waitlist."
   },
   "socialProof": {
-    "title": "Built for New Zealand Real Estate",
-    "subtitle": "OpenHouse Media was designed from the ground up for NZ agents — we understand the local market and what it takes to stand out in your area.",
+    "title": "Built for the Kiwi + Aussie Real Estate Market",
+    "subtitle": "TDDK was designed from the ground up for Kiwi and Aussie agents - we understand the local market and what it takes to stand out in your area.",
     "testimonials": [
       {
-        "stat": "340% More Reel Views",
-        "quote": "Within 6 weeks my Instagram went from crickets to consistently generating enquiries. The content strategy they built for me was a game-changer.",
-        "name": "Sarah Mitchell",
-        "agency": "Bayleys, Ponsonby"
+        "stat": "0 - 3.3K Followers ",
+        "quote": "Went from having no social media accounts to becoming the most followed agent in their region.",
+        "name": "Glenn Green",
+        "agency": "Harcourts Team Green",
+        "image": "/uploads/Screenshot 2026-03-07 at 6.14.13 PM.png"
       },
       {
-        "stat": "12 New Listings in 3 Months",
-        "quote": "I was sceptical about video content but the results speak for themselves. I'm now the go-to agent in my suburb thanks to the visibility we've built.",
-        "name": "James Hartley",
-        "agency": "Ray White, Takapuna"
-      },
-      {
-        "stat": "4x Engagement Rate",
-        "quote": "They completely transformed how I show up online. My competitors are now asking ME what I'm doing differently. Best investment I've made in my brand.",
-        "name": "Rachel Tuhoe",
-        "agency": "Harcourts, Mt Eden"
+        "stat": "Grew their agent count by 50%",
+        "quote": "Team Green started with 4 agents, but with the reach of social media and the compounding effect of content, have grown to 6.",
+        "name": "Glenn Green",
+        "agency": "Harcourts Team Green",
+        "image": "/uploads/IMG_8961.jpg"
       }
     ],
-    "beforeTitle": "❌ BEFORE: Lost in the crowd",
+    "beforeTitle": "❌  BEFORE: Lost in the crowd",
     "beforeItems": [
       {
         "text": "15+ competitors posting in your suburb"
-      },
-      {
-        "text": "Inconsistent, amateur phone videos"
       },
       {
         "text": "Sellers can't distinguish you from others"
@@ -123,9 +116,6 @@
       },
       {
         "text": "Sellers know your name before calling"
-      },
-      {
-        "text": "Pre-qualified sellers contacting YOU first"
       },
       {
         "text": "Premium positioning = full commission"
@@ -447,10 +437,26 @@
     "agentName": "Example Agent",
     "agentSuburb": "Auckland Suburb",
     "stats": [
-      { "label": "Monthly Reel Views", "before": "1,200", "after": "48,000" },
-      { "label": "Follower Growth", "before": "+5/month", "after": "+180/month" },
-      { "label": "Enquiries from Instagram", "before": "0-1/month", "after": "8-12/month" },
-      { "label": "Listings Won via Social", "before": "0", "after": "3 in first quarter" }
+      {
+        "label": "Monthly Reel Views",
+        "before": "1,200",
+        "after": "48,000"
+      },
+      {
+        "label": "Follower Growth",
+        "before": "+5/month",
+        "after": "+180/month"
+      },
+      {
+        "label": "Enquiries from Instagram",
+        "before": "0-1/month",
+        "after": "8-12/month"
+      },
+      {
+        "label": "Listings Won via Social",
+        "before": "0",
+        "after": "3 in first quarter"
+      }
     ],
     "quote": "I went from posting once a month with no strategy to being the most visible agent in my suburb. The difference is night and day."
   },

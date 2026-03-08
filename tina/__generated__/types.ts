@@ -350,6 +350,39 @@ export type PageFaq = {
   items?: Maybe<Array<Maybe<PageFaqItems>>>;
 };
 
+export type PagePortfolioItems = {
+  __typename?: 'PagePortfolioItems';
+  title?: Maybe<Scalars['String']['output']>;
+  type?: Maybe<Scalars['String']['output']>;
+  description?: Maybe<Scalars['String']['output']>;
+  stat?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+};
+
+export type PagePortfolio = {
+  __typename?: 'PagePortfolio';
+  title?: Maybe<Scalars['String']['output']>;
+  subtitle?: Maybe<Scalars['String']['output']>;
+  items?: Maybe<Array<Maybe<PagePortfolioItems>>>;
+};
+
+export type PageShowcaseStats = {
+  __typename?: 'PageShowcaseStats';
+  label?: Maybe<Scalars['String']['output']>;
+  before?: Maybe<Scalars['String']['output']>;
+  after?: Maybe<Scalars['String']['output']>;
+};
+
+export type PageShowcase = {
+  __typename?: 'PageShowcase';
+  title?: Maybe<Scalars['String']['output']>;
+  subtitle?: Maybe<Scalars['String']['output']>;
+  agentName?: Maybe<Scalars['String']['output']>;
+  agentSuburb?: Maybe<Scalars['String']['output']>;
+  stats?: Maybe<Array<Maybe<PageShowcaseStats>>>;
+  quote?: Maybe<Scalars['String']['output']>;
+};
+
 export type PageStickyCta = {
   __typename?: 'PageStickyCta';
   text?: Maybe<Scalars['String']['output']>;
@@ -392,6 +425,8 @@ export type Page = Node & Document & {
   qualification?: Maybe<PageQualification>;
   cta?: Maybe<PageCta>;
   faq?: Maybe<PageFaq>;
+  portfolio?: Maybe<PagePortfolio>;
+  showcase?: Maybe<PageShowcase>;
   stickyCta?: Maybe<PageStickyCta>;
   footer?: Maybe<PageFooter>;
   id: Scalars['ID']['output'];
@@ -574,6 +609,35 @@ export type PageFaqFilter = {
   items?: InputMaybe<PageFaqItemsFilter>;
 };
 
+export type PagePortfolioItemsFilter = {
+  title?: InputMaybe<StringFilter>;
+  type?: InputMaybe<StringFilter>;
+  description?: InputMaybe<StringFilter>;
+  stat?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+};
+
+export type PagePortfolioFilter = {
+  title?: InputMaybe<StringFilter>;
+  subtitle?: InputMaybe<StringFilter>;
+  items?: InputMaybe<PagePortfolioItemsFilter>;
+};
+
+export type PageShowcaseStatsFilter = {
+  label?: InputMaybe<StringFilter>;
+  before?: InputMaybe<StringFilter>;
+  after?: InputMaybe<StringFilter>;
+};
+
+export type PageShowcaseFilter = {
+  title?: InputMaybe<StringFilter>;
+  subtitle?: InputMaybe<StringFilter>;
+  agentName?: InputMaybe<StringFilter>;
+  agentSuburb?: InputMaybe<StringFilter>;
+  stats?: InputMaybe<PageShowcaseStatsFilter>;
+  quote?: InputMaybe<StringFilter>;
+};
+
 export type PageStickyCtaFilter = {
   text?: InputMaybe<StringFilter>;
   buttonText?: InputMaybe<StringFilter>;
@@ -611,6 +675,8 @@ export type PageFilter = {
   qualification?: InputMaybe<PageQualificationFilter>;
   cta?: InputMaybe<PageCtaFilter>;
   faq?: InputMaybe<PageFaqFilter>;
+  portfolio?: InputMaybe<PagePortfolioFilter>;
+  showcase?: InputMaybe<PageShowcaseFilter>;
   stickyCta?: InputMaybe<PageStickyCtaFilter>;
   footer?: InputMaybe<PageFooterFilter>;
 };
@@ -854,6 +920,35 @@ export type PageFaqMutation = {
   items?: InputMaybe<Array<InputMaybe<PageFaqItemsMutation>>>;
 };
 
+export type PagePortfolioItemsMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  type?: InputMaybe<Scalars['String']['input']>;
+  description?: InputMaybe<Scalars['String']['input']>;
+  stat?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PagePortfolioMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  subtitle?: InputMaybe<Scalars['String']['input']>;
+  items?: InputMaybe<Array<InputMaybe<PagePortfolioItemsMutation>>>;
+};
+
+export type PageShowcaseStatsMutation = {
+  label?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PageShowcaseMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  subtitle?: InputMaybe<Scalars['String']['input']>;
+  agentName?: InputMaybe<Scalars['String']['input']>;
+  agentSuburb?: InputMaybe<Scalars['String']['input']>;
+  stats?: InputMaybe<Array<InputMaybe<PageShowcaseStatsMutation>>>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type PageStickyCtaMutation = {
   text?: InputMaybe<Scalars['String']['input']>;
   buttonText?: InputMaybe<Scalars['String']['input']>;
@@ -891,18 +986,20 @@ export type PageMutation = {
   qualification?: InputMaybe<PageQualificationMutation>;
   cta?: InputMaybe<PageCtaMutation>;
   faq?: InputMaybe<PageFaqMutation>;
+  portfolio?: InputMaybe<PagePortfolioMutation>;
+  showcase?: InputMaybe<PageShowcaseMutation>;
   stickyCta?: InputMaybe<PageStickyCtaMutation>;
   footer?: InputMaybe<PageFooterMutation>;
 };
 
-export type PagePartsFragment = { __typename: 'Page', navbar?: { __typename: 'PageNavbar', brand?: string | null, ctaText?: string | null, ctaHref?: string | null, links?: Array<{ __typename: 'PageNavbarLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'PageHero', badge?: string | null, headlinePart1?: string | null, headlineHighlight?: string | null, headlinePart2?: string | null, subheadline?: string | null, description?: string | null, ctaPrimaryText?: string | null, ctaSecondaryText?: string | null, ctaFootnote?: string | null, stats?: Array<{ __typename: 'PageHeroStats', value?: string | null, label?: string | null } | null> | null } | null, suburbs?: { __typename: 'PageSuburbs', title?: string | null, description?: string | null, warningTitle?: string | null, warningText?: string | null, steps?: Array<{ __typename: 'PageSuburbsSteps', title?: string | null, description?: string | null } | null> | null, listings?: Array<{ __typename: 'PageSuburbsListings', name?: string | null, detail?: string | null, status?: string | null } | null> | null } | null, socialProof?: { __typename: 'PageSocialProof', title?: string | null, subtitle?: string | null, beforeTitle?: string | null, afterTitle?: string | null, testimonials?: Array<{ __typename: 'PageSocialProofTestimonials', stat?: string | null, quote?: string | null, name?: string | null, agency?: string | null, image?: string | null } | null> | null, beforeItems?: Array<{ __typename: 'PageSocialProofBeforeItems', text?: string | null } | null> | null, afterItems?: Array<{ __typename: 'PageSocialProofAfterItems', text?: string | null } | null> | null } | null, investment?: { __typename: 'PageInvestment', title?: string | null, subtitle?: string | null, totalValue?: string | null, priceLabel?: string | null, price?: string | null, pricePeriod?: string | null, priceNote?: string | null, roiTitle?: string | null, monthlyInvestment?: string | null, avgCommission?: string | null, breakEven?: string | null, avgListings?: string | null, avgListingsDetail?: string | null, valueStack?: Array<{ __typename: 'PageInvestmentValueStack', role?: string | null, detail?: string | null, price?: string | null } | null> | null, includes?: Array<{ __typename: 'PageInvestmentIncludes', text?: string | null } | null> | null } | null, process?: { __typename: 'PageProcess', title?: string | null, subtitle?: string | null, steps?: Array<{ __typename: 'PageProcessSteps', week?: string | null, title?: string | null, bullets?: Array<{ __typename: 'PageProcessStepsBullets', text?: string | null } | null> | null } | null> | null } | null, qualification?: { __typename: 'PageQualification', title?: string | null, subtitle?: string | null, dontApply?: Array<{ __typename: 'PageQualificationDontApply', title?: string | null, description?: string | null } | null> | null, perfectIf?: Array<{ __typename: 'PageQualificationPerfectIf', title?: string | null, description?: string | null } | null> | null } | null, cta?: { __typename: 'PageCta', headline?: string | null, subheadline?: string | null, description?: string | null, formTitle?: string | null, submitText?: string | null, footnote?: string | null, trustBadges?: Array<{ __typename: 'PageCtaTrustBadges', text?: string | null } | null> | null } | null, faq?: { __typename: 'PageFaq', title?: string | null, items?: Array<{ __typename: 'PageFaqItems', question?: string | null, answer?: string | null } | null> | null } | null, stickyCta?: { __typename: 'PageStickyCta', text?: string | null, buttonText?: string | null, buttonHref?: string | null } | null, footer?: { __typename: 'PageFooter', brand?: string | null, tagline?: string | null, email?: string | null, phone?: string | null, location?: string | null, copyright?: string | null, quickLinks?: Array<{ __typename: 'PageFooterQuickLinks', label?: string | null, href?: string | null } | null> | null, resources?: Array<{ __typename: 'PageFooterResources', label?: string | null, href?: string | null } | null> | null } | null };
+export type PagePartsFragment = { __typename: 'Page', navbar?: { __typename: 'PageNavbar', brand?: string | null, ctaText?: string | null, ctaHref?: string | null, links?: Array<{ __typename: 'PageNavbarLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'PageHero', badge?: string | null, headlinePart1?: string | null, headlineHighlight?: string | null, headlinePart2?: string | null, subheadline?: string | null, description?: string | null, ctaPrimaryText?: string | null, ctaSecondaryText?: string | null, ctaFootnote?: string | null, stats?: Array<{ __typename: 'PageHeroStats', value?: string | null, label?: string | null } | null> | null } | null, suburbs?: { __typename: 'PageSuburbs', title?: string | null, description?: string | null, warningTitle?: string | null, warningText?: string | null, steps?: Array<{ __typename: 'PageSuburbsSteps', title?: string | null, description?: string | null } | null> | null, listings?: Array<{ __typename: 'PageSuburbsListings', name?: string | null, detail?: string | null, status?: string | null } | null> | null } | null, socialProof?: { __typename: 'PageSocialProof', title?: string | null, subtitle?: string | null, beforeTitle?: string | null, afterTitle?: string | null, testimonials?: Array<{ __typename: 'PageSocialProofTestimonials', stat?: string | null, quote?: string | null, name?: string | null, agency?: string | null, image?: string | null } | null> | null, beforeItems?: Array<{ __typename: 'PageSocialProofBeforeItems', text?: string | null } | null> | null, afterItems?: Array<{ __typename: 'PageSocialProofAfterItems', text?: string | null } | null> | null } | null, investment?: { __typename: 'PageInvestment', title?: string | null, subtitle?: string | null, totalValue?: string | null, priceLabel?: string | null, price?: string | null, pricePeriod?: string | null, priceNote?: string | null, roiTitle?: string | null, monthlyInvestment?: string | null, avgCommission?: string | null, breakEven?: string | null, avgListings?: string | null, avgListingsDetail?: string | null, valueStack?: Array<{ __typename: 'PageInvestmentValueStack', role?: string | null, detail?: string | null, price?: string | null } | null> | null, includes?: Array<{ __typename: 'PageInvestmentIncludes', text?: string | null } | null> | null } | null, process?: { __typename: 'PageProcess', title?: string | null, subtitle?: string | null, steps?: Array<{ __typename: 'PageProcessSteps', week?: string | null, title?: string | null, bullets?: Array<{ __typename: 'PageProcessStepsBullets', text?: string | null } | null> | null } | null> | null } | null, qualification?: { __typename: 'PageQualification', title?: string | null, subtitle?: string | null, dontApply?: Array<{ __typename: 'PageQualificationDontApply', title?: string | null, description?: string | null } | null> | null, perfectIf?: Array<{ __typename: 'PageQualificationPerfectIf', title?: string | null, description?: string | null } | null> | null } | null, cta?: { __typename: 'PageCta', headline?: string | null, subheadline?: string | null, description?: string | null, formTitle?: string | null, submitText?: string | null, footnote?: string | null, trustBadges?: Array<{ __typename: 'PageCtaTrustBadges', text?: string | null } | null> | null } | null, faq?: { __typename: 'PageFaq', title?: string | null, items?: Array<{ __typename: 'PageFaqItems', question?: string | null, answer?: string | null } | null> | null } | null, portfolio?: { __typename: 'PagePortfolio', title?: string | null, subtitle?: string | null, items?: Array<{ __typename: 'PagePortfolioItems', title?: string | null, type?: string | null, description?: string | null, stat?: string | null, image?: string | null } | null> | null } | null, showcase?: { __typename: 'PageShowcase', title?: string | null, subtitle?: string | null, agentName?: string | null, agentSuburb?: string | null, quote?: string | null, stats?: Array<{ __typename: 'PageShowcaseStats', label?: string | null, before?: string | null, after?: string | null } | null> | null } | null, stickyCta?: { __typename: 'PageStickyCta', text?: string | null, buttonText?: string | null, buttonHref?: string | null } | null, footer?: { __typename: 'PageFooter', brand?: string | null, tagline?: string | null, email?: string | null, phone?: string | null, location?: string | null, copyright?: string | null, quickLinks?: Array<{ __typename: 'PageFooterQuickLinks', label?: string | null, href?: string | null } | null> | null, resources?: Array<{ __typename: 'PageFooterResources', label?: string | null, href?: string | null } | null> | null } | null };
 
 export type PageQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type PageQuery = { __typename?: 'Query', page: { __typename: 'Page', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, navbar?: { __typename: 'PageNavbar', brand?: string | null, ctaText?: string | null, ctaHref?: string | null, links?: Array<{ __typename: 'PageNavbarLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'PageHero', badge?: string | null, headlinePart1?: string | null, headlineHighlight?: string | null, headlinePart2?: string | null, subheadline?: string | null, description?: string | null, ctaPrimaryText?: string | null, ctaSecondaryText?: string | null, ctaFootnote?: string | null, stats?: Array<{ __typename: 'PageHeroStats', value?: string | null, label?: string | null } | null> | null } | null, suburbs?: { __typename: 'PageSuburbs', title?: string | null, description?: string | null, warningTitle?: string | null, warningText?: string | null, steps?: Array<{ __typename: 'PageSuburbsSteps', title?: string | null, description?: string | null } | null> | null, listings?: Array<{ __typename: 'PageSuburbsListings', name?: string | null, detail?: string | null, status?: string | null } | null> | null } | null, socialProof?: { __typename: 'PageSocialProof', title?: string | null, subtitle?: string | null, beforeTitle?: string | null, afterTitle?: string | null, testimonials?: Array<{ __typename: 'PageSocialProofTestimonials', stat?: string | null, quote?: string | null, name?: string | null, agency?: string | null, image?: string | null } | null> | null, beforeItems?: Array<{ __typename: 'PageSocialProofBeforeItems', text?: string | null } | null> | null, afterItems?: Array<{ __typename: 'PageSocialProofAfterItems', text?: string | null } | null> | null } | null, investment?: { __typename: 'PageInvestment', title?: string | null, subtitle?: string | null, totalValue?: string | null, priceLabel?: string | null, price?: string | null, pricePeriod?: string | null, priceNote?: string | null, roiTitle?: string | null, monthlyInvestment?: string | null, avgCommission?: string | null, breakEven?: string | null, avgListings?: string | null, avgListingsDetail?: string | null, valueStack?: Array<{ __typename: 'PageInvestmentValueStack', role?: string | null, detail?: string | null, price?: string | null } | null> | null, includes?: Array<{ __typename: 'PageInvestmentIncludes', text?: string | null } | null> | null } | null, process?: { __typename: 'PageProcess', title?: string | null, subtitle?: string | null, steps?: Array<{ __typename: 'PageProcessSteps', week?: string | null, title?: string | null, bullets?: Array<{ __typename: 'PageProcessStepsBullets', text?: string | null } | null> | null } | null> | null } | null, qualification?: { __typename: 'PageQualification', title?: string | null, subtitle?: string | null, dontApply?: Array<{ __typename: 'PageQualificationDontApply', title?: string | null, description?: string | null } | null> | null, perfectIf?: Array<{ __typename: 'PageQualificationPerfectIf', title?: string | null, description?: string | null } | null> | null } | null, cta?: { __typename: 'PageCta', headline?: string | null, subheadline?: string | null, description?: string | null, formTitle?: string | null, submitText?: string | null, footnote?: string | null, trustBadges?: Array<{ __typename: 'PageCtaTrustBadges', text?: string | null } | null> | null } | null, faq?: { __typename: 'PageFaq', title?: string | null, items?: Array<{ __typename: 'PageFaqItems', question?: string | null, answer?: string | null } | null> | null } | null, stickyCta?: { __typename: 'PageStickyCta', text?: string | null, buttonText?: string | null, buttonHref?: string | null } | null, footer?: { __typename: 'PageFooter', brand?: string | null, tagline?: string | null, email?: string | null, phone?: string | null, location?: string | null, copyright?: string | null, quickLinks?: Array<{ __typename: 'PageFooterQuickLinks', label?: string | null, href?: string | null } | null> | null, resources?: Array<{ __typename: 'PageFooterResources', label?: string | null, href?: string | null } | null> | null } | null } };
+export type PageQuery = { __typename?: 'Query', page: { __typename: 'Page', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, navbar?: { __typename: 'PageNavbar', brand?: string | null, ctaText?: string | null, ctaHref?: string | null, links?: Array<{ __typename: 'PageNavbarLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'PageHero', badge?: string | null, headlinePart1?: string | null, headlineHighlight?: string | null, headlinePart2?: string | null, subheadline?: string | null, description?: string | null, ctaPrimaryText?: string | null, ctaSecondaryText?: string | null, ctaFootnote?: string | null, stats?: Array<{ __typename: 'PageHeroStats', value?: string | null, label?: string | null } | null> | null } | null, suburbs?: { __typename: 'PageSuburbs', title?: string | null, description?: string | null, warningTitle?: string | null, warningText?: string | null, steps?: Array<{ __typename: 'PageSuburbsSteps', title?: string | null, description?: string | null } | null> | null, listings?: Array<{ __typename: 'PageSuburbsListings', name?: string | null, detail?: string | null, status?: string | null } | null> | null } | null, socialProof?: { __typename: 'PageSocialProof', title?: string | null, subtitle?: string | null, beforeTitle?: string | null, afterTitle?: string | null, testimonials?: Array<{ __typename: 'PageSocialProofTestimonials', stat?: string | null, quote?: string | null, name?: string | null, agency?: string | null, image?: string | null } | null> | null, beforeItems?: Array<{ __typename: 'PageSocialProofBeforeItems', text?: string | null } | null> | null, afterItems?: Array<{ __typename: 'PageSocialProofAfterItems', text?: string | null } | null> | null } | null, investment?: { __typename: 'PageInvestment', title?: string | null, subtitle?: string | null, totalValue?: string | null, priceLabel?: string | null, price?: string | null, pricePeriod?: string | null, priceNote?: string | null, roiTitle?: string | null, monthlyInvestment?: string | null, avgCommission?: string | null, breakEven?: string | null, avgListings?: string | null, avgListingsDetail?: string | null, valueStack?: Array<{ __typename: 'PageInvestmentValueStack', role?: string | null, detail?: string | null, price?: string | null } | null> | null, includes?: Array<{ __typename: 'PageInvestmentIncludes', text?: string | null } | null> | null } | null, process?: { __typename: 'PageProcess', title?: string | null, subtitle?: string | null, steps?: Array<{ __typename: 'PageProcessSteps', week?: string | null, title?: string | null, bullets?: Array<{ __typename: 'PageProcessStepsBullets', text?: string | null } | null> | null } | null> | null } | null, qualification?: { __typename: 'PageQualification', title?: string | null, subtitle?: string | null, dontApply?: Array<{ __typename: 'PageQualificationDontApply', title?: string | null, description?: string | null } | null> | null, perfectIf?: Array<{ __typename: 'PageQualificationPerfectIf', title?: string | null, description?: string | null } | null> | null } | null, cta?: { __typename: 'PageCta', headline?: string | null, subheadline?: string | null, description?: string | null, formTitle?: string | null, submitText?: string | null, footnote?: string | null, trustBadges?: Array<{ __typename: 'PageCtaTrustBadges', text?: string | null } | null> | null } | null, faq?: { __typename: 'PageFaq', title?: string | null, items?: Array<{ __typename: 'PageFaqItems', question?: string | null, answer?: string | null } | null> | null } | null, portfolio?: { __typename: 'PagePortfolio', title?: string | null, subtitle?: string | null, items?: Array<{ __typename: 'PagePortfolioItems', title?: string | null, type?: string | null, description?: string | null, stat?: string | null, image?: string | null } | null> | null } | null, showcase?: { __typename: 'PageShowcase', title?: string | null, subtitle?: string | null, agentName?: string | null, agentSuburb?: string | null, quote?: string | null, stats?: Array<{ __typename: 'PageShowcaseStats', label?: string | null, before?: string | null, after?: string | null } | null> | null } | null, stickyCta?: { __typename: 'PageStickyCta', text?: string | null, buttonText?: string | null, buttonHref?: string | null } | null, footer?: { __typename: 'PageFooter', brand?: string | null, tagline?: string | null, email?: string | null, phone?: string | null, location?: string | null, copyright?: string | null, quickLinks?: Array<{ __typename: 'PageFooterQuickLinks', label?: string | null, href?: string | null } | null> | null, resources?: Array<{ __typename: 'PageFooterResources', label?: string | null, href?: string | null } | null> | null } | null } };
 
 export type PageConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -914,7 +1011,7 @@ export type PageConnectionQueryVariables = Exact<{
 }>;
 
 
-export type PageConnectionQuery = { __typename?: 'Query', pageConnection: { __typename?: 'PageConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PageConnectionEdges', cursor: string, node?: { __typename: 'Page', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, navbar?: { __typename: 'PageNavbar', brand?: string | null, ctaText?: string | null, ctaHref?: string | null, links?: Array<{ __typename: 'PageNavbarLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'PageHero', badge?: string | null, headlinePart1?: string | null, headlineHighlight?: string | null, headlinePart2?: string | null, subheadline?: string | null, description?: string | null, ctaPrimaryText?: string | null, ctaSecondaryText?: string | null, ctaFootnote?: string | null, stats?: Array<{ __typename: 'PageHeroStats', value?: string | null, label?: string | null } | null> | null } | null, suburbs?: { __typename: 'PageSuburbs', title?: string | null, description?: string | null, warningTitle?: string | null, warningText?: string | null, steps?: Array<{ __typename: 'PageSuburbsSteps', title?: string | null, description?: string | null } | null> | null, listings?: Array<{ __typename: 'PageSuburbsListings', name?: string | null, detail?: string | null, status?: string | null } | null> | null } | null, socialProof?: { __typename: 'PageSocialProof', title?: string | null, subtitle?: string | null, beforeTitle?: string | null, afterTitle?: string | null, testimonials?: Array<{ __typename: 'PageSocialProofTestimonials', stat?: string | null, quote?: string | null, name?: string | null, agency?: string | null, image?: string | null } | null> | null, beforeItems?: Array<{ __typename: 'PageSocialProofBeforeItems', text?: string | null } | null> | null, afterItems?: Array<{ __typename: 'PageSocialProofAfterItems', text?: string | null } | null> | null } | null, investment?: { __typename: 'PageInvestment', title?: string | null, subtitle?: string | null, totalValue?: string | null, priceLabel?: string | null, price?: string | null, pricePeriod?: string | null, priceNote?: string | null, roiTitle?: string | null, monthlyInvestment?: string | null, avgCommission?: string | null, breakEven?: string | null, avgListings?: string | null, avgListingsDetail?: string | null, valueStack?: Array<{ __typename: 'PageInvestmentValueStack', role?: string | null, detail?: string | null, price?: string | null } | null> | null, includes?: Array<{ __typename: 'PageInvestmentIncludes', text?: string | null } | null> | null } | null, process?: { __typename: 'PageProcess', title?: string | null, subtitle?: string | null, steps?: Array<{ __typename: 'PageProcessSteps', week?: string | null, title?: string | null, bullets?: Array<{ __typename: 'PageProcessStepsBullets', text?: string | null } | null> | null } | null> | null } | null, qualification?: { __typename: 'PageQualification', title?: string | null, subtitle?: string | null, dontApply?: Array<{ __typename: 'PageQualificationDontApply', title?: string | null, description?: string | null } | null> | null, perfectIf?: Array<{ __typename: 'PageQualificationPerfectIf', title?: string | null, description?: string | null } | null> | null } | null, cta?: { __typename: 'PageCta', headline?: string | null, subheadline?: string | null, description?: string | null, formTitle?: string | null, submitText?: string | null, footnote?: string | null, trustBadges?: Array<{ __typename: 'PageCtaTrustBadges', text?: string | null } | null> | null } | null, faq?: { __typename: 'PageFaq', title?: string | null, items?: Array<{ __typename: 'PageFaqItems', question?: string | null, answer?: string | null } | null> | null } | null, stickyCta?: { __typename: 'PageStickyCta', text?: string | null, buttonText?: string | null, buttonHref?: string | null } | null, footer?: { __typename: 'PageFooter', brand?: string | null, tagline?: string | null, email?: string | null, phone?: string | null, location?: string | null, copyright?: string | null, quickLinks?: Array<{ __typename: 'PageFooterQuickLinks', label?: string | null, href?: string | null } | null> | null, resources?: Array<{ __typename: 'PageFooterResources', label?: string | null, href?: string | null } | null> | null } | null } | null } | null> | null } };
+export type PageConnectionQuery = { __typename?: 'Query', pageConnection: { __typename?: 'PageConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PageConnectionEdges', cursor: string, node?: { __typename: 'Page', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, navbar?: { __typename: 'PageNavbar', brand?: string | null, ctaText?: string | null, ctaHref?: string | null, links?: Array<{ __typename: 'PageNavbarLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'PageHero', badge?: string | null, headlinePart1?: string | null, headlineHighlight?: string | null, headlinePart2?: string | null, subheadline?: string | null, description?: string | null, ctaPrimaryText?: string | null, ctaSecondaryText?: string | null, ctaFootnote?: string | null, stats?: Array<{ __typename: 'PageHeroStats', value?: string | null, label?: string | null } | null> | null } | null, suburbs?: { __typename: 'PageSuburbs', title?: string | null, description?: string | null, warningTitle?: string | null, warningText?: string | null, steps?: Array<{ __typename: 'PageSuburbsSteps', title?: string | null, description?: string | null } | null> | null, listings?: Array<{ __typename: 'PageSuburbsListings', name?: string | null, detail?: string | null, status?: string | null } | null> | null } | null, socialProof?: { __typename: 'PageSocialProof', title?: string | null, subtitle?: string | null, beforeTitle?: string | null, afterTitle?: string | null, testimonials?: Array<{ __typename: 'PageSocialProofTestimonials', stat?: string | null, quote?: string | null, name?: string | null, agency?: string | null, image?: string | null } | null> | null, beforeItems?: Array<{ __typename: 'PageSocialProofBeforeItems', text?: string | null } | null> | null, afterItems?: Array<{ __typename: 'PageSocialProofAfterItems', text?: string | null } | null> | null } | null, investment?: { __typename: 'PageInvestment', title?: string | null, subtitle?: string | null, totalValue?: string | null, priceLabel?: string | null, price?: string | null, pricePeriod?: string | null, priceNote?: string | null, roiTitle?: string | null, monthlyInvestment?: string | null, avgCommission?: string | null, breakEven?: string | null, avgListings?: string | null, avgListingsDetail?: string | null, valueStack?: Array<{ __typename: 'PageInvestmentValueStack', role?: string | null, detail?: string | null, price?: string | null } | null> | null, includes?: Array<{ __typename: 'PageInvestmentIncludes', text?: string | null } | null> | null } | null, process?: { __typename: 'PageProcess', title?: string | null, subtitle?: string | null, steps?: Array<{ __typename: 'PageProcessSteps', week?: string | null, title?: string | null, bullets?: Array<{ __typename: 'PageProcessStepsBullets', text?: string | null } | null> | null } | null> | null } | null, qualification?: { __typename: 'PageQualification', title?: string | null, subtitle?: string | null, dontApply?: Array<{ __typename: 'PageQualificationDontApply', title?: string | null, description?: string | null } | null> | null, perfectIf?: Array<{ __typename: 'PageQualificationPerfectIf', title?: string | null, description?: string | null } | null> | null } | null, cta?: { __typename: 'PageCta', headline?: string | null, subheadline?: string | null, description?: string | null, formTitle?: string | null, submitText?: string | null, footnote?: string | null, trustBadges?: Array<{ __typename: 'PageCtaTrustBadges', text?: string | null } | null> | null } | null, faq?: { __typename: 'PageFaq', title?: string | null, items?: Array<{ __typename: 'PageFaqItems', question?: string | null, answer?: string | null } | null> | null } | null, portfolio?: { __typename: 'PagePortfolio', title?: string | null, subtitle?: string | null, items?: Array<{ __typename: 'PagePortfolioItems', title?: string | null, type?: string | null, description?: string | null, stat?: string | null, image?: string | null } | null> | null } | null, showcase?: { __typename: 'PageShowcase', title?: string | null, subtitle?: string | null, agentName?: string | null, agentSuburb?: string | null, quote?: string | null, stats?: Array<{ __typename: 'PageShowcaseStats', label?: string | null, before?: string | null, after?: string | null } | null> | null } | null, stickyCta?: { __typename: 'PageStickyCta', text?: string | null, buttonText?: string | null, buttonHref?: string | null } | null, footer?: { __typename: 'PageFooter', brand?: string | null, tagline?: string | null, email?: string | null, phone?: string | null, location?: string | null, copyright?: string | null, quickLinks?: Array<{ __typename: 'PageFooterQuickLinks', label?: string | null, href?: string | null } | null> | null, resources?: Array<{ __typename: 'PageFooterResources', label?: string | null, href?: string | null } | null> | null } | null } | null } | null> | null } };
 
 export const PagePartsFragmentDoc = gql`
     fragment PageParts on Page {
@@ -1064,6 +1161,33 @@ export const PagePartsFragmentDoc = gql`
       question
       answer
     }
+  }
+  portfolio {
+    __typename
+    title
+    subtitle
+    items {
+      __typename
+      title
+      type
+      description
+      stat
+      image
+    }
+  }
+  showcase {
+    __typename
+    title
+    subtitle
+    agentName
+    agentSuburb
+    stats {
+      __typename
+      label
+      before
+      after
+    }
+    quote
   }
   stickyCta {
     __typename

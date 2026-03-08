@@ -289,6 +289,53 @@ var config_default = defineConfig({
               }
             ]
           },
+          // ── CONTENT PORTFOLIO ──
+          {
+            type: "object",
+            name: "portfolio",
+            label: "Content Portfolio Section",
+            fields: [
+              { type: "string", name: "title", label: "Section Title" },
+              { type: "string", name: "subtitle", label: "Subtitle" },
+              {
+                type: "object",
+                name: "items",
+                label: "Portfolio Items",
+                list: true,
+                fields: [
+                  { type: "string", name: "title", label: "Content Title" },
+                  { type: "string", name: "type", label: "Content Type (e.g. Property Tour, Brand Reel)" },
+                  { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
+                  { type: "string", name: "stat", label: "Key Stat (e.g. 47K Views)" },
+                  { type: "image", name: "image", label: "Thumbnail Image" }
+                ]
+              }
+            ]
+          },
+          // ── BEFORE/AFTER SHOWCASE ──
+          {
+            type: "object",
+            name: "showcase",
+            label: "Before/After Showcase Section",
+            fields: [
+              { type: "string", name: "title", label: "Section Title" },
+              { type: "string", name: "subtitle", label: "Subtitle" },
+              { type: "string", name: "agentName", label: "Agent Name" },
+              { type: "string", name: "agentSuburb", label: "Agent Suburb" },
+              {
+                type: "object",
+                name: "stats",
+                label: "Transformation Stats",
+                list: true,
+                fields: [
+                  { type: "string", name: "label", label: "Metric Label" },
+                  { type: "string", name: "before", label: "Before Value" },
+                  { type: "string", name: "after", label: "After Value" }
+                ]
+              },
+              { type: "string", name: "quote", label: "Agent Quote", ui: { component: "textarea" } }
+            ]
+          },
           // ── STICKY CTA ──
           {
             type: "object",

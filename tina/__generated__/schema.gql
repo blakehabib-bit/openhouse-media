@@ -248,6 +248,35 @@ type PageFaq {
   items: [PageFaqItems]
 }
 
+type PagePortfolioItems {
+  title: String
+  type: String
+  description: String
+  stat: String
+  image: String
+}
+
+type PagePortfolio {
+  title: String
+  subtitle: String
+  items: [PagePortfolioItems]
+}
+
+type PageShowcaseStats {
+  label: String
+  before: String
+  after: String
+}
+
+type PageShowcase {
+  title: String
+  subtitle: String
+  agentName: String
+  agentSuburb: String
+  stats: [PageShowcaseStats]
+  quote: String
+}
+
 type PageStickyCta {
   text: String
   buttonText: String
@@ -285,6 +314,8 @@ type Page implements Node & Document {
   qualification: PageQualification
   cta: PageCta
   faq: PageFaq
+  portfolio: PagePortfolio
+  showcase: PageShowcase
   stickyCta: PageStickyCta
   footer: PageFooter
   id: ID!
@@ -467,6 +498,35 @@ input PageFaqFilter {
   items: PageFaqItemsFilter
 }
 
+input PagePortfolioItemsFilter {
+  title: StringFilter
+  type: StringFilter
+  description: StringFilter
+  stat: StringFilter
+  image: ImageFilter
+}
+
+input PagePortfolioFilter {
+  title: StringFilter
+  subtitle: StringFilter
+  items: PagePortfolioItemsFilter
+}
+
+input PageShowcaseStatsFilter {
+  label: StringFilter
+  before: StringFilter
+  after: StringFilter
+}
+
+input PageShowcaseFilter {
+  title: StringFilter
+  subtitle: StringFilter
+  agentName: StringFilter
+  agentSuburb: StringFilter
+  stats: PageShowcaseStatsFilter
+  quote: StringFilter
+}
+
 input PageStickyCtaFilter {
   text: StringFilter
   buttonText: StringFilter
@@ -504,6 +564,8 @@ input PageFilter {
   qualification: PageQualificationFilter
   cta: PageCtaFilter
   faq: PageFaqFilter
+  portfolio: PagePortfolioFilter
+  showcase: PageShowcaseFilter
   stickyCta: PageStickyCtaFilter
   footer: PageFooterFilter
 }
@@ -699,6 +761,35 @@ input PageFaqMutation {
   items: [PageFaqItemsMutation]
 }
 
+input PagePortfolioItemsMutation {
+  title: String
+  type: String
+  description: String
+  stat: String
+  image: String
+}
+
+input PagePortfolioMutation {
+  title: String
+  subtitle: String
+  items: [PagePortfolioItemsMutation]
+}
+
+input PageShowcaseStatsMutation {
+  label: String
+  before: String
+  after: String
+}
+
+input PageShowcaseMutation {
+  title: String
+  subtitle: String
+  agentName: String
+  agentSuburb: String
+  stats: [PageShowcaseStatsMutation]
+  quote: String
+}
+
 input PageStickyCtaMutation {
   text: String
   buttonText: String
@@ -736,6 +827,8 @@ input PageMutation {
   qualification: PageQualificationMutation
   cta: PageCtaMutation
   faq: PageFaqMutation
+  portfolio: PagePortfolioMutation
+  showcase: PageShowcaseMutation
   stickyCta: PageStickyCtaMutation
   footer: PageFooterMutation
 }
