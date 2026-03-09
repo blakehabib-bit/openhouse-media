@@ -69,15 +69,18 @@ export default function SuburbExclusivity({
                     className="flex-1 px-4 py-4 rounded-lg border-2 border-gray-200 focus:border-purple-500 focus:outline-none text-gray-900 text-lg"
                     onKeyDown={(e) => {
                       if (e.key === "Enter" && suburb.trim()) {
-                        window.location.href = "#cta";
+                        window.open(`/check-availability?suburb=${encodeURIComponent(suburb.trim())}`, "_blank");
                       }
                     }}
                   />
-                  <a
-                    href={suburb.trim() ? "#cta" : undefined}
-                    onClick={(e) => {
-                      if (!suburb.trim()) e.preventDefault();
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (suburb.trim()) {
+                        window.open(`/check-availability?suburb=${encodeURIComponent(suburb.trim())}`, "_blank");
+                      }
                     }}
+                    disabled={!suburb.trim()}
                     className={`px-8 py-4 rounded-lg font-semibold text-center text-lg transition whitespace-nowrap ${
                       suburb.trim()
                         ? "bg-purple-600 text-white hover:bg-purple-700 cursor-pointer"
@@ -85,7 +88,7 @@ export default function SuburbExclusivity({
                     }`}
                   >
                     {checkerButtonText || "Check Availability"}
-                  </a>
+                  </button>
                 </div>
                 <p className="text-sm text-gray-500">
                   {checkerFootnote || "We only work with one agent per suburb. Check if yours is still open."}
