@@ -2,7 +2,7 @@
   "navbar": {
     "brand": "OpenHouse Media",
     "links": [],
-    "ctaText": "Book Free Area Audit",
+    "ctaText": "Check If Your Area is Available",
     "ctaHref": "#cta"
   },
   "hero": {
@@ -26,8 +26,8 @@
         "label": "Of filming per week is all it takes to become the celebrity agent in your area"
       }
     ],
-    "ctaPrimaryText": "Book Your Free Area Audit",
-    "ctaSecondaryText": "Check Area Availability",
+    "ctaPrimaryText": "",
+    "ctaSecondaryText": "Check If Your Area is Available",
     "ctaFootnote": "✓ Free 15-min call · No obligation "
   },
   "aboutBlake": {
@@ -44,7 +44,7 @@
         "label": "In real estate media"
       },
       {
-        "value": "18-22",
+        "value": "Age 18 - 22",
         "label": "Licensed real estate agent"
       }
     ]
@@ -66,8 +66,8 @@
         "description": "When they search \"[Your Area] real estate agent\" it's your videos that appear"
       }
     ],
-    "warningTitle": "Once your area is claimed, it stays claimed",
-    "warningText": "We maintain exclusivity for 12 months minimum. If another agent in your area books first, you'll be added to a waitlist."
+    "warningTitle": "",
+    "warningText": ""
   },
   "socialProof": {
     "title": "Our Results Speak For Themselves",
@@ -305,7 +305,7 @@
             "text": "Every Monday: 60-sec voice note tells you exactly what to film this week (no more \"what should I post?\")"
           },
           {
-            "text": "fter 30 days: Your first Celebrity Report arrives - proof you're outpacing your competitors, plus data from 1,200+ videos tested across our network"
+            "text": "After 30 days: Your first Celebrity Report arrives - proof you're outpacing your competitors, plus data from 1,200+ videos tested across our network"
           }
         ]
       }
@@ -376,7 +376,7 @@
       },
       {
         "question": "What kind of videos do you create?",
-        "answer": "We create 10 short-form videos per month (30-60 seconds) designed to make you the celebrity agent in your area:\n✓ Market updates with local insights (\"3 streets in [Suburb] with best value right now\")\n✓ Property spotlights (\"Just sold in [Street Name] - here's what that means for your value\")\n✓ Local area features (\"[School Zone] just changed - what parents need to know\")\n✓ \"Guess the Price\" videos (high engagement, gets people commenting)\n✓ Buyer/seller education (\"3 things first-home buyers miss about [Suburb]\")"
+        "answer": "We create 10 short-form videos per month (30-60 seconds) designed to make you the celebrity agent in your area:\n✓ Market updates with local insights (\"3 streets in [Area] with best value right now\")\n✓ Property spotlights (\"Just sold in [Street Name] - here's what that means for your value\")\n✓ Local area features (\"[School Zone] just changed - what parents need to know\")\n✓ \"Guess the Price\" videos (high engagement, gets people commenting)\n✓ Buyer/seller education (\"3 things first-home buyers miss about [Area]\")"
       },
       {
         "question": "I already post videos myself / I already have a videographer. Why do I need this?",
@@ -540,7 +540,7 @@
       }
     ],
     "footnote": "No pitch. No pressure. If your area isn't a fit for the exclusivity model, we'll tell you straight up.",
-    "ctaText": "Book Your Free Area Audit",
+    "ctaText": "Check If Your Area is Available",
     "ctaHref": "#cta",
     "trustBadges": [
       "✓ Free 15-min call",
@@ -550,7 +550,7 @@
   },
   "stickyCta": {
     "text": "Exclusive to One Agent Per Area",
-    "buttonText": "Book Free Area Audit →",
+    "buttonText": "Check If Your Area is Available →",
     "buttonHref": "#cta"
   },
   "footer": {
