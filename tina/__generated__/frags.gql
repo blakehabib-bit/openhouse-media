@@ -207,6 +207,20 @@ fragment PageParts on Page {
     auditFootnote
     footnote
   }
+  freeAudit {
+    __typename
+    title
+    intro
+    items {
+      __typename
+      title
+      description
+    }
+    footnote
+    ctaText
+    ctaHref
+    trustBadges
+  }
   stickyCta {
     __typename
     text

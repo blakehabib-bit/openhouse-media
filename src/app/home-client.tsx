@@ -9,6 +9,7 @@ import ContentPortfolio from "@/components/ContentPortfolio";
 // HIDDEN — uncomment to restore: import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 // HIDDEN — uncomment to restore: import InvestmentSection from "@/components/InvestmentSection";
 import ProcessTimeline from "@/components/ProcessTimeline";
+import FreeAuditSection from "@/components/FreeAuditSection";
 import QualificationSection from "@/components/QualificationSection";
 import FinalCTA from "@/components/FinalCTA";
 import FAQ from "@/components/FAQ";
@@ -118,6 +119,16 @@ export default function HomePageClient({ data }: HomePageClientProps) {
           title={page.process.title}
           subtitle={page.process.subtitle}
           steps={page.process.steps}
+        />
+
+        <FreeAuditSection
+          title={page.freeAudit.title}
+          intro={page.freeAudit.intro}
+          items={page.freeAudit.items}
+          footnote={page.freeAudit.footnote}
+          ctaText={page.freeAudit.ctaText}
+          ctaHref={page.freeAudit.ctaHref}
+          trustBadges={page.freeAudit.trustBadges}
         />
 
         <QualificationSection

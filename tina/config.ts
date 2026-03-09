@@ -411,6 +411,36 @@ export default defineConfig({
             ],
           },
 
+          // ── FREE AUDIT SECTION ──
+          {
+            type: "object",
+            name: "freeAudit",
+            label: "Free Suburb Audit Section",
+            fields: [
+              { type: "string", name: "title", label: "Section Title" },
+              { type: "string", name: "intro", label: "Intro Text", ui: { component: "textarea" } },
+              {
+                type: "object",
+                name: "items",
+                label: "Audit Value Props",
+                list: true,
+                fields: [
+                  { type: "string", name: "title", label: "Title" },
+                  { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
+                ],
+              },
+              { type: "string", name: "footnote", label: "Footnote" },
+              { type: "string", name: "ctaText", label: "CTA Button Text" },
+              { type: "string", name: "ctaHref", label: "CTA Button Link" },
+              {
+                type: "string",
+                name: "trustBadges",
+                label: "Trust Badges",
+                list: true,
+              },
+            ],
+          },
+
           // ── STICKY CTA ──
           {
             type: "object",

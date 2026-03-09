@@ -313,6 +313,21 @@ type PageCheckAvailability {
   footnote: String
 }
 
+type PageFreeAuditItems {
+  title: String
+  description: String
+}
+
+type PageFreeAudit {
+  title: String
+  intro: String
+  items: [PageFreeAuditItems]
+  footnote: String
+  ctaText: String
+  ctaHref: String
+  trustBadges: [String]
+}
+
 type PageStickyCta {
   text: String
   buttonText: String
@@ -354,6 +369,7 @@ type Page implements Node & Document {
   portfolio: PagePortfolio
   showcase: PageShowcase
   checkAvailability: PageCheckAvailability
+  freeAudit: PageFreeAudit
   stickyCta: PageStickyCta
   footer: PageFooter
   id: ID!
@@ -601,6 +617,21 @@ input PageCheckAvailabilityFilter {
   footnote: StringFilter
 }
 
+input PageFreeAuditItemsFilter {
+  title: StringFilter
+  description: StringFilter
+}
+
+input PageFreeAuditFilter {
+  title: StringFilter
+  intro: StringFilter
+  items: PageFreeAuditItemsFilter
+  footnote: StringFilter
+  ctaText: StringFilter
+  ctaHref: StringFilter
+  trustBadges: StringFilter
+}
+
 input PageStickyCtaFilter {
   text: StringFilter
   buttonText: StringFilter
@@ -642,6 +673,7 @@ input PageFilter {
   portfolio: PagePortfolioFilter
   showcase: PageShowcaseFilter
   checkAvailability: PageCheckAvailabilityFilter
+  freeAudit: PageFreeAuditFilter
   stickyCta: PageStickyCtaFilter
   footer: PageFooterFilter
 }
@@ -902,6 +934,21 @@ input PageCheckAvailabilityMutation {
   footnote: String
 }
 
+input PageFreeAuditItemsMutation {
+  title: String
+  description: String
+}
+
+input PageFreeAuditMutation {
+  title: String
+  intro: String
+  items: [PageFreeAuditItemsMutation]
+  footnote: String
+  ctaText: String
+  ctaHref: String
+  trustBadges: [String]
+}
+
 input PageStickyCtaMutation {
   text: String
   buttonText: String
@@ -943,6 +990,7 @@ input PageMutation {
   portfolio: PagePortfolioMutation
   showcase: PageShowcaseMutation
   checkAvailability: PageCheckAvailabilityMutation
+  freeAudit: PageFreeAuditMutation
   stickyCta: PageStickyCtaMutation
   footer: PageFooterMutation
 }

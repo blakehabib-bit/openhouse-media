@@ -390,42 +390,48 @@
         "type": "Market Knowledge",
         "description": "A walkthrough reel highlighting the area that positioned the agent as the local expert.",
         "stat": "11K Views",
-        "videoFile": "/uploads/reels/DVZG64CD836.mp4"
+        "videoFile": "/uploads/reels/DVZG64CD836.mp4",
+        "image": "/uploads/reels/DVZG64CD836-thumb.jpg"
       },
       {
         "title": "Jaron Mumby Profile",
         "type": "Profile Intro",
         "description": "Cinematic profile video introducing Team Green's newest team member.",
         "stat": "16K Views",
-        "videoFile": "/uploads/reels/DU6LNr_jxA0.mp4"
+        "videoFile": "/uploads/reels/jaron-mumby-profile.mp4",
+        "image": "/uploads/reels/jaron-mumby-profile-thumb.jpg"
       },
       {
         "title": "New Listing Weekly Tour",
         "type": "Brand Reel",
         "description": "Reel showing all the new listings coming to the market with the team - shows BTS.",
         "stat": "10K Reach",
-        "videoFile": "/uploads/reels/DQ28FJDjqqB.mp4"
+        "videoFile": "/uploads/reels/DQ28FJDjqqB.mp4",
+        "image": "/uploads/reels/DQ28FJDjqqB-thumb.jpg"
       },
       {
         "title": "Walkthrough Tour",
         "type": "Listing Content",
         "description": "Cinematic property tour.",
         "stat": "11K Views",
-        "videoFile": "/uploads/reels/DPfQWYfgRNE.mp4"
+        "videoFile": "/uploads/reels/DPfQWYfgRNE.mp4",
+        "image": "/uploads/reels/DPfQWYfgRNE-thumb.jpg"
       },
       {
         "title": "SOLD - Settlement",
         "type": "Story",
         "description": "Reel that shows the sale and purchase of their vendors in one perfect story.",
         "stat": "12K Views",
-        "videoFile": "/uploads/reels/DPVydCEDNsW.mp4"
+        "videoFile": "/uploads/reels/DPVydCEDNsW.mp4",
+        "image": "/uploads/reels/DPVydCEDNsW-thumb.jpg"
       },
       {
         "title": "Sales Proof Story",
         "type": "Success Story",
         "description": "Showcase of the latest homes sold and strong CTA to introduce sellers to market.",
         "stat": "10K Views",
-        "videoFile": "/uploads/reels/DO4mzMNgiB8.mp4"
+        "videoFile": "/uploads/reels/DO4mzMNgiB8.mp4",
+        "image": "/uploads/reels/DO4mzMNgiB8-thumb.jpg"
       }
     ]
   },
@@ -478,7 +484,7 @@
     ],
     "bookingTitle": "Lock In Your Area Now",
     "bookingSubtitle": "Book your free 15-minute area audit before another agent claims it.",
-    "auditTitle": "Your Free Suburb Audit",
+    "auditTitle": "Your Free Area Audit",
     "auditIntro": "Before you commit to anything, we show you exactly what's happening in your market, for free.\n\nIn a 15-minute call with Blake, you'll walk away with:",
     "auditItems": [
       {
@@ -496,6 +502,28 @@
     ],
     "auditFootnote": "No pitch. No pressure. If your suburb isn't a fit for the exclusivity model, we'll tell you straight up.",
     "footnote": "✓ Free 15-min call · ✓ No obligation · "
+  },
+  "freeAudit": {
+    "title": "Your Free Suburb Audit",
+    "intro": "Before you commit to anything, we show you exactly what's happening in your market, for free.\n\nIn a 15-minute call with Blake, you'll walk away with:",
+    "items": [
+      {
+        "title": "Your Competitor Snapshot",
+        "description": "We audit the top 5 agents in your suburb and show you exactly what content they're posting (or not posting). Most agents are shocked by how weak their competition actually is online."
+      },
+      {
+        "title": "Your Visibility Score",
+        "description": "We assess your current online presence across Instagram, Facebook, TikTok, and LinkedIn and score it against the local benchmark. You'll see exactly where you rank and where the gaps are."
+      },
+      {
+        "title": "Your Opportunity Map",
+        "description": "Based on your suburb's demographics, property volume, and competitor activity, we'll show you the specific content angles that would give you the fastest path to local dominance."
+      }
+    ],
+    "footnote": "No pitch. No pressure. If your suburb isn't a fit for the exclusivity model, we'll tell you straight up.",
+    "ctaText": "Book Your Free Suburb Audit",
+    "ctaHref": "#cta",
+    "trustBadges": ["✓ Free 15-min call", "✓ No obligation", "✓ Instant area availability check"]
   },
   "stickyCta": {
     "text": "Exclusive to One Agent Per Area",

@@ -55,20 +55,11 @@ export default function HeroSection({
           ))}
         </div>
 
-        {/* CTA Buttons */}
+        {/* CTA Button */}
         <div className="flex flex-col sm:flex-row gap-4">
           <a
-            href="#cta"
-            className="bg-white text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-100 transition inline-flex items-center justify-center"
-          >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            {ctaPrimaryText}
-          </a>
-          <a
             href="#suburbs"
-            className="bg-purple-800/50 border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-800 transition inline-flex items-center justify-center"
+            className="bg-white text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-100 transition inline-flex items-center justify-center"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
