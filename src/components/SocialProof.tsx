@@ -11,10 +11,17 @@ interface ListItem {
   text: string;
 }
 
+interface FeaturedLogo {
+  name: string;
+  logo: string;
+}
+
 interface SocialProofProps {
   title: string;
   subtitle: string;
   testimonials: Testimonial[];
+  featuredTitle?: string;
+  featuredLogos?: FeaturedLogo[];
   beforeTitle: string;
   beforeItems: ListItem[];
   afterTitle: string;
@@ -25,6 +32,8 @@ export default function SocialProof({
   title,
   subtitle,
   testimonials,
+  featuredTitle,
+  featuredLogos,
   beforeTitle,
   beforeItems,
   afterTitle,
@@ -59,6 +68,31 @@ export default function SocialProof({
               </div>
             ))}
           </div>
+
+          {/* Featured On Carousel */}
+          {featuredLogos && featuredLogos.length > 0 && (
+            <div className="mb-12">
+              <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-6">
+                {featuredTitle || "Work Featured On"}
+              </p>
+              <div className="relative overflow-hidden">
+                <div className="flex animate-scroll">
+                  {[...featuredLogos, ...featuredLogos].map((item, i) => (
+                    <div
+                      key={i}
+                      className="flex-shrink-0 px-8 flex items-center justify-center"
+                    >
+                      <img
+                        src={item.logo}
+                        alt={item.name}
+                        className="h-10 md:h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Before/After */}
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">

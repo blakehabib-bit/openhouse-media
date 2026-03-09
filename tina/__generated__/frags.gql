@@ -68,6 +68,12 @@ fragment PageParts on Page {
       image
       headshot
     }
+    featuredTitle
+    featuredLogos {
+      __typename
+      name
+      logo
+    }
     beforeTitle
     beforeItems {
       __typename

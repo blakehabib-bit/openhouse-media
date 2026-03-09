@@ -71,7 +71,7 @@
   },
   "socialProof": {
     "title": "Built for the Kiwi + Aussie Real Estate Market",
-    "subtitle": "TDDK was designed for Kiwi and Aussie agents - we've spent 10 years in your market so we understand what it takes to stand out. ",
+    "subtitle": "We've spent 10 years in the Kiwi & Aussie RE market so we understand what it takes to stand out. ",
     "testimonials": [
       {
         "stat": "0 - 3.3K Followers ",
@@ -98,6 +98,8 @@
         "headshot": "/uploads/Ngaire-Tito-Wordpress-JPG.jpg"
       }
     ],
+    "featuredTitle": "Work Featured On",
+    "featuredLogos": [],
     "beforeTitle": "❌  BEFORE: Lost in the crowd",
     "beforeItems": [
       {
@@ -523,7 +525,11 @@
     "footnote": "No pitch. No pressure. If your suburb isn't a fit for the exclusivity model, we'll tell you straight up.",
     "ctaText": "Book Your Free Suburb Audit",
     "ctaHref": "#cta",
-    "trustBadges": ["✓ Free 15-min call", "✓ No obligation", "✓ Instant area availability check"]
+    "trustBadges": [
+      "✓ Free 15-min call",
+      "✓ No obligation",
+      "✓ Instant area availability check"
+    ]
   },
   "stickyCta": {
     "text": "Exclusive to One Agent Per Area",

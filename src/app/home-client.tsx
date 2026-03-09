@@ -72,6 +72,8 @@ export default function HomePageClient({ data }: HomePageClientProps) {
           title={page.socialProof.title}
           subtitle={page.socialProof.subtitle}
           testimonials={page.socialProof.testimonials}
+          featuredTitle={page.socialProof.featuredTitle}
+          featuredLogos={page.socialProof.featuredLogos}
           beforeTitle={page.socialProof.beforeTitle}
           beforeItems={page.socialProof.beforeItems}
           afterTitle={page.socialProof.afterTitle}

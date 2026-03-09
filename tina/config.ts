@@ -152,6 +152,17 @@ export default defineConfig({
                   { type: "image", name: "headshot", label: "Headshot (small circle)" },
                 ],
               },
+              { type: "string", name: "featuredTitle", label: "Featured Logos Title (e.g. Work Featured On)" },
+              {
+                type: "object",
+                name: "featuredLogos",
+                label: "Featured Logos",
+                list: true,
+                fields: [
+                  { type: "string", name: "name", label: "Company Name" },
+                  { type: "image", name: "logo", label: "Logo Image" },
+                ],
+              },
               { type: "string", name: "beforeTitle", label: "Before Title" },
               {
                 type: "object",

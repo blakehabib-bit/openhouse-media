@@ -155,6 +155,11 @@ type PageSocialProofTestimonials {
   headshot: String
 }
 
+type PageSocialProofFeaturedLogos {
+  name: String
+  logo: String
+}
+
 type PageSocialProofBeforeItems {
   text: String
 }
@@ -167,6 +172,8 @@ type PageSocialProof {
   title: String
   subtitle: String
   testimonials: [PageSocialProofTestimonials]
+  featuredTitle: String
+  featuredLogos: [PageSocialProofFeaturedLogos]
   beforeTitle: String
   beforeItems: [PageSocialProofBeforeItems]
   afterTitle: String
@@ -459,6 +466,11 @@ input PageSocialProofTestimonialsFilter {
   headshot: ImageFilter
 }
 
+input PageSocialProofFeaturedLogosFilter {
+  name: StringFilter
+  logo: ImageFilter
+}
+
 input PageSocialProofBeforeItemsFilter {
   text: StringFilter
 }
@@ -471,6 +483,8 @@ input PageSocialProofFilter {
   title: StringFilter
   subtitle: StringFilter
   testimonials: PageSocialProofTestimonialsFilter
+  featuredTitle: StringFilter
+  featuredLogos: PageSocialProofFeaturedLogosFilter
   beforeTitle: StringFilter
   beforeItems: PageSocialProofBeforeItemsFilter
   afterTitle: StringFilter
@@ -776,6 +790,11 @@ input PageSocialProofTestimonialsMutation {
   headshot: String
 }
 
+input PageSocialProofFeaturedLogosMutation {
+  name: String
+  logo: String
+}
+
 input PageSocialProofBeforeItemsMutation {
   text: String
 }
@@ -788,6 +807,8 @@ input PageSocialProofMutation {
   title: String
   subtitle: String
   testimonials: [PageSocialProofTestimonialsMutation]
+  featuredTitle: String
+  featuredLogos: [PageSocialProofFeaturedLogosMutation]
   beforeTitle: String
   beforeItems: [PageSocialProofBeforeItemsMutation]
   afterTitle: String
