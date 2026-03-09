@@ -52,9 +52,12 @@ export default function HomePageClient({ data }: HomePageClientProps) {
           title={page.suburbs.title}
           description={page.suburbs.description}
           steps={page.suburbs.steps}
-          listings={page.suburbs.listings}
           warningTitle={page.suburbs.warningTitle}
           warningText={page.suburbs.warningText}
+          checkerTitle={page.suburbs.checkerTitle}
+          checkerPlaceholder={page.suburbs.checkerPlaceholder}
+          checkerButtonText={page.suburbs.checkerButtonText}
+          checkerFootnote={page.suburbs.checkerFootnote}
         />
 
         <AboutBlake

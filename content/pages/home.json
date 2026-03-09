@@ -66,28 +66,10 @@
         "description": "When they search \"[Your Suburb] real estate agent\" it's your videos that appear"
       }
     ],
-    "listings": [
-      {
-        "name": "North Shore",
-        "detail": "Available",
-        "status": "OPEN"
-      },
-      {
-        "name": "Whangārei",
-        "detail": "Available",
-        "status": "OPEN"
-      },
-      {
-        "name": "New Plymouth",
-        "detail": "Unavailable",
-        "status": "CLAIMED"
-      },
-      {
-        "name": "Invercargill",
-        "detail": "Unavailable",
-        "status": "CLAIMED"
-      }
-    ],
+    "checkerTitle": "Is Your Suburb Still Available?",
+    "checkerPlaceholder": "Enter your suburb",
+    "checkerButtonText": "Check Availability",
+    "checkerFootnote": "We only work with one agent per suburb. Check if yours is still open.",
     "warningTitle": "Once your area is claimed, it stays claimed",
     "warningText": "We maintain exclusivity for 12 months minimum. If another agent in your area books first, you'll be added to a waitlist."
   },
