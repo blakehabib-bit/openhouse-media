@@ -42,32 +42,18 @@ export default function SocialProof({
           {/* Testimonial Cards */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {testimonials.map((t) => (
-              <div key={t.name} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="aspect-video bg-gray-200 relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                    </svg>
-                  </div>
-                  {t.image ? (
-                    <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
+              <div key={t.name} className="bg-white rounded-xl shadow-md p-8 border border-gray-100">
+                <div className="text-2xl font-bold text-purple-600 mb-4">{t.stat}</div>
+                <blockquote className="text-gray-700 mb-6 leading-relaxed">&ldquo;{t.quote}&rdquo;</blockquote>
+                <div className="flex items-center">
+                  {(t.headshot || t.image) ? (
+                    <img src={t.headshot || t.image} alt={t.name} className="w-12 h-12 rounded-full mr-3 object-cover" />
                   ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-purple-600 to-indigo-700" />
+                    <div className="w-12 h-12 bg-purple-100 rounded-full mr-3" />
                   )}
-                </div>
-                <div className="p-6">
-                  <div className="text-2xl font-bold text-purple-600 mb-2">{t.stat}</div>
-                  <blockquote className="text-gray-700 mb-4">&ldquo;{t.quote}&rdquo;</blockquote>
-                  <div className="flex items-center">
-                    {(t.headshot || t.image) ? (
-                      <img src={t.headshot || t.image} alt={t.name} className="w-12 h-12 rounded-full mr-3 object-cover" />
-                    ) : (
-                      <div className="w-12 h-12 bg-purple-100 rounded-full mr-3" />
-                    )}
-                    <div>
-                      <div className="font-semibold">{t.name}</div>
-                      <div className="text-sm text-gray-600">{t.agency}</div>
-                    </div>
+                  <div>
+                    <div className="font-semibold">{t.name}</div>
+                    <div className="text-sm text-gray-600">{t.agency}</div>
                   </div>
                 </div>
               </div>

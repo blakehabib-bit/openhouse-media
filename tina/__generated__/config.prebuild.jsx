@@ -110,17 +110,10 @@ var config_default = defineConfig({
                   { type: "string", name: "description", label: "Step Description" }
                 ]
               },
-              {
-                type: "object",
-                name: "listings",
-                label: "Suburb Listings",
-                list: true,
-                fields: [
-                  { type: "string", name: "name", label: "Suburb Name" },
-                  { type: "string", name: "detail", label: "Detail Text" },
-                  { type: "string", name: "status", label: "Status (OPEN or CLAIMED)" }
-                ]
-              },
+              { type: "string", name: "checkerTitle", label: "Suburb Checker Title" },
+              { type: "string", name: "checkerPlaceholder", label: "Suburb Checker Placeholder" },
+              { type: "string", name: "checkerButtonText", label: "Suburb Checker Button Text" },
+              { type: "string", name: "checkerFootnote", label: "Suburb Checker Footnote" },
               { type: "string", name: "warningTitle", label: "Warning Box Title" },
               { type: "string", name: "warningText", label: "Warning Box Text", ui: { component: "textarea" } }
             ]
@@ -143,7 +136,8 @@ var config_default = defineConfig({
                   { type: "string", name: "quote", label: "Quote", ui: { component: "textarea" } },
                   { type: "string", name: "name", label: "Person Name" },
                   { type: "string", name: "agency", label: "Agency & Suburb" },
-                  { type: "image", name: "image", label: "Photo" }
+                  { type: "image", name: "image", label: "Card Photo" },
+                  { type: "image", name: "headshot", label: "Headshot (small circle)" }
                 ]
               },
               { type: "string", name: "beforeTitle", label: "Before Title" },
@@ -357,6 +351,43 @@ var config_default = defineConfig({
                 ]
               },
               { type: "string", name: "quote", label: "Agent Quote", ui: { component: "textarea" } }
+            ]
+          },
+          // ── CHECK AVAILABILITY PAGE ──
+          {
+            type: "object",
+            name: "checkAvailability",
+            label: "Check Availability Page",
+            fields: [
+              { type: "string", name: "headline", label: "Headline (use {suburb} for suburb name)" },
+              { type: "string", name: "subtitle", label: "Subtitle" },
+              { type: "string", name: "scarcityWarning", label: "Scarcity Warning", ui: { component: "textarea" } },
+              {
+                type: "object",
+                name: "stats",
+                label: "Stats Row",
+                list: true,
+                fields: [
+                  { type: "string", name: "value", label: "Value" },
+                  { type: "string", name: "label", label: "Label" }
+                ]
+              },
+              { type: "string", name: "bookingTitle", label: "Booking Section Title" },
+              { type: "string", name: "bookingSubtitle", label: "Booking Section Subtitle" },
+              { type: "string", name: "auditTitle", label: "Audit Section Title" },
+              { type: "string", name: "auditIntro", label: "Audit Intro Text", ui: { component: "textarea" } },
+              {
+                type: "object",
+                name: "auditItems",
+                label: "Audit Value Props",
+                list: true,
+                fields: [
+                  { type: "string", name: "title", label: "Title" },
+                  { type: "string", name: "description", label: "Description", ui: { component: "textarea" } }
+                ]
+              },
+              { type: "string", name: "auditFootnote", label: "Audit Footnote" },
+              { type: "string", name: "footnote", label: "Bottom Footnote" }
             ]
           },
           // ── STICKY CTA ──

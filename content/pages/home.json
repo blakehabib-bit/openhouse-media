@@ -459,13 +459,22 @@
     "quote": "I went from posting once a month with no strategy to being the most visible agent in my suburb. The difference is night and day."
   },
   "checkAvailability": {
-    "headline": "Good News — {suburb} Is Still Open",
+    "headline": "Good News - {suburb} Is Still Open",
     "subtitle": "No other agent has claimed exclusive content rights for this area yet.",
-    "scarcityWarning": "We're currently speaking with 2-3 agents per week. Once an agent in your area locks in, it's gone for a minimum of 12 months. We cannot guarantee this area will still be available tomorrow.",
+    "scarcityWarning": "We're currently speaking with 2-3 agents per week. Once an agent in your area locks in, it's gone for a minimum of 3 months. We cannot guarantee this area will still be available tomorrow.",
     "stats": [
-      { "value": "1", "label": "Agent per area" },
-      { "value": "12 mo", "label": "Minimum lock-in" },
-      { "value": "Free", "label": "15-min audit call" }
+      {
+        "value": "1",
+        "label": "Agent per area"
+      },
+      {
+        "value": "3 mo",
+        "label": "Minimum lock-in"
+      },
+      {
+        "value": "Free",
+        "label": "15-min audit call"
+      }
     ],
     "bookingTitle": "Lock In Your Area Now",
     "bookingSubtitle": "Book your free 15-minute area audit before another agent claims it.",
@@ -486,7 +495,7 @@
       }
     ],
     "auditFootnote": "No pitch. No pressure. If your suburb isn't a fit for the exclusivity model, we'll tell you straight up.",
-    "footnote": "✓ Free 15-min call · ✓ No obligation · ✓ Instant area availability check"
+    "footnote": "✓ Free 15-min call · ✓ No obligation · "
   },
   "stickyCta": {
     "text": "Exclusive to One Agent Per Area",

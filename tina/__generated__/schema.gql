@@ -134,17 +134,14 @@ type PageSuburbsSteps {
   description: String
 }
 
-type PageSuburbsListings {
-  name: String
-  detail: String
-  status: String
-}
-
 type PageSuburbs {
   title: String
   description: String
   steps: [PageSuburbsSteps]
-  listings: [PageSuburbsListings]
+  checkerTitle: String
+  checkerPlaceholder: String
+  checkerButtonText: String
+  checkerFootnote: String
   warningTitle: String
   warningText: String
 }
@@ -155,6 +152,7 @@ type PageSocialProofTestimonials {
   name: String
   agency: String
   image: String
+  headshot: String
 }
 
 type PageSocialProofBeforeItems {
@@ -291,6 +289,30 @@ type PageShowcase {
   quote: String
 }
 
+type PageCheckAvailabilityStats {
+  value: String
+  label: String
+}
+
+type PageCheckAvailabilityAuditItems {
+  title: String
+  description: String
+}
+
+type PageCheckAvailability {
+  headline: String
+  subtitle: String
+  scarcityWarning: String
+  stats: [PageCheckAvailabilityStats]
+  bookingTitle: String
+  bookingSubtitle: String
+  auditTitle: String
+  auditIntro: String
+  auditItems: [PageCheckAvailabilityAuditItems]
+  auditFootnote: String
+  footnote: String
+}
+
 type PageStickyCta {
   text: String
   buttonText: String
@@ -331,6 +353,7 @@ type Page implements Node & Document {
   faq: PageFaq
   portfolio: PagePortfolio
   showcase: PageShowcase
+  checkAvailability: PageCheckAvailability
   stickyCta: PageStickyCta
   footer: PageFooter
   id: ID!
@@ -392,17 +415,14 @@ input PageSuburbsStepsFilter {
   description: StringFilter
 }
 
-input PageSuburbsListingsFilter {
-  name: StringFilter
-  detail: StringFilter
-  status: StringFilter
-}
-
 input PageSuburbsFilter {
   title: StringFilter
   description: StringFilter
   steps: PageSuburbsStepsFilter
-  listings: PageSuburbsListingsFilter
+  checkerTitle: StringFilter
+  checkerPlaceholder: StringFilter
+  checkerButtonText: StringFilter
+  checkerFootnote: StringFilter
   warningTitle: StringFilter
   warningText: StringFilter
 }
@@ -420,6 +440,7 @@ input PageSocialProofTestimonialsFilter {
   name: StringFilter
   agency: StringFilter
   image: ImageFilter
+  headshot: ImageFilter
 }
 
 input PageSocialProofBeforeItemsFilter {
@@ -556,6 +577,30 @@ input PageShowcaseFilter {
   quote: StringFilter
 }
 
+input PageCheckAvailabilityStatsFilter {
+  value: StringFilter
+  label: StringFilter
+}
+
+input PageCheckAvailabilityAuditItemsFilter {
+  title: StringFilter
+  description: StringFilter
+}
+
+input PageCheckAvailabilityFilter {
+  headline: StringFilter
+  subtitle: StringFilter
+  scarcityWarning: StringFilter
+  stats: PageCheckAvailabilityStatsFilter
+  bookingTitle: StringFilter
+  bookingSubtitle: StringFilter
+  auditTitle: StringFilter
+  auditIntro: StringFilter
+  auditItems: PageCheckAvailabilityAuditItemsFilter
+  auditFootnote: StringFilter
+  footnote: StringFilter
+}
+
 input PageStickyCtaFilter {
   text: StringFilter
   buttonText: StringFilter
@@ -596,6 +641,7 @@ input PageFilter {
   faq: PageFaqFilter
   portfolio: PagePortfolioFilter
   showcase: PageShowcaseFilter
+  checkAvailability: PageCheckAvailabilityFilter
   stickyCta: PageStickyCtaFilter
   footer: PageFooterFilter
 }
@@ -677,17 +723,14 @@ input PageSuburbsStepsMutation {
   description: String
 }
 
-input PageSuburbsListingsMutation {
-  name: String
-  detail: String
-  status: String
-}
-
 input PageSuburbsMutation {
   title: String
   description: String
   steps: [PageSuburbsStepsMutation]
-  listings: [PageSuburbsListingsMutation]
+  checkerTitle: String
+  checkerPlaceholder: String
+  checkerButtonText: String
+  checkerFootnote: String
   warningTitle: String
   warningText: String
 }
@@ -698,6 +741,7 @@ input PageSocialProofTestimonialsMutation {
   name: String
   agency: String
   image: String
+  headshot: String
 }
 
 input PageSocialProofBeforeItemsMutation {
@@ -834,6 +878,30 @@ input PageShowcaseMutation {
   quote: String
 }
 
+input PageCheckAvailabilityStatsMutation {
+  value: String
+  label: String
+}
+
+input PageCheckAvailabilityAuditItemsMutation {
+  title: String
+  description: String
+}
+
+input PageCheckAvailabilityMutation {
+  headline: String
+  subtitle: String
+  scarcityWarning: String
+  stats: [PageCheckAvailabilityStatsMutation]
+  bookingTitle: String
+  bookingSubtitle: String
+  auditTitle: String
+  auditIntro: String
+  auditItems: [PageCheckAvailabilityAuditItemsMutation]
+  auditFootnote: String
+  footnote: String
+}
+
 input PageStickyCtaMutation {
   text: String
   buttonText: String
@@ -874,6 +942,7 @@ input PageMutation {
   faq: PageFaqMutation
   portfolio: PagePortfolioMutation
   showcase: PageShowcaseMutation
+  checkAvailability: PageCheckAvailabilityMutation
   stickyCta: PageStickyCtaMutation
   footer: PageFooterMutation
 }

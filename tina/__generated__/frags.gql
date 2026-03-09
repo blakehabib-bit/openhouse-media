@@ -48,12 +48,10 @@ fragment PageParts on Page {
       title
       description
     }
-    listings {
-      __typename
-      name
-      detail
-      status
-    }
+    checkerTitle
+    checkerPlaceholder
+    checkerButtonText
+    checkerFootnote
     warningTitle
     warningText
   }
@@ -68,6 +66,7 @@ fragment PageParts on Page {
       name
       agency
       image
+      headshot
     }
     beforeTitle
     beforeItems {
@@ -185,6 +184,28 @@ fragment PageParts on Page {
       after
     }
     quote
+  }
+  checkAvailability {
+    __typename
+    headline
+    subtitle
+    scarcityWarning
+    stats {
+      __typename
+      value
+      label
+    }
+    bookingTitle
+    bookingSubtitle
+    auditTitle
+    auditIntro
+    auditItems {
+      __typename
+      title
+      description
+    }
+    auditFootnote
+    footnote
   }
   stickyCta {
     __typename
