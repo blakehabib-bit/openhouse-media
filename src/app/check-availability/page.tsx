@@ -46,14 +46,14 @@ function CheckAvailabilityContent() {
     ],
     bookingTitle: "Lock In Your Area Now",
     bookingSubtitle: "Book your free 15-minute area audit before another agent claims it.",
-    auditTitle: "Your Free Suburb Audit",
+    auditTitle: "Your Free Area Audit",
     auditIntro: "Before you commit to anything, we show you exactly what's happening in your market, for free.\n\nIn a 15-minute call with Blake, you'll walk away with:",
     auditItems: [
-      { title: "Your Competitor Snapshot", description: "We audit the top 5 agents in your suburb and show you exactly what content they're posting (or not posting). Most agents are shocked by how weak their competition actually is online." },
+      { title: "Your Competitor Snapshot", description: "We audit the top 5 agents in your area and show you exactly what content they're posting (or not posting). Most agents are shocked by how weak their competition actually is online." },
       { title: "Your Visibility Score", description: "We assess your current online presence across Instagram, Facebook, TikTok, and LinkedIn and score it against the local benchmark. You'll see exactly where you rank and where the gaps are." },
-      { title: "Your Opportunity Map", description: "Based on your suburb's demographics, property volume, and competitor activity, we'll show you the specific content angles that would give you the fastest path to local dominance." },
+      { title: "Your Opportunity Map", description: "Based on your area's demographics, property volume, and competitor activity, we'll show you the specific content angles that would give you the fastest path to local dominance." },
     ],
-    auditFootnote: "No pitch. No pressure. If your suburb isn't a fit for the exclusivity model, we'll tell you straight up.",
+    auditFootnote: "No pitch. No pressure. If your area isn't a fit for the exclusivity model, we'll tell you straight up.",
     footnote: "✓ Free 15-min call · ✓ No obligation · ✓ Instant area availability check",
   };
 

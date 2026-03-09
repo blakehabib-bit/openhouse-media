@@ -43,7 +43,7 @@ export default function SuburbExclusivity({
           <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-12 mb-12">
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-2xl font-bold mb-6">How Suburb Exclusivity Works:</h3>
+                <h3 className="text-2xl font-bold mb-6">How Area Exclusivity Works:</h3>
                 <div className="space-y-4">
                   {steps.map((step, i) => (
                     <div key={i} className="flex items-start">
@@ -59,13 +59,13 @@ export default function SuburbExclusivity({
                 </div>
               </div>
               <div className="flex flex-col justify-center">
-                <h3 className="text-2xl font-bold mb-4">{checkerTitle || "Is Your Suburb Still Available?"}</h3>
+                <h3 className="text-2xl font-bold mb-4">{checkerTitle || "Is Your Area Still Available?"}</h3>
                 <div className="flex flex-col sm:flex-row gap-3 mb-3">
                   <input
                     type="text"
                     value={suburb}
                     onChange={(e) => setSuburb(e.target.value)}
-                    placeholder={checkerPlaceholder || "Enter your suburb"}
+                    placeholder={checkerPlaceholder || "Enter your area"}
                     className="flex-1 px-4 py-4 rounded-lg border-2 border-gray-200 focus:border-purple-500 focus:outline-none text-gray-900 text-lg"
                     onKeyDown={(e) => {
                       if (e.key === "Enter" && suburb.trim()) {
@@ -91,7 +91,7 @@ export default function SuburbExclusivity({
                   </button>
                 </div>
                 <p className="text-sm text-gray-500">
-                  {checkerFootnote || "We only work with one agent per suburb. Check if yours is still open."}
+                  {checkerFootnote || "We only work with one agent per area. Check if yours is still open."}
                 </p>
               </div>
             </div>

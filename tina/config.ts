@@ -103,11 +103,11 @@ export default defineConfig({
             ],
           },
 
-          // ── SUBURB EXCLUSIVITY ──
+          // ── AREA EXCLUSIVITY ──
           {
             type: "object",
             name: "suburbs",
-            label: "Suburb Exclusivity Section",
+            label: "Area Exclusivity Section",
             fields: [
               { type: "string", name: "title", label: "Section Title" },
               { type: "string", name: "description", label: "Section Description", ui: { component: "textarea" } },
@@ -121,10 +121,10 @@ export default defineConfig({
                   { type: "string", name: "description", label: "Step Description" },
                 ],
               },
-              { type: "string", name: "checkerTitle", label: "Suburb Checker Title" },
-              { type: "string", name: "checkerPlaceholder", label: "Suburb Checker Placeholder" },
-              { type: "string", name: "checkerButtonText", label: "Suburb Checker Button Text" },
-              { type: "string", name: "checkerFootnote", label: "Suburb Checker Footnote" },
+              { type: "string", name: "checkerTitle", label: "Area Checker Title" },
+              { type: "string", name: "checkerPlaceholder", label: "Area Checker Placeholder" },
+              { type: "string", name: "checkerButtonText", label: "Area Checker Button Text" },
+              { type: "string", name: "checkerFootnote", label: "Area Checker Footnote" },
               { type: "string", name: "warningTitle", label: "Warning Box Title" },
               { type: "string", name: "warningText", label: "Warning Box Text", ui: { component: "textarea" } },
             ],
@@ -147,7 +147,7 @@ export default defineConfig({
                   { type: "string", name: "stat", label: "Headline Stat" },
                   { type: "string", name: "quote", label: "Quote", ui: { component: "textarea" } },
                   { type: "string", name: "name", label: "Person Name" },
-                  { type: "string", name: "agency", label: "Agency & Suburb" },
+                  { type: "string", name: "agency", label: "Agency & Area" },
                   { type: "image", name: "image", label: "Card Photo" },
                   { type: "image", name: "headshot", label: "Headshot (small circle)" },
                 ],
@@ -368,7 +368,7 @@ export default defineConfig({
               { type: "string", name: "title", label: "Section Title" },
               { type: "string", name: "subtitle", label: "Subtitle" },
               { type: "string", name: "agentName", label: "Agent Name" },
-              { type: "string", name: "agentSuburb", label: "Agent Suburb" },
+              { type: "string", name: "agentSuburb", label: "Agent Area" },
               {
                 type: "object",
                 name: "stats",
@@ -390,7 +390,7 @@ export default defineConfig({
             name: "checkAvailability",
             label: "Check Availability Page",
             fields: [
-              { type: "string", name: "headline", label: "Headline (use {suburb} for suburb name)" },
+              { type: "string", name: "headline", label: "Headline (use {suburb} for area name)" },
               { type: "string", name: "subtitle", label: "Subtitle" },
               { type: "string", name: "scarcityWarning", label: "Scarcity Warning", ui: { component: "textarea" } },
               {
@@ -426,7 +426,7 @@ export default defineConfig({
           {
             type: "object",
             name: "freeAudit",
-            label: "Free Suburb Audit Section",
+            label: "Free Area Audit Section",
             fields: [
               { type: "string", name: "title", label: "Section Title" },
               { type: "string", name: "intro", label: "Intro Text", ui: { component: "textarea" } },

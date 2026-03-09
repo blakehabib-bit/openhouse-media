@@ -97,7 +97,7 @@ export default function SocialProof({
           {/* Before/After */}
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
             <h3 className="text-3xl font-bold text-center mb-8">
-              What Happens When You Own Your Suburb
+              What Happens When You Own Your Area
             </h3>
             <div className="grid md:grid-cols-2 gap-12">
               <div>
