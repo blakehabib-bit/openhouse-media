@@ -373,6 +373,44 @@ export default defineConfig({
             ],
           },
 
+          // ── CHECK AVAILABILITY PAGE ──
+          {
+            type: "object",
+            name: "checkAvailability",
+            label: "Check Availability Page",
+            fields: [
+              { type: "string", name: "headline", label: "Headline (use {suburb} for suburb name)" },
+              { type: "string", name: "subtitle", label: "Subtitle" },
+              { type: "string", name: "scarcityWarning", label: "Scarcity Warning", ui: { component: "textarea" } },
+              {
+                type: "object",
+                name: "stats",
+                label: "Stats Row",
+                list: true,
+                fields: [
+                  { type: "string", name: "value", label: "Value" },
+                  { type: "string", name: "label", label: "Label" },
+                ],
+              },
+              { type: "string", name: "bookingTitle", label: "Booking Section Title" },
+              { type: "string", name: "bookingSubtitle", label: "Booking Section Subtitle" },
+              { type: "string", name: "auditTitle", label: "Audit Section Title" },
+              { type: "string", name: "auditIntro", label: "Audit Intro Text", ui: { component: "textarea" } },
+              {
+                type: "object",
+                name: "auditItems",
+                label: "Audit Value Props",
+                list: true,
+                fields: [
+                  { type: "string", name: "title", label: "Title" },
+                  { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
+                ],
+              },
+              { type: "string", name: "auditFootnote", label: "Audit Footnote" },
+              { type: "string", name: "footnote", label: "Bottom Footnote" },
+            ],
+          },
+
           // ── STICKY CTA ──
           {
             type: "object",
