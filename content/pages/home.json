@@ -49,6 +49,26 @@
       }
     ]
   },
+  "suburbs": {
+    "title": "Why We Only Work with 1 Agent Per Area",
+    "description": "Your investment only works if you dominate your local market. We won't dilute your presence by working with your competitors.",
+    "steps": [
+      {
+        "title": "You Own Your Territory",
+        "description": "We guarantee no other agent in your area gets our service while you're active"
+      },
+      {
+        "title": "Saturate Your Market",
+        "description": "14+ pieces of content per month = you're everywhere, competitors are nowhere"
+      },
+      {
+        "title": "Sellers See Only You",
+        "description": "When they search \"[Your Area] real estate agent\" it's your videos that appear"
+      }
+    ],
+    "warningTitle": "Once your area is claimed, it stays claimed",
+    "warningText": "We maintain exclusivity for 12 months minimum. If another agent in your area books first, you'll be added to a waitlist."
+  },
   "socialProof": {
     "title": "Our Results Speak For Themselves",
     "subtitle": "We've spent 10 years in the Kiwi & Aussie RE market so we understand what it takes to stand out. ",
@@ -81,17 +101,20 @@
     "featuredTitle": "Work Featured On",
     "featuredLogos": [
       {
-        "name": "",
-        "logo": "/uploads/685b65941dbddfdb93dcc931_6721979bbb3c59101e30cd04_The%20Post.png"
+        "name": "The Post",
+        "logo": "/uploads/logo-the-post.png"
       },
       {
-        "logo": "/uploads/9Tzi8ywRz924XE3uHaD6DfGZQfjEdZd7oKlsiR53VLHvSZExpMzuRmKdwHbkL9Pkqx6RBvIcWQxkj4Vv9iAmh8KJkrshTUNFstpQbNqZtYBvWz6B8k5Hav41nq1H6mKJplbI-+mzAgcRaLAPgUqzdYntng8HWuTFK6oNtfykHlpQ+ZIGHz5miqLOQHY4eU4e.jpeg"
+        "name": "Stuff",
+        "logo": "/uploads/logo-stuff.jpeg"
       },
       {
-        "logo": "/uploads/44b552c4c5de7b9b505813f6690c72f29ee12061-1600x400.png"
+        "name": "NZ Herald",
+        "logo": "/uploads/logo-nzherald.png"
       },
       {
-        "logo": "/uploads/imgbin-logo-tvnz-1-new-zealand-1-news-k7uGJqX0hE4mMtv0VhVkXFwNq.jpg"
+        "name": "TVNZ",
+        "logo": "/uploads/logo-tvnz.jpg"
       }
     ],
     "beforeTitle": "❌  BEFORE: Lost in the crowd",

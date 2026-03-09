@@ -49,17 +49,19 @@ export default function HomePageClient({ data }: HomePageClientProps) {
       </section>
 
       <main>
-        <SuburbExclusivity
-          title={page.suburbs.title}
-          description={page.suburbs.description}
-          steps={page.suburbs.steps}
-          warningTitle={page.suburbs.warningTitle}
-          warningText={page.suburbs.warningText}
-          checkerTitle={page.suburbs.checkerTitle}
-          checkerPlaceholder={page.suburbs.checkerPlaceholder}
-          checkerButtonText={page.suburbs.checkerButtonText}
-          checkerFootnote={page.suburbs.checkerFootnote}
-        />
+        {page.suburbs && (
+          <SuburbExclusivity
+            title={page.suburbs.title}
+            description={page.suburbs.description}
+            steps={page.suburbs.steps}
+            warningTitle={page.suburbs.warningTitle}
+            warningText={page.suburbs.warningText}
+            checkerTitle={page.suburbs.checkerTitle}
+            checkerPlaceholder={page.suburbs.checkerPlaceholder}
+            checkerButtonText={page.suburbs.checkerButtonText}
+            checkerFootnote={page.suburbs.checkerFootnote}
+          />
+        )}
 
         <AboutBlake
           title={page.aboutBlake.title}

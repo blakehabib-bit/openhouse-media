@@ -76,16 +76,17 @@ export default function SocialProof({
                 {featuredTitle || "Work Featured On"}
               </p>
               <div className="relative overflow-hidden">
-                <div className="flex animate-scroll">
+                <div className="flex animate-scroll" style={{ width: "max-content" }}>
                   {[...featuredLogos, ...featuredLogos].map((item, i) => (
                     <div
                       key={i}
-                      className="flex-shrink-0 px-8 flex items-center justify-center"
+                      className="flex-shrink-0 px-10 flex items-center justify-center"
+                      style={{ minWidth: "180px" }}
                     >
                       <img
                         src={item.logo}
-                        alt={item.name}
-                        className="h-10 md:h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300"
+                        alt={item.name || ""}
+                        className="h-10 md:h-12 max-w-[160px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300"
                       />
                     </div>
                   ))}
