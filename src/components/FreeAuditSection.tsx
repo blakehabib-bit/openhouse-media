@@ -27,8 +27,8 @@ export default function FreeAuditSection({
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{title}</h2>
-            <div className="text-gray-600 mb-8 whitespace-pre-line text-lg">{intro}</div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">{title}</h2>
+            <div className="text-gray-600 mb-8 whitespace-pre-line text-lg text-center">{intro}</div>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {items.map((item, i) => (
