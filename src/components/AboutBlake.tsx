@@ -1,7 +1,5 @@
 "use client";
 
-import { useRef, useState } from "react";
-
 interface AboutBlakeStat {
   value: string;
   label: string;
@@ -11,51 +9,24 @@ interface AboutBlakeProps {
   title: string;
   description: string;
   videoFile?: string;
+  youtubeUrl?: string;
   stats: AboutBlakeStat[];
 }
 
-function VideoPlayer({ src }: { src: string }) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const togglePlay = () => {
-    if (!videoRef.current) return;
-    if (isPlaying) {
-      videoRef.current.pause();
-    } else {
-      videoRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
-
-  return (
-    <div
-      className="aspect-[9/16] max-h-[520px] relative bg-black rounded-2xl overflow-hidden cursor-pointer shadow-2xl"
-      onClick={togglePlay}
-    >
-      <video
-        ref={videoRef}
-        src={src}
-        className="w-full h-full object-cover"
-        playsInline
-        loop
-        preload="metadata"
-        onEnded={() => setIsPlaying(false)}
-      />
-      {!isPlaying && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-          <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-            <svg className="w-7 h-7 text-gray-900 ml-1" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-            </svg>
-          </div>
-        </div>
-      )}
-    </div>
-  );
+function extractYouTubeId(url: string): string | null {
+  const patterns = [
+    /youtube\.com\/shorts\/([a-zA-Z0-9_-]+)/,
+    /youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/,
+    /youtu\.be\/([a-zA-Z0-9_-]+)/,
+  ];
+  for (const pattern of patterns) {
+    const match = url.match(pattern);
+    if (match) return match[1];
+  }
+  return null;
 }
 
-export default function AboutBlake({ title, description, videoFile, stats }: AboutBlakeProps) {
+export default function AboutBlake({ title, description, videoFile, youtubeUrl, stats }: AboutBlakeProps) {
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-6">
@@ -69,8 +40,27 @@ export default function AboutBlake({ title, description, videoFile, stats }: Abo
 
           {/* Video */}
           <div className="flex justify-center mb-16">
-            {videoFile ? (
-              <VideoPlayer src={videoFile} />
+            {youtubeUrl && extractYouTubeId(youtubeUrl) ? (
+              <div className="aspect-[9/16] max-h-[520px] w-[293px] relative bg-black rounded-2xl overflow-hidden shadow-2xl">
+                <iframe
+                  src={`https://www.youtube.com/embed/${extractYouTubeId(youtubeUrl)}?rel=0&modestbranding=1`}
+                  className="w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title="About Blake"
+                />
+              </div>
+            ) : videoFile ? (
+              <div className="aspect-[9/16] max-h-[520px] w-[293px] relative bg-black rounded-2xl overflow-hidden shadow-2xl">
+                <video
+                  src={videoFile}
+                  className="w-full h-full object-cover"
+                  playsInline
+                  loop
+                  controls
+                  preload="metadata"
+                />
+              </div>
             ) : (
               <div className="aspect-[9/16] max-h-[520px] w-[293px] bg-gradient-to-br from-indigo-900 via-purple-900 to-purple-800 rounded-2xl shadow-2xl flex items-center justify-center">
                 <div className="text-center text-white/70 px-6">

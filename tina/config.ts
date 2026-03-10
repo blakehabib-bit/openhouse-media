@@ -90,6 +90,7 @@ export default defineConfig({
               { type: "string", name: "title", label: "Section Title" },
               { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
               { type: "string", name: "videoFile", label: "Video File Path (e.g. /uploads/blake-intro.mp4)" },
+              { type: "string", name: "youtubeUrl", label: "YouTube Video URL (e.g. https://youtube.com/shorts/...)" },
               {
                 type: "object",
                 name: "stats",

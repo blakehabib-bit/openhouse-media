@@ -67,6 +67,7 @@ export default function HomePageClient({ data }: HomePageClientProps) {
           title={page.aboutBlake.title}
           description={page.aboutBlake.description}
           videoFile={page.aboutBlake.videoFile}
+          youtubeUrl={page.aboutBlake.youtubeUrl}
           stats={page.aboutBlake.stats}
         />
 
