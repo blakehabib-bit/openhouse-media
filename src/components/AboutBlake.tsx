@@ -42,13 +42,15 @@ export default function AboutBlake({ title, description, videoFile, youtubeUrl, 
           <div className="flex justify-center mb-16">
             {youtubeUrl && extractYouTubeId(youtubeUrl) ? (
               <div className="aspect-[9/16] max-h-[520px] w-[293px] relative bg-black rounded-2xl overflow-hidden shadow-2xl">
-                <iframe
-                  src={`https://www.youtube.com/embed/${extractYouTubeId(youtubeUrl)}?rel=0&modestbranding=1`}
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  title="About Blake"
-                />
+                {/* Slightly oversized iframe with negative margins to crop YouTube's title bar and bottom info */}
+                <div className="absolute inset-[-40px_0px_-20px_0px]">
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/${extractYouTubeId(youtubeUrl)}?rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&fs=0&disablekb=1&playsinline=1&color=white`}
+                    className="w-full h-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    title="About Blake"
+                  />
+                </div>
               </div>
             ) : videoFile ? (
               <div className="aspect-[9/16] max-h-[520px] w-[293px] relative bg-black rounded-2xl overflow-hidden shadow-2xl">
