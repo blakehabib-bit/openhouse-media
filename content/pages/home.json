@@ -2,14 +2,14 @@
   "navbar": {
     "brand": "OpenHouse Media",
     "links": [],
-    "ctaText": "Check If Your Area is Available",
+    "ctaText": "Check If Your Suburb is Available",
     "ctaHref": "#cta"
   },
   "hero": {
-    "badge": "Exclusive to One Agent Per Area",
+    "badge": "Exclusive to One Agent Per Suburb",
     "headlinePart1": "Become the ",
     "headlineHighlight": "Only Agent Sellers Think Of",
-    "headlinePart2": " in Your Area",
+    "headlinePart2": " in Your Suburb",
     "subheadline": "",
     "description": "We produce consistent short-form video content that makes you the agent everyone knows - so when sellers are ready to list, you're the only name they think of.",
     "stats": [
@@ -23,11 +23,11 @@
       },
       {
         "value": "15 minutes",
-        "label": "Of filming per week is all it takes to become the celebrity agent in your area"
+        "label": "Of filming per week is all it takes to become the celebrity agent in your suburb"
       }
     ],
     "ctaPrimaryText": "",
-    "ctaSecondaryText": "Check If Your Area is Available",
+    "ctaSecondaryText": "Check If Your Suburb is Available",
     "ctaFootnote": "✓ Free 15-min call · No obligation "
   },
   "aboutBlake": {
@@ -51,12 +51,12 @@
     ]
   },
   "suburbs": {
-    "title": "Why We Only Work with 1 Agent Per Area",
+    "title": "Why We Only Work with 1 Agent Per Suburb",
     "description": "Your investment only works if you dominate your local market. We won't dilute your presence by working with your competitors.",
     "steps": [
       {
         "title": "You Own Your Territory",
-        "description": "We guarantee no other agent in your area gets our service while you're active"
+        "description": "We guarantee no other agent in your suburb gets our service while you're active"
       },
       {
         "title": "Saturate Your Market",
@@ -64,7 +64,7 @@
       },
       {
         "title": "Sellers See Only You",
-        "description": "When they search \"[Your Area] real estate agent\" it's your videos that appear"
+        "description": "When they search \"[Your Suburb] real estate agent\" it's your videos that appear"
       }
     ],
     "warningTitle": "",
@@ -121,7 +121,7 @@
     "beforeTitle": "❌  BEFORE: Lost in the crowd",
     "beforeItems": [
       {
-        "text": "15+ competitors posting in your area"
+        "text": "15+ competitors posting in your suburb"
       },
       {
         "text": "Sellers can't distinguish you from others"
@@ -133,7 +133,7 @@
         "text": "Competing on commission rates"
       }
     ],
-    "afterTitle": "✓ AFTER: Area domination",
+    "afterTitle": "✓ AFTER: Suburb domination",
     "afterItems": [
       {
         "text": "YOU are the only professional video presence"
@@ -185,22 +185,22 @@
       }
     ],
     "totalValue": "$5,449/mo",
-    "priceLabel": "Your Investment with Area Exclusivity",
+    "priceLabel": "Your Investment with Suburb Exclusivity",
     "price": "$1,997",
     "pricePeriod": "/mo",
     "priceNote": "All-inclusive. No hidden fees. Cancel anytime after 90 days.",
     "includes": [
       {
-        "text": "Custom strategy built specifically for your area"
+        "text": "Custom strategy built specifically for your suburb"
       },
       {
         "text": "10+ edited videos per month"
       },
       {
-        "text": "Area exclusivity guarantee"
+        "text": "Suburb exclusivity guarantee"
       },
       {
-        "text": "Area Deep Dive Strategy Session"
+        "text": "Suburb Deep Dive Strategy Session"
       },
       {
         "text": "Content calendar & scheduling"
@@ -235,12 +235,12 @@
     "avgListingsDetail": "covers 6 months of your investment"
   },
   "process": {
-    "title": "How We Take You From Zero to Area Domination in 30 Days",
+    "title": "How We Take You From Zero to Suburb Domination in 30 Days",
     "subtitle": "\"From 'I don't know if this will work' to 'This is actually working' in 30 days\"",
     "steps": [
       {
         "week": "WEEK 1",
-        "title": "We Build Your Area Domination Blueprint",
+        "title": "We Build Your Suburb Domination Blueprint",
         "bullets": [
           {
             "text": "Welcome package lands on your desk within 48 hours (you're officially locked in)"
@@ -249,7 +249,7 @@
             "text": "60-min strategy session with Blake: we audit your area, analyze your top 5 competitors, and map your differentiation strategy"
           },
           {
-            "text": "Custom Script Vault delivered: 30-50 proven hooks written specifically for your area (no other agent can use these)"
+            "text": "Custom Script Vault delivered: 30-50 proven hooks written specifically for your suburb (no other agent can use these)"
           },
           {
             "text": "Quick tech call: we test your first clip and confirm you're ready (takes 15 minutes)"
@@ -325,8 +325,8 @@
         "description": "Personal brand = you need to show your face"
       },
       {
-        "title": "Your area has fewer than 500 properties",
-        "description": "Market too small for the area exclusivity model to work effectively"
+        "title": "Your suburb has fewer than 500 properties",
+        "description": "Market too small for the suburb exclusivity model to work effectively"
       },
       {
         "title": "You want instant results",
@@ -353,19 +353,19 @@
     ]
   },
   "cta": {
-    "headline": "Ready to Own Your Area?",
-    "subheadline": "Another agent in your area could claim exclusivity while you're thinking about it",
-    "description": "Book a free 15-minute area audit. We'll look at your current online presence, identify the biggest opportunities in your area, and show you exactly how consistent video content can make you the agent everyone knows.",
-    "formTitle": "Book Your Free Area Audit",
-    "submitText": "Check If My Area Is Available →",
-    "footnote": "✓ Free 15-min call · ✓ No obligation · ✓ Instant area availability check"
+    "headline": "Ready to Own Your Suburb?",
+    "subheadline": "Another agent in your suburb could claim exclusivity while you're thinking about it",
+    "description": "Book a free 15-minute suburb audit. We'll look at your current online presence, identify the biggest opportunities in your area, and show you exactly how consistent video content can make you the agent everyone knows.",
+    "formTitle": "Book Your Free Suburb Audit",
+    "submitText": "Check If My Suburb Is Available →",
+    "footnote": "✓ Free 15-min call · ✓ No obligation · ✓ Instant suburb availability check"
   },
   "faq": {
     "title": "Common Questions",
     "items": [
       {
-        "question": "What does 'area exclusivity' mean?",
-        "answer": "We only work with one agent per area. When you sign up, we lock down your territory and turn away every other agent who operates in that area."
+        "question": "What does 'suburb exclusivity' mean?",
+        "answer": "We only work with one agent per suburb. When you sign up, we lock down your territory and turn away every other agent who operates in that area."
       },
       {
         "question": "How much time do I need to commit?",
@@ -373,27 +373,27 @@
       },
       {
         "question": "How quickly will I see results?",
-        "answer": "Week 1: First videos go live (you're now visible)\nWeek 2-3: Residents start recognising you (\"I saw your video about 1 Blake Street\")\nWeek 4: First DMs arrive from people asking about listings\nMonth 2-3: Consistent enquiries (our attribution tracking shows which videos are working)\nMonth 6+: You're the agent everyone knows in your area"
+        "answer": "Week 1: First videos go live (you're now visible)\nWeek 2-3: Residents start recognising you (\"I saw your video about 1 Blake Street\")\nWeek 4: First DMs arrive from people asking about listings\nMonth 2-3: Consistent enquiries (our attribution tracking shows which videos are working)\nMonth 6+: You're the agent everyone knows in your suburb"
       },
       {
         "question": "What kind of videos do you create?",
-        "answer": "We create 10 short-form videos per month (30-60 seconds) designed to make you the celebrity agent in your area:\n✓ Market updates with local insights (\"3 streets in [Area] with best value right now\")\n✓ Property spotlights (\"Just sold in [Street Name] - here's what that means for your value\")\n✓ Local area features (\"[School Zone] just changed - what parents need to know\")\n✓ \"Guess the Price\" videos (high engagement, gets people commenting)\n✓ Buyer/seller education (\"3 things first-home buyers miss about [Area]\")"
+        "answer": "We create 10 short-form videos per month (30-60 seconds) designed to make you the celebrity agent in your suburb:\n✓ Market updates with local insights (\"3 streets in [Suburb] with best value right now\")\n✓ Property spotlights (\"Just sold in [Street Name] - here's what that means for your value\")\n✓ Local area features (\"[School Zone] just changed - what parents need to know\")\n✓ \"Guess the Price\" videos (high engagement, gets people commenting)\n✓ Buyer/seller education (\"3 things first-home buyers miss about [Area]\")"
       },
       {
         "question": "I already post videos myself / I already have a videographer. Why do I need this?",
-        "answer": "If you're posting yourself:\n\nYou're guessing what content works (we test videos/month and give you the winning formulas)\nYou're spending 3-4 hours/week editing (we do it in 15 min/week from you)\nYou don't have attribution tracking (we show you which videos generate DMs)\n\nIf you have a videographer:\n\nThey film and edit, but who's doing strategy? (We provide monthly data showing what's working across our network)\nAre they posting consistently for you? (We ghost-post 10x/month — you never touch the apps)\nDo they have area exclusivity? (Anyone can hire them, including your competitors)"
+        "answer": "If you're posting yourself:\n\nYou're guessing what content works (we test videos/month and give you the winning formulas)\nYou're spending 3-4 hours/week editing (we do it in 15 min/week from you)\nYou don't have attribution tracking (we show you which videos generate DMs)\n\nIf you have a videographer:\n\nThey film and edit, but who's doing strategy? (We provide monthly data showing what's working across our network)\nAre they posting consistently for you? (We ghost-post 10x/month — you never touch the apps)\nDo they have suburb exclusivity? (Anyone can hire them, including your competitors)"
       },
       {
         "question": "What if I'm camera shy / not good on camera?",
-        "answer": "Here's why it's easier than you think:\n✓ Custom Script Vault: We give you exact words to say (30-50 proven hooks for your area)\n✓ Monday Content Menu: Every week, 60-sec voice note tells you what to film (zero guesswork)\n✓ Retake freedom: Film 3 takes, we pick the best one (or splice them together)\n✓ Insecurity-aware editing: Strategic framing minimizes appearance concerns\n✓ Camera Confidence Kit: 10-min video showing posture, eye contact, tone"
+        "answer": "Here's why it's easier than you think:\n✓ Custom Script Vault: We give you exact words to say (30-50 proven hooks for your suburb)\n✓ Monday Content Menu: Every week, 60-sec voice note tells you what to film (zero guesswork)\n✓ Retake freedom: Film 3 takes, we pick the best one (or splice them together)\n✓ Insecurity-aware editing: Strategic framing minimizes appearance concerns\n✓ Camera Confidence Kit: 10-min video showing posture, eye contact, tone"
       },
       {
         "question": "What if I want to cancel?",
         "answer": "We don't lock you into long term contracts, here's where we stand:\n3-month minimum commitment\nMonth-to-month after that\n30-90 day pause available for life events (maternity, illness, travel)\nCancel anytime after the first 3 months"
       },
       {
-        "question": "Is my area still available?",
-        "answer": "That depends on when you're reading this.\nWe only work with one agent per area (territorial exclusivity). If another agent in your area signs up before you do, the opportunity is gone.\nRight now: We're talking to 2-3 agents per week. Some areas get claimed within days.\nThe only way to know for sure: Book a call. We'll tell you immediately if your area is open or already taken."
+        "question": "Is my suburb still available?",
+        "answer": "That depends on when you're reading this.\nWe only work with one agent per suburb (territorial exclusivity). If another agent in your area signs up before you do, the opportunity is gone.\nRight now: We're talking to 2-3 agents per week. Some suburbs get claimed within days.\nThe only way to know for sure: Book a call. We'll tell you immediately if your suburb is open or already taken."
       },
       {
         "question": "What if I don't get results?",
@@ -406,9 +406,9 @@
     "subtitle": "Real examples of content strategies we've built for NZ real estate agents",
     "items": [
       {
-        "title": "Area Spotlight: Fitzroy/Strandon",
+        "title": "Suburb Spotlight: Fitzroy/Strandon",
         "type": "Market Knowledge",
-        "description": "A walkthrough reel highlighting the area that positioned the agent as the local expert.",
+        "description": "A walkthrough reel highlighting the suburb that positioned the agent as the local expert.",
         "stat": "11K Views",
         "videoFile": "/uploads/reels/DVZG64CD836.mp4",
         "image": "/uploads/reels/DVZG64CD836-thumb.jpg"
@@ -482,16 +482,16 @@
         "after": "3 in first quarter"
       }
     ],
-    "quote": "I went from posting once a month with no strategy to being the most visible agent in my area. The difference is night and day."
+    "quote": "I went from posting once a month with no strategy to being the most visible agent in my suburb. The difference is night and day."
   },
   "checkAvailability": {
     "headline": "Good News - {suburb} Is Still Open",
-    "subtitle": "No other agent has claimed exclusive content rights for this area yet.",
-    "scarcityWarning": "We're currently speaking with 2-3 agents per week. Once an agent in your area locks in, it's gone for a minimum of 3 months. We cannot guarantee this area will still be available tomorrow.",
+    "subtitle": "No other agent has claimed exclusive content rights for this suburb yet.",
+    "scarcityWarning": "We're currently speaking with 2-3 agents per week. Once an agent in your suburb locks in, it's gone for a minimum of 3 months. We cannot guarantee this area will still be available tomorrow.",
     "stats": [
       {
         "value": "1",
-        "label": "Agent per area"
+        "label": "Agent per suburb"
       },
       {
         "value": "3 mo",
@@ -502,14 +502,14 @@
         "label": "15-min audit call"
       }
     ],
-    "bookingTitle": "Lock In Your Area Now",
-    "bookingSubtitle": "Book your free 15-minute area audit before another agent claims it.",
-    "auditTitle": "Your Free Area Audit",
+    "bookingTitle": "Lock In Your Suburb Now",
+    "bookingSubtitle": "Book your free 15-minute suburb audit before another agent claims it.",
+    "auditTitle": "Your Free Suburb Audit",
     "auditIntro": "Before you commit to anything, we show you exactly what's happening in your market, for free.\n\nIn a 15-minute call with Blake, you'll walk away with:",
     "auditItems": [
       {
         "title": "Your Competitor Snapshot",
-        "description": "We audit the top 5 agents in your area and show you exactly what content they're posting (or not posting). Most agents are shocked by how weak their competition actually is online."
+        "description": "We audit the top 5 agents in your suburb and show you exactly what content they're posting (or not posting). Most agents are shocked by how weak their competition actually is online."
       },
       {
         "title": "Your Visibility Score",
@@ -517,14 +517,14 @@
       },
       {
         "title": "Your Opportunity Map",
-        "description": "Based on your area's demographics, property volume, and competitor activity, we'll show you the specific content angles that would give you the fastest path to local dominance."
+        "description": "Based on your suburb's demographics, property volume, and competitor activity, we'll show you the specific content angles that would give you the fastest path to local dominance."
       }
     ],
     "auditFootnote": "No pitch. No pressure. If your area isn't a fit for the exclusivity model, we'll tell you straight up.",
     "footnote": "✓ Free 15-min call · ✓ No obligation · "
   },
   "freeAudit": {
-    "title": "Your Free Area Audit",
+    "title": "Your Free Suburb Audit",
     "intro": "Before you commit to anything, we show you exactly what's happening in your market, for free.\n\nIn a 15-minute call with Blake, you'll walk away with:",
     "items": [
       {
@@ -537,26 +537,26 @@
       },
       {
         "title": "Your Opportunity Map",
-        "description": "Based on your area's demographics, property volume, and competitor activity, we'll show you the specific content angles that would give you the fastest path to local dominance."
+        "description": "Based on your suburb's demographics, property volume, and competitor activity, we'll show you the specific content angles that would give you the fastest path to local dominance."
       }
     ],
-    "footnote": "No pitch. No pressure. If your area isn't a fit for the exclusivity model, we'll tell you straight up.",
-    "ctaText": "Check If Your Area is Available",
+    "footnote": "No pitch. No pressure. If your suburb isn't a fit for the exclusivity model, we'll tell you straight up.",
+    "ctaText": "Check If Your Suburb is Available",
     "ctaHref": "#cta",
     "trustBadges": [
       "✓ Free 15-min call",
       "✓ No obligation",
-      "✓ Instant area availability check"
+      "✓ Instant suburb availability check"
     ]
   },
   "stickyCta": {
-    "text": "Exclusive to One Agent Per Area",
-    "buttonText": "Check If Your Area is Available →",
+    "text": "Exclusive to One Agent Per Suburb",
+    "buttonText": "Check If Your Suburb is Available →",
     "buttonHref": "#cta"
   },
   "footer": {
     "brand": "The Digital Door Knock",
-    "tagline": "Area-exclusive video content for Australasia's most ambitious real estate agents.",
+    "tagline": "Suburb-exclusive video content for Australasia's most ambitious real estate agents.",
     "email": "blake@thedigitaldoorknock.com",
     "phone": "",
     "location": "",

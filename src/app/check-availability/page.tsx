@@ -37,24 +37,24 @@ function CheckAvailabilityContent() {
   // Defaults while loading or if fetch fails
   const d: CheckAvailabilityData = data || {
     headline: "Good News — {suburb} Is Still Open",
-    subtitle: "No other agent has claimed exclusive content rights for this area yet.",
-    scarcityWarning: "We're currently speaking with 2-3 agents per week. Once an agent in your area locks in, it's gone for a minimum of 12 months. We cannot guarantee this area will still be available tomorrow.",
+    subtitle: "No other agent has claimed exclusive content rights for this suburb yet.",
+    scarcityWarning: "We're currently speaking with 2-3 agents per week. Once an agent in your suburb locks in, it's gone for a minimum of 12 months. We cannot guarantee this area will still be available tomorrow.",
     stats: [
-      { value: "1", label: "Agent per area" },
+      { value: "1", label: "Agent per suburb" },
       { value: "12 mo", label: "Minimum lock-in" },
       { value: "Free", label: "15-min audit call" },
     ],
-    bookingTitle: "Lock In Your Area Now",
-    bookingSubtitle: "Book your free 15-minute area audit before another agent claims it.",
-    auditTitle: "Your Free Area Audit",
+    bookingTitle: "Lock In Your Suburb Now",
+    bookingSubtitle: "Book your free 15-minute suburb audit before another agent claims it.",
+    auditTitle: "Your Free Suburb Audit",
     auditIntro: "Before you commit to anything, we show you exactly what's happening in your market, for free.\n\nIn a 15-minute call with Blake, you'll walk away with:",
     auditItems: [
-      { title: "Your Competitor Snapshot", description: "We audit the top 5 agents in your area and show you exactly what content they're posting (or not posting). Most agents are shocked by how weak their competition actually is online." },
+      { title: "Your Competitor Snapshot", description: "We audit the top 5 agents in your suburb and show you exactly what content they're posting (or not posting). Most agents are shocked by how weak their competition actually is online." },
       { title: "Your Visibility Score", description: "We assess your current online presence across Instagram, Facebook, TikTok, and LinkedIn and score it against the local benchmark. You'll see exactly where you rank and where the gaps are." },
-      { title: "Your Opportunity Map", description: "Based on your area's demographics, property volume, and competitor activity, we'll show you the specific content angles that would give you the fastest path to local dominance." },
+      { title: "Your Opportunity Map", description: "Based on your suburb's demographics, property volume, and competitor activity, we'll show you the specific content angles that would give you the fastest path to local dominance." },
     ],
     auditFootnote: "No pitch. No pressure. If your area isn't a fit for the exclusivity model, we'll tell you straight up.",
-    footnote: "✓ Free 15-min call · ✓ No obligation · ✓ Instant area availability check",
+    footnote: "✓ Free 15-min call · ✓ No obligation · ✓ Instant suburb availability check",
   };
 
   const headlineText = d.headline.replace("{suburb}", suburb);
@@ -74,7 +74,7 @@ function CheckAvailabilityContent() {
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 mb-8 border border-white/20 text-center">
             <div className="inline-flex items-center bg-green-500/20 border border-green-400/40 rounded-full px-4 py-2 mb-6">
               <span className="w-2.5 h-2.5 bg-green-400 rounded-full mr-2 animate-pulse" />
-              <span className="text-green-300 font-semibold text-sm">Area Available</span>
+              <span className="text-green-300 font-semibold text-sm">Suburb Available</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -143,7 +143,7 @@ function CheckAvailabilityContent() {
                 width="100%"
                 height="700"
                 frameBorder="0"
-                title="Book Your Free Area Audit"
+                title="Book Your Free Suburb Audit"
               />
             </div>
             <p className="text-sm text-purple-300 mt-4 text-center">{d.footnote}</p>

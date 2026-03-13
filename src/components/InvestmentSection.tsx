@@ -94,7 +94,7 @@ export default function InvestmentSection({
                 href="#cta"
                 className="block w-full bg-purple-600 text-white text-center px-8 py-5 rounded-lg font-bold text-lg hover:bg-purple-700 transition"
               >
-                Book Your Free Area Audit →
+                Book Your Free Suburb Audit →
               </a>
             </div>
           </div>
