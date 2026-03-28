@@ -33,6 +33,7 @@ fragment PageParts on Page {
     title
     description
     videoFile
+    youtubeUrl
     stats {
       __typename
       value

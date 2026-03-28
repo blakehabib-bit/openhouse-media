@@ -126,6 +126,7 @@ type PageAboutBlake {
   title: String
   description: String
   videoFile: String
+  youtubeUrl: String
   stats: [PageAboutBlakeStats]
 }
 
@@ -430,6 +431,7 @@ input PageAboutBlakeFilter {
   title: StringFilter
   description: StringFilter
   videoFile: StringFilter
+  youtubeUrl: StringFilter
   stats: PageAboutBlakeStatsFilter
 }
 
@@ -761,6 +763,7 @@ input PageAboutBlakeMutation {
   title: String
   description: String
   videoFile: String
+  youtubeUrl: String
   stats: [PageAboutBlakeStatsMutation]
 }
 
