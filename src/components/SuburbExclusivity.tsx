@@ -31,6 +31,31 @@ export default function SuburbExclusivity({
   checkerFootnote,
 }: SuburbProps) {
   const [suburb, setSuburb] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+
+  function openModal() {
+    if (suburb.trim()) setShowModal(true);
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setSubmitting(true);
+    try {
+      await fetch("/api/capture-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, suburb: suburb.trim() }),
+      });
+    } catch {
+      // fire and forget — don't block the user
+    }
+    setShowModal(false);
+    window.open(`/check-availability?suburb=${encodeURIComponent(suburb.trim())}`, "_blank");
+  }
+
   return (
     <section id="suburbs" className="py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -68,18 +93,12 @@ export default function SuburbExclusivity({
                     placeholder={checkerPlaceholder || "Enter your suburb"}
                     className="flex-1 px-4 py-4 rounded-lg border-2 border-gray-200 focus:border-purple-500 focus:outline-none text-gray-900 text-lg"
                     onKeyDown={(e) => {
-                      if (e.key === "Enter" && suburb.trim()) {
-                        window.open(`/check-availability?suburb=${encodeURIComponent(suburb.trim())}`, "_blank");
-                      }
+                      if (e.key === "Enter") openModal();
                     }}
                   />
                   <button
                     type="button"
-                    onClick={() => {
-                      if (suburb.trim()) {
-                        window.open(`/check-availability?suburb=${encodeURIComponent(suburb.trim())}`, "_blank");
-                      }
-                    }}
+                    onClick={openModal}
                     disabled={!suburb.trim()}
                     className={`px-8 py-4 rounded-lg font-semibold text-center text-lg transition whitespace-nowrap ${
                       suburb.trim()
@@ -113,6 +132,56 @@ export default function SuburbExclusivity({
           )}
         </div>
       </div>
+
+      {/* Lead Capture Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+          <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md relative">
+            <button
+              onClick={() => setShowModal(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl leading-none"
+            >
+              &times;
+            </button>
+
+            <div className="inline-flex items-center bg-green-100 border border-green-300 rounded-full px-3 py-1 mb-4">
+              <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse" />
+              <span className="text-green-700 text-sm font-semibold">{suburb} is available</span>
+            </div>
+
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">See your suburb report</h2>
+            <p className="text-gray-500 mb-6 text-sm">Enter your details and we'll show you what's happening in {suburb}.</p>
+
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <input
+                type="text"
+                required
+                placeholder="Your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-purple-500 focus:outline-none text-gray-900"
+              />
+              <input
+                type="email"
+                required
+                placeholder="Your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-purple-500 focus:outline-none text-gray-900"
+              />
+              <button
+                type="submit"
+                disabled={submitting}
+                className="w-full bg-purple-600 text-white py-4 rounded-lg font-bold text-lg hover:bg-purple-700 transition disabled:opacity-60"
+              >
+                {submitting ? "One moment..." : "Check My Suburb →"}
+              </button>
+            </form>
+
+            <p className="text-xs text-gray-400 mt-4 text-center">No spam. We'll only reach out if your suburb is a fit.</p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
