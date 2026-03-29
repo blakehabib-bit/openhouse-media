@@ -69,12 +69,12 @@
     ],
     "warningTitle": "",
     "warningText": "",
-    "popupTitle": "See your suburb report",
-    "popupSubtitle": "Enter your details and we'll show you what's happening in {suburb}.",
+    "popupTitle": "Check your suburb",
+    "popupSubtitle": "Enter your details and we'll confirm if {suburb} is available.",
     "popupNamePlaceholder": "Your name",
     "popupEmailPlaceholder": "Your email",
     "popupButtonText": "Check My Suburb →",
-    "popupFootnote": "No spam. We'll only reach out if your suburb is a fit."
+    "popupFootnote": "No spam. We'll only reach out if your suburb is available."
   },
   "socialProof": {
     "title": "Our Results Speak For Themselves",

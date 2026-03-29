@@ -156,11 +156,6 @@ export default function SuburbExclusivity({
               &times;
             </button>
 
-            <div className="inline-flex items-center bg-green-100 border border-green-300 rounded-full px-3 py-1 mb-4">
-              <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse" />
-              <span className="text-green-700 text-sm font-semibold">{suburb} is available</span>
-            </div>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-2">{popupTitle || "See your suburb report"}</h2>
             <p className="text-gray-500 mb-6 text-sm">{(popupSubtitle || "Enter your details and we'll show you what's happening in {suburb}.").replace("{suburb}", suburb)}</p>
 
