@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
 
   // Notify Blake
   await resend.emails.send({
-    from: "onboarding@resend.dev",
+    from: "leads@thedigitaldoorknock.com",
     to: "blake@thedigitaldoorknock.com",
     subject: `New lead: ${name} checked ${suburb}`,
     html: `
@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
 
   // Send lead magnet email to the lead
   await resend.emails.send({
-    from: "onboarding@resend.dev",
+    from: "Blake @ The Digital Door Knock <blake@thedigitaldoorknock.com>",
     to: email,
     subject: `${firstName}, your free ${suburb} suburb audit is ready`,
     html: `
