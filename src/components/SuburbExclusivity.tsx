@@ -65,7 +65,7 @@ export default function SuburbExclusivity({
       // fire and forget — don't block the user
     }
     setShowModal(false);
-    window.open(`/check-availability?suburb=${encodeURIComponent(suburb.trim())}`, "_blank");
+    window.location.href = `/check-availability?suburb=${encodeURIComponent(suburb.trim())}`;
   }
 
   return (
