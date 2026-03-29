@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
 
   // Notify Blake
   await resend.emails.send({
-    from: "leads@thedigitaldoorknock.com",
+    from: "blake@thedigitaldoorknock.com",
     to: "blake@thedigitaldoorknock.com",
     subject: `New lead: ${name} checked ${suburb}`,
     html: `
