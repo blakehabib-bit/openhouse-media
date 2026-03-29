@@ -62,9 +62,9 @@ export async function POST(req: NextRequest) {
                       <tr>
                         <td style="padding:28px;">
                           <p style="margin:0 0 16px;color:#4338ca;font-size:14px;font-weight:bold;text-transform:uppercase;letter-spacing:1px;">Your Free Suburb Audit includes:</p>
-                          <p style="margin:0 0 10px;color:#374151;font-size:15px;">✓ &nbsp;<strong>Competitor Snapshot</strong> — we audit the top 5 agents in ${suburb} and show you exactly what content they're posting (most agents are shocked by how little their competition does online)</p>
-                          <p style="margin:0 0 10px;color:#374151;font-size:15px;">✓ &nbsp;<strong>Your Visibility Score</strong> — we score your current online presence against the local benchmark across Instagram, TikTok, Facebook and LinkedIn</p>
-                          <p style="margin:0 0 0;color:#374151;font-size:15px;">✓ &nbsp;<strong>Your Opportunity Map</strong> — the specific content angles that would give you the fastest path to owning ${suburb} online</p>
+                          <p style="margin:0 0 10px;color:#374151;font-size:15px;">✓ &nbsp;<strong>Competitor Snapshot</strong> - we audit the top 5 agents in ${suburb} and show you exactly where the content gaps are and how to position yourself ahead of them</p>
+                          <p style="margin:0 0 10px;color:#374151;font-size:15px;">✓ &nbsp;<strong>Your Visibility Score</strong> - we score your current online presence against the local benchmark across Instagram, TikTok, Facebook and LinkedIn</p>
+                          <p style="margin:0 0 0;color:#374151;font-size:15px;">✓ &nbsp;<strong>Your Opportunity Map</strong> - the specific content angles that would give you the fastest path to owning ${suburb} online</p>
                         </td>
                       </tr>
                     </table>
