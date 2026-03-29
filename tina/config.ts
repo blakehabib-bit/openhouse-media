@@ -128,6 +128,12 @@ export default defineConfig({
               { type: "string", name: "checkerFootnote", label: "Area Checker Footnote" },
               { type: "string", name: "warningTitle", label: "Warning Box Title" },
               { type: "string", name: "warningText", label: "Warning Box Text", ui: { component: "textarea" } },
+              { type: "string", name: "popupTitle", label: "Popup: Title" },
+              { type: "string", name: "popupSubtitle", label: "Popup: Subtitle (use {suburb} for the area name)" },
+              { type: "string", name: "popupNamePlaceholder", label: "Popup: Name Field Placeholder" },
+              { type: "string", name: "popupEmailPlaceholder", label: "Popup: Email Field Placeholder" },
+              { type: "string", name: "popupButtonText", label: "Popup: Button Text" },
+              { type: "string", name: "popupFootnote", label: "Popup: Small Footnote" },
             ],
           },
 

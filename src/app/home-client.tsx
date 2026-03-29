@@ -60,6 +60,12 @@ export default function HomePageClient({ data }: HomePageClientProps) {
             checkerPlaceholder={page.suburbs.checkerPlaceholder}
             checkerButtonText={page.suburbs.checkerButtonText}
             checkerFootnote={page.suburbs.checkerFootnote}
+            popupTitle={page.suburbs.popupTitle}
+            popupSubtitle={page.suburbs.popupSubtitle}
+            popupNamePlaceholder={page.suburbs.popupNamePlaceholder}
+            popupEmailPlaceholder={page.suburbs.popupEmailPlaceholder}
+            popupButtonText={page.suburbs.popupButtonText}
+            popupFootnote={page.suburbs.popupFootnote}
           />
         )}
 

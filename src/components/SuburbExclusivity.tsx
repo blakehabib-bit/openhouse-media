@@ -17,6 +17,12 @@ interface SuburbProps {
   checkerPlaceholder?: string;
   checkerButtonText?: string;
   checkerFootnote?: string;
+  popupTitle?: string;
+  popupSubtitle?: string;
+  popupNamePlaceholder?: string;
+  popupEmailPlaceholder?: string;
+  popupButtonText?: string;
+  popupFootnote?: string;
 }
 
 export default function SuburbExclusivity({
@@ -29,6 +35,12 @@ export default function SuburbExclusivity({
   checkerPlaceholder,
   checkerButtonText,
   checkerFootnote,
+  popupTitle,
+  popupSubtitle,
+  popupNamePlaceholder,
+  popupEmailPlaceholder,
+  popupButtonText,
+  popupFootnote,
 }: SuburbProps) {
   const [suburb, setSuburb] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -149,14 +161,14 @@ export default function SuburbExclusivity({
               <span className="text-green-700 text-sm font-semibold">{suburb} is available</span>
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">See your suburb report</h2>
-            <p className="text-gray-500 mb-6 text-sm">Enter your details and we'll show you what's happening in {suburb}.</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">{popupTitle || "See your suburb report"}</h2>
+            <p className="text-gray-500 mb-6 text-sm">{(popupSubtitle || "Enter your details and we'll show you what's happening in {suburb}.").replace("{suburb}", suburb)}</p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
                 required
-                placeholder="Your name"
+                placeholder={popupNamePlaceholder || "Your name"}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-purple-500 focus:outline-none text-gray-900"
@@ -164,7 +176,7 @@ export default function SuburbExclusivity({
               <input
                 type="email"
                 required
-                placeholder="Your email"
+                placeholder={popupEmailPlaceholder || "Your email"}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-purple-500 focus:outline-none text-gray-900"
@@ -174,11 +186,11 @@ export default function SuburbExclusivity({
                 disabled={submitting}
                 className="w-full bg-purple-600 text-white py-4 rounded-lg font-bold text-lg hover:bg-purple-700 transition disabled:opacity-60"
               >
-                {submitting ? "One moment..." : "Check My Suburb →"}
+                {submitting ? "One moment..." : (popupButtonText || "Check My Suburb →")}
               </button>
             </form>
 
-            <p className="text-xs text-gray-400 mt-4 text-center">No spam. We'll only reach out if your suburb is a fit.</p>
+            <p className="text-xs text-gray-400 mt-4 text-center">{popupFootnote || "No spam. We'll only reach out if your suburb is a fit."}</p>
           </div>
         </div>
       )}

@@ -68,7 +68,13 @@
       }
     ],
     "warningTitle": "",
-    "warningText": ""
+    "warningText": "",
+    "popupTitle": "See your suburb report",
+    "popupSubtitle": "Enter your details and we'll show you what's happening in {suburb}.",
+    "popupNamePlaceholder": "Your name",
+    "popupEmailPlaceholder": "Your email",
+    "popupButtonText": "Check My Suburb →",
+    "popupFootnote": "No spam. We'll only reach out if your suburb is a fit."
   },
   "socialProof": {
     "title": "Our Results Speak For Themselves",
