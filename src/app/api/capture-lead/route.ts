@@ -88,7 +88,7 @@ export async function POST(req: NextRequest) {
                 <tr>
                   <td style="background:#f9fafb;padding:24px 40px;border-top:1px solid #e5e7eb;">
                     <p style="margin:0;color:#9ca3af;font-size:12px;text-align:center;">Blake Habib &nbsp;·&nbsp; The Digital Door Knock &nbsp;·&nbsp; blake@thedigitaldoorknock.com</p>
-                    <p style="margin:8px 0 0;color:#9ca3af;font-size:12px;text-align:center;">You received this because you checked suburb availability at thedigitaldoorknock.co.nz</p>
+                    <p style="margin:8px 0 0;color:#9ca3af;font-size:12px;text-align:center;">You received this because you checked suburb availability at thedigitaldoorknock.com</p>
                   </td>
                 </tr>
 

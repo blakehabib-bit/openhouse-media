@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import LeadCapturePopup from "./LeadCapturePopup";
 
 interface StickyCTAProps {
   text: string;
@@ -8,7 +9,7 @@ interface StickyCTAProps {
   buttonHref: string;
 }
 
-export default function StickyCTA({ text, buttonText, buttonHref }: StickyCTAProps) {
+export default function StickyCTA({ text, buttonText }: StickyCTAProps) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -30,12 +31,10 @@ export default function StickyCTA({ text, buttonText, buttonHref }: StickyCTAPro
           <span className="w-3 h-3 bg-green-400 rounded-full mr-2 animate-pulse" />
           <span className="font-semibold">{text}</span>
         </div>
-        <a
-          href={buttonHref}
-          className="bg-white text-purple-900 px-6 py-3 rounded-lg font-bold hover:bg-purple-100 transition whitespace-nowrap"
-        >
-          {buttonText}
-        </a>
+        <LeadCapturePopup
+          buttonClassName="bg-white text-purple-900 px-6 py-3 rounded-lg font-bold hover:bg-purple-100 transition whitespace-nowrap cursor-pointer"
+          buttonContent={buttonText}
+        />
       </div>
     </div>
   );

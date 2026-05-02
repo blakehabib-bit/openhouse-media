@@ -1,3 +1,5 @@
+import LeadCapturePopup from "./LeadCapturePopup";
+
 interface TrustBadge {
   text: string;
 }
@@ -16,7 +18,6 @@ export default function FinalCTA({
   headline,
   subheadline,
   description,
-  formTitle,
   submitText,
   footnote,
   trustBadges,
@@ -27,18 +28,13 @@ export default function FinalCTA({
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">{headline}</h2>
           <p className="text-2xl mb-4 text-purple-200">{subheadline}</p>
-          <p className="text-xl mb-12 text-purple-100">{description}</p>
+          <p className="text-xl mb-10 text-purple-100">{description}</p>
 
-          {/* Calendly Embed */}
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-            <iframe
-              src="https://calendly.com/blakehabib98/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=7c3aed"
-              width="100%"
-              height="700"
-              frameBorder="0"
-              title="Book Your Free Suburb Audit"
-            />
-          </div>
+          <LeadCapturePopup
+            buttonClassName="inline-block bg-white text-purple-900 px-10 py-5 rounded-lg font-bold text-xl hover:bg-purple-100 transition cursor-pointer shadow-2xl"
+            buttonContent={submitText || "Check If My Suburb Is Available →"}
+          />
+
           <p className="text-sm text-purple-300 mt-4">{footnote}</p>
 
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-purple-200">

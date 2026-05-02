@@ -1,5 +1,7 @@
 "use client";
 
+import LeadCapturePopup from "./LeadCapturePopup";
+
 interface NavLink {
   label: string;
   href: string;
@@ -12,7 +14,7 @@ interface NavbarProps {
   ctaHref: string;
 }
 
-export default function Navbar({ brand, links, ctaText, ctaHref }: NavbarProps) {
+export default function Navbar({ links, ctaText }: NavbarProps) {
   return (
     <nav className="container mx-auto px-6 py-6 flex justify-between items-center">
       <span
@@ -33,12 +35,10 @@ export default function Navbar({ brand, links, ctaText, ctaHref }: NavbarProps) 
           </a>
         ))}
       </div>
-      <a
-        href={ctaHref}
-        className="bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-purple-100 transition"
-      >
-        {ctaText}
-      </a>
+      <LeadCapturePopup
+        buttonClassName="bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-purple-100 transition cursor-pointer"
+        buttonContent={ctaText}
+      />
     </nav>
   );
 }

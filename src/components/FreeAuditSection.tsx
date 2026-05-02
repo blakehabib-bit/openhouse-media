@@ -1,3 +1,5 @@
+import LeadCapturePopup from "./LeadCapturePopup";
+
 interface AuditItem {
   title: string;
   description: string;
@@ -19,7 +21,6 @@ export default function FreeAuditSection({
   items,
   footnote,
   ctaText,
-  ctaHref,
   trustBadges,
 }: FreeAuditSectionProps) {
   return (
@@ -44,12 +45,10 @@ export default function FreeAuditSection({
             <p className="text-gray-500 text-sm italic mb-8">{footnote}</p>
 
             <div className="text-center">
-              <a
-                href={ctaHref}
-                className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-700 transition"
-              >
-                {ctaText}
-              </a>
+              <LeadCapturePopup
+                buttonClassName="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-700 transition cursor-pointer"
+                buttonContent={ctaText}
+              />
               {trustBadges && trustBadges.length > 0 && (
                 <p className="text-sm text-gray-500 mt-4">
                   {trustBadges.join(" · ")}
