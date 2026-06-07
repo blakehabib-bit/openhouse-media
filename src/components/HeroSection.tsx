@@ -31,29 +31,31 @@ export default function HeroSection({
   return (
     <div className="container mx-auto px-6 py-20">
       <div className="max-w-5xl mx-auto">
-        {/* Exclusivity Badge */}
-        <div className="inline-flex items-center bg-purple-800/50 border border-purple-400/30 rounded-full px-4 py-2 mb-6">
-          <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse" />
-          <span className="text-sm">{badge}</span>
-        </div>
+        {badge && (
+          <div className="inline-flex items-center bg-purple-800/50 border border-purple-400/30 rounded-full px-4 py-2 mb-6">
+            <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse" />
+            <span className="text-sm">{badge}</span>
+          </div>
+        )}
 
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           {headlinePart1}
           <span className="gradient-text">{headlineHighlight}</span>
           {headlinePart2}
         </h1>
-        <p className="text-2xl mb-4 text-purple-200">{subheadline}</p>
+        {subheadline && <p className="text-2xl mb-4 text-purple-200">{subheadline}</p>}
         <p className="text-xl mb-12 text-purple-100 max-w-3xl">{description}</p>
 
-        {/* Stats */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {stats.map((stat) => (
-            <div key={stat.value}>
-              <div className="text-5xl font-bold mb-2">{stat.value}</div>
-              <div className="text-purple-200">{stat.label}</div>
-            </div>
-          ))}
-        </div>
+        {stats && stats.length > 0 && (
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {stats.map((stat) => (
+              <div key={stat.value}>
+                <div className="text-5xl font-bold mb-2">{stat.value}</div>
+                <div className="text-purple-200">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* CTA Button */}
         <div className="flex flex-col sm:flex-row gap-4">
@@ -68,7 +70,7 @@ export default function HeroSection({
           </a>
         </div>
 
-        <p className="text-sm text-purple-300 mt-4">{ctaFootnote}</p>
+        {ctaFootnote && <p className="text-sm text-purple-300 mt-4">{ctaFootnote}</p>}
       </div>
     </div>
   );

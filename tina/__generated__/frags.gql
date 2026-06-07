@@ -55,6 +55,12 @@ fragment PageParts on Page {
     checkerFootnote
     warningTitle
     warningText
+    popupTitle
+    popupSubtitle
+    popupNamePlaceholder
+    popupEmailPlaceholder
+    popupButtonText
+    popupFootnote
   }
   socialProof {
     __typename

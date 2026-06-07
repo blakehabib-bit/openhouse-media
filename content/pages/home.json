@@ -1,74 +1,89 @@
 {
   "navbar": {
-    "brand": "OpenHouse Media",
+    "brand": "The Digital Door Knock",
     "links": [],
-    "ctaText": "Check If Your Suburb is Available",
+    "ctaText": "Check If Your Suburb Is Available",
     "ctaHref": "#cta"
   },
   "hero": {
-    "badge": "Exclusive to One Agent Per Suburb",
-    "headlinePart1": "Become the ",
-    "headlineHighlight": "Only Agent Sellers Think Of",
-    "headlinePart2": " in Your Suburb",
+    "badge": "",
+    "headlinePart1": "We Help Agents ",
+    "headlineHighlight": "Dominate Social Media",
+    "headlinePart2": " to List & Sell More Property",
     "subheadline": "",
-    "description": "We produce consistent short-form video content that makes you the agent everyone knows - so when sellers are ready to list, you're the only name they think of.",
-    "stats": [
-      {
-        "value": "3,000+",
-        "label": "Videos produced for Agents in NZ"
-      },
-      {
-        "value": "90 Days",
-        "label": "To double your organic reach and become the most visible agent in your area"
-      },
-      {
-        "value": "15 minutes",
-        "label": "Of filming per week is all it takes to become the celebrity agent in your suburb"
-      }
-    ],
+    "description": "A done for you content and social media listing system. Exclusive to one agent per area.",
+    "stats": [],
     "ctaPrimaryText": "",
-    "ctaSecondaryText": "Check If Your Suburb is Available",
-    "ctaFootnote": "✓ Free 15-min call · No obligation "
+    "ctaSecondaryText": "Check If Your Suburb Is Available",
+    "ctaFootnote": ""
   },
-  "aboutBlake": {
-    "title": "Built by an Agent, for Agents",
-    "description": "",
-    "videoFile": "",
-    "youtubeUrl": "https://youtube.com/shorts/LGO7HY3g4MM",
-    "stats": [
+  "whatIs": {
+    "eyebrow": "What is The Digital Door Knock?",
+    "body": "Your all-in-one marketing system for real estate. Professionally filmed content, fully managed social media, and paid ads that turn attention into appraisals."
+  },
+  "whatWeDo": {
+    "title": "What We Do",
+    "subtitle": "Four capabilities. One connected system.",
+    "items": [
       {
-        "value": "3,000+",
-        "label": "Videos produced for NZ agents"
+        "title": "Content Creation",
+        "description": "Professionally filmed reels and high quality photos. Visuals built to get attention in your suburb."
       },
       {
-        "value": "6 Years",
-        "label": "In real estate media"
+        "title": "Social Media Management",
+        "description": "Scripting, editing, captions, carousels, scheduling, posting. You stay front of mind without touching the apps."
       },
       {
-        "value": "Age 18 - 22",
-        "label": "Licensed real estate agent"
+        "title": "Paid Ads",
+        "description": "Profile growth and lead generation campaigns for buyers and sellers. Strategic ad spend that turns content into enquiries."
+      },
+      {
+        "title": "Reporting",
+        "description": "Clear monthly reports across every platform. What's working, what isn't, what we're doing next."
+      }
+    ]
+  },
+  "system": {
+    "title": "The System",
+    "subtitle": "Three pillars working together — content earns attention, management keeps you in front, ads turn it into leads.",
+    "pillars": [
+      {
+        "name": "Social Media Content",
+        "deliverables": [
+          "Strategic Video Reels",
+          "Photo and Carousel Posts"
+        ],
+        "goal": "Build your profile, show personality, educate and entertain."
+      },
+      {
+        "name": "Social Media Management",
+        "deliverables": [
+          "Posting reels weekly",
+          "Photo carousels & stories",
+          "Scripting & publishing"
+        ],
+        "goal": "More touch points. Build and nurture your audience."
+      },
+      {
+        "name": "Paid Ads",
+        "deliverables": [
+          "Profile awareness campaigns",
+          "Lead generation campaigns for Buyers and Sellers"
+        ],
+        "goal": "New eyeballs. Convert attention into appraisals."
       }
     ]
   },
   "suburbs": {
-    "title": "Why We Only Work with 1 Agent Per Suburb",
-    "description": "Your investment only works if you dominate your local market. We won't dilute your presence by working with your competitors.",
-    "steps": [
-      {
-        "title": "You Own Your Territory",
-        "description": "We guarantee no other agent in your suburb gets our service while you're active"
-      },
-      {
-        "title": "Saturate Your Market",
-        "description": "14+ pieces of content per month = you're everywhere, competitors are nowhere"
-      },
-      {
-        "title": "Sellers See Only You",
-        "description": "When they search \"[Your Suburb] real estate agent\" it's your videos that appear"
-      }
-    ],
+    "title": "One Agent Per Suburb. No Exceptions.",
+    "description": "Once it's claimed, it's locked in. We won't take on your competitors.",
+    "steps": [],
     "warningTitle": "",
     "warningText": "",
+    "checkerTitle": "Is Your Suburb Still Available?",
+    "checkerPlaceholder": "Enter your suburb",
+    "checkerButtonText": "Check Availability",
+    "checkerFootnote": "",
     "popupTitle": "Check your suburb",
     "popupSubtitle": "Enter your details and we'll confirm if {suburb} is available.",
     "popupNamePlaceholder": "Your name",
@@ -76,9 +91,39 @@
     "popupButtonText": "Check My Suburb →",
     "popupFootnote": "No spam. We'll only reach out if your suburb is available."
   },
+  "process": {
+    "title": "The Process",
+    "subtitle": "How we get you from day one to live in 14 days.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Strategise",
+        "description": "We audit your suburb, your competitors, and your current online presence. Build a plan specific to you."
+      },
+      {
+        "number": "02",
+        "title": "Create",
+        "description": "Our team films, edits, scripts, and prepares everything. You approve, we publish."
+      },
+      {
+        "number": "03",
+        "title": "Grow",
+        "description": "Ads turn on. Content stacks. Leads come in. Bi-weekly reporting keeps everything sharp."
+      }
+    ]
+  },
+  "caseStudy": {
+    "eyebrow": "Case Study",
+    "client": "Harcourts Team Green",
+    "objective": "Use social media to list and sell more property.",
+    "solution": "The Digital Door Knock System.",
+    "resultHeadline": "3 listings from 1 video. $75K GCI.",
+    "resultDetail": "One piece of content. Three new listings on the back of it. That's what happens when content earns attention and the system turns it into leads.",
+    "image": "/uploads/IMG_8961.jpg"
+  },
   "socialProof": {
-    "title": "Our Results Speak For Themselves",
-    "subtitle": "We've spent 10 years in the Kiwi & Aussie RE market so we understand what it takes to stand out. ",
+    "title": "What Agents Say",
+    "subtitle": "",
     "testimonials": [
       {
         "stat": "$1.8M Sight Unseen Sale",
@@ -89,424 +134,107 @@
         "headshot": "/uploads/3a4026dc-feed-4236-aa44-66e63916b85d.jpg.webp"
       },
       {
-        "stat": "A must have on your team",
-        "quote": "Consistently bought skill, attitude and value to each project we produced together, something that's increasingly rare in 2026.",
-        "name": "Jaron Mumby",
-        "agency": "Harcourts Team Green",
-        "image": "/uploads/jaron-mumby-headshot.png",
-        "headshot": ""
-      },
-      {
-        "stat": "First appraisal in 2 hours!",
-        "quote": "Within 2 hours of our first content piece going live, I received an appraisal directly from the content piece!",
+        "stat": "First appraisal in 2 hours",
+        "quote": "Within 2 hours of our first content piece going live, I received an appraisal directly from the content piece.",
         "name": "Ngaire Tito",
         "agency": "Metcalfe Real Estate",
         "image": "",
         "headshot": "/uploads/Ngaire-Tito-Wordpress-JPG.jpg"
+      },
+      {
+        "stat": "A must-have on your team",
+        "quote": "Consistently bought skill, attitude and value to each project we produced together — something that's increasingly rare.",
+        "name": "Jaron Mumby",
+        "agency": "Harcourts Team Green",
+        "image": "/uploads/jaron-mumby-headshot.png",
+        "headshot": ""
       }
     ],
     "featuredTitle": "Work Featured On",
     "featuredLogos": [
-      {
-        "name": "The Post",
-        "logo": "/uploads/logo-the-post.png"
-      },
-      {
-        "name": "Stuff",
-        "logo": "/uploads/logo-stuff.jpeg"
-      },
-      {
-        "name": "NZ Herald",
-        "logo": "/uploads/logo-nzherald.png"
-      },
-      {
-        "name": "TVNZ",
-        "logo": "/uploads/001-tvnz-1-black-horizontal.png.webp"
-      }
+      { "name": "The Post", "logo": "/uploads/logo-the-post.png" },
+      { "name": "Stuff", "logo": "/uploads/logo-stuff.jpeg" },
+      { "name": "NZ Herald", "logo": "/uploads/logo-nzherald.png" },
+      { "name": "TVNZ", "logo": "/uploads/001-tvnz-1-black-horizontal.png.webp" }
     ],
-    "beforeTitle": "❌  BEFORE: Lost in the crowd",
-    "beforeItems": [
-      {
-        "text": "15+ competitors posting in your suburb"
-      },
-      {
-        "text": "Sellers can't distinguish you from others"
-      },
-      {
-        "text": "Price-shopping sellers calling multiple agents"
-      },
-      {
-        "text": "Competing on commission rates"
-      }
-    ],
-    "afterTitle": "✓ AFTER: Suburb domination",
-    "afterItems": [
-      {
-        "text": "YOU are the only professional video presence"
-      },
-      {
-        "text": "10+ high-quality posts per month"
-      },
-      {
-        "text": "Sellers know your name before calling"
-      },
-      {
-        "text": "Premium positioning = full commission"
-      }
-    ]
-  },
-  "investment": {
-    "title": "The Real Cost of Professional Video Content",
-    "subtitle": "If you hired these roles separately in New Zealand...",
-    "valueStack": [
-      {
-        "role": "Professional Videographer",
-        "detail": "$150/hr × 6 hours/month filming",
-        "price": "$900/mo"
-      },
-      {
-        "role": "Video Editor",
-        "detail": "$60/hr × 16 hours/month editing",
-        "price": "$960/mo"
-      },
-      {
-        "role": "Social Media Strategist",
-        "detail": "Content planning, scheduling, optimisation",
-        "price": "$1,200/mo"
-      },
-      {
-        "role": "Copywriter",
-        "detail": "Captions, hooks, calls-to-action",
-        "price": "$800/mo"
-      },
-      {
-        "role": "Performance Analytics",
-        "detail": "Monthly reports, optimisation recommendations",
-        "price": "$640/mo"
-      },
-      {
-        "role": "Real Estate Content Strategist ",
-        "detail": "Real Estate Specific, industry insights, backed by data",
-        "price": "$949"
-      }
-    ],
-    "totalValue": "$5,449/mo",
-    "priceLabel": "Your Investment with Suburb Exclusivity",
-    "price": "$1,997",
-    "pricePeriod": "/mo",
-    "priceNote": "All-inclusive. No hidden fees. Cancel anytime after 90 days.",
-    "includes": [
-      {
-        "text": "Custom strategy built specifically for your suburb"
-      },
-      {
-        "text": "10+ edited videos per month"
-      },
-      {
-        "text": "Suburb exclusivity guarantee"
-      },
-      {
-        "text": "Suburb Deep Dive Strategy Session"
-      },
-      {
-        "text": "Content calendar & scheduling"
-      },
-      {
-        "text": "Captions, music, branding"
-      },
-      {
-        "text": "Monthly performance reports"
-      },
-      {
-        "text": "Mobile Creator Kit"
-      },
-      {
-        "text": "Competitor Content Audit"
-      },
-      {
-        "text": "Script Vault (30+ Custom Hooks)"
-      },
-      {
-        "text": "DM to appointment playbook"
-      },
-      {
-        "text": "28 more deliverables too long to add here"
-      }
-    ],
-    "roiTitle": "The Math is Simple",
-    "monthlyInvestment": "$1,997",
-    "avgCommission": "~$12,000",
-    "breakEven": "1 listing every 6 months",
-    "avgListings": "1 listing",
-    "avgListingsDetail": "covers 6 months of your investment"
-  },
-  "process": {
-    "title": "How We Take You From Zero to Suburb Domination in 30 Days",
-    "subtitle": "\"From 'I don't know if this will work' to 'This is actually working' in 30 days\"",
-    "steps": [
-      {
-        "week": "WEEK 1",
-        "title": "We Build Your Suburb Domination Blueprint",
-        "bullets": [
-          {
-            "text": "Welcome package lands on your desk within 48 hours (you're officially locked in)"
-          },
-          {
-            "text": "60-min strategy session with Blake: we audit your area, analyze your top 5 competitors, and map your differentiation strategy"
-          },
-          {
-            "text": "Custom Script Vault delivered: 30-50 proven hooks written specifically for your suburb (no other agent can use these)"
-          },
-          {
-            "text": "Quick tech call: we test your first clip and confirm you're ready (takes 15 minutes)"
-          }
-        ]
-      },
-      {
-        "week": "WEEK 2",
-        "title": "You Film 15 Minutes, We Do Everything Else",
-        "bullets": [
-          {
-            "text": "You film 3 clips in 15 minutes using Script Vault (we tell you exactly what to say)"
-          },
-          {
-            "text": "Send us the raw footage - you never edit, never schedule, never write captions"
-          },
-          {
-            "text": "We edit, polish, add captions/music/branding while you go back to selling"
-          }
-        ]
-      },
-      {
-        "week": "WEEK 3",
-        "title": "You Go Live (And Start Getting Noticed)",
-        "bullets": [
-          {
-            "text": "We edit your clips into 2-3 polished, platform-optimised videos"
-          },
-          {
-            "text": "You review and approve each one (nothing posts without your OK)"
-          },
-          {
-            "text": "First videos go live - you're now visible on Instagram, TikTok, Facebook"
-          },
-          {
-            "text": "Residents in your area start seeing your name. Competitors wonder what you're doing."
-          }
-        ]
-      },
-      {
-        "week": "WEEK 4 & ONGOING",
-        "title": "You're Now the Agent Everyone Sees",
-        "bullets": [
-          {
-            "text": "Posting 10x/month across all platforms — you're consistent, professional, everywhere your competitors aren't"
-          },
-          {
-            "text": "DMs start flowing - our tracking shows exactly which videos are generating enquiries (you know what's working)"
-          },
-          {
-            "text": " LinkedIn repurposing kicks in - investors and commercial buyers see your content (2 posts/week, zero extra filming)"
-          },
-          {
-            "text": "Every Monday: 60-sec voice note tells you exactly what to film this week (no more \"what should I post?\")"
-          },
-          {
-            "text": "After 30 days: Your first Celebrity Report arrives - proof you're outpacing your competitors, plus data from 1,200+ videos tested across our network"
-          }
-        ]
-      }
-    ]
-  },
-  "qualification": {
-    "title": "This ISN'T for Everyone",
-    "subtitle": "We're selective about who we work with. Here's why:",
-    "dontApply": [
-      {
-        "title": "You're happy with 3–5 deals per year",
-        "description": "This is for agents who want to dominate, not just survive"
-      },
-      {
-        "title": "You don't want to be on camera",
-        "description": "Personal brand = you need to show your face"
-      },
-      {
-        "title": "Your suburb has fewer than 500 properties",
-        "description": "Market too small for the suburb exclusivity model to work effectively"
-      },
-      {
-        "title": "You want instant results",
-        "description": "This is a 3-6 month play. If you need listings tomorrow, this isn't it."
-      }
-    ],
-    "perfectIf": [
-      {
-        "title": "Close 10+ deals annually and want to double it",
-        "description": "You have the skills, now we amplify your reach"
-      },
-      {
-        "title": "Understand that personal brand = premium positioning",
-        "description": "You're ready to be THE local expert"
-      },
-      {
-        "title": "Want to work smarter, not harder",
-        "description": "Let content work while you're at open homes"
-      },
-      {
-        "title": "Willing to commit 1-2 hours/month to filming",
-        "description": "We handle everything else"
-      }
-    ]
+    "beforeTitle": "",
+    "beforeItems": [],
+    "afterTitle": "",
+    "afterItems": []
   },
   "cta": {
     "headline": "Ready to Own Your Suburb?",
-    "subheadline": "Another agent in your suburb could claim exclusivity while you're thinking about it",
-    "description": "Book a free 15-minute suburb audit. We'll look at your current online presence, identify the biggest opportunities in your area, and show you exactly how consistent video content can make you the agent everyone knows.",
-    "formTitle": "Book Your Free Suburb Audit",
+    "subheadline": "Book a free 15-minute call.",
+    "description": "We'll show you how to get listings using our system in your area.",
+    "formTitle": "",
     "submitText": "Check If My Suburb Is Available →",
-    "footnote": "✓ Free 15-min call · ✓ No obligation · ✓ Instant suburb availability check"
+    "footnote": "✓ Free 15-min call · ✓ No obligation · ✓ Instant suburb availability check",
+    "trustBadges": []
   },
-  "faq": {
-    "title": "Common Questions",
-    "items": [
-      {
-        "question": "What does 'suburb exclusivity' mean?",
-        "answer": "We only work with one agent per suburb. When you sign up, we lock down your territory and turn away every other agent who operates in that area."
-      },
-      {
-        "question": "How much time do I need to commit?",
-        "answer": "15 minutes per week. That's it. You film 3 short clips (5 min each) on Wednesday. Text them to us. We handle everything else: editing, captions, posting, strategy, analytics."
-      },
-      {
-        "question": "How quickly will I see results?",
-        "answer": "Week 1: First videos go live (you're now visible)\nWeek 2-3: Residents start recognising you (\"I saw your video about 1 Blake Street\")\nWeek 4: First DMs arrive from people asking about listings\nMonth 2-3: Consistent enquiries (our attribution tracking shows which videos are working)\nMonth 6+: You're the agent everyone knows in your suburb"
-      },
-      {
-        "question": "What kind of videos do you create?",
-        "answer": "We create 10 short-form videos per month (30-60 seconds) designed to make you the celebrity agent in your suburb:\n✓ Market updates with local insights (\"3 streets in [Suburb] with best value right now\")\n✓ Property spotlights (\"Just sold in [Street Name] - here's what that means for your value\")\n✓ Local area features (\"[School Zone] just changed - what parents need to know\")\n✓ \"Guess the Price\" videos (high engagement, gets people commenting)\n✓ Buyer/seller education (\"3 things first-home buyers miss about [Area]\")"
-      },
-      {
-        "question": "I already post videos myself / I already have a videographer. Why do I need this?",
-        "answer": "If you're posting yourself:\n\nYou're guessing what content works (we test videos/month and give you the winning formulas)\nYou're spending 3-4 hours/week editing (we do it in 15 min/week from you)\nYou don't have attribution tracking (we show you which videos generate DMs)\n\nIf you have a videographer:\n\nThey film and edit, but who's doing strategy? (We provide monthly data showing what's working across our network)\nAre they posting consistently for you? (We ghost-post 10x/month — you never touch the apps)\nDo they have suburb exclusivity? (Anyone can hire them, including your competitors)"
-      },
-      {
-        "question": "What if I'm camera shy / not good on camera?",
-        "answer": "Here's why it's easier than you think:\n✓ Custom Script Vault: We give you exact words to say (30-50 proven hooks for your suburb)\n✓ Monday Content Menu: Every week, 60-sec voice note tells you what to film (zero guesswork)\n✓ Retake freedom: Film 3 takes, we pick the best one (or splice them together)\n✓ Insecurity-aware editing: Strategic framing minimizes appearance concerns\n✓ Camera Confidence Kit: 10-min video showing posture, eye contact, tone"
-      },
-      {
-        "question": "What if I want to cancel?",
-        "answer": "We don't lock you into long term contracts, here's where we stand:\n3-month minimum commitment\nMonth-to-month after that\n30-90 day pause available for life events (maternity, illness, travel)\nCancel anytime after the first 3 months"
-      },
-      {
-        "question": "Is my suburb still available?",
-        "answer": "That depends on when you're reading this.\nWe only work with one agent per suburb (territorial exclusivity). If another agent in your area signs up before you do, the opportunity is gone.\nRight now: We're talking to 2-3 agents per week. Some suburbs get claimed within days.\nThe only way to know for sure: Book a call. We'll tell you immediately if your suburb is open or already taken."
-      },
-      {
-        "question": "What if I don't get results?",
-        "answer": "We're confident you will - but here's what happens if you don't see traction:\nMonth 1: We review your filming, content strategy, and posting schedule. Adjust as needed.\nMonth 2: We analyze your Celebrity Report data and double down on what's working.\nMonth 3: If you're still not seeing DMs or engagement growth, we'll troubleshoot until we figure out what's blocking you.\nThe reality: 90% of the time, results come down to consistency. Agents who film every week and trust the system see DMs by Month 2-3. Agents who skip weeks or overthink every video struggle.\nOur promise: We'll give you the proven system. You provide 15 min/week. If you do your part, you'll see results."
-      }
-    ]
+  "aboutBlake": {
+    "title": "",
+    "description": "",
+    "videoFile": "",
+    "youtubeUrl": "",
+    "stats": []
   },
   "portfolio": {
-    "title": "Content That Converts",
-    "subtitle": "Real examples of content strategies we've built for NZ real estate agents",
-    "items": [
-      {
-        "title": "Suburb Spotlight: Fitzroy/Strandon",
-        "type": "Market Knowledge",
-        "description": "A walkthrough reel highlighting the suburb that positioned the agent as the local expert.",
-        "stat": "11K Views",
-        "videoFile": "/uploads/reels/DVZG64CD836.mp4",
-        "image": "/uploads/reels/DVZG64CD836-thumb.jpg"
-      },
-      {
-        "title": "Jaron Mumby Profile",
-        "type": "Profile Intro",
-        "description": "Cinematic profile video introducing Team Green's newest team member.",
-        "stat": "16K Views",
-        "videoFile": "/uploads/reels/jaron-mumby-profile.mp4",
-        "image": "/uploads/reels/jaron-mumby-profile-thumb.jpg"
-      },
-      {
-        "title": "New Listing Weekly Tour",
-        "type": "Brand Reel",
-        "description": "Reel showing all the new listings coming to the market with the team - shows BTS.",
-        "stat": "10K Reach",
-        "videoFile": "/uploads/reels/DQ28FJDjqqB.mp4",
-        "image": "/uploads/reels/DQ28FJDjqqB-thumb.jpg"
-      },
-      {
-        "title": "Walkthrough Tour",
-        "type": "Listing Content",
-        "description": "Cinematic property tour.",
-        "stat": "11K Views",
-        "videoFile": "/uploads/reels/DPfQWYfgRNE.mp4",
-        "image": "/uploads/reels/DPfQWYfgRNE-thumb.jpg"
-      },
-      {
-        "title": "SOLD - Settlement",
-        "type": "Story",
-        "description": "Reel that shows the sale and purchase of their vendors in one perfect story.",
-        "stat": "12K Views",
-        "videoFile": "/uploads/reels/DPVydCEDNsW.mp4",
-        "image": "/uploads/reels/DPVydCEDNsW-thumb.jpg"
-      },
-      {
-        "title": "Sales Proof Story",
-        "type": "Success Story",
-        "description": "Showcase of the latest homes sold and strong CTA to introduce sellers to market.",
-        "stat": "10K Views",
-        "videoFile": "/uploads/reels/DO4mzMNgiB8.mp4",
-        "image": "/uploads/reels/DO4mzMNgiB8-thumb.jpg"
-      }
-    ]
+    "title": "",
+    "subtitle": "",
+    "items": []
   },
   "showcase": {
-    "title": "The Transformation",
-    "subtitle": "See what happens when a real estate agent commits to a proper content strategy",
-    "agentName": "Example Agent",
-    "agentSuburb": "Auckland Area",
-    "stats": [
-      {
-        "label": "Monthly Reel Views",
-        "before": "1,200",
-        "after": "48,000"
-      },
-      {
-        "label": "Follower Growth",
-        "before": "+5/month",
-        "after": "+180/month"
-      },
-      {
-        "label": "Enquiries from Instagram",
-        "before": "0-1/month",
-        "after": "8-12/month"
-      },
-      {
-        "label": "Listings Won via Social",
-        "before": "0",
-        "after": "3 in first quarter"
-      }
-    ],
-    "quote": "I went from posting once a month with no strategy to being the most visible agent in my suburb. The difference is night and day."
+    "title": "",
+    "subtitle": "",
+    "agentName": "",
+    "agentSuburb": "",
+    "stats": [],
+    "quote": ""
+  },
+  "investment": {
+    "title": "",
+    "subtitle": "",
+    "valueStack": [],
+    "totalValue": "",
+    "priceLabel": "",
+    "price": "",
+    "pricePeriod": "",
+    "priceNote": "",
+    "includes": [],
+    "roiTitle": "",
+    "monthlyInvestment": "",
+    "avgCommission": "",
+    "breakEven": "",
+    "avgListings": "",
+    "avgListingsDetail": ""
+  },
+  "qualification": {
+    "title": "",
+    "subtitle": "",
+    "dontApply": [],
+    "perfectIf": []
+  },
+  "faq": {
+    "title": "",
+    "items": []
+  },
+  "freeAudit": {
+    "title": "",
+    "intro": "",
+    "items": [],
+    "footnote": "",
+    "ctaText": "",
+    "ctaHref": "",
+    "trustBadges": []
   },
   "checkAvailability": {
-    "headline": "Good News - {suburb} Is Still Open",
+    "headline": "Good News — {suburb} Is Still Open",
     "subtitle": "No other agent has claimed exclusive content rights for this suburb yet.",
-    "scarcityWarning": "We're currently speaking with 2-3 agents per week. Once an agent in your suburb locks in, it's gone for a minimum of 3 months. We cannot guarantee this area will still be available tomorrow.",
+    "scarcityWarning": "We're currently speaking with 2-3 agents per week. Once an agent in your suburb locks in, it's gone for a minimum of 3 months.",
     "stats": [
-      {
-        "value": "1",
-        "label": "Agent per suburb"
-      },
-      {
-        "value": "3 mo",
-        "label": "Minimum lock-in"
-      },
-      {
-        "value": "Free",
-        "label": "15-min audit call"
-      }
+      { "value": "1", "label": "Agent per suburb" },
+      { "value": "3 mo", "label": "Minimum lock-in" },
+      { "value": "Free", "label": "15-min audit call" }
     ],
     "bookingTitle": "Lock In Your Suburb Now",
     "bookingSubtitle": "Book your free 15-minute suburb audit before another agent claims it.",
@@ -515,54 +243,28 @@
     "auditItems": [
       {
         "title": "Your Competitor Snapshot",
-        "description": "We audit the top 5 agents in your suburb and show you exactly what content they're posting (or not posting). Most agents are shocked by how weak their competition actually is online."
+        "description": "We audit the top 5 agents in your suburb and show you exactly what content they're posting (or not posting)."
       },
       {
         "title": "Your Visibility Score",
-        "description": "We assess your current online presence across Instagram, Facebook, TikTok, and LinkedIn and score it against the local benchmark. You'll see exactly where you rank and where the gaps are."
+        "description": "We assess your current online presence across Instagram, Facebook, TikTok, and LinkedIn and score it against the local benchmark."
       },
       {
         "title": "Your Opportunity Map",
-        "description": "Based on your suburb's demographics, property volume, and competitor activity, we'll show you the specific content angles that would give you the fastest path to local dominance."
+        "description": "Based on your suburb's demographics, property volume, and competitor activity, we'll show you the content angles that give you the fastest path to local dominance."
       }
     ],
     "auditFootnote": "No pitch. No pressure. If your area isn't a fit for the exclusivity model, we'll tell you straight up.",
-    "footnote": "✓ Free 15-min call · ✓ No obligation · "
-  },
-  "freeAudit": {
-    "title": "Your Free Suburb Audit",
-    "intro": "Before you commit to anything, we show you exactly what's happening in your market, for free.\n\nIn a 15-minute call with Blake, you'll walk away with:",
-    "items": [
-      {
-        "title": "Your Competitor Snapshot",
-        "description": "We audit the top 5 agents in your area and show you exactly what content they're posting (or not posting). Most agents are shocked by how weak their competition actually is online."
-      },
-      {
-        "title": "Your Visibility Score",
-        "description": "We assess your current online presence across Instagram, Facebook, TikTok, and LinkedIn and score it against the local benchmark. You'll see exactly where you rank and where the gaps are."
-      },
-      {
-        "title": "Your Opportunity Map",
-        "description": "Based on your suburb's demographics, property volume, and competitor activity, we'll show you the specific content angles that would give you the fastest path to local dominance."
-      }
-    ],
-    "footnote": "No pitch. No pressure. If your suburb isn't a fit for the exclusivity model, we'll tell you straight up.",
-    "ctaText": "Check If Your Suburb is Available",
-    "ctaHref": "#cta",
-    "trustBadges": [
-      "✓ Free 15-min call",
-      "✓ No obligation",
-      "✓ Instant suburb availability check"
-    ]
+    "footnote": "✓ Free 15-min call · ✓ No obligation"
   },
   "stickyCta": {
     "text": "Exclusive to One Agent Per Suburb",
-    "buttonText": "Check If Your Suburb is Available →",
+    "buttonText": "Check If Your Suburb Is Available →",
     "buttonHref": "#cta"
   },
   "footer": {
     "brand": "The Digital Door Knock",
-    "tagline": "Suburb-exclusive video content for Australasia's most ambitious real estate agents.",
+    "tagline": "Suburb-exclusive video and social media systems for Australasia's most ambitious real estate agents.",
     "email": "blake@thedigitaldoorknock.com",
     "phone": "",
     "location": "",

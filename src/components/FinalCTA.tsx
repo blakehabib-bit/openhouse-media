@@ -24,8 +24,8 @@ export default function FinalCTA({
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">{headline}</h2>
-          <p className="text-2xl mb-4 text-purple-200">{subheadline}</p>
-          <p className="text-xl mb-12 text-purple-100">{description}</p>
+          {subheadline && <p className="text-2xl mb-4 text-purple-200">{subheadline}</p>}
+          {description && <p className="text-xl mb-12 text-purple-100">{description}</p>}
 
           {/* Calendly Embed */}
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">

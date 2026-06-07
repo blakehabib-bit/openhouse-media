@@ -145,6 +145,12 @@ type PageSuburbs {
   checkerFootnote: String
   warningTitle: String
   warningText: String
+  popupTitle: String
+  popupSubtitle: String
+  popupNamePlaceholder: String
+  popupEmailPlaceholder: String
+  popupButtonText: String
+  popupFootnote: String
 }
 
 type PageSocialProofTestimonials {
@@ -450,6 +456,12 @@ input PageSuburbsFilter {
   checkerFootnote: StringFilter
   warningTitle: StringFilter
   warningText: StringFilter
+  popupTitle: StringFilter
+  popupSubtitle: StringFilter
+  popupNamePlaceholder: StringFilter
+  popupEmailPlaceholder: StringFilter
+  popupButtonText: StringFilter
+  popupFootnote: StringFilter
 }
 
 input ImageFilter {
@@ -782,6 +794,12 @@ input PageSuburbsMutation {
   checkerFootnote: String
   warningTitle: String
   warningText: String
+  popupTitle: String
+  popupSubtitle: String
+  popupNamePlaceholder: String
+  popupEmailPlaceholder: String
+  popupButtonText: String
+  popupFootnote: String
 }
 
 input PageSocialProofTestimonialsMutation {

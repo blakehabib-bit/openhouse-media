@@ -2,17 +2,13 @@
 
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import WhatIsTDDK from "@/components/WhatIsTDDK";
+import WhatWeDo from "@/components/WhatWeDo";
+import TheSystem from "@/components/TheSystem";
 import SuburbExclusivity from "@/components/SuburbExclusivity";
-import AboutBlake from "@/components/AboutBlake";
-import SocialProof from "@/components/SocialProof";
-import ContentPortfolio from "@/components/ContentPortfolio";
-// HIDDEN — uncomment to restore: import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
-// HIDDEN — uncomment to restore: import InvestmentSection from "@/components/InvestmentSection";
-import ProcessTimeline from "@/components/ProcessTimeline";
-import FreeAuditSection from "@/components/FreeAuditSection";
-import QualificationSection from "@/components/QualificationSection";
+import Process3Steps from "@/components/Process3Steps";
+import CaseStudyFeatured from "@/components/CaseStudyFeatured";
 import FinalCTA from "@/components/FinalCTA";
-import FAQ from "@/components/FAQ";
 import StickyCTA from "@/components/StickyCTA";
 import Footer from "@/components/Footer";
 
@@ -26,7 +22,6 @@ export default function HomePageClient({ data }: HomePageClientProps) {
 
   return (
     <>
-      {/* Hero + Navbar wrapper */}
       <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-purple-800 text-white">
         <Navbar
           brand={page.navbar.brand}
@@ -49,6 +44,26 @@ export default function HomePageClient({ data }: HomePageClientProps) {
       </section>
 
       <main>
+        {page.whatIs && (
+          <WhatIsTDDK eyebrow={page.whatIs.eyebrow} body={page.whatIs.body} />
+        )}
+
+        {page.whatWeDo && (
+          <WhatWeDo
+            title={page.whatWeDo.title}
+            subtitle={page.whatWeDo.subtitle}
+            items={page.whatWeDo.items}
+          />
+        )}
+
+        {page.system && (
+          <TheSystem
+            title={page.system.title}
+            subtitle={page.system.subtitle}
+            pillars={page.system.pillars}
+          />
+        )}
+
         {page.suburbs && (
           <SuburbExclusivity
             title={page.suburbs.title}
@@ -69,90 +84,25 @@ export default function HomePageClient({ data }: HomePageClientProps) {
           />
         )}
 
-        <AboutBlake
-          title={page.aboutBlake.title}
-          description={page.aboutBlake.description}
-          videoFile={page.aboutBlake.videoFile}
-          youtubeUrl={page.aboutBlake.youtubeUrl}
-          stats={page.aboutBlake.stats}
-        />
+        {page.process && (
+          <Process3Steps
+            title={page.process.title}
+            subtitle={page.process.subtitle}
+            steps={page.process.steps}
+          />
+        )}
 
-        <SocialProof
-          title={page.socialProof.title}
-          subtitle={page.socialProof.subtitle}
-          testimonials={page.socialProof.testimonials}
-          featuredTitle={page.socialProof.featuredTitle}
-          featuredLogos={page.socialProof.featuredLogos}
-          beforeTitle={page.socialProof.beforeTitle}
-          beforeItems={page.socialProof.beforeItems}
-          afterTitle={page.socialProof.afterTitle}
-          afterItems={page.socialProof.afterItems}
-        />
-
-        <ContentPortfolio
-          title={page.portfolio.title}
-          subtitle={page.portfolio.subtitle}
-          items={page.portfolio.items}
-        />
-
-        {/* HIDDEN — uncomment to restore Before/After Showcase
-        <BeforeAfterShowcase
-          title={page.showcase.title}
-          subtitle={page.showcase.subtitle}
-          agentName={page.showcase.agentName}
-          agentSuburb={page.showcase.agentSuburb}
-          stats={page.showcase.stats}
-          quote={page.showcase.quote}
-        />
-        */}
-
-        {/* HIDDEN — uncomment to restore Investment Section
-        <InvestmentSection
-          title={page.investment.title}
-          subtitle={page.investment.subtitle}
-          valueStack={page.investment.valueStack}
-          totalValue={page.investment.totalValue}
-          priceLabel={page.investment.priceLabel}
-          price={page.investment.price}
-          pricePeriod={page.investment.pricePeriod}
-          priceNote={page.investment.priceNote}
-          includes={page.investment.includes}
-          roiTitle={page.investment.roiTitle}
-          monthlyInvestment={page.investment.monthlyInvestment}
-          avgCommission={page.investment.avgCommission}
-          breakEven={page.investment.breakEven}
-          avgListings={page.investment.avgListings}
-          avgListingsDetail={page.investment.avgListingsDetail}
-        />
-        */}
-
-        <ProcessTimeline
-          title={page.process.title}
-          subtitle={page.process.subtitle}
-          steps={page.process.steps}
-        />
-
-        <FreeAuditSection
-          title={page.freeAudit.title}
-          intro={page.freeAudit.intro}
-          items={page.freeAudit.items}
-          footnote={page.freeAudit.footnote}
-          ctaText={page.freeAudit.ctaText}
-          ctaHref={page.freeAudit.ctaHref}
-          trustBadges={page.freeAudit.trustBadges}
-        />
-
-        <QualificationSection
-          title={page.qualification.title}
-          subtitle={page.qualification.subtitle}
-          dontApply={page.qualification.dontApply}
-          perfectIf={page.qualification.perfectIf}
-        />
-
-        <FAQ
-          title={page.faq.title}
-          items={page.faq.items}
-        />
+        {page.caseStudy && (
+          <CaseStudyFeatured
+            eyebrow={page.caseStudy.eyebrow}
+            client={page.caseStudy.client}
+            objective={page.caseStudy.objective}
+            solution={page.caseStudy.solution}
+            resultHeadline={page.caseStudy.resultHeadline}
+            resultDetail={page.caseStudy.resultDetail}
+            image={page.caseStudy.image}
+          />
+        )}
 
         <FinalCTA
           headline={page.cta.headline}
