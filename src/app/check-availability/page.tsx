@@ -251,7 +251,7 @@ const css = `
   margin-top:8px;
   box-shadow:0 4px 20px rgba(0,0,0,.04);
 }
-#ca .case-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+#ca .case-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
 #ca .case-stat{background:#0a0a0a;color:#fff;padding:18px 12px;border-radius:10px;text-align:center}
 #ca .case-stat-num{font-size:28px;font-weight:800;color:var(--gold);line-height:1}
 #ca .case-stat-label{font-size:11px;color:var(--muted);margin-top:6px;text-transform:uppercase;letter-spacing:1px}
@@ -333,7 +333,7 @@ const css = `
   #ca h1{font-size:48px}
   #ca h2{font-size:34px}
   #ca .section{padding:80px 0}
-  #ca .case-stats{grid-template-columns:repeat(4,1fr)}
+  #ca .case-stats{grid-template-columns:repeat(3,1fr)}
 
   /* Use the wider screen: roomier container, but keep text columns readable */
   #ca .container{max-width:1040px;padding:0 32px}
@@ -444,12 +444,6 @@ function CheckAvailabilityContent() {
               </div>
               <a href={CALENDLY} className="btn">Find Me a Nearby Suburb →</a>
             </div>
-
-            <div className="trust-row">
-              <span><span className="check">✓</span> Free 15-min call</span>
-              <span><span className="check">✓</span> No obligation</span>
-              <span><span className="check">✓</span> NZ &amp; AU agents</span>
-            </div>
           </div>
         </section>
 
@@ -466,7 +460,6 @@ function CheckAvailabilityContent() {
           <div className="container">
             <div className="section-tag">The Real Problem</div>
             <h2>Your competitor is posting reels. Your sellers are watching. You&apos;re invisible.</h2>
-            <p className="section-sub">Sellers in your suburb pick the agent they see most. Right now, that probably isn&apos;t you.</p>
             <ul className="pain-list">
               <li><span className="pain-x">✕</span> You know you should be making content but you&apos;re flat out listing &amp; selling</li>
               <li><span className="pain-x">✕</span> You don&apos;t have a content and ads strategy to get listings from social media</li>
@@ -481,10 +474,6 @@ function CheckAvailabilityContent() {
             <div className="section-tag" style={{ textAlign: "center" }}>Here&apos;s What You Get</div>
             <h2 style={{ textAlign: "center" }}>The full system. Done for you. One price.</h2>
             <div className="stack-card">
-              <div className="stack-header">
-                <h3>Inside the system</h3>
-              </div>
-
               <div className="stack-item">
                 <div>
                   <div className="stack-item-title">Pro-filmed reels &amp; photos</div>
@@ -540,7 +529,6 @@ function CheckAvailabilityContent() {
         {/* CASE STUDY */}
         <section className="section case">
           <div className="container">
-            <div className="section-tag">Proof</div>
             <h2>Harcourts Team Green: 3 listings from 1 video.</h2>
             <p className="section-sub" style={{ color: "#555" }}>One piece of content. The right system behind it. Look what happens.</p>
             <div className="case-card">
@@ -557,10 +545,6 @@ function CheckAvailabilityContent() {
                   <div className="case-stat-num">$75K</div>
                   <div className="case-stat-label">GCI</div>
                 </div>
-                <div className="case-stat">
-                  <div className="case-stat-num">14</div>
-                  <div className="case-stat-label">Days to live</div>
-                </div>
               </div>
               <p className="case-quote">
                 &ldquo;One piece of content. Three new listings on the back of it. That&apos;s what happens when
@@ -574,9 +558,8 @@ function CheckAvailabilityContent() {
         {/* RISK REVERSAL */}
         <section className="section risk">
           <div className="container">
-            <div className="section-tag">Zero Risk to Find Out</div>
             <h2>What happens on the call</h2>
-            <p className="section-sub">15 minutes. No pitch deck. No pressure. Just a straight conversation about whether we&apos;re a fit.</p>
+            <p className="section-sub">15 minutes. An honest conversation of how we help our clients get listings with our strategy.</p>
             <div className="risk-grid">
               <div className="risk-item">
                 <div className="risk-item-title">1. Free suburb audit</div>
@@ -597,8 +580,7 @@ function CheckAvailabilityContent() {
         {/* FAQ */}
         <section className="section faq">
           <div className="container">
-            <div className="section-tag" style={{ textAlign: "center" }}>Common Questions</div>
-            <h2 style={{ textAlign: "center" }}>Before you book</h2>
+            <h2 style={{ textAlign: "center" }}>Common Questions</h2>
 
             <details className="faq-item">
               <summary>What if my suburb is already taken? <span className="faq-icon">+</span></summary>
@@ -631,8 +613,7 @@ function CheckAvailabilityContent() {
         <section className="final-cta">
           <div className="container">
             <div className="section-tag">Last Step</div>
-            <h2>Lock your suburb. Or watch your competitor do it.</h2>
-            <p className="section-sub">Once it&apos;s claimed, it&apos;s gone. The agent who books first wins.</p>
+            <h2>Lock in your suburb. Lock out your competition.</h2>
             <a href={CALENDLY} className="btn">Book My Free 15-Min Call →</a>
             <div className="trust-row">
               <span><span className="check">✓</span> 15 mins</span>
