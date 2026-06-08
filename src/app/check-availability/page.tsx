@@ -420,7 +420,7 @@ function CheckAvailabilityContent() {
                 type="text"
                 id="suburbInput"
                 className="form-input"
-                placeholder="e.g. Bulimba, Brisbane"
+                placeholder="e.g. Ponsonby, Broadbeach"
                 required
                 autoComplete="off"
                 value={suburb}
