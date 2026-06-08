@@ -334,6 +334,22 @@ const css = `
   #ca h2{font-size:34px}
   #ca .section{padding:80px 0}
   #ca .case-stats{grid-template-columns:repeat(4,1fr)}
+
+  /* Use the wider screen: roomier container, but keep text columns readable */
+  #ca .container{max-width:1040px;padding:0 32px}
+  #ca .nav{max-width:1040px}
+  #ca .hero{padding:32px 0 64px}
+  #ca .hero h1{max-width:760px;margin-left:auto;margin-right:auto}
+  #ca .hero-sub{max-width:600px;margin-left:auto;margin-right:auto}
+  #ca .suburb-form,#ca .result{max-width:520px;margin-left:auto;margin-right:auto}
+  #ca .section-sub{max-width:640px;margin-left:auto;margin-right:auto}
+  #ca .problem h2,#ca .stack h2,#ca .case h2,#ca .risk h2,#ca .final-cta h2{max-width:760px;margin-left:auto;margin-right:auto}
+  #ca .stack-card{max-width:680px;margin-left:auto;margin-right:auto}
+  #ca .case-card{max-width:820px;margin-left:auto;margin-right:auto}
+  #ca .risk-grid{grid-template-columns:repeat(3,1fr);gap:20px}
+  #ca .faq .container{max-width:780px}
+  #ca .final-cta .btn{max-width:360px;margin-left:auto;margin-right:auto}
+  #ca .final-cta .trust-row{margin-top:22px}
 }
 `;
 
