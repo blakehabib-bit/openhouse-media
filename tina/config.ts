@@ -507,6 +507,369 @@ export default defineConfig({
           },
         ],
       },
+
+      // ============================================================
+      // HOMEPAGE (live /) — content/home/index.json
+      // ============================================================
+      {
+        name: "home",
+        label: "Homepage",
+        path: "content/home",
+        format: "json",
+        ui: { allowedActions: { create: false, delete: false } },
+        fields: [
+          {
+            type: "string",
+            name: "ctaLabel",
+            label: "Button label (used on every booking button)",
+          },
+          {
+            type: "object",
+            name: "nav",
+            label: "Navigation",
+            fields: [
+              { type: "string", name: "videoLinkLabel", label: "Video link label" },
+            ],
+          },
+          {
+            type: "object",
+            name: "hero",
+            label: "Hero",
+            fields: [
+              { type: "string", name: "headlineLead", label: "Headline (start)", ui: { component: "textarea" } },
+              { type: "string", name: "headlineUnderline", label: "Headline (underlined end)" },
+              { type: "string", name: "subhead", label: "Sub-headline", ui: { component: "textarea" } },
+              { type: "string", name: "trust", label: "Trust items", list: true },
+            ],
+          },
+          {
+            type: "object",
+            name: "stats",
+            label: "Stat bar",
+            list: true,
+            fields: [
+              { type: "string", name: "num", label: "Number" },
+              { type: "string", name: "label", label: "Label" },
+            ],
+          },
+          {
+            type: "object",
+            name: "problem",
+            label: "Problem",
+            fields: [
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "sub", label: "Sub-text", ui: { component: "textarea" } },
+              { type: "string", name: "pains", label: "Pain points", list: true, ui: { component: "textarea" } },
+            ],
+          },
+          {
+            type: "object",
+            name: "proof",
+            label: "Proof / Case study",
+            fields: [
+              { type: "string", name: "kicker", label: "Kicker" },
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "sub", label: "Sub-text", ui: { component: "textarea" } },
+              { type: "string", name: "caseBadge", label: "Case badge" },
+              { type: "string", name: "caseClient", label: "Case client" },
+              {
+                type: "object",
+                name: "caseStats",
+                label: "Case stats",
+                list: true,
+                fields: [
+                  { type: "string", name: "num", label: "Number" },
+                  { type: "string", name: "label", label: "Label" },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "founder",
+            label: "Founder",
+            fields: [
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "quote", label: "Quote", ui: { component: "textarea" } },
+              { type: "string", name: "name", label: "Name" },
+              { type: "string", name: "title", label: "Title" },
+              { type: "image", name: "photo", label: "Headshot" },
+              {
+                type: "object",
+                name: "creds",
+                label: "Credibility chips",
+                list: true,
+                fields: [
+                  { type: "string", name: "num", label: "Number" },
+                  { type: "string", name: "label", label: "Label" },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "ctaBand",
+            label: "Mid-page CTA band",
+            fields: [{ type: "string", name: "text", label: "Text" }],
+          },
+          {
+            type: "object",
+            name: "system",
+            label: "The System",
+            fields: [
+              { type: "string", name: "kicker", label: "Kicker" },
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "sub", label: "Sub-text", ui: { component: "textarea" } },
+              {
+                type: "object",
+                name: "pillars",
+                label: "Pillars",
+                list: true,
+                fields: [
+                  { type: "string", name: "num", label: "Number" },
+                  { type: "string", name: "name", label: "Name" },
+                  { type: "string", name: "deliverables", label: "Deliverables", list: true },
+                  { type: "string", name: "goal", label: "Goal" },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "exclusivity",
+            label: "Exclusivity",
+            fields: [
+              { type: "string", name: "kicker", label: "Kicker" },
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "body", label: "Body", ui: { component: "textarea" } },
+            ],
+          },
+          {
+            type: "object",
+            name: "agenda",
+            label: "What happens on the call",
+            fields: [
+              { type: "string", name: "kicker", label: "Kicker" },
+              { type: "string", name: "heading", label: "Heading" },
+              {
+                type: "object",
+                name: "steps",
+                label: "Steps",
+                list: true,
+                fields: [
+                  { type: "string", name: "num", label: "Number" },
+                  { type: "string", name: "title", label: "Title" },
+                  { type: "string", name: "body", label: "Body", ui: { component: "textarea" } },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "faq",
+            label: "FAQ",
+            fields: [
+              { type: "string", name: "kicker", label: "Kicker" },
+              { type: "string", name: "heading", label: "Heading" },
+              {
+                type: "object",
+                name: "items",
+                label: "Questions",
+                list: true,
+                fields: [
+                  { type: "string", name: "q", label: "Question" },
+                  { type: "string", name: "a", label: "Answer", ui: { component: "textarea" } },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "finalCta",
+            label: "Final CTA",
+            fields: [
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "body", label: "Body", ui: { component: "textarea" } },
+              { type: "string", name: "trust", label: "Trust items", list: true },
+            ],
+          },
+          {
+            type: "object",
+            name: "prefooter",
+            label: "Pre-footer strip (door to /video)",
+            fields: [
+              { type: "string", name: "text", label: "Text" },
+              { type: "string", name: "linkLabel", label: "Link label" },
+            ],
+          },
+          {
+            type: "object",
+            name: "footer",
+            label: "Footer",
+            fields: [
+              { type: "string", name: "tagline", label: "Tagline" },
+              { type: "string", name: "email", label: "Email" },
+              { type: "string", name: "copyright", label: "Copyright" },
+            ],
+          },
+        ],
+      },
+
+      // ============================================================
+      // VIDEO PAGE (/video) — content/video/index.json
+      // ============================================================
+      {
+        name: "video",
+        label: "Video Page",
+        path: "content/video",
+        format: "json",
+        ui: { allowedActions: { create: false, delete: false } },
+        fields: [
+          { type: "string", name: "quoteEmail", label: "Quote enquiry email" },
+          {
+            type: "object",
+            name: "nav",
+            label: "Navigation",
+            fields: [
+              {
+                type: "object",
+                name: "links",
+                label: "Nav links",
+                list: true,
+                fields: [
+                  { type: "string", name: "label", label: "Label" },
+                  { type: "string", name: "href", label: "Anchor (e.g. #services)" },
+                ],
+              },
+              { type: "string", name: "ctaLabel", label: "Nav button label" },
+            ],
+          },
+          {
+            type: "object",
+            name: "hero",
+            label: "Hero",
+            fields: [
+              { type: "string", name: "kicker", label: "Kicker" },
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "sub", label: "Sub-text", ui: { component: "textarea" } },
+              { type: "string", name: "cta", label: "Button label" },
+              {
+                type: "object",
+                name: "stats",
+                label: "Stats",
+                list: true,
+                fields: [
+                  { type: "string", name: "num", label: "Number" },
+                  { type: "string", name: "label", label: "Label" },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "services",
+            label: "Services",
+            fields: [
+              { type: "string", name: "kicker", label: "Kicker" },
+              { type: "string", name: "heading", label: "Heading" },
+              {
+                type: "object",
+                name: "cards",
+                label: "Service cards",
+                list: true,
+                fields: [
+                  { type: "string", name: "title", label: "Title" },
+                  { type: "string", name: "body", label: "Body", ui: { component: "textarea" } },
+                  { type: "string", name: "items", label: "Bullet items", list: true },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "agentBanner",
+            label: "Agent banner (coral)",
+            fields: [
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "body", label: "Body", ui: { component: "textarea" } },
+              { type: "string", name: "linkLabel", label: "Link label" },
+            ],
+          },
+          {
+            type: "object",
+            name: "process",
+            label: "Process",
+            fields: [
+              { type: "string", name: "kicker", label: "Kicker" },
+              { type: "string", name: "heading", label: "Heading" },
+              {
+                type: "object",
+                name: "steps",
+                label: "Steps",
+                list: true,
+                fields: [
+                  { type: "string", name: "num", label: "Number" },
+                  { type: "string", name: "title", label: "Title" },
+                  { type: "string", name: "body", label: "Body", ui: { component: "textarea" } },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "founder",
+            label: "Founder",
+            fields: [
+              { type: "string", name: "kicker", label: "Kicker" },
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "body", label: "Body", ui: { component: "textarea" } },
+              { type: "image", name: "photo", label: "Headshot" },
+              { type: "string", name: "name", label: "Name" },
+              { type: "string", name: "role", label: "Role" },
+            ],
+          },
+          {
+            type: "object",
+            name: "faq",
+            label: "FAQ",
+            fields: [
+              { type: "string", name: "kicker", label: "Kicker" },
+              { type: "string", name: "heading", label: "Heading" },
+              {
+                type: "object",
+                name: "items",
+                label: "Questions",
+                list: true,
+                fields: [
+                  { type: "string", name: "q", label: "Question" },
+                  { type: "string", name: "a", label: "Answer", ui: { component: "textarea" } },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "quote",
+            label: "Quote CTA",
+            fields: [
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "sub", label: "Sub-text", ui: { component: "textarea" } },
+              { type: "string", name: "cta", label: "Quote button label" },
+              { type: "string", name: "agentCta", label: "Agent button label" },
+            ],
+          },
+          {
+            type: "object",
+            name: "footer",
+            label: "Footer",
+            fields: [
+              { type: "string", name: "tagline", label: "Tagline" },
+              { type: "string", name: "email", label: "Email" },
+              { type: "string", name: "copyright", label: "Copyright" },
+            ],
+          },
+        ],
+      },
     ],
   },
 });

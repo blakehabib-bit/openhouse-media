@@ -1,0 +1,164 @@
+{
+  "ctaLabel": "Check If My Suburb Is Free",
+  "nav": {
+    "videoLinkLabel": "Video production"
+  },
+  "hero": {
+    "headlineLead": "Sellers list with the agent they see most. In your suburb, that ",
+    "headlineUnderline": "should be you.",
+    "subhead": "Suburb-exclusive video, social management and paid ads. One agent per suburb. Locked in. Done for you.",
+    "trust": [
+      "Free 15-min suburb audit call",
+      "NZ & AU agents"
+    ]
+  },
+  "stats": [
+    { "num": "3,000+", "label": "Videos produced" },
+    { "num": "$75K", "label": "Client result from 1 video" },
+    { "num": "14 days", "label": "Signed to live" }
+  ],
+  "problem": {
+    "heading": "The agent who shows up online wins the listing.",
+    "sub": "Sellers in your suburb pick the agent they see most. Right now, that probably isn't you.",
+    "pains": [
+      "You know you should be making content but you're flat out listing and selling",
+      "The agent down the road posts daily and gets the appraisals you should be getting",
+      "Every week you wait, your competitor builds a deeper moat in your patch"
+    ]
+  },
+  "proof": {
+    "kicker": "Proof",
+    "heading": "3 listings from 1 video. $75K GCI.",
+    "sub": "One piece of content. The right system behind it. Watch what happens.",
+    "caseBadge": "Case Study",
+    "caseClient": "Harcourts Team Green",
+    "caseStats": [
+      { "num": "3", "label": "Listings" },
+      { "num": "1", "label": "Video" },
+      { "num": "$75K", "label": "GCI" }
+    ]
+  },
+  "founder": {
+    "heading": "Built by a former agent. Not a marketer guessing at real estate.",
+    "quote": "I was a real estate agent from 18 to 22. TDDK is the system I wish I'd had then.",
+    "name": "Blake Habib",
+    "title": "Founder, The Digital Door Knock",
+    "photo": "/uploads/blake.headshot.jpg",
+    "creds": [
+      { "num": "4 yrs", "label": "Real Estate Agent" },
+      { "num": "3,000+", "label": "Videos Produced" },
+      { "num": "6 yrs", "label": "Video Production" },
+      { "num": "TV", "label": "Featured on national news" }
+    ]
+  },
+  "ctaBand": {
+    "text": "Your suburb might still be open. Check before it isn't."
+  },
+  "system": {
+    "kicker": "The System",
+    "heading": "Three pillars. One connected machine.",
+    "sub": "Content earns attention. Management keeps you front of mind. Ads turn it into appraisals.",
+    "pillars": [
+      {
+        "num": "01",
+        "name": "Content Creation",
+        "deliverables": [
+          "Professionally Produced Video Reels",
+          "High-quality lifestyle photos",
+          "Ideas and scripts created for your core area"
+        ],
+        "goal": "Build profile. Show personality."
+      },
+      {
+        "num": "02",
+        "name": "Social Management",
+        "deliverables": [
+          "Reels edited and published weekly",
+          "Stories and carousels rolled out",
+          "Captions, hashtags, scheduling handled"
+        ],
+        "goal": "More touch points. Nurture the audience."
+      },
+      {
+        "num": "03",
+        "name": "Paid Ads",
+        "deliverables": [
+          "Profile awareness campaigns",
+          "Buyer lead generation",
+          "Seller lead generation"
+        ],
+        "goal": "New eyeballs. Real appraisals."
+      }
+    ]
+  },
+  "exclusivity": {
+    "kicker": "The Unfair Advantage",
+    "heading": "One agent per suburb. No exceptions.",
+    "body": "Once your suburb is claimed, it's locked. Every reel, every ad, every dollar of attention we earn in your patch goes to you and only you."
+  },
+  "agenda": {
+    "kicker": "No Pitch Deck",
+    "heading": "Here's the actual agenda.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "We pull up your suburb.",
+        "body": "Who's posting, who's winning attention, and where the gap is. Real data on your patch, not a generic deck."
+      },
+      {
+        "num": "02",
+        "title": "We show you the system in your suburb.",
+        "body": "What the content, social and ads would look like for your area specifically, and what it's done in suburbs like yours."
+      },
+      {
+        "num": "03",
+        "title": "We tell you straight.",
+        "body": "If it's a fit, you'll know the next step. If it's not, we'll say so and you keep the audit. Either way, 15 minutes and you walk away knowing exactly where you stand in your suburb."
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Common Questions",
+    "heading": "Before you book",
+    "items": [
+      {
+        "q": "What if my suburb is already taken?",
+        "a": "Two options. We add you to the waitlist for that suburb, or we find a high-potential suburb nearby that's still open. You keep the free audit either way."
+      },
+      {
+        "q": "I've been burnt by agencies before. Why is this different?",
+        "a": "Most agencies have never sat an open home or lost a listing to the agent down the road. Blake was an agent for 4 years, was featured on national news, and has produced 3,000+ videos since. And because we only take one agent per suburb, we can't hedge our bets across your competitors. If you don't win your patch, we don't have a story to tell. That's the difference."
+      },
+      {
+        "q": "Do I need to be on camera?",
+        "a": "Yes. People list with people, not logos. Don't worry about being polished, we coach you through what to say and how to say it. Most agents are comfortable by their second shoot."
+      },
+      {
+        "q": "How long does it take to see results?",
+        "a": "Profile growth is immediate. Lead enquiries usually start in weeks 3-6 once ads have data. Listings typically follow in months 2-4. This is a compounding system, not a vending machine."
+      },
+      {
+        "q": "I'm in Australia. Do you operate here?",
+        "a": "Yes. We work across NZ and Australia. Brisbane, Sydney, Melbourne, Gold Coast, Auckland, Wellington and beyond. If you've got a suburb, we can shoot it."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Ready to own your suburb?",
+    "body": "Book a free 15-min call. We'll check your suburb is still open, audit your area, show you what's possible, and tell you straight whether we're a fit. No pitch deck. No pressure.",
+    "trust": [
+      "15 mins",
+      "Free suburb audit",
+      "No pressure"
+    ]
+  },
+  "prefooter": {
+    "text": "Not an agent? We also produce video for Brisbane brands and businesses.",
+    "linkLabel": "See video production →"
+  },
+  "footer": {
+    "tagline": "Suburb-exclusive video and social media systems for Australasia's most ambitious real estate agents.",
+    "email": "blake@thedigitaldoorknock.com",
+    "copyright": "© 2026 THE DIGITAL DOOR KNOCK. ALL RIGHTS RESERVED."
+  }
+}

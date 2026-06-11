@@ -1,0 +1,119 @@
+{
+  "quoteEmail": "blake@thedigitaldoorknock.com",
+  "nav": {
+    "links": [
+      { "label": "Services", "href": "#services" },
+      { "label": "Process", "href": "#process" },
+      { "label": "FAQ", "href": "#faq" }
+    ],
+    "ctaLabel": "Get a quote"
+  },
+  "hero": {
+    "kicker": "Video production, Brisbane",
+    "heading": "Brisbane video production by the team behind 3,000+ videos.",
+    "sub": "One-off shoots and monthly content retainers for brands, businesses and real estate agents. Shot, edited, delivered. No fluff in between.",
+    "cta": "Get a quote →",
+    "stats": [
+      { "num": "3,000+", "label": "Videos produced" },
+      { "num": "6 yrs", "label": "In production" },
+      { "num": "7 days", "label": "Standard turnaround" }
+    ]
+  },
+  "services": {
+    "kicker": "Services",
+    "heading": "Two ways to work with us.",
+    "cards": [
+      {
+        "title": "One-off shoots",
+        "body": "A launch, an event, a brand video, a property. One brief, one shoot day, edits delivered inside a week.",
+        "items": [
+          "Half or full day shoot",
+          "4K video and drone where it earns its place",
+          "Edited deliverables cut for where they'll live",
+          "Vertical and horizontal versions included"
+        ]
+      },
+      {
+        "title": "Monthly content retainers",
+        "body": "Consistent content without hiring an in-house team. We plan it, shoot it, edit it and hand it back ready to post.",
+        "items": [
+          "Monthly shoot day at your place or on location",
+          "Batch of edited reels and cutdowns every month",
+          "Content planning and shot lists handled",
+          "Priority turnaround, locked monthly rate"
+        ]
+      }
+    ]
+  },
+  "agentBanner": {
+    "heading": "Real estate agent? Read this first.",
+    "body": "We'll happily shoot your content. But content alone gets you seen, the full Digital Door Knock system gets you listings: strategy, social management, paid ads and your suburb locked so no competitor can use us. If you're an agent, that's the better conversation to have.",
+    "linkLabel": "See the full system →"
+  },
+  "process": {
+    "kicker": "Process",
+    "heading": "From enquiry to delivery.",
+    "steps": [
+      {
+        "num": "1",
+        "title": "Tell us what you need",
+        "body": "Quick enquiry, then a short call. We scope the shoot, lock the date and quote you a fixed price. No surprises later."
+      },
+      {
+        "num": "2",
+        "title": "Shoot day",
+        "body": "We turn up with a plan and a shot list, not just a camera. You'll know exactly what we're capturing and why before we roll."
+      },
+      {
+        "num": "3",
+        "title": "Delivered, ready to post",
+        "body": "Edited deliverables inside 7 days, cut for the platforms they'll actually live on. One round of revisions included."
+      }
+    ]
+  },
+  "founder": {
+    "kicker": "Who's behind it",
+    "heading": "Six years. 3,000+ videos. One standard.",
+    "body": "DD. Video is the production arm of The Digital Door Knock, run by founder Blake Habib. Six years of production across real estate, brands and businesses, 3,000+ videos delivered, and work featured on national news. We're not a videographer with a website. We're a content machine with a shoot calendar.",
+    "photo": "/uploads/blake.headshot.jpg",
+    "name": "Blake Habib",
+    "role": "Founder, The Digital Door Knock"
+  },
+  "faq": {
+    "kicker": "Common questions",
+    "heading": "Before you enquire",
+    "items": [
+      {
+        "q": "How fast is turnaround?",
+        "a": "Standard is 7 days from shoot to delivery. Retainer clients get priority. If you've got a hard deadline, tell us up front and we'll tell you straight if we can hit it."
+      },
+      {
+        "q": "Do you travel outside Brisbane?",
+        "a": "Yes. Gold Coast and Sunshine Coast regularly, and further for the right project. Travel is quoted up front, never added after."
+      },
+      {
+        "q": "Do we own the footage?",
+        "a": "You own the edited deliverables outright. Raw footage is available, just ask when we quote."
+      },
+      {
+        "q": "Can you handle the posting too?",
+        "a": "For real estate agents, yes, that's the full Digital Door Knock system. For brands and businesses we deliver post-ready content and can advise on rollout."
+      },
+      {
+        "q": "What does it cost?",
+        "a": "Every job is quoted fixed before we book a date. Tell us what you need and we'll come back with a number, usually same day."
+      }
+    ]
+  },
+  "quote": {
+    "heading": "Got a project? Let's price it.",
+    "sub": "Tell us what you're after and we'll come back with a fixed quote and the next available shoot dates. Usually same day.",
+    "cta": "Get a quote →",
+    "agentCta": "I'm a real estate agent →"
+  },
+  "footer": {
+    "tagline": "Video production and suburb-exclusive marketing systems, Brisbane and beyond.",
+    "email": "blake@thedigitaldoorknock.com",
+    "copyright": "© 2026 The Digital Door Knock. All rights reserved."
+  }
+}
