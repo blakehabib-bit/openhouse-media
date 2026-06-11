@@ -441,10 +441,10 @@ const css = `
   /* NAV */
   .v2-root .nav{
     position:sticky;top:0;z-index:50;
-    background:rgba(10,10,10,.85);
+    background:rgba(40,22,90,.72);
     backdrop-filter:blur(12px);
     -webkit-backdrop-filter:blur(12px);
-    border-bottom:1px solid rgba(255,255,255,.04);
+    border-bottom:1px solid rgba(167,139,250,.12);
   }
   .v2-root .nav-inner{
     display:flex;
@@ -475,6 +475,7 @@ const css = `
     position:relative;
     padding:48px 0 56px;
     overflow:hidden;
+    background:linear-gradient(155deg,#312e81 0%,#5b21b6 38%,#3b0764 68%,#0a0a0a 100%);
   }
   .v2-root .hero-glow{
     position:absolute;top:-100px;left:50%;transform:translateX(-50%);
