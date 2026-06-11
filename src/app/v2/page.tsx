@@ -4,12 +4,23 @@ import { ReactNode } from "react";
 import LeadCapturePopup from "@/components/LeadCapturePopup";
 
 /**
- * HOMEPAGE V3 — PREVIEW ONLY
- * Lives at /v2 so it never touches the live homepage (/).
- * Every booking CTA is wired to the existing LeadCapturePopup flow
- * (captures name/email/suburb -> /api/capture-lead -> /check-availability).
- * Once approved, this becomes the real homepage and the copy moves into Tina.
+ * HOMEPAGE — rebuilt per TDDK-website-rebuild-spec.md
+ * Lives at /v2 and is re-exported as the homepage (/) via src/app/page.tsx.
+ * Every booking CTA is wired to the existing LeadCapturePopup flow, which already
+ * collects a required "Your suburb" field (-> /api/capture-lead -> /check-availability).
+ *
+ * PENDING ASSETS (blocked on Blake — see spec section 0). These render as visible
+ * dashed placeholders below and MUST be resolved or removed before deploying:
+ *   - Hero montage reel + the actual $75K result video + 3-5 client reels  [VIDEOS]
+ *   - Real attributed Team Green testimonial (name, role, quote, headshot)  [TESTIMONIAL]
+ *   - Recently-locked suburb names for the top bar                          [LOCKED_SUBURBS]
+ *   - National news outlet + year link                                     [NEWS]
+ *   - Agency logos + permission                                            [LOGOS]
+ *   - Instagram / TikTok links                                             [SOCIALS]
+ * HARD RULE: no invented facts, no fake scarcity, NZ English, no em dashes.
  */
+
+const CTA_LABEL = "Check If My Suburb Is Free →";
 
 function CtaButton({
   className,
@@ -23,12 +34,12 @@ function CtaButton({
       buttonClassName={className}
       buttonContent={children}
       popupTitle="Check your suburb"
-      popupSubtitle="Enter your details and we'll confirm if your suburb is available."
+      popupSubtitle="Enter your details and we'll check if your suburb is still free."
       popupNamePlaceholder="Your name"
       popupEmailPlaceholder="Your email"
       popupSuburbPlaceholder="Your suburb"
-      popupButtonText="Check My Suburb →"
-      popupFootnote="No spam. We'll only reach out if your suburb is available."
+      popupButtonText={CTA_LABEL}
+      popupFootnote="No spam. We'll only reach out about your suburb."
     />
   );
 }
@@ -43,34 +54,37 @@ export default function HomeV2Preview() {
           <div className="logo">
             DD<span>.</span>
           </div>
-          <CtaButton className="nav-cta">Check My Suburb</CtaButton>
+          <div className="nav-right">
+            <a href="/video" className="nav-textlink">
+              Video production
+            </a>
+            <CtaButton className="nav-cta">Check If My Suburb Is Free</CtaButton>
+          </div>
         </div>
       </nav>
+
+      {/* TOP BAR — pending real locked suburbs [LOCKED_SUBURBS].
+          No fake scarcity until Blake provides genuine names. */}
 
       <main>
         {/* HERO */}
         <section className="hero">
           <div className="hero-glow" />
           <div className="wrap hero-inner">
-            <div className="pill">
-              <span className="pill-dot" />5 suburbs claimed this month
-            </div>
             <h1>
-              Become the only agent sellers can{" "}
-              <span className="underline">find in your suburb.</span>
+              Sellers list with the agent they see most. In your suburb, that{" "}
+              <span className="underline">should be you.</span>
             </h1>
             <p className="hero-sub">
-              Suburb-exclusive video, social management, and paid ads. One agent
-              per area. Locked in. Done for you.
+              Suburb-exclusive video, social management and paid ads. One agent
+              per suburb. Locked in. Done for you.
             </p>
             <div className="hero-cta-row">
-              <CtaButton className="btn">
-                Check If My Suburb Is Available →
-              </CtaButton>
+              <CtaButton className="btn">{CTA_LABEL}</CtaButton>
             </div>
             <div className="trust-row">
               <span>
-                <span className="check">✓</span> Free 15-min call
+                <span className="check">✓</span> Free 15-min suburb audit call
               </span>
               <span>
                 <span className="check">✓</span> NZ &amp; AU agents
@@ -89,11 +103,11 @@ export default function HomeV2Preview() {
               </div>
               <div>
                 <div className="stat-num">$75K</div>
-                <div className="stat-label">GCI from 1 video</div>
+                <div className="stat-label">Client result from 1 video</div>
               </div>
               <div>
                 <div className="stat-num">14 days</div>
-                <div className="stat-label">From signed to live</div>
+                <div className="stat-label">Signed to live</div>
               </div>
             </div>
           </div>
@@ -112,7 +126,7 @@ export default function HomeV2Preview() {
             <ul className="pain-list">
               <li>
                 <span className="pain-x">✕</span> You know you should be making
-                content but you&apos;re flat out listing &amp; selling
+                content but you&apos;re flat out listing and selling
               </li>
               <li>
                 <span className="pain-x">✕</span> The agent down the road posts
@@ -123,6 +137,42 @@ export default function HomeV2Preview() {
                 competitor builds a deeper moat in your patch
               </li>
             </ul>
+          </div>
+        </section>
+
+        {/* PROOF (moved above founder) */}
+        <section className="section case" id="case">
+          <div className="narrow">
+            <div className="center">
+              <span className="section-tag">Proof</span>
+              <h2>3 listings from 1 video. $75K GCI.</h2>
+              <p className="section-sub" style={{ color: "#555" }}>
+                One piece of content. The right system behind it. Watch what
+                happens.
+              </p>
+            </div>
+            <div className="proof-single">
+              <div className="case-card">
+                <div className="case-header">
+                  <span className="case-badge">Case Study</span>
+                  <span className="case-client">Harcourts Team Green</span>
+                </div>
+                <div className="case-stats">
+                  <div className="case-stat">
+                    <div className="case-stat-num">3</div>
+                    <div className="case-stat-label">Listings</div>
+                  </div>
+                  <div className="case-stat">
+                    <div className="case-stat-num">1</div>
+                    <div className="case-stat-label">Video</div>
+                  </div>
+                  <div className="case-stat">
+                    <div className="case-stat-num">$75K</div>
+                    <div className="case-stat-label">GCI</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -164,18 +214,20 @@ export default function HomeV2Preview() {
                   <div className="founder-cred-num">6 yrs</div>
                   <div className="founder-cred-label">Video Production</div>
                 </div>
+                <div className="founder-cred">
+                  <div className="founder-cred-num">TV</div>
+                  <div className="founder-cred-label">Featured on national news</div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CTA BAND */}
+        {/* MID-PAGE CTA */}
         <section className="cta-band">
           <div className="wrap">
             <p>Your suburb might still be open. Check before it isn&apos;t.</p>
-            <CtaButton className="btn btn-ghost btn-sm">
-              Check Availability →
-            </CtaButton>
+            <CtaButton className="btn btn-ghost btn-sm">{CTA_LABEL}</CtaButton>
           </div>
         </section>
 
@@ -246,46 +298,55 @@ export default function HomeV2Preview() {
                 ad, every dollar of attention we earn in your patch goes to you
                 and only you.
               </p>
-              <CtaButton className="btn btn-block">Check My Suburb →</CtaButton>
+              <CtaButton className="btn btn-block">{CTA_LABEL}</CtaButton>
             </div>
           </div>
         </section>
 
-        {/* CASE STUDY */}
-        <section className="section case" id="case">
+        {/* WHAT HAPPENS ON THE CALL */}
+        <section className="section agenda-section">
+          <div className="narrow center">
+            <span className="section-tag">No Pitch Deck</span>
+            <h2>Here&apos;s the actual agenda.</h2>
+          </div>
           <div className="narrow">
-            <div className="center">
-              <span className="section-tag">Proof</span>
-              <h2>3 listings from 1 video. $75K GCI.</h2>
-              <p className="section-sub" style={{ color: "#555" }}>
-                One piece of content. The right system behind it. Watch what
-                happens.
-              </p>
+            <div className="agenda">
+              <div className="agenda-step">
+                <div className="agenda-num">01</div>
+                <div>
+                  <h3>We pull up your suburb.</h3>
+                  <p>
+                    Who&apos;s posting, who&apos;s winning attention, and where
+                    the gap is. Real data on your patch, not a generic deck.
+                  </p>
+                </div>
+              </div>
+              <div className="agenda-step">
+                <div className="agenda-num">02</div>
+                <div>
+                  <h3>We show you the system in your suburb.</h3>
+                  <p>
+                    What the content, social and ads would look like for your
+                    area specifically, and what it&apos;s done in suburbs like
+                    yours.
+                  </p>
+                </div>
+              </div>
+              <div className="agenda-step">
+                <div className="agenda-num">03</div>
+                <div>
+                  <h3>We tell you straight.</h3>
+                  <p>
+                    If it&apos;s a fit, you&apos;ll know the next step. If
+                    it&apos;s not, we&apos;ll say so and you keep the audit.
+                    Either way, 15 minutes and you walk away knowing exactly
+                    where you stand in your suburb.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="case-card">
-              <div className="case-header">
-                <span className="case-badge">Case Study</span>
-                <span className="case-client">Harcourts Team Green</span>
-              </div>
-              <div className="case-stats">
-                <div className="case-stat">
-                  <div className="case-stat-num">3</div>
-                  <div className="case-stat-label">Listings</div>
-                </div>
-                <div className="case-stat">
-                  <div className="case-stat-num">1</div>
-                  <div className="case-stat-label">Video</div>
-                </div>
-                <div className="case-stat">
-                  <div className="case-stat-num">$75K</div>
-                  <div className="case-stat-label">GCI</div>
-                </div>
-              </div>
-              <p className="case-quote">
-                &ldquo;One piece of content. Three new listings on the back of
-                it. That&apos;s what happens when content earns attention and the
-                system turns it into leads.&rdquo;
-              </p>
+            <div className="center" style={{ marginTop: "32px" }}>
+              <CtaButton className="btn">{CTA_LABEL}</CtaButton>
             </div>
           </div>
         </section>
@@ -315,9 +376,13 @@ export default function HomeV2Preview() {
                   <span className="faq-icon">+</span>
                 </summary>
                 <div className="faq-answer">
-                  Most agencies don&apos;t understand real estate. We do, deeply.
-                  Blake spent 4 years as an agent. We&apos;re suburb-exclusive, so
-                  we have skin in the game on your area specifically.
+                  Most agencies have never sat an open home or lost a listing to
+                  the agent down the road. Blake was an agent for 4 years, was
+                  featured on national news, and has produced 3,000+ videos
+                  since. And because we only take one agent per suburb, we
+                  can&apos;t hedge our bets across your competitors. If you
+                  don&apos;t win your patch, we don&apos;t have a story to tell.
+                  That&apos;s the difference.
                 </div>
               </details>
               <details className="faq-item">
@@ -362,11 +427,11 @@ export default function HomeV2Preview() {
           <div className="narrow">
             <h2>Ready to own your suburb?</h2>
             <p className="section-sub">
-              Book a free 15-min call. We&apos;ll audit your area, show you
-              what&apos;s possible, and tell you straight whether we&apos;re a
-              fit. No pitch deck. No pressure.
+              Book a free 15-min call. We&apos;ll check your suburb is still
+              open, audit your area, show you what&apos;s possible, and tell you
+              straight whether we&apos;re a fit. No pitch deck. No pressure.
             </p>
-            <CtaButton className="btn">Book My Free 15-Min Call →</CtaButton>
+            <CtaButton className="btn">{CTA_LABEL}</CtaButton>
             <div className="trust-row" style={{ marginTop: "24px" }}>
               <span>
                 <span className="check">✓</span> 15 mins
@@ -381,6 +446,17 @@ export default function HomeV2Preview() {
           </div>
         </section>
       </main>
+
+      {/* PRE-FOOTER STRIP — quiet door to /video for non-agents */}
+      <section className="prefooter">
+        <div className="wrap">
+          <p>
+            Not an agent? We also produce video for Brisbane brands and
+            businesses.{" "}
+            <a href="/video">See video production →</a>
+          </p>
+        </div>
+      </section>
 
       <footer className="v2-footer">
         <div className="wrap">
@@ -438,6 +514,29 @@ const css = `
   .v2-root .section{padding:68px 0}
   .v2-root .section-lg{padding:88px 0}
 
+  /* PENDING ASSET PLACEHOLDERS (preview only — removed before deploy) */
+  .v2-root .pending{
+    border:1px dashed rgba(124,58,237,.45);
+    border-radius:var(--radius);
+    padding:20px;
+    text-align:center;
+    color:var(--accent-strong);
+    font-size:13px;
+    font-weight:600;
+    background:rgba(124,58,237,.05);
+  }
+  .v2-root .pending.on-dark{
+    color:var(--accent);
+    border-color:rgba(167,139,250,.4);
+    background:rgba(167,139,250,.06);
+  }
+  .v2-root .pending-video{
+    aspect-ratio:16/9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
   /* NAV */
   .v2-root .nav{
     position:sticky;top:0;z-index:50;
@@ -456,6 +555,17 @@ const css = `
   }
   .v2-root .logo{font-weight:800;font-size:18px;letter-spacing:.5px}
   .v2-root .logo span{color:var(--accent)}
+  .v2-root .nav-right{display:flex;align-items:center;gap:18px}
+  .v2-root .nav-textlink{
+    color:var(--muted);
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    transition:color .15s;
+    white-space:nowrap;
+  }
+  .v2-root .nav-textlink:hover{color:#fff}
+  @media(max-width:600px){.v2-root .nav-textlink{display:none}}
   .v2-root .nav-cta{
     background:var(--accent-strong);
     color:#fff;
@@ -484,29 +594,6 @@ const css = `
     pointer-events:none;z-index:0;
   }
   .v2-root .hero-inner{position:relative;z-index:1;text-align:center}
-  .v2-root .pill{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    background:rgba(167,139,250,.12);
-    border:1px solid rgba(167,139,250,.3);
-    padding:8px 14px;
-    border-radius:999px;
-    font-size:12px;
-    font-weight:600;
-    color:var(--accent);
-    margin-bottom:24px;
-    letter-spacing:.3px;
-  }
-  .v2-root .pill-dot{
-    width:8px;height:8px;background:var(--success);border-radius:50%;
-    animation:v2pulse 2s infinite;
-  }
-  @keyframes v2pulse{
-    0%{box-shadow:0 0 0 0 rgba(34,197,94,.7)}
-    70%{box-shadow:0 0 0 10px rgba(34,197,94,0)}
-    100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}
-  }
   .v2-root h1{
     font-size:42px;
     line-height:1.05;
@@ -523,7 +610,7 @@ const css = `
   }
   .v2-root .hero-sub{
     font-size:18px;
-    color:var(--muted);
+    color:#d8d2ec;
     margin-bottom:32px;
     max-width:560px;
     margin-left:auto;
@@ -536,6 +623,10 @@ const css = `
     justify-content:center;
     flex-wrap:wrap;
     margin-bottom:24px;
+  }
+  .v2-root .hero-video{
+    max-width:560px;
+    margin:32px auto 0;
   }
   .v2-root .btn{
     display:inline-block;
@@ -572,6 +663,7 @@ const css = `
     font-size:12px;
     color:var(--muted);
   }
+  .v2-root .hero .trust-row{color:#c9c2e4}
   .v2-root .trust-row span{display:flex;align-items:center;gap:6px}
   .v2-root .check{color:var(--success);font-weight:800}
 
@@ -687,8 +779,8 @@ const css = `
   .v2-root .founder-title{font-size:13px;color:#666;margin-top:2px}
   .v2-root .founder-creds{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px 12px;
     margin-top:24px;
     padding-top:24px;
     border-top:1px solid #ece5d6;
@@ -706,6 +798,15 @@ const css = `
     margin-top:6px;
     text-transform:uppercase;
     letter-spacing:.8px;
+  }
+  .v2-root .cred-bar{margin-top:28px}
+  .v2-root .cred-bar-caption{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    color:#888;
+    margin-bottom:12px;
+    text-align:center;
   }
 
   /* SYSTEM */
@@ -731,12 +832,6 @@ const css = `
     line-height:1;
   }
   .v2-root .pillar h3{font-size:20px;margin-bottom:12px;font-weight:700}
-  .v2-root .pillar-desc{
-    color:var(--muted);
-    font-size:14px;
-    margin-bottom:18px;
-    line-height:1.55;
-  }
   .v2-root .pillar-list{list-style:none}
   .v2-root .pillar-list li{
     font-size:14px;
@@ -798,10 +893,12 @@ const css = `
     line-height:1.55;
   }
 
-  /* CASE STUDY */
+  /* PROOF / CASE STUDY */
   .v2-root .case{background:var(--cream);color:#1a1a1a}
   .v2-root .case h2{color:#0a0a0a}
   .v2-root .case .section-tag{color:var(--accent-strong)}
+  .v2-root .proof-grid{display:grid;gap:20px;margin-top:8px}
+  .v2-root .proof-single{max-width:520px;margin:8px auto 0}
   .v2-root .case-card{
     background:#fff;
     border:1px solid #e5dfd3;
@@ -854,12 +951,38 @@ const css = `
     text-transform:uppercase;
     letter-spacing:1px;
   }
-  .v2-root .case-quote{
-    font-style:italic;
-    font-size:15px;
-    line-height:1.55;
-    color:#333;
+  .v2-root .video-wall{margin-top:44px}
+  .v2-root .video-wall h3{
+    font-size:20px;
+    font-weight:700;
+    text-align:center;
+    margin-bottom:20px;
+    color:#0a0a0a;
   }
+
+  /* WHAT HAPPENS ON THE CALL */
+  .v2-root .agenda-section{background:#0a0a0a}
+  .v2-root .agenda{
+    margin-top:8px;
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+  }
+  .v2-root .agenda-step{display:flex;gap:18px;align-items:flex-start}
+  .v2-root .agenda-num{
+    flex-shrink:0;
+    width:42px;height:42px;
+    border-radius:50%;
+    background:var(--accent-strong);
+    color:#fff;
+    font-weight:800;
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .v2-root .agenda-step h3{font-size:18px;font-weight:700;margin-bottom:6px}
+  .v2-root .agenda-step p{font-size:14px;color:var(--muted);line-height:1.6}
 
   /* FAQ */
   .v2-root .faq{background:#0a0a0a;border-top:1px solid #1a1a1a}
@@ -917,6 +1040,17 @@ const css = `
     color:#e8e8e8;
   }
 
+  /* PRE-FOOTER STRIP (quiet door to /video) */
+  .v2-root .prefooter{
+    background:#0d0d0d;
+    border-top:1px solid #1a1a1a;
+    padding:22px 0;
+    text-align:center;
+  }
+  .v2-root .prefooter p{font-size:14px;color:var(--muted)}
+  .v2-root .prefooter a{color:var(--accent);text-decoration:none;font-weight:600;white-space:nowrap}
+  .v2-root .prefooter a:hover{text-decoration:underline}
+
   /* FOOTER */
   .v2-root .v2-footer{
     background:#000;
@@ -932,6 +1066,7 @@ const css = `
     max-width:320px;
     margin:0 auto 20px;
   }
+  .v2-root .footer-socials{max-width:320px;margin:0 auto 16px}
   .v2-root .footer-contact{font-size:13px;color:var(--muted);margin-bottom:8px}
   .v2-root .footer-contact a{color:var(--accent);text-decoration:none}
   .v2-root .footer-copy{
@@ -950,5 +1085,7 @@ const css = `
     .v2-root .pillar-grid{grid-template-columns:repeat(3,1fr)}
     .v2-root .case-stats{grid-template-columns:repeat(3,1fr)}
     .v2-root .case-header{justify-content:flex-start}
+    .v2-root .proof-grid{grid-template-columns:1fr 1fr;align-items:start}
+    .v2-root .founder-creds{grid-template-columns:repeat(4,1fr)}
   }
 `;

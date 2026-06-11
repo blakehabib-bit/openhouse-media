@@ -4,25 +4,35 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The Digital Door Knock | Own Your Suburb's Video Real Estate Market",
+  title:
+    "The Digital Door Knock | Suburb-Exclusive Video Marketing for NZ & AU Real Estate Agents",
   description:
-    "Suburb-exclusive video content for New Zealand's top real estate agents. We guarantee only 1 agent per suburb. Book your free suburb audit today.",
+    "Suburb-exclusive video content for real estate agents across Australia and New Zealand. One agent per suburb, locked in. Check if your suburb is still free.",
   keywords: [
     "real estate video",
     "suburb exclusivity",
     "real estate social media NZ",
+    "real estate social media AU",
     "agent video content",
     "real estate marketing NZ",
+    "real estate marketing Australia",
     "The Digital Door Knock",
     "suburb domination",
     "area exclusivity",
   ],
   openGraph: {
-    title: "The Digital Door Knock | Own Your Suburb's Video Real Estate Market",
+    title: "The Digital Door Knock | One Agent Per Suburb. Locked In.",
     description:
-      "Become the only agent sellers can find in your suburb. Suburb-exclusive video content for NZ real estate agents.",
+      "Sellers list with the agent they see most. Suburb-exclusive video, social and ads for NZ & AU agents. Check if your suburb is free.",
     type: "website",
     locale: "en_NZ",
+    alternateLocale: ["en_AU"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Digital Door Knock | One Agent Per Suburb. Locked In.",
+    description:
+      "Sellers list with the agent they see most. Suburb-exclusive video, social and ads for NZ & AU agents. Check if your suburb is free.",
   },
 };
 

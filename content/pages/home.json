@@ -228,8 +228,8 @@
     "trustBadges": []
   },
   "checkAvailability": {
-    "headline": "Good News — {suburb} Is Still Open",
-    "subtitle": "No other agent has claimed exclusive content rights for this suburb yet.",
+    "headline": "We're checking {suburb} now.",
+    "subtitle": "You'll get the verdict on the call. Grab a time below.",
     "scarcityWarning": "We're currently speaking with 2-3 agents per week. Once an agent in your suburb locks in, it's gone for a minimum of 3 months.",
     "stats": [
       { "value": "1", "label": "Agent per suburb" },
