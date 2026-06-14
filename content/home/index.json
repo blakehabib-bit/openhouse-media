@@ -4,9 +4,9 @@
     "videoLinkLabel": "Video production"
   },
   "hero": {
-    "headlineLead": "The Digital Door Knock System. Your suburb's ",
+    "headlineLead": "The Digital Door Knock System. \nYour suburb's ",
     "headlineUnderline": "24/7 listing machine.",
-    "subhead": "Content, social and ads. One connected system that puts you in front of every seller in your patch, until they list with you.",
+    "subhead": "Content, social and ads. One connected system that puts you in front of every seller in your area, until they list with you.",
     "trust": [
       "Free 15-min suburb audit call",
       "NZ & AU agents"
@@ -37,8 +37,8 @@
   },
   "proof": {
     "kicker": "Proof",
-    "heading": "3 listings from 1 video. $75K GCI.",
-    "sub": "One piece of content. The right system behind it. Watch what happens.",
+    "heading": "3 listings & $75K GCI from this 1 video.",
+    "sub": "",
     "caseBadge": "Case Study",
     "caseClient": "Harcourts Team Green",
     "caseStats": [
@@ -85,9 +85,9 @@
     "text": "Your suburb might still be open. Check before it isn't."
   },
   "system": {
-    "kicker": "The System",
-    "heading": "Three pillars. One connected machine.",
-    "sub": "Content earns attention. Management keeps you front of mind. Ads turn it into appraisals.",
+    "kicker": "The Digital Door Knock System",
+    "heading": "Content builds attention. Social Management keeps you front of mind. Ads turn it into appraisals.",
+    "sub": "",
     "pillars": [
       {
         "num": "01",
@@ -101,7 +101,7 @@
       },
       {
         "num": "02",
-        "name": "Social Management",
+        "name": "Social Media Management",
         "deliverables": [
           "Reels edited and published weekly",
           "Stories and carousels rolled out",
