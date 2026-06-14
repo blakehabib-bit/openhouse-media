@@ -4,18 +4,27 @@
     "videoLinkLabel": "Video production"
   },
   "hero": {
-    "headlineLead": "Sellers list with the agent they see most. In your suburb, that ",
-    "headlineUnderline": "should be you.",
-    "subhead": "The Digital Door Knock System Turns Your Socials Into a 24/7, Consistent Prospecting Machine. ",
+    "headlineLead": "The Digital Door Knock System. Your suburb's ",
+    "headlineUnderline": "24/7 listing machine.",
+    "subhead": "Content, social and ads. One connected system that puts you in front of every seller in your patch, until they list with you.",
     "trust": [
       "Free 15-min suburb audit call",
       "NZ & AU agents"
     ]
   },
   "stats": [
-    { "num": "3,000+", "label": "Videos produced" },
-    { "num": "$75K GCI", "label": "Client result from 1 video" },
-    { "num": "14 days", "label": "From Signed to Live" }
+    {
+      "num": "3,000+",
+      "label": "Videos produced"
+    },
+    {
+      "num": "$75K GCI",
+      "label": "Client result from 1 video"
+    },
+    {
+      "num": "14 days",
+      "label": "From Signed to Live"
+    }
   ],
   "problem": {
     "heading": "The agent who shows up online wins the listing.",
@@ -33,9 +42,18 @@
     "caseBadge": "Case Study",
     "caseClient": "Harcourts Team Green",
     "caseStats": [
-      { "num": "3", "label": "Listings" },
-      { "num": "1", "label": "Video" },
-      { "num": "$75K", "label": "GCI" }
+      {
+        "num": "3",
+        "label": "Listings"
+      },
+      {
+        "num": "1",
+        "label": "Video"
+      },
+      {
+        "num": "$75K",
+        "label": "GCI"
+      }
     ]
   },
   "founder": {
@@ -45,10 +63,22 @@
     "title": "Founder, The Digital Door Knock",
     "photo": "/uploads/blake.headshot.jpg",
     "creds": [
-      { "num": "4 yrs", "label": "Real Estate Agent" },
-      { "num": "3,000+", "label": "Videos Produced" },
-      { "num": "6 yrs", "label": "Video Production" },
-      { "num": "TV", "label": "Featured on national news" }
+      {
+        "num": "4 yrs",
+        "label": "Real Estate Agent"
+      },
+      {
+        "num": "3,000+",
+        "label": "Videos Produced"
+      },
+      {
+        "num": "6 yrs",
+        "label": "Video Production"
+      },
+      {
+        "num": "TV",
+        "label": "Featured on national news"
+      }
     ]
   },
   "ctaBand": {
