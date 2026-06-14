@@ -570,6 +570,7 @@ export default defineConfig({
               { type: "string", name: "kicker", label: "Kicker" },
               { type: "string", name: "heading", label: "Heading" },
               { type: "string", name: "sub", label: "Sub-text", ui: { component: "textarea" } },
+              { type: "string", name: "videoFile", label: "Reel video file path (e.g. /uploads/case-study.mp4) — leave blank to hide" },
               { type: "string", name: "caseBadge", label: "Case badge" },
               { type: "string", name: "caseClient", label: "Case client" },
               {
@@ -629,7 +630,6 @@ export default defineConfig({
                   { type: "string", name: "num", label: "Number" },
                   { type: "string", name: "name", label: "Name" },
                   { type: "string", name: "deliverables", label: "Deliverables", list: true },
-                  { type: "string", name: "goal", label: "Goal" },
                 ],
               },
             ],

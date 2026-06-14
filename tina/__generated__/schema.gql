@@ -56,10 +56,16 @@ type Query {
   document(collection: String, relativePath: String): DocumentNode!
   page(relativePath: String): Page!
   pageConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: PageFilter): PageConnection!
+  home(relativePath: String): Home!
+  homeConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: HomeFilter): HomeConnection!
+  video(relativePath: String): Video!
+  videoConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: VideoFilter): VideoConnection!
 }
 
 input DocumentFilter {
   page: PageFilter
+  home: HomeFilter
+  video: VideoFilter
 }
 
 type DocumentConnectionEdges {
@@ -85,7 +91,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Page | Folder
+union DocumentNode = Page | Home | Video | Folder
 
 type PageNavbarLinks {
   label: String
@@ -717,6 +723,496 @@ type PageConnection implements Connection {
   edges: [PageConnectionEdges]
 }
 
+type HomeNav {
+  videoLinkLabel: String
+}
+
+type HomeHero {
+  headlineLead: String
+  headlineUnderline: String
+  subhead: String
+  trust: [String]
+}
+
+type HomeStats {
+  num: String
+  label: String
+}
+
+type HomeProblem {
+  heading: String
+  sub: String
+  pains: [String]
+}
+
+type HomeProofCaseStats {
+  num: String
+  label: String
+}
+
+type HomeProof {
+  kicker: String
+  heading: String
+  sub: String
+  caseBadge: String
+  caseClient: String
+  caseStats: [HomeProofCaseStats]
+}
+
+type HomeFounderCreds {
+  num: String
+  label: String
+}
+
+type HomeFounder {
+  heading: String
+  quote: String
+  name: String
+  title: String
+  photo: String
+  creds: [HomeFounderCreds]
+}
+
+type HomeCtaBand {
+  text: String
+}
+
+type HomeSystemPillars {
+  num: String
+  name: String
+  deliverables: [String]
+  goal: String
+}
+
+type HomeSystem {
+  kicker: String
+  heading: String
+  sub: String
+  pillars: [HomeSystemPillars]
+}
+
+type HomeExclusivity {
+  kicker: String
+  heading: String
+  body: String
+}
+
+type HomeAgendaSteps {
+  num: String
+  title: String
+  body: String
+}
+
+type HomeAgenda {
+  kicker: String
+  heading: String
+  steps: [HomeAgendaSteps]
+}
+
+type HomeFaqItems {
+  q: String
+  a: String
+}
+
+type HomeFaq {
+  kicker: String
+  heading: String
+  items: [HomeFaqItems]
+}
+
+type HomeFinalCta {
+  heading: String
+  body: String
+  trust: [String]
+}
+
+type HomePrefooter {
+  text: String
+  linkLabel: String
+}
+
+type HomeFooter {
+  tagline: String
+  email: String
+  copyright: String
+}
+
+type Home implements Node & Document {
+  ctaLabel: String
+  nav: HomeNav
+  hero: HomeHero
+  stats: [HomeStats]
+  problem: HomeProblem
+  proof: HomeProof
+  founder: HomeFounder
+  ctaBand: HomeCtaBand
+  system: HomeSystem
+  exclusivity: HomeExclusivity
+  agenda: HomeAgenda
+  faq: HomeFaq
+  finalCta: HomeFinalCta
+  prefooter: HomePrefooter
+  footer: HomeFooter
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input HomeNavFilter {
+  videoLinkLabel: StringFilter
+}
+
+input HomeHeroFilter {
+  headlineLead: StringFilter
+  headlineUnderline: StringFilter
+  subhead: StringFilter
+  trust: StringFilter
+}
+
+input HomeStatsFilter {
+  num: StringFilter
+  label: StringFilter
+}
+
+input HomeProblemFilter {
+  heading: StringFilter
+  sub: StringFilter
+  pains: StringFilter
+}
+
+input HomeProofCaseStatsFilter {
+  num: StringFilter
+  label: StringFilter
+}
+
+input HomeProofFilter {
+  kicker: StringFilter
+  heading: StringFilter
+  sub: StringFilter
+  caseBadge: StringFilter
+  caseClient: StringFilter
+  caseStats: HomeProofCaseStatsFilter
+}
+
+input HomeFounderCredsFilter {
+  num: StringFilter
+  label: StringFilter
+}
+
+input HomeFounderFilter {
+  heading: StringFilter
+  quote: StringFilter
+  name: StringFilter
+  title: StringFilter
+  photo: ImageFilter
+  creds: HomeFounderCredsFilter
+}
+
+input HomeCtaBandFilter {
+  text: StringFilter
+}
+
+input HomeSystemPillarsFilter {
+  num: StringFilter
+  name: StringFilter
+  deliverables: StringFilter
+  goal: StringFilter
+}
+
+input HomeSystemFilter {
+  kicker: StringFilter
+  heading: StringFilter
+  sub: StringFilter
+  pillars: HomeSystemPillarsFilter
+}
+
+input HomeExclusivityFilter {
+  kicker: StringFilter
+  heading: StringFilter
+  body: StringFilter
+}
+
+input HomeAgendaStepsFilter {
+  num: StringFilter
+  title: StringFilter
+  body: StringFilter
+}
+
+input HomeAgendaFilter {
+  kicker: StringFilter
+  heading: StringFilter
+  steps: HomeAgendaStepsFilter
+}
+
+input HomeFaqItemsFilter {
+  q: StringFilter
+  a: StringFilter
+}
+
+input HomeFaqFilter {
+  kicker: StringFilter
+  heading: StringFilter
+  items: HomeFaqItemsFilter
+}
+
+input HomeFinalCtaFilter {
+  heading: StringFilter
+  body: StringFilter
+  trust: StringFilter
+}
+
+input HomePrefooterFilter {
+  text: StringFilter
+  linkLabel: StringFilter
+}
+
+input HomeFooterFilter {
+  tagline: StringFilter
+  email: StringFilter
+  copyright: StringFilter
+}
+
+input HomeFilter {
+  ctaLabel: StringFilter
+  nav: HomeNavFilter
+  hero: HomeHeroFilter
+  stats: HomeStatsFilter
+  problem: HomeProblemFilter
+  proof: HomeProofFilter
+  founder: HomeFounderFilter
+  ctaBand: HomeCtaBandFilter
+  system: HomeSystemFilter
+  exclusivity: HomeExclusivityFilter
+  agenda: HomeAgendaFilter
+  faq: HomeFaqFilter
+  finalCta: HomeFinalCtaFilter
+  prefooter: HomePrefooterFilter
+  footer: HomeFooterFilter
+}
+
+type HomeConnectionEdges {
+  cursor: String!
+  node: Home
+}
+
+type HomeConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [HomeConnectionEdges]
+}
+
+type VideoNavLinks {
+  label: String
+  href: String
+}
+
+type VideoNav {
+  links: [VideoNavLinks]
+  ctaLabel: String
+}
+
+type VideoHeroStats {
+  num: String
+  label: String
+}
+
+type VideoHero {
+  kicker: String
+  heading: String
+  sub: String
+  cta: String
+  stats: [VideoHeroStats]
+}
+
+type VideoServicesCards {
+  title: String
+  body: String
+  items: [String]
+}
+
+type VideoServices {
+  kicker: String
+  heading: String
+  cards: [VideoServicesCards]
+}
+
+type VideoAgentBanner {
+  heading: String
+  body: String
+  linkLabel: String
+}
+
+type VideoProcessSteps {
+  num: String
+  title: String
+  body: String
+}
+
+type VideoProcess {
+  kicker: String
+  heading: String
+  steps: [VideoProcessSteps]
+}
+
+type VideoFounder {
+  kicker: String
+  heading: String
+  body: String
+  photo: String
+  name: String
+  role: String
+}
+
+type VideoFaqItems {
+  q: String
+  a: String
+}
+
+type VideoFaq {
+  kicker: String
+  heading: String
+  items: [VideoFaqItems]
+}
+
+type VideoQuote {
+  heading: String
+  sub: String
+  cta: String
+  agentCta: String
+}
+
+type VideoFooter {
+  tagline: String
+  email: String
+  copyright: String
+}
+
+type Video implements Node & Document {
+  quoteEmail: String
+  nav: VideoNav
+  hero: VideoHero
+  services: VideoServices
+  agentBanner: VideoAgentBanner
+  process: VideoProcess
+  founder: VideoFounder
+  faq: VideoFaq
+  quote: VideoQuote
+  footer: VideoFooter
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input VideoNavLinksFilter {
+  label: StringFilter
+  href: StringFilter
+}
+
+input VideoNavFilter {
+  links: VideoNavLinksFilter
+  ctaLabel: StringFilter
+}
+
+input VideoHeroStatsFilter {
+  num: StringFilter
+  label: StringFilter
+}
+
+input VideoHeroFilter {
+  kicker: StringFilter
+  heading: StringFilter
+  sub: StringFilter
+  cta: StringFilter
+  stats: VideoHeroStatsFilter
+}
+
+input VideoServicesCardsFilter {
+  title: StringFilter
+  body: StringFilter
+  items: StringFilter
+}
+
+input VideoServicesFilter {
+  kicker: StringFilter
+  heading: StringFilter
+  cards: VideoServicesCardsFilter
+}
+
+input VideoAgentBannerFilter {
+  heading: StringFilter
+  body: StringFilter
+  linkLabel: StringFilter
+}
+
+input VideoProcessStepsFilter {
+  num: StringFilter
+  title: StringFilter
+  body: StringFilter
+}
+
+input VideoProcessFilter {
+  kicker: StringFilter
+  heading: StringFilter
+  steps: VideoProcessStepsFilter
+}
+
+input VideoFounderFilter {
+  kicker: StringFilter
+  heading: StringFilter
+  body: StringFilter
+  photo: ImageFilter
+  name: StringFilter
+  role: StringFilter
+}
+
+input VideoFaqItemsFilter {
+  q: StringFilter
+  a: StringFilter
+}
+
+input VideoFaqFilter {
+  kicker: StringFilter
+  heading: StringFilter
+  items: VideoFaqItemsFilter
+}
+
+input VideoQuoteFilter {
+  heading: StringFilter
+  sub: StringFilter
+  cta: StringFilter
+  agentCta: StringFilter
+}
+
+input VideoFooterFilter {
+  tagline: StringFilter
+  email: StringFilter
+  copyright: StringFilter
+}
+
+input VideoFilter {
+  quoteEmail: StringFilter
+  nav: VideoNavFilter
+  hero: VideoHeroFilter
+  services: VideoServicesFilter
+  agentBanner: VideoAgentBannerFilter
+  process: VideoProcessFilter
+  founder: VideoFounderFilter
+  faq: VideoFaqFilter
+  quote: VideoQuoteFilter
+  footer: VideoFooterFilter
+}
+
+type VideoConnectionEdges {
+  cursor: String!
+  node: Video
+}
+
+type VideoConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [VideoConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
@@ -725,15 +1221,23 @@ type Mutation {
   createFolder(collection: String, relativePath: String!): DocumentNode!
   updatePage(relativePath: String!, params: PageMutation!): Page!
   createPage(relativePath: String!, params: PageMutation!): Page!
+  updateHome(relativePath: String!, params: HomeMutation!): Home!
+  createHome(relativePath: String!, params: HomeMutation!): Home!
+  updateVideo(relativePath: String!, params: VideoMutation!): Video!
+  createVideo(relativePath: String!, params: VideoMutation!): Video!
 }
 
 input DocumentUpdateMutation {
   page: PageMutation
+  home: HomeMutation
+  video: VideoMutation
   relativePath: String
 }
 
 input DocumentMutation {
   page: PageMutation
+  home: HomeMutation
+  video: VideoMutation
 }
 
 input PageNavbarLinksMutation {
@@ -1035,6 +1539,237 @@ input PageMutation {
   freeAudit: PageFreeAuditMutation
   stickyCta: PageStickyCtaMutation
   footer: PageFooterMutation
+}
+
+input HomeNavMutation {
+  videoLinkLabel: String
+}
+
+input HomeHeroMutation {
+  headlineLead: String
+  headlineUnderline: String
+  subhead: String
+  trust: [String]
+}
+
+input HomeStatsMutation {
+  num: String
+  label: String
+}
+
+input HomeProblemMutation {
+  heading: String
+  sub: String
+  pains: [String]
+}
+
+input HomeProofCaseStatsMutation {
+  num: String
+  label: String
+}
+
+input HomeProofMutation {
+  kicker: String
+  heading: String
+  sub: String
+  caseBadge: String
+  caseClient: String
+  caseStats: [HomeProofCaseStatsMutation]
+}
+
+input HomeFounderCredsMutation {
+  num: String
+  label: String
+}
+
+input HomeFounderMutation {
+  heading: String
+  quote: String
+  name: String
+  title: String
+  photo: String
+  creds: [HomeFounderCredsMutation]
+}
+
+input HomeCtaBandMutation {
+  text: String
+}
+
+input HomeSystemPillarsMutation {
+  num: String
+  name: String
+  deliverables: [String]
+  goal: String
+}
+
+input HomeSystemMutation {
+  kicker: String
+  heading: String
+  sub: String
+  pillars: [HomeSystemPillarsMutation]
+}
+
+input HomeExclusivityMutation {
+  kicker: String
+  heading: String
+  body: String
+}
+
+input HomeAgendaStepsMutation {
+  num: String
+  title: String
+  body: String
+}
+
+input HomeAgendaMutation {
+  kicker: String
+  heading: String
+  steps: [HomeAgendaStepsMutation]
+}
+
+input HomeFaqItemsMutation {
+  q: String
+  a: String
+}
+
+input HomeFaqMutation {
+  kicker: String
+  heading: String
+  items: [HomeFaqItemsMutation]
+}
+
+input HomeFinalCtaMutation {
+  heading: String
+  body: String
+  trust: [String]
+}
+
+input HomePrefooterMutation {
+  text: String
+  linkLabel: String
+}
+
+input HomeFooterMutation {
+  tagline: String
+  email: String
+  copyright: String
+}
+
+input HomeMutation {
+  ctaLabel: String
+  nav: HomeNavMutation
+  hero: HomeHeroMutation
+  stats: [HomeStatsMutation]
+  problem: HomeProblemMutation
+  proof: HomeProofMutation
+  founder: HomeFounderMutation
+  ctaBand: HomeCtaBandMutation
+  system: HomeSystemMutation
+  exclusivity: HomeExclusivityMutation
+  agenda: HomeAgendaMutation
+  faq: HomeFaqMutation
+  finalCta: HomeFinalCtaMutation
+  prefooter: HomePrefooterMutation
+  footer: HomeFooterMutation
+}
+
+input VideoNavLinksMutation {
+  label: String
+  href: String
+}
+
+input VideoNavMutation {
+  links: [VideoNavLinksMutation]
+  ctaLabel: String
+}
+
+input VideoHeroStatsMutation {
+  num: String
+  label: String
+}
+
+input VideoHeroMutation {
+  kicker: String
+  heading: String
+  sub: String
+  cta: String
+  stats: [VideoHeroStatsMutation]
+}
+
+input VideoServicesCardsMutation {
+  title: String
+  body: String
+  items: [String]
+}
+
+input VideoServicesMutation {
+  kicker: String
+  heading: String
+  cards: [VideoServicesCardsMutation]
+}
+
+input VideoAgentBannerMutation {
+  heading: String
+  body: String
+  linkLabel: String
+}
+
+input VideoProcessStepsMutation {
+  num: String
+  title: String
+  body: String
+}
+
+input VideoProcessMutation {
+  kicker: String
+  heading: String
+  steps: [VideoProcessStepsMutation]
+}
+
+input VideoFounderMutation {
+  kicker: String
+  heading: String
+  body: String
+  photo: String
+  name: String
+  role: String
+}
+
+input VideoFaqItemsMutation {
+  q: String
+  a: String
+}
+
+input VideoFaqMutation {
+  kicker: String
+  heading: String
+  items: [VideoFaqItemsMutation]
+}
+
+input VideoQuoteMutation {
+  heading: String
+  sub: String
+  cta: String
+  agentCta: String
+}
+
+input VideoFooterMutation {
+  tagline: String
+  email: String
+  copyright: String
+}
+
+input VideoMutation {
+  quoteEmail: String
+  nav: VideoNavMutation
+  hero: VideoHeroMutation
+  services: VideoServicesMutation
+  agentBanner: VideoAgentBannerMutation
+  process: VideoProcessMutation
+  founder: VideoFounderMutation
+  faq: VideoFaqMutation
+  quote: VideoQuoteMutation
+  footer: VideoFooterMutation
 }
 
 schema {

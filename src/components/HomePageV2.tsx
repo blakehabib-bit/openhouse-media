@@ -1,7 +1,10 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import LeadCapturePopup from "@/components/LeadCapturePopup";
+
+const CALENDLY_URL =
+  "https://calendly.com/blakehabib98/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=7c3aed";
 
 /**
  * Homepage (TDDK agent site). Content is driven by content/home/index.json
@@ -38,6 +41,15 @@ function CtaButton({
 
 export default function HomePageV2({ data }: { data: Data }) {
   const cta: string = data.ctaLabel;
+
+  useEffect(() => {
+    if (document.querySelector('script[data-calendly]')) return;
+    const s = document.createElement("script");
+    s.src = "https://assets.calendly.com/assets/external/widget.js";
+    s.async = true;
+    s.setAttribute("data-calendly", "1");
+    document.body.appendChild(s);
+  }, []);
 
   return (
     <div className="v2-root">
@@ -116,10 +128,6 @@ export default function HomePageV2({ data }: { data: Data }) {
                       <li key={j}>{d}</li>
                     ))}
                   </ul>
-                  <div className="pillar-goal">
-                    <span className="pillar-goal-label">Goal</span>
-                    {p.goal}
-                  </div>
                 </div>
               ))}
             </div>
@@ -137,6 +145,18 @@ export default function HomePageV2({ data }: { data: Data }) {
               </p>
             </div>
             <div className="proof-single">
+              {data.proof.videoFile && (
+                <div className="proof-video">
+                  <video
+                    src={data.proof.videoFile}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls
+                  />
+                </div>
+              )}
               <div className="case-card">
                 <div className="case-header">
                   <span className="case-badge">{data.proof.caseBadge}</span>
@@ -278,9 +298,10 @@ export default function HomePageV2({ data }: { data: Data }) {
           <div className="narrow">
             <h2>{data.finalCta.heading}</h2>
             <p className="section-sub">{data.finalCta.body}</p>
-            <CtaButton className="btn" popupButtonText={cta}>
-              {cta} →
-            </CtaButton>
+            <div
+              className="calendly-inline-widget"
+              data-url={CALENDLY_URL}
+            />
             <div className="trust-row" style={{ marginTop: "24px" }}>
               {data.finalCta.trust.map((t: string, i: number) => (
                 <span key={i}>
@@ -392,6 +413,7 @@ const css = `
   .v2-root h1{
     font-size:42px;line-height:1.05;font-weight:800;letter-spacing:-1.2px;
     margin-bottom:20px;max-width:680px;margin-left:auto;margin-right:auto;
+    white-space:pre-line;
   }
   .v2-root h1 .underline{
     background:linear-gradient(180deg,transparent 60%,rgba(167,139,250,.4) 60%);
@@ -479,6 +501,8 @@ const css = `
   .v2-root .case h2{color:#0a0a0a}
   .v2-root .case .section-tag{color:var(--accent-strong)}
   .v2-root .proof-single{max-width:520px;margin:8px auto 0}
+  .v2-root .proof-video{max-width:340px;margin:0 auto 24px;aspect-ratio:9/16;border-radius:var(--radius);overflow:hidden;background:#0a0a0a;box-shadow:0 8px 32px rgba(0,0,0,.18)}
+  .v2-root .proof-video video{width:100%;height:100%;object-fit:cover;display:block}
   .v2-root .case-card{background:#fff;border:1px solid #e5dfd3;border-radius:var(--radius);padding:28px 24px;box-shadow:0 4px 24px rgba(0,0,0,.05)}
   .v2-root .case-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid #ece5d6}
   .v2-root .case-badge{background:#0a0a0a;color:var(--gold);padding:6px 12px;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
@@ -510,6 +534,8 @@ const css = `
   .v2-root .final-cta{background:linear-gradient(180deg,#0a0a0a 0%,#1a0f2e 100%);text-align:center}
   .v2-root .final-cta h2{font-size:34px;margin-bottom:16px}
   .v2-root .final-cta .section-sub{margin-bottom:28px}
+  .v2-root .calendly-inline-widget{min-width:320px;height:680px;margin:0 auto;border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:0 12px 40px rgba(0,0,0,.4)}
+  @media(min-width:760px){.v2-root .calendly-inline-widget{height:720px}}
 
   /* INLINE CTA BAND */
   .v2-root .cta-band{background:rgba(124,58,237,.08);border-top:1px solid rgba(167,139,250,.15);border-bottom:1px solid rgba(167,139,250,.15);padding:32px 0;text-align:center}

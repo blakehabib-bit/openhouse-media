@@ -84,6 +84,10 @@ export type Query = {
   document: DocumentNode;
   page: Page;
   pageConnection: PageConnection;
+  home: Home;
+  homeConnection: HomeConnection;
+  video: Video;
+  videoConnection: VideoConnection;
 };
 
 
@@ -122,8 +126,40 @@ export type QueryPageConnectionArgs = {
   filter?: InputMaybe<PageFilter>;
 };
 
+
+export type QueryHomeArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryHomeConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<HomeFilter>;
+};
+
+
+export type QueryVideoArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryVideoConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<VideoFilter>;
+};
+
 export type DocumentFilter = {
   page?: InputMaybe<PageFilter>;
+  home?: InputMaybe<HomeFilter>;
+  video?: InputMaybe<VideoFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -163,7 +199,7 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Page | Folder;
+export type DocumentNode = Page | Home | Video | Folder;
 
 export type PageNavbarLinks = {
   __typename?: 'PageNavbarLinks';
@@ -837,6 +873,535 @@ export type PageConnection = Connection & {
   edges?: Maybe<Array<Maybe<PageConnectionEdges>>>;
 };
 
+export type HomeNav = {
+  __typename?: 'HomeNav';
+  videoLinkLabel?: Maybe<Scalars['String']['output']>;
+};
+
+export type HomeHero = {
+  __typename?: 'HomeHero';
+  headlineLead?: Maybe<Scalars['String']['output']>;
+  headlineUnderline?: Maybe<Scalars['String']['output']>;
+  subhead?: Maybe<Scalars['String']['output']>;
+  trust?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+export type HomeStats = {
+  __typename?: 'HomeStats';
+  num?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
+export type HomeProblem = {
+  __typename?: 'HomeProblem';
+  heading?: Maybe<Scalars['String']['output']>;
+  sub?: Maybe<Scalars['String']['output']>;
+  pains?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+export type HomeProofCaseStats = {
+  __typename?: 'HomeProofCaseStats';
+  num?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
+export type HomeProof = {
+  __typename?: 'HomeProof';
+  kicker?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  sub?: Maybe<Scalars['String']['output']>;
+  caseBadge?: Maybe<Scalars['String']['output']>;
+  caseClient?: Maybe<Scalars['String']['output']>;
+  caseStats?: Maybe<Array<Maybe<HomeProofCaseStats>>>;
+};
+
+export type HomeFounderCreds = {
+  __typename?: 'HomeFounderCreds';
+  num?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
+export type HomeFounder = {
+  __typename?: 'HomeFounder';
+  heading?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  name?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  photo?: Maybe<Scalars['String']['output']>;
+  creds?: Maybe<Array<Maybe<HomeFounderCreds>>>;
+};
+
+export type HomeCtaBand = {
+  __typename?: 'HomeCtaBand';
+  text?: Maybe<Scalars['String']['output']>;
+};
+
+export type HomeSystemPillars = {
+  __typename?: 'HomeSystemPillars';
+  num?: Maybe<Scalars['String']['output']>;
+  name?: Maybe<Scalars['String']['output']>;
+  deliverables?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  goal?: Maybe<Scalars['String']['output']>;
+};
+
+export type HomeSystem = {
+  __typename?: 'HomeSystem';
+  kicker?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  sub?: Maybe<Scalars['String']['output']>;
+  pillars?: Maybe<Array<Maybe<HomeSystemPillars>>>;
+};
+
+export type HomeExclusivity = {
+  __typename?: 'HomeExclusivity';
+  kicker?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  body?: Maybe<Scalars['String']['output']>;
+};
+
+export type HomeAgendaSteps = {
+  __typename?: 'HomeAgendaSteps';
+  num?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  body?: Maybe<Scalars['String']['output']>;
+};
+
+export type HomeAgenda = {
+  __typename?: 'HomeAgenda';
+  kicker?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  steps?: Maybe<Array<Maybe<HomeAgendaSteps>>>;
+};
+
+export type HomeFaqItems = {
+  __typename?: 'HomeFaqItems';
+  q?: Maybe<Scalars['String']['output']>;
+  a?: Maybe<Scalars['String']['output']>;
+};
+
+export type HomeFaq = {
+  __typename?: 'HomeFaq';
+  kicker?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  items?: Maybe<Array<Maybe<HomeFaqItems>>>;
+};
+
+export type HomeFinalCta = {
+  __typename?: 'HomeFinalCta';
+  heading?: Maybe<Scalars['String']['output']>;
+  body?: Maybe<Scalars['String']['output']>;
+  trust?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+export type HomePrefooter = {
+  __typename?: 'HomePrefooter';
+  text?: Maybe<Scalars['String']['output']>;
+  linkLabel?: Maybe<Scalars['String']['output']>;
+};
+
+export type HomeFooter = {
+  __typename?: 'HomeFooter';
+  tagline?: Maybe<Scalars['String']['output']>;
+  email?: Maybe<Scalars['String']['output']>;
+  copyright?: Maybe<Scalars['String']['output']>;
+};
+
+export type Home = Node & Document & {
+  __typename?: 'Home';
+  ctaLabel?: Maybe<Scalars['String']['output']>;
+  nav?: Maybe<HomeNav>;
+  hero?: Maybe<HomeHero>;
+  stats?: Maybe<Array<Maybe<HomeStats>>>;
+  problem?: Maybe<HomeProblem>;
+  proof?: Maybe<HomeProof>;
+  founder?: Maybe<HomeFounder>;
+  ctaBand?: Maybe<HomeCtaBand>;
+  system?: Maybe<HomeSystem>;
+  exclusivity?: Maybe<HomeExclusivity>;
+  agenda?: Maybe<HomeAgenda>;
+  faq?: Maybe<HomeFaq>;
+  finalCta?: Maybe<HomeFinalCta>;
+  prefooter?: Maybe<HomePrefooter>;
+  footer?: Maybe<HomeFooter>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type HomeNavFilter = {
+  videoLinkLabel?: InputMaybe<StringFilter>;
+};
+
+export type HomeHeroFilter = {
+  headlineLead?: InputMaybe<StringFilter>;
+  headlineUnderline?: InputMaybe<StringFilter>;
+  subhead?: InputMaybe<StringFilter>;
+  trust?: InputMaybe<StringFilter>;
+};
+
+export type HomeStatsFilter = {
+  num?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
+export type HomeProblemFilter = {
+  heading?: InputMaybe<StringFilter>;
+  sub?: InputMaybe<StringFilter>;
+  pains?: InputMaybe<StringFilter>;
+};
+
+export type HomeProofCaseStatsFilter = {
+  num?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
+export type HomeProofFilter = {
+  kicker?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  sub?: InputMaybe<StringFilter>;
+  caseBadge?: InputMaybe<StringFilter>;
+  caseClient?: InputMaybe<StringFilter>;
+  caseStats?: InputMaybe<HomeProofCaseStatsFilter>;
+};
+
+export type HomeFounderCredsFilter = {
+  num?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
+export type HomeFounderFilter = {
+  heading?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  name?: InputMaybe<StringFilter>;
+  title?: InputMaybe<StringFilter>;
+  photo?: InputMaybe<ImageFilter>;
+  creds?: InputMaybe<HomeFounderCredsFilter>;
+};
+
+export type HomeCtaBandFilter = {
+  text?: InputMaybe<StringFilter>;
+};
+
+export type HomeSystemPillarsFilter = {
+  num?: InputMaybe<StringFilter>;
+  name?: InputMaybe<StringFilter>;
+  deliverables?: InputMaybe<StringFilter>;
+  goal?: InputMaybe<StringFilter>;
+};
+
+export type HomeSystemFilter = {
+  kicker?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  sub?: InputMaybe<StringFilter>;
+  pillars?: InputMaybe<HomeSystemPillarsFilter>;
+};
+
+export type HomeExclusivityFilter = {
+  kicker?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  body?: InputMaybe<StringFilter>;
+};
+
+export type HomeAgendaStepsFilter = {
+  num?: InputMaybe<StringFilter>;
+  title?: InputMaybe<StringFilter>;
+  body?: InputMaybe<StringFilter>;
+};
+
+export type HomeAgendaFilter = {
+  kicker?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  steps?: InputMaybe<HomeAgendaStepsFilter>;
+};
+
+export type HomeFaqItemsFilter = {
+  q?: InputMaybe<StringFilter>;
+  a?: InputMaybe<StringFilter>;
+};
+
+export type HomeFaqFilter = {
+  kicker?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  items?: InputMaybe<HomeFaqItemsFilter>;
+};
+
+export type HomeFinalCtaFilter = {
+  heading?: InputMaybe<StringFilter>;
+  body?: InputMaybe<StringFilter>;
+  trust?: InputMaybe<StringFilter>;
+};
+
+export type HomePrefooterFilter = {
+  text?: InputMaybe<StringFilter>;
+  linkLabel?: InputMaybe<StringFilter>;
+};
+
+export type HomeFooterFilter = {
+  tagline?: InputMaybe<StringFilter>;
+  email?: InputMaybe<StringFilter>;
+  copyright?: InputMaybe<StringFilter>;
+};
+
+export type HomeFilter = {
+  ctaLabel?: InputMaybe<StringFilter>;
+  nav?: InputMaybe<HomeNavFilter>;
+  hero?: InputMaybe<HomeHeroFilter>;
+  stats?: InputMaybe<HomeStatsFilter>;
+  problem?: InputMaybe<HomeProblemFilter>;
+  proof?: InputMaybe<HomeProofFilter>;
+  founder?: InputMaybe<HomeFounderFilter>;
+  ctaBand?: InputMaybe<HomeCtaBandFilter>;
+  system?: InputMaybe<HomeSystemFilter>;
+  exclusivity?: InputMaybe<HomeExclusivityFilter>;
+  agenda?: InputMaybe<HomeAgendaFilter>;
+  faq?: InputMaybe<HomeFaqFilter>;
+  finalCta?: InputMaybe<HomeFinalCtaFilter>;
+  prefooter?: InputMaybe<HomePrefooterFilter>;
+  footer?: InputMaybe<HomeFooterFilter>;
+};
+
+export type HomeConnectionEdges = {
+  __typename?: 'HomeConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Home>;
+};
+
+export type HomeConnection = Connection & {
+  __typename?: 'HomeConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<HomeConnectionEdges>>>;
+};
+
+export type VideoNavLinks = {
+  __typename?: 'VideoNavLinks';
+  label?: Maybe<Scalars['String']['output']>;
+  href?: Maybe<Scalars['String']['output']>;
+};
+
+export type VideoNav = {
+  __typename?: 'VideoNav';
+  links?: Maybe<Array<Maybe<VideoNavLinks>>>;
+  ctaLabel?: Maybe<Scalars['String']['output']>;
+};
+
+export type VideoHeroStats = {
+  __typename?: 'VideoHeroStats';
+  num?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
+export type VideoHero = {
+  __typename?: 'VideoHero';
+  kicker?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  sub?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<Scalars['String']['output']>;
+  stats?: Maybe<Array<Maybe<VideoHeroStats>>>;
+};
+
+export type VideoServicesCards = {
+  __typename?: 'VideoServicesCards';
+  title?: Maybe<Scalars['String']['output']>;
+  body?: Maybe<Scalars['String']['output']>;
+  items?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+export type VideoServices = {
+  __typename?: 'VideoServices';
+  kicker?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  cards?: Maybe<Array<Maybe<VideoServicesCards>>>;
+};
+
+export type VideoAgentBanner = {
+  __typename?: 'VideoAgentBanner';
+  heading?: Maybe<Scalars['String']['output']>;
+  body?: Maybe<Scalars['String']['output']>;
+  linkLabel?: Maybe<Scalars['String']['output']>;
+};
+
+export type VideoProcessSteps = {
+  __typename?: 'VideoProcessSteps';
+  num?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  body?: Maybe<Scalars['String']['output']>;
+};
+
+export type VideoProcess = {
+  __typename?: 'VideoProcess';
+  kicker?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  steps?: Maybe<Array<Maybe<VideoProcessSteps>>>;
+};
+
+export type VideoFounder = {
+  __typename?: 'VideoFounder';
+  kicker?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  body?: Maybe<Scalars['String']['output']>;
+  photo?: Maybe<Scalars['String']['output']>;
+  name?: Maybe<Scalars['String']['output']>;
+  role?: Maybe<Scalars['String']['output']>;
+};
+
+export type VideoFaqItems = {
+  __typename?: 'VideoFaqItems';
+  q?: Maybe<Scalars['String']['output']>;
+  a?: Maybe<Scalars['String']['output']>;
+};
+
+export type VideoFaq = {
+  __typename?: 'VideoFaq';
+  kicker?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  items?: Maybe<Array<Maybe<VideoFaqItems>>>;
+};
+
+export type VideoQuote = {
+  __typename?: 'VideoQuote';
+  heading?: Maybe<Scalars['String']['output']>;
+  sub?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<Scalars['String']['output']>;
+  agentCta?: Maybe<Scalars['String']['output']>;
+};
+
+export type VideoFooter = {
+  __typename?: 'VideoFooter';
+  tagline?: Maybe<Scalars['String']['output']>;
+  email?: Maybe<Scalars['String']['output']>;
+  copyright?: Maybe<Scalars['String']['output']>;
+};
+
+export type Video = Node & Document & {
+  __typename?: 'Video';
+  quoteEmail?: Maybe<Scalars['String']['output']>;
+  nav?: Maybe<VideoNav>;
+  hero?: Maybe<VideoHero>;
+  services?: Maybe<VideoServices>;
+  agentBanner?: Maybe<VideoAgentBanner>;
+  process?: Maybe<VideoProcess>;
+  founder?: Maybe<VideoFounder>;
+  faq?: Maybe<VideoFaq>;
+  quote?: Maybe<VideoQuote>;
+  footer?: Maybe<VideoFooter>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type VideoNavLinksFilter = {
+  label?: InputMaybe<StringFilter>;
+  href?: InputMaybe<StringFilter>;
+};
+
+export type VideoNavFilter = {
+  links?: InputMaybe<VideoNavLinksFilter>;
+  ctaLabel?: InputMaybe<StringFilter>;
+};
+
+export type VideoHeroStatsFilter = {
+  num?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
+export type VideoHeroFilter = {
+  kicker?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  sub?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<StringFilter>;
+  stats?: InputMaybe<VideoHeroStatsFilter>;
+};
+
+export type VideoServicesCardsFilter = {
+  title?: InputMaybe<StringFilter>;
+  body?: InputMaybe<StringFilter>;
+  items?: InputMaybe<StringFilter>;
+};
+
+export type VideoServicesFilter = {
+  kicker?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  cards?: InputMaybe<VideoServicesCardsFilter>;
+};
+
+export type VideoAgentBannerFilter = {
+  heading?: InputMaybe<StringFilter>;
+  body?: InputMaybe<StringFilter>;
+  linkLabel?: InputMaybe<StringFilter>;
+};
+
+export type VideoProcessStepsFilter = {
+  num?: InputMaybe<StringFilter>;
+  title?: InputMaybe<StringFilter>;
+  body?: InputMaybe<StringFilter>;
+};
+
+export type VideoProcessFilter = {
+  kicker?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  steps?: InputMaybe<VideoProcessStepsFilter>;
+};
+
+export type VideoFounderFilter = {
+  kicker?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  body?: InputMaybe<StringFilter>;
+  photo?: InputMaybe<ImageFilter>;
+  name?: InputMaybe<StringFilter>;
+  role?: InputMaybe<StringFilter>;
+};
+
+export type VideoFaqItemsFilter = {
+  q?: InputMaybe<StringFilter>;
+  a?: InputMaybe<StringFilter>;
+};
+
+export type VideoFaqFilter = {
+  kicker?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  items?: InputMaybe<VideoFaqItemsFilter>;
+};
+
+export type VideoQuoteFilter = {
+  heading?: InputMaybe<StringFilter>;
+  sub?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<StringFilter>;
+  agentCta?: InputMaybe<StringFilter>;
+};
+
+export type VideoFooterFilter = {
+  tagline?: InputMaybe<StringFilter>;
+  email?: InputMaybe<StringFilter>;
+  copyright?: InputMaybe<StringFilter>;
+};
+
+export type VideoFilter = {
+  quoteEmail?: InputMaybe<StringFilter>;
+  nav?: InputMaybe<VideoNavFilter>;
+  hero?: InputMaybe<VideoHeroFilter>;
+  services?: InputMaybe<VideoServicesFilter>;
+  agentBanner?: InputMaybe<VideoAgentBannerFilter>;
+  process?: InputMaybe<VideoProcessFilter>;
+  founder?: InputMaybe<VideoFounderFilter>;
+  faq?: InputMaybe<VideoFaqFilter>;
+  quote?: InputMaybe<VideoQuoteFilter>;
+  footer?: InputMaybe<VideoFooterFilter>;
+};
+
+export type VideoConnectionEdges = {
+  __typename?: 'VideoConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Video>;
+};
+
+export type VideoConnection = Connection & {
+  __typename?: 'VideoConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<VideoConnectionEdges>>>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   addPendingDocument: DocumentNode;
@@ -846,6 +1411,10 @@ export type Mutation = {
   createFolder: DocumentNode;
   updatePage: Page;
   createPage: Page;
+  updateHome: Home;
+  createHome: Home;
+  updateVideo: Video;
+  createVideo: Video;
 };
 
 
@@ -893,13 +1462,41 @@ export type MutationCreatePageArgs = {
   params: PageMutation;
 };
 
+
+export type MutationUpdateHomeArgs = {
+  relativePath: Scalars['String']['input'];
+  params: HomeMutation;
+};
+
+
+export type MutationCreateHomeArgs = {
+  relativePath: Scalars['String']['input'];
+  params: HomeMutation;
+};
+
+
+export type MutationUpdateVideoArgs = {
+  relativePath: Scalars['String']['input'];
+  params: VideoMutation;
+};
+
+
+export type MutationCreateVideoArgs = {
+  relativePath: Scalars['String']['input'];
+  params: VideoMutation;
+};
+
 export type DocumentUpdateMutation = {
   page?: InputMaybe<PageMutation>;
+  home?: InputMaybe<HomeMutation>;
+  video?: InputMaybe<VideoMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type DocumentMutation = {
   page?: InputMaybe<PageMutation>;
+  home?: InputMaybe<HomeMutation>;
+  video?: InputMaybe<VideoMutation>;
 };
 
 export type PageNavbarLinksMutation = {
@@ -1203,7 +1800,242 @@ export type PageMutation = {
   footer?: InputMaybe<PageFooterMutation>;
 };
 
+export type HomeNavMutation = {
+  videoLinkLabel?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type HomeHeroMutation = {
+  headlineLead?: InputMaybe<Scalars['String']['input']>;
+  headlineUnderline?: InputMaybe<Scalars['String']['input']>;
+  subhead?: InputMaybe<Scalars['String']['input']>;
+  trust?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type HomeStatsMutation = {
+  num?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type HomeProblemMutation = {
+  heading?: InputMaybe<Scalars['String']['input']>;
+  sub?: InputMaybe<Scalars['String']['input']>;
+  pains?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type HomeProofCaseStatsMutation = {
+  num?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type HomeProofMutation = {
+  kicker?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  sub?: InputMaybe<Scalars['String']['input']>;
+  caseBadge?: InputMaybe<Scalars['String']['input']>;
+  caseClient?: InputMaybe<Scalars['String']['input']>;
+  caseStats?: InputMaybe<Array<InputMaybe<HomeProofCaseStatsMutation>>>;
+};
+
+export type HomeFounderCredsMutation = {
+  num?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type HomeFounderMutation = {
+  heading?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  name?: InputMaybe<Scalars['String']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  photo?: InputMaybe<Scalars['String']['input']>;
+  creds?: InputMaybe<Array<InputMaybe<HomeFounderCredsMutation>>>;
+};
+
+export type HomeCtaBandMutation = {
+  text?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type HomeSystemPillarsMutation = {
+  num?: InputMaybe<Scalars['String']['input']>;
+  name?: InputMaybe<Scalars['String']['input']>;
+  deliverables?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  goal?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type HomeSystemMutation = {
+  kicker?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  sub?: InputMaybe<Scalars['String']['input']>;
+  pillars?: InputMaybe<Array<InputMaybe<HomeSystemPillarsMutation>>>;
+};
+
+export type HomeExclusivityMutation = {
+  kicker?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  body?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type HomeAgendaStepsMutation = {
+  num?: InputMaybe<Scalars['String']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  body?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type HomeAgendaMutation = {
+  kicker?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  steps?: InputMaybe<Array<InputMaybe<HomeAgendaStepsMutation>>>;
+};
+
+export type HomeFaqItemsMutation = {
+  q?: InputMaybe<Scalars['String']['input']>;
+  a?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type HomeFaqMutation = {
+  kicker?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  items?: InputMaybe<Array<InputMaybe<HomeFaqItemsMutation>>>;
+};
+
+export type HomeFinalCtaMutation = {
+  heading?: InputMaybe<Scalars['String']['input']>;
+  body?: InputMaybe<Scalars['String']['input']>;
+  trust?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type HomePrefooterMutation = {
+  text?: InputMaybe<Scalars['String']['input']>;
+  linkLabel?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type HomeFooterMutation = {
+  tagline?: InputMaybe<Scalars['String']['input']>;
+  email?: InputMaybe<Scalars['String']['input']>;
+  copyright?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type HomeMutation = {
+  ctaLabel?: InputMaybe<Scalars['String']['input']>;
+  nav?: InputMaybe<HomeNavMutation>;
+  hero?: InputMaybe<HomeHeroMutation>;
+  stats?: InputMaybe<Array<InputMaybe<HomeStatsMutation>>>;
+  problem?: InputMaybe<HomeProblemMutation>;
+  proof?: InputMaybe<HomeProofMutation>;
+  founder?: InputMaybe<HomeFounderMutation>;
+  ctaBand?: InputMaybe<HomeCtaBandMutation>;
+  system?: InputMaybe<HomeSystemMutation>;
+  exclusivity?: InputMaybe<HomeExclusivityMutation>;
+  agenda?: InputMaybe<HomeAgendaMutation>;
+  faq?: InputMaybe<HomeFaqMutation>;
+  finalCta?: InputMaybe<HomeFinalCtaMutation>;
+  prefooter?: InputMaybe<HomePrefooterMutation>;
+  footer?: InputMaybe<HomeFooterMutation>;
+};
+
+export type VideoNavLinksMutation = {
+  label?: InputMaybe<Scalars['String']['input']>;
+  href?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VideoNavMutation = {
+  links?: InputMaybe<Array<InputMaybe<VideoNavLinksMutation>>>;
+  ctaLabel?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VideoHeroStatsMutation = {
+  num?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VideoHeroMutation = {
+  kicker?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  sub?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<Scalars['String']['input']>;
+  stats?: InputMaybe<Array<InputMaybe<VideoHeroStatsMutation>>>;
+};
+
+export type VideoServicesCardsMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  body?: InputMaybe<Scalars['String']['input']>;
+  items?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type VideoServicesMutation = {
+  kicker?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  cards?: InputMaybe<Array<InputMaybe<VideoServicesCardsMutation>>>;
+};
+
+export type VideoAgentBannerMutation = {
+  heading?: InputMaybe<Scalars['String']['input']>;
+  body?: InputMaybe<Scalars['String']['input']>;
+  linkLabel?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VideoProcessStepsMutation = {
+  num?: InputMaybe<Scalars['String']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  body?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VideoProcessMutation = {
+  kicker?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  steps?: InputMaybe<Array<InputMaybe<VideoProcessStepsMutation>>>;
+};
+
+export type VideoFounderMutation = {
+  kicker?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  body?: InputMaybe<Scalars['String']['input']>;
+  photo?: InputMaybe<Scalars['String']['input']>;
+  name?: InputMaybe<Scalars['String']['input']>;
+  role?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VideoFaqItemsMutation = {
+  q?: InputMaybe<Scalars['String']['input']>;
+  a?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VideoFaqMutation = {
+  kicker?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  items?: InputMaybe<Array<InputMaybe<VideoFaqItemsMutation>>>;
+};
+
+export type VideoQuoteMutation = {
+  heading?: InputMaybe<Scalars['String']['input']>;
+  sub?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<Scalars['String']['input']>;
+  agentCta?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VideoFooterMutation = {
+  tagline?: InputMaybe<Scalars['String']['input']>;
+  email?: InputMaybe<Scalars['String']['input']>;
+  copyright?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VideoMutation = {
+  quoteEmail?: InputMaybe<Scalars['String']['input']>;
+  nav?: InputMaybe<VideoNavMutation>;
+  hero?: InputMaybe<VideoHeroMutation>;
+  services?: InputMaybe<VideoServicesMutation>;
+  agentBanner?: InputMaybe<VideoAgentBannerMutation>;
+  process?: InputMaybe<VideoProcessMutation>;
+  founder?: InputMaybe<VideoFounderMutation>;
+  faq?: InputMaybe<VideoFaqMutation>;
+  quote?: InputMaybe<VideoQuoteMutation>;
+  footer?: InputMaybe<VideoFooterMutation>;
+};
+
 export type PagePartsFragment = { __typename: 'Page', navbar?: { __typename: 'PageNavbar', brand?: string | null, ctaText?: string | null, ctaHref?: string | null, links?: Array<{ __typename: 'PageNavbarLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'PageHero', badge?: string | null, headlinePart1?: string | null, headlineHighlight?: string | null, headlinePart2?: string | null, subheadline?: string | null, description?: string | null, ctaPrimaryText?: string | null, ctaSecondaryText?: string | null, ctaFootnote?: string | null, stats?: Array<{ __typename: 'PageHeroStats', value?: string | null, label?: string | null } | null> | null } | null, aboutBlake?: { __typename: 'PageAboutBlake', title?: string | null, description?: string | null, videoFile?: string | null, youtubeUrl?: string | null, stats?: Array<{ __typename: 'PageAboutBlakeStats', value?: string | null, label?: string | null } | null> | null } | null, suburbs?: { __typename: 'PageSuburbs', title?: string | null, description?: string | null, checkerTitle?: string | null, checkerPlaceholder?: string | null, checkerButtonText?: string | null, checkerFootnote?: string | null, warningTitle?: string | null, warningText?: string | null, popupTitle?: string | null, popupSubtitle?: string | null, popupNamePlaceholder?: string | null, popupEmailPlaceholder?: string | null, popupButtonText?: string | null, popupFootnote?: string | null, steps?: Array<{ __typename: 'PageSuburbsSteps', title?: string | null, description?: string | null } | null> | null } | null, socialProof?: { __typename: 'PageSocialProof', title?: string | null, subtitle?: string | null, featuredTitle?: string | null, beforeTitle?: string | null, afterTitle?: string | null, testimonials?: Array<{ __typename: 'PageSocialProofTestimonials', stat?: string | null, quote?: string | null, name?: string | null, agency?: string | null, image?: string | null, headshot?: string | null } | null> | null, featuredLogos?: Array<{ __typename: 'PageSocialProofFeaturedLogos', name?: string | null, logo?: string | null } | null> | null, beforeItems?: Array<{ __typename: 'PageSocialProofBeforeItems', text?: string | null } | null> | null, afterItems?: Array<{ __typename: 'PageSocialProofAfterItems', text?: string | null } | null> | null } | null, investment?: { __typename: 'PageInvestment', title?: string | null, subtitle?: string | null, totalValue?: string | null, priceLabel?: string | null, price?: string | null, pricePeriod?: string | null, priceNote?: string | null, roiTitle?: string | null, monthlyInvestment?: string | null, avgCommission?: string | null, breakEven?: string | null, avgListings?: string | null, avgListingsDetail?: string | null, valueStack?: Array<{ __typename: 'PageInvestmentValueStack', role?: string | null, detail?: string | null, price?: string | null } | null> | null, includes?: Array<{ __typename: 'PageInvestmentIncludes', text?: string | null } | null> | null } | null, process?: { __typename: 'PageProcess', title?: string | null, subtitle?: string | null, steps?: Array<{ __typename: 'PageProcessSteps', week?: string | null, title?: string | null, bullets?: Array<{ __typename: 'PageProcessStepsBullets', text?: string | null } | null> | null } | null> | null } | null, qualification?: { __typename: 'PageQualification', title?: string | null, subtitle?: string | null, dontApply?: Array<{ __typename: 'PageQualificationDontApply', title?: string | null, description?: string | null } | null> | null, perfectIf?: Array<{ __typename: 'PageQualificationPerfectIf', title?: string | null, description?: string | null } | null> | null } | null, cta?: { __typename: 'PageCta', headline?: string | null, subheadline?: string | null, description?: string | null, formTitle?: string | null, submitText?: string | null, footnote?: string | null, trustBadges?: Array<{ __typename: 'PageCtaTrustBadges', text?: string | null } | null> | null } | null, faq?: { __typename: 'PageFaq', title?: string | null, items?: Array<{ __typename: 'PageFaqItems', question?: string | null, answer?: string | null } | null> | null } | null, portfolio?: { __typename: 'PagePortfolio', title?: string | null, subtitle?: string | null, items?: Array<{ __typename: 'PagePortfolioItems', title?: string | null, type?: string | null, description?: string | null, stat?: string | null, videoFile?: string | null, reelUrl?: string | null, image?: string | null } | null> | null } | null, showcase?: { __typename: 'PageShowcase', title?: string | null, subtitle?: string | null, agentName?: string | null, agentSuburb?: string | null, quote?: string | null, stats?: Array<{ __typename: 'PageShowcaseStats', label?: string | null, before?: string | null, after?: string | null } | null> | null } | null, checkAvailability?: { __typename: 'PageCheckAvailability', headline?: string | null, subtitle?: string | null, scarcityWarning?: string | null, bookingTitle?: string | null, bookingSubtitle?: string | null, auditTitle?: string | null, auditIntro?: string | null, auditFootnote?: string | null, footnote?: string | null, stats?: Array<{ __typename: 'PageCheckAvailabilityStats', value?: string | null, label?: string | null } | null> | null, auditItems?: Array<{ __typename: 'PageCheckAvailabilityAuditItems', title?: string | null, description?: string | null } | null> | null } | null, freeAudit?: { __typename: 'PageFreeAudit', title?: string | null, intro?: string | null, footnote?: string | null, ctaText?: string | null, ctaHref?: string | null, trustBadges?: Array<string | null> | null, items?: Array<{ __typename: 'PageFreeAuditItems', title?: string | null, description?: string | null } | null> | null } | null, stickyCta?: { __typename: 'PageStickyCta', text?: string | null, buttonText?: string | null, buttonHref?: string | null } | null, footer?: { __typename: 'PageFooter', brand?: string | null, tagline?: string | null, email?: string | null, phone?: string | null, location?: string | null, copyright?: string | null, quickLinks?: Array<{ __typename: 'PageFooterQuickLinks', label?: string | null, href?: string | null } | null> | null, resources?: Array<{ __typename: 'PageFooterResources', label?: string | null, href?: string | null } | null> | null } | null };
+
+export type HomePartsFragment = { __typename: 'Home', ctaLabel?: string | null, nav?: { __typename: 'HomeNav', videoLinkLabel?: string | null } | null, hero?: { __typename: 'HomeHero', headlineLead?: string | null, headlineUnderline?: string | null, subhead?: string | null, trust?: Array<string | null> | null } | null, stats?: Array<{ __typename: 'HomeStats', num?: string | null, label?: string | null } | null> | null, problem?: { __typename: 'HomeProblem', heading?: string | null, sub?: string | null, pains?: Array<string | null> | null } | null, proof?: { __typename: 'HomeProof', kicker?: string | null, heading?: string | null, sub?: string | null, caseBadge?: string | null, caseClient?: string | null, caseStats?: Array<{ __typename: 'HomeProofCaseStats', num?: string | null, label?: string | null } | null> | null } | null, founder?: { __typename: 'HomeFounder', heading?: string | null, quote?: string | null, name?: string | null, title?: string | null, photo?: string | null, creds?: Array<{ __typename: 'HomeFounderCreds', num?: string | null, label?: string | null } | null> | null } | null, ctaBand?: { __typename: 'HomeCtaBand', text?: string | null } | null, system?: { __typename: 'HomeSystem', kicker?: string | null, heading?: string | null, sub?: string | null, pillars?: Array<{ __typename: 'HomeSystemPillars', num?: string | null, name?: string | null, deliverables?: Array<string | null> | null, goal?: string | null } | null> | null } | null, exclusivity?: { __typename: 'HomeExclusivity', kicker?: string | null, heading?: string | null, body?: string | null } | null, agenda?: { __typename: 'HomeAgenda', kicker?: string | null, heading?: string | null, steps?: Array<{ __typename: 'HomeAgendaSteps', num?: string | null, title?: string | null, body?: string | null } | null> | null } | null, faq?: { __typename: 'HomeFaq', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'HomeFaqItems', q?: string | null, a?: string | null } | null> | null } | null, finalCta?: { __typename: 'HomeFinalCta', heading?: string | null, body?: string | null, trust?: Array<string | null> | null } | null, prefooter?: { __typename: 'HomePrefooter', text?: string | null, linkLabel?: string | null } | null, footer?: { __typename: 'HomeFooter', tagline?: string | null, email?: string | null, copyright?: string | null } | null };
+
+export type VideoPartsFragment = { __typename: 'Video', quoteEmail?: string | null, nav?: { __typename: 'VideoNav', ctaLabel?: string | null, links?: Array<{ __typename: 'VideoNavLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'VideoHero', kicker?: string | null, heading?: string | null, sub?: string | null, cta?: string | null, stats?: Array<{ __typename: 'VideoHeroStats', num?: string | null, label?: string | null } | null> | null } | null, services?: { __typename: 'VideoServices', kicker?: string | null, heading?: string | null, cards?: Array<{ __typename: 'VideoServicesCards', title?: string | null, body?: string | null, items?: Array<string | null> | null } | null> | null } | null, agentBanner?: { __typename: 'VideoAgentBanner', heading?: string | null, body?: string | null, linkLabel?: string | null } | null, process?: { __typename: 'VideoProcess', kicker?: string | null, heading?: string | null, steps?: Array<{ __typename: 'VideoProcessSteps', num?: string | null, title?: string | null, body?: string | null } | null> | null } | null, founder?: { __typename: 'VideoFounder', kicker?: string | null, heading?: string | null, body?: string | null, photo?: string | null, name?: string | null, role?: string | null } | null, faq?: { __typename: 'VideoFaq', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'VideoFaqItems', q?: string | null, a?: string | null } | null> | null } | null, quote?: { __typename: 'VideoQuote', heading?: string | null, sub?: string | null, cta?: string | null, agentCta?: string | null } | null, footer?: { __typename: 'VideoFooter', tagline?: string | null, email?: string | null, copyright?: string | null } | null };
 
 export type PageQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1223,6 +2055,44 @@ export type PageConnectionQueryVariables = Exact<{
 
 
 export type PageConnectionQuery = { __typename?: 'Query', pageConnection: { __typename?: 'PageConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PageConnectionEdges', cursor: string, node?: { __typename: 'Page', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, navbar?: { __typename: 'PageNavbar', brand?: string | null, ctaText?: string | null, ctaHref?: string | null, links?: Array<{ __typename: 'PageNavbarLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'PageHero', badge?: string | null, headlinePart1?: string | null, headlineHighlight?: string | null, headlinePart2?: string | null, subheadline?: string | null, description?: string | null, ctaPrimaryText?: string | null, ctaSecondaryText?: string | null, ctaFootnote?: string | null, stats?: Array<{ __typename: 'PageHeroStats', value?: string | null, label?: string | null } | null> | null } | null, aboutBlake?: { __typename: 'PageAboutBlake', title?: string | null, description?: string | null, videoFile?: string | null, youtubeUrl?: string | null, stats?: Array<{ __typename: 'PageAboutBlakeStats', value?: string | null, label?: string | null } | null> | null } | null, suburbs?: { __typename: 'PageSuburbs', title?: string | null, description?: string | null, checkerTitle?: string | null, checkerPlaceholder?: string | null, checkerButtonText?: string | null, checkerFootnote?: string | null, warningTitle?: string | null, warningText?: string | null, popupTitle?: string | null, popupSubtitle?: string | null, popupNamePlaceholder?: string | null, popupEmailPlaceholder?: string | null, popupButtonText?: string | null, popupFootnote?: string | null, steps?: Array<{ __typename: 'PageSuburbsSteps', title?: string | null, description?: string | null } | null> | null } | null, socialProof?: { __typename: 'PageSocialProof', title?: string | null, subtitle?: string | null, featuredTitle?: string | null, beforeTitle?: string | null, afterTitle?: string | null, testimonials?: Array<{ __typename: 'PageSocialProofTestimonials', stat?: string | null, quote?: string | null, name?: string | null, agency?: string | null, image?: string | null, headshot?: string | null } | null> | null, featuredLogos?: Array<{ __typename: 'PageSocialProofFeaturedLogos', name?: string | null, logo?: string | null } | null> | null, beforeItems?: Array<{ __typename: 'PageSocialProofBeforeItems', text?: string | null } | null> | null, afterItems?: Array<{ __typename: 'PageSocialProofAfterItems', text?: string | null } | null> | null } | null, investment?: { __typename: 'PageInvestment', title?: string | null, subtitle?: string | null, totalValue?: string | null, priceLabel?: string | null, price?: string | null, pricePeriod?: string | null, priceNote?: string | null, roiTitle?: string | null, monthlyInvestment?: string | null, avgCommission?: string | null, breakEven?: string | null, avgListings?: string | null, avgListingsDetail?: string | null, valueStack?: Array<{ __typename: 'PageInvestmentValueStack', role?: string | null, detail?: string | null, price?: string | null } | null> | null, includes?: Array<{ __typename: 'PageInvestmentIncludes', text?: string | null } | null> | null } | null, process?: { __typename: 'PageProcess', title?: string | null, subtitle?: string | null, steps?: Array<{ __typename: 'PageProcessSteps', week?: string | null, title?: string | null, bullets?: Array<{ __typename: 'PageProcessStepsBullets', text?: string | null } | null> | null } | null> | null } | null, qualification?: { __typename: 'PageQualification', title?: string | null, subtitle?: string | null, dontApply?: Array<{ __typename: 'PageQualificationDontApply', title?: string | null, description?: string | null } | null> | null, perfectIf?: Array<{ __typename: 'PageQualificationPerfectIf', title?: string | null, description?: string | null } | null> | null } | null, cta?: { __typename: 'PageCta', headline?: string | null, subheadline?: string | null, description?: string | null, formTitle?: string | null, submitText?: string | null, footnote?: string | null, trustBadges?: Array<{ __typename: 'PageCtaTrustBadges', text?: string | null } | null> | null } | null, faq?: { __typename: 'PageFaq', title?: string | null, items?: Array<{ __typename: 'PageFaqItems', question?: string | null, answer?: string | null } | null> | null } | null, portfolio?: { __typename: 'PagePortfolio', title?: string | null, subtitle?: string | null, items?: Array<{ __typename: 'PagePortfolioItems', title?: string | null, type?: string | null, description?: string | null, stat?: string | null, videoFile?: string | null, reelUrl?: string | null, image?: string | null } | null> | null } | null, showcase?: { __typename: 'PageShowcase', title?: string | null, subtitle?: string | null, agentName?: string | null, agentSuburb?: string | null, quote?: string | null, stats?: Array<{ __typename: 'PageShowcaseStats', label?: string | null, before?: string | null, after?: string | null } | null> | null } | null, checkAvailability?: { __typename: 'PageCheckAvailability', headline?: string | null, subtitle?: string | null, scarcityWarning?: string | null, bookingTitle?: string | null, bookingSubtitle?: string | null, auditTitle?: string | null, auditIntro?: string | null, auditFootnote?: string | null, footnote?: string | null, stats?: Array<{ __typename: 'PageCheckAvailabilityStats', value?: string | null, label?: string | null } | null> | null, auditItems?: Array<{ __typename: 'PageCheckAvailabilityAuditItems', title?: string | null, description?: string | null } | null> | null } | null, freeAudit?: { __typename: 'PageFreeAudit', title?: string | null, intro?: string | null, footnote?: string | null, ctaText?: string | null, ctaHref?: string | null, trustBadges?: Array<string | null> | null, items?: Array<{ __typename: 'PageFreeAuditItems', title?: string | null, description?: string | null } | null> | null } | null, stickyCta?: { __typename: 'PageStickyCta', text?: string | null, buttonText?: string | null, buttonHref?: string | null } | null, footer?: { __typename: 'PageFooter', brand?: string | null, tagline?: string | null, email?: string | null, phone?: string | null, location?: string | null, copyright?: string | null, quickLinks?: Array<{ __typename: 'PageFooterQuickLinks', label?: string | null, href?: string | null } | null> | null, resources?: Array<{ __typename: 'PageFooterResources', label?: string | null, href?: string | null } | null> | null } | null } | null } | null> | null } };
+
+export type HomeQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type HomeQuery = { __typename?: 'Query', home: { __typename: 'Home', id: string, ctaLabel?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, nav?: { __typename: 'HomeNav', videoLinkLabel?: string | null } | null, hero?: { __typename: 'HomeHero', headlineLead?: string | null, headlineUnderline?: string | null, subhead?: string | null, trust?: Array<string | null> | null } | null, stats?: Array<{ __typename: 'HomeStats', num?: string | null, label?: string | null } | null> | null, problem?: { __typename: 'HomeProblem', heading?: string | null, sub?: string | null, pains?: Array<string | null> | null } | null, proof?: { __typename: 'HomeProof', kicker?: string | null, heading?: string | null, sub?: string | null, caseBadge?: string | null, caseClient?: string | null, caseStats?: Array<{ __typename: 'HomeProofCaseStats', num?: string | null, label?: string | null } | null> | null } | null, founder?: { __typename: 'HomeFounder', heading?: string | null, quote?: string | null, name?: string | null, title?: string | null, photo?: string | null, creds?: Array<{ __typename: 'HomeFounderCreds', num?: string | null, label?: string | null } | null> | null } | null, ctaBand?: { __typename: 'HomeCtaBand', text?: string | null } | null, system?: { __typename: 'HomeSystem', kicker?: string | null, heading?: string | null, sub?: string | null, pillars?: Array<{ __typename: 'HomeSystemPillars', num?: string | null, name?: string | null, deliverables?: Array<string | null> | null, goal?: string | null } | null> | null } | null, exclusivity?: { __typename: 'HomeExclusivity', kicker?: string | null, heading?: string | null, body?: string | null } | null, agenda?: { __typename: 'HomeAgenda', kicker?: string | null, heading?: string | null, steps?: Array<{ __typename: 'HomeAgendaSteps', num?: string | null, title?: string | null, body?: string | null } | null> | null } | null, faq?: { __typename: 'HomeFaq', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'HomeFaqItems', q?: string | null, a?: string | null } | null> | null } | null, finalCta?: { __typename: 'HomeFinalCta', heading?: string | null, body?: string | null, trust?: Array<string | null> | null } | null, prefooter?: { __typename: 'HomePrefooter', text?: string | null, linkLabel?: string | null } | null, footer?: { __typename: 'HomeFooter', tagline?: string | null, email?: string | null, copyright?: string | null } | null } };
+
+export type HomeConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<HomeFilter>;
+}>;
+
+
+export type HomeConnectionQuery = { __typename?: 'Query', homeConnection: { __typename?: 'HomeConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeConnectionEdges', cursor: string, node?: { __typename: 'Home', id: string, ctaLabel?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, nav?: { __typename: 'HomeNav', videoLinkLabel?: string | null } | null, hero?: { __typename: 'HomeHero', headlineLead?: string | null, headlineUnderline?: string | null, subhead?: string | null, trust?: Array<string | null> | null } | null, stats?: Array<{ __typename: 'HomeStats', num?: string | null, label?: string | null } | null> | null, problem?: { __typename: 'HomeProblem', heading?: string | null, sub?: string | null, pains?: Array<string | null> | null } | null, proof?: { __typename: 'HomeProof', kicker?: string | null, heading?: string | null, sub?: string | null, caseBadge?: string | null, caseClient?: string | null, caseStats?: Array<{ __typename: 'HomeProofCaseStats', num?: string | null, label?: string | null } | null> | null } | null, founder?: { __typename: 'HomeFounder', heading?: string | null, quote?: string | null, name?: string | null, title?: string | null, photo?: string | null, creds?: Array<{ __typename: 'HomeFounderCreds', num?: string | null, label?: string | null } | null> | null } | null, ctaBand?: { __typename: 'HomeCtaBand', text?: string | null } | null, system?: { __typename: 'HomeSystem', kicker?: string | null, heading?: string | null, sub?: string | null, pillars?: Array<{ __typename: 'HomeSystemPillars', num?: string | null, name?: string | null, deliverables?: Array<string | null> | null, goal?: string | null } | null> | null } | null, exclusivity?: { __typename: 'HomeExclusivity', kicker?: string | null, heading?: string | null, body?: string | null } | null, agenda?: { __typename: 'HomeAgenda', kicker?: string | null, heading?: string | null, steps?: Array<{ __typename: 'HomeAgendaSteps', num?: string | null, title?: string | null, body?: string | null } | null> | null } | null, faq?: { __typename: 'HomeFaq', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'HomeFaqItems', q?: string | null, a?: string | null } | null> | null } | null, finalCta?: { __typename: 'HomeFinalCta', heading?: string | null, body?: string | null, trust?: Array<string | null> | null } | null, prefooter?: { __typename: 'HomePrefooter', text?: string | null, linkLabel?: string | null } | null, footer?: { __typename: 'HomeFooter', tagline?: string | null, email?: string | null, copyright?: string | null } | null } | null } | null> | null } };
+
+export type VideoQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type VideoQuery = { __typename?: 'Query', video: { __typename: 'Video', id: string, quoteEmail?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, nav?: { __typename: 'VideoNav', ctaLabel?: string | null, links?: Array<{ __typename: 'VideoNavLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'VideoHero', kicker?: string | null, heading?: string | null, sub?: string | null, cta?: string | null, stats?: Array<{ __typename: 'VideoHeroStats', num?: string | null, label?: string | null } | null> | null } | null, services?: { __typename: 'VideoServices', kicker?: string | null, heading?: string | null, cards?: Array<{ __typename: 'VideoServicesCards', title?: string | null, body?: string | null, items?: Array<string | null> | null } | null> | null } | null, agentBanner?: { __typename: 'VideoAgentBanner', heading?: string | null, body?: string | null, linkLabel?: string | null } | null, process?: { __typename: 'VideoProcess', kicker?: string | null, heading?: string | null, steps?: Array<{ __typename: 'VideoProcessSteps', num?: string | null, title?: string | null, body?: string | null } | null> | null } | null, founder?: { __typename: 'VideoFounder', kicker?: string | null, heading?: string | null, body?: string | null, photo?: string | null, name?: string | null, role?: string | null } | null, faq?: { __typename: 'VideoFaq', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'VideoFaqItems', q?: string | null, a?: string | null } | null> | null } | null, quote?: { __typename: 'VideoQuote', heading?: string | null, sub?: string | null, cta?: string | null, agentCta?: string | null } | null, footer?: { __typename: 'VideoFooter', tagline?: string | null, email?: string | null, copyright?: string | null } | null } };
+
+export type VideoConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<VideoFilter>;
+}>;
+
+
+export type VideoConnectionQuery = { __typename?: 'Query', videoConnection: { __typename?: 'VideoConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'VideoConnectionEdges', cursor: string, node?: { __typename: 'Video', id: string, quoteEmail?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, nav?: { __typename: 'VideoNav', ctaLabel?: string | null, links?: Array<{ __typename: 'VideoNavLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'VideoHero', kicker?: string | null, heading?: string | null, sub?: string | null, cta?: string | null, stats?: Array<{ __typename: 'VideoHeroStats', num?: string | null, label?: string | null } | null> | null } | null, services?: { __typename: 'VideoServices', kicker?: string | null, heading?: string | null, cards?: Array<{ __typename: 'VideoServicesCards', title?: string | null, body?: string | null, items?: Array<string | null> | null } | null> | null } | null, agentBanner?: { __typename: 'VideoAgentBanner', heading?: string | null, body?: string | null, linkLabel?: string | null } | null, process?: { __typename: 'VideoProcess', kicker?: string | null, heading?: string | null, steps?: Array<{ __typename: 'VideoProcessSteps', num?: string | null, title?: string | null, body?: string | null } | null> | null } | null, founder?: { __typename: 'VideoFounder', kicker?: string | null, heading?: string | null, body?: string | null, photo?: string | null, name?: string | null, role?: string | null } | null, faq?: { __typename: 'VideoFaq', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'VideoFaqItems', q?: string | null, a?: string | null } | null> | null } | null, quote?: { __typename: 'VideoQuote', heading?: string | null, sub?: string | null, cta?: string | null, agentCta?: string | null } | null, footer?: { __typename: 'VideoFooter', tagline?: string | null, email?: string | null, copyright?: string | null } | null } | null } | null> | null } };
 
 export const PagePartsFragmentDoc = gql`
     fragment PageParts on Page {
@@ -1488,6 +2358,208 @@ export const PagePartsFragmentDoc = gql`
   }
 }
     `;
+export const HomePartsFragmentDoc = gql`
+    fragment HomeParts on Home {
+  __typename
+  ctaLabel
+  nav {
+    __typename
+    videoLinkLabel
+  }
+  hero {
+    __typename
+    headlineLead
+    headlineUnderline
+    subhead
+    trust
+  }
+  stats {
+    __typename
+    num
+    label
+  }
+  problem {
+    __typename
+    heading
+    sub
+    pains
+  }
+  proof {
+    __typename
+    kicker
+    heading
+    sub
+    caseBadge
+    caseClient
+    caseStats {
+      __typename
+      num
+      label
+    }
+  }
+  founder {
+    __typename
+    heading
+    quote
+    name
+    title
+    photo
+    creds {
+      __typename
+      num
+      label
+    }
+  }
+  ctaBand {
+    __typename
+    text
+  }
+  system {
+    __typename
+    kicker
+    heading
+    sub
+    pillars {
+      __typename
+      num
+      name
+      deliverables
+      goal
+    }
+  }
+  exclusivity {
+    __typename
+    kicker
+    heading
+    body
+  }
+  agenda {
+    __typename
+    kicker
+    heading
+    steps {
+      __typename
+      num
+      title
+      body
+    }
+  }
+  faq {
+    __typename
+    kicker
+    heading
+    items {
+      __typename
+      q
+      a
+    }
+  }
+  finalCta {
+    __typename
+    heading
+    body
+    trust
+  }
+  prefooter {
+    __typename
+    text
+    linkLabel
+  }
+  footer {
+    __typename
+    tagline
+    email
+    copyright
+  }
+}
+    `;
+export const VideoPartsFragmentDoc = gql`
+    fragment VideoParts on Video {
+  __typename
+  quoteEmail
+  nav {
+    __typename
+    links {
+      __typename
+      label
+      href
+    }
+    ctaLabel
+  }
+  hero {
+    __typename
+    kicker
+    heading
+    sub
+    cta
+    stats {
+      __typename
+      num
+      label
+    }
+  }
+  services {
+    __typename
+    kicker
+    heading
+    cards {
+      __typename
+      title
+      body
+      items
+    }
+  }
+  agentBanner {
+    __typename
+    heading
+    body
+    linkLabel
+  }
+  process {
+    __typename
+    kicker
+    heading
+    steps {
+      __typename
+      num
+      title
+      body
+    }
+  }
+  founder {
+    __typename
+    kicker
+    heading
+    body
+    photo
+    name
+    role
+  }
+  faq {
+    __typename
+    kicker
+    heading
+    items {
+      __typename
+      q
+      a
+    }
+  }
+  quote {
+    __typename
+    heading
+    sub
+    cta
+    agentCta
+  }
+  footer {
+    __typename
+    tagline
+    email
+    copyright
+  }
+}
+    `;
 export const PageDocument = gql`
     query page($relativePath: String!) {
   page(relativePath: $relativePath) {
@@ -1545,6 +2617,120 @@ export const PageConnectionDocument = gql`
   }
 }
     ${PagePartsFragmentDoc}`;
+export const HomeDocument = gql`
+    query home($relativePath: String!) {
+  home(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...HomeParts
+  }
+}
+    ${HomePartsFragmentDoc}`;
+export const HomeConnectionDocument = gql`
+    query homeConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: HomeFilter) {
+  homeConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...HomeParts
+      }
+    }
+  }
+}
+    ${HomePartsFragmentDoc}`;
+export const VideoDocument = gql`
+    query video($relativePath: String!) {
+  video(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...VideoParts
+  }
+}
+    ${VideoPartsFragmentDoc}`;
+export const VideoConnectionDocument = gql`
+    query videoConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: VideoFilter) {
+  videoConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...VideoParts
+      }
+    }
+  }
+}
+    ${VideoPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -1553,6 +2739,18 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     pageConnection(variables?: PageConnectionQueryVariables, options?: C): Promise<{data: PageConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PageConnectionQueryVariables, query: string}> {
         return requester<{data: PageConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PageConnectionQueryVariables, query: string}, PageConnectionQueryVariables>(PageConnectionDocument, variables, options);
+      },
+    home(variables: HomeQueryVariables, options?: C): Promise<{data: HomeQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeQueryVariables, query: string}> {
+        return requester<{data: HomeQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeQueryVariables, query: string}, HomeQueryVariables>(HomeDocument, variables, options);
+      },
+    homeConnection(variables?: HomeConnectionQueryVariables, options?: C): Promise<{data: HomeConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeConnectionQueryVariables, query: string}> {
+        return requester<{data: HomeConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeConnectionQueryVariables, query: string}, HomeConnectionQueryVariables>(HomeConnectionDocument, variables, options);
+      },
+    video(variables: VideoQueryVariables, options?: C): Promise<{data: VideoQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: VideoQueryVariables, query: string}> {
+        return requester<{data: VideoQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: VideoQueryVariables, query: string}, VideoQueryVariables>(VideoDocument, variables, options);
+      },
+    videoConnection(variables?: VideoConnectionQueryVariables, options?: C): Promise<{data: VideoConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: VideoConnectionQueryVariables, query: string}> {
+        return requester<{data: VideoConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: VideoConnectionQueryVariables, query: string}, VideoConnectionQueryVariables>(VideoConnectionDocument, variables, options);
       }
     };
   }

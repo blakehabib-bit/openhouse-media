@@ -260,3 +260,203 @@ fragment PageParts on Page {
     copyright
   }
 }
+
+fragment HomeParts on Home {
+  __typename
+  ctaLabel
+  nav {
+    __typename
+    videoLinkLabel
+  }
+  hero {
+    __typename
+    headlineLead
+    headlineUnderline
+    subhead
+    trust
+  }
+  stats {
+    __typename
+    num
+    label
+  }
+  problem {
+    __typename
+    heading
+    sub
+    pains
+  }
+  proof {
+    __typename
+    kicker
+    heading
+    sub
+    caseBadge
+    caseClient
+    caseStats {
+      __typename
+      num
+      label
+    }
+  }
+  founder {
+    __typename
+    heading
+    quote
+    name
+    title
+    photo
+    creds {
+      __typename
+      num
+      label
+    }
+  }
+  ctaBand {
+    __typename
+    text
+  }
+  system {
+    __typename
+    kicker
+    heading
+    sub
+    pillars {
+      __typename
+      num
+      name
+      deliverables
+      goal
+    }
+  }
+  exclusivity {
+    __typename
+    kicker
+    heading
+    body
+  }
+  agenda {
+    __typename
+    kicker
+    heading
+    steps {
+      __typename
+      num
+      title
+      body
+    }
+  }
+  faq {
+    __typename
+    kicker
+    heading
+    items {
+      __typename
+      q
+      a
+    }
+  }
+  finalCta {
+    __typename
+    heading
+    body
+    trust
+  }
+  prefooter {
+    __typename
+    text
+    linkLabel
+  }
+  footer {
+    __typename
+    tagline
+    email
+    copyright
+  }
+}
+
+fragment VideoParts on Video {
+  __typename
+  quoteEmail
+  nav {
+    __typename
+    links {
+      __typename
+      label
+      href
+    }
+    ctaLabel
+  }
+  hero {
+    __typename
+    kicker
+    heading
+    sub
+    cta
+    stats {
+      __typename
+      num
+      label
+    }
+  }
+  services {
+    __typename
+    kicker
+    heading
+    cards {
+      __typename
+      title
+      body
+      items
+    }
+  }
+  agentBanner {
+    __typename
+    heading
+    body
+    linkLabel
+  }
+  process {
+    __typename
+    kicker
+    heading
+    steps {
+      __typename
+      num
+      title
+      body
+    }
+  }
+  founder {
+    __typename
+    kicker
+    heading
+    body
+    photo
+    name
+    role
+  }
+  faq {
+    __typename
+    kicker
+    heading
+    items {
+      __typename
+      q
+      a
+    }
+  }
+  quote {
+    __typename
+    heading
+    sub
+    cta
+    agentCta
+  }
+  footer {
+    __typename
+    tagline
+    email
+    copyright
+  }
+}

@@ -39,6 +39,7 @@
     "kicker": "Proof",
     "heading": "3 listings & $75K GCI from this 1 video.",
     "sub": "",
+    "videoFile": "",
     "caseBadge": "Case Study",
     "caseClient": "Harcourts Team Green",
     "caseStats": [
@@ -96,8 +97,7 @@
           "Professionally Produced Video Reels",
           "High-quality lifestyle photos",
           "Ideas and scripts created for your core area"
-        ],
-        "goal": "Build profile. Show personality."
+        ]
       },
       {
         "num": "02",
@@ -106,8 +106,7 @@
           "Reels edited and published weekly",
           "Stories and carousels rolled out",
           "Captions, hashtags, scheduling handled"
-        ],
-        "goal": "More touch points. Nurture the audience."
+        ]
       },
       {
         "num": "03",
@@ -116,8 +115,7 @@
           "Profile awareness campaigns",
           "Buyer lead generation",
           "Seller lead generation"
-        ],
-        "goal": "New eyeballs. Real appraisals."
+        ]
       }
     ]
   },
