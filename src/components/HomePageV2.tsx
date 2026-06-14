@@ -98,20 +98,31 @@ export default function HomePageV2({ data }: { data: Data }) {
           </div>
         </section>
 
-        {/* PROBLEM */}
-        <section className="section problem">
+        {/* SYSTEM */}
+        <section className="section system">
           <div className="narrow center">
-            <h2>{data.problem.heading}</h2>
-            <p className="section-sub">{data.problem.sub}</p>
+            <span className="section-tag">{data.system.kicker}</span>
+            <h2>{data.system.heading}</h2>
+            <p className="section-sub">{data.system.sub}</p>
           </div>
           <div className="wrap">
-            <ul className="pain-list">
-              {data.problem.pains.map((p: string, i: number) => (
-                <li key={i}>
-                  <span className="pain-x">✕</span> {p}
-                </li>
+            <div className="pillar-grid">
+              {data.system.pillars.map((p: Data, i: number) => (
+                <div className="pillar" key={i}>
+                  <div className="pillar-num">{p.num}</div>
+                  <h3>{p.name}</h3>
+                  <ul className="pillar-list">
+                    {p.deliverables.map((d: string, j: number) => (
+                      <li key={j}>{d}</li>
+                    ))}
+                  </ul>
+                  <div className="pillar-goal">
+                    <span className="pillar-goal-label">Goal</span>
+                    {p.goal}
+                  </div>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </section>
 
@@ -184,31 +195,20 @@ export default function HomePageV2({ data }: { data: Data }) {
           </div>
         </section>
 
-        {/* SYSTEM */}
-        <section className="section system">
+        {/* PROBLEM */}
+        <section className="section problem">
           <div className="narrow center">
-            <span className="section-tag">{data.system.kicker}</span>
-            <h2>{data.system.heading}</h2>
-            <p className="section-sub">{data.system.sub}</p>
+            <h2>{data.problem.heading}</h2>
+            <p className="section-sub">{data.problem.sub}</p>
           </div>
           <div className="wrap">
-            <div className="pillar-grid">
-              {data.system.pillars.map((p: Data, i: number) => (
-                <div className="pillar" key={i}>
-                  <div className="pillar-num">{p.num}</div>
-                  <h3>{p.name}</h3>
-                  <ul className="pillar-list">
-                    {p.deliverables.map((d: string, j: number) => (
-                      <li key={j}>{d}</li>
-                    ))}
-                  </ul>
-                  <div className="pillar-goal">
-                    <span className="pillar-goal-label">Goal</span>
-                    {p.goal}
-                  </div>
-                </div>
+            <ul className="pain-list">
+              {data.problem.pains.map((p: string, i: number) => (
+                <li key={i}>
+                  <span className="pain-x">✕</span> {p}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
