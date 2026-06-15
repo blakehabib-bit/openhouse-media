@@ -291,7 +291,7 @@ const css = `
   .vc-stage{display:flex;align-items:center;justify-content:center;gap:20px}
   .vc-arrow{flex-shrink:0;width:48px;height:48px;border-radius:50%;background:var(--v-card);border:1px solid var(--v-line);color:var(--v-text);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;line-height:1}
   .vc-arrow:hover{background:var(--v-accent)}
-  .vc-viewer{position:relative;width:min(320px,72vw);aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 16px 48px rgba(0,0,0,.5)}
+  .vc-viewer{position:relative;width:min(680px,82vw);aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 16px 48px rgba(0,0,0,.5)}
   .vc-video{width:100%;height:100%;object-fit:cover;display:block}
   .vc-label{position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-size:13px;font-weight:600;text-align:left}
   .vc-dots{display:flex;justify-content:center;gap:8px;margin-top:20px}
