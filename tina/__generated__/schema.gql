@@ -1038,7 +1038,7 @@ type VideoServices {
 }
 
 type VideoReelsItems {
-  videoFile: String
+  url: String
   label: String
 }
 
@@ -1153,7 +1153,7 @@ input VideoServicesFilter {
 }
 
 input VideoReelsItemsFilter {
-  videoFile: StringFilter
+  url: StringFilter
   label: StringFilter
 }
 
@@ -1736,7 +1736,7 @@ input VideoServicesMutation {
 }
 
 input VideoReelsItemsMutation {
-  videoFile: String
+  url: String
   label: String
 }
 

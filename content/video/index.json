@@ -68,12 +68,9 @@
     "kicker": "Our work",
     "heading": "What we shoot.",
     "items": [
-      { "videoFile": "/uploads/reels/DVZG64CD836.mp4", "label": "Harcourts Team Green" },
-      { "videoFile": "/uploads/reels/DO4mzMNgiB8.mp4", "label": "" },
-      { "videoFile": "/uploads/reels/DPVydCEDNsW.mp4", "label": "" },
-      { "videoFile": "/uploads/reels/DPfQWYfgRNE.mp4", "label": "" },
-      { "videoFile": "/uploads/reels/DQ28FJDjqqB.mp4", "label": "" },
-      { "videoFile": "/uploads/reels/jaron-mumby-profile.mp4", "label": "Jaron Mumby" }
+      { "url": "", "label": "" },
+      { "url": "", "label": "" },
+      { "url": "", "label": "" }
     ]
   },
   "agentBanner": {

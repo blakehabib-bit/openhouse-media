@@ -799,7 +799,7 @@ export default defineConfig({
                 label: "Reels (up to 8)",
                 list: true,
                 fields: [
-                  { type: "string", name: "videoFile", label: "Video file path (e.g. /uploads/reels/filename.mp4)" },
+                  { type: "string", name: "url", label: "Instagram reel URL (e.g. https://www.instagram.com/reel/ABC123/)" },
                   { type: "string", name: "label", label: "Caption label (optional)" },
                 ],
               },
