@@ -788,6 +788,25 @@ export default defineConfig({
           },
           {
             type: "object",
+            name: "reels",
+            label: "Reels carousel",
+            fields: [
+              { type: "string", name: "kicker", label: "Kicker" },
+              { type: "string", name: "heading", label: "Heading" },
+              {
+                type: "object",
+                name: "items",
+                label: "Reels (up to 8)",
+                list: true,
+                fields: [
+                  { type: "string", name: "videoFile", label: "Video file path (e.g. /uploads/reels/filename.mp4)" },
+                  { type: "string", name: "label", label: "Caption label (optional)" },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
             name: "agentBanner",
             label: "Agent banner (coral)",
             fields: [

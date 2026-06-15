@@ -4,6 +4,8 @@
  * Green palette scoped under .video-root so it never bleeds into the homepage.
  */
 
+import VideoCarousel from "@/components/VideoCarousel";
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Data = any;
 
@@ -84,6 +86,17 @@ export default function VideoPage({ data }: { data: Data }) {
           </div>
         </div>
       </section>
+
+      {/* REELS CAROUSEL */}
+      {data.reels?.items?.length > 0 && (
+        <section className="alt reels-section">
+          <div className="wrap">
+            <p className="kicker">{data.reels.kicker}</p>
+            <h2 style={{ fontSize: "34px", marginBottom: "40px" }}>{data.reels.heading}</h2>
+            <VideoCarousel items={data.reels.items} />
+          </div>
+        </section>
+      )}
 
       <section>
         <div className="wrap">
@@ -279,9 +292,24 @@ const css = `
   .video-root footer p{color:var(--v-muted);font-size:14px}
   .video-root footer a{color:var(--v-accent-light);text-decoration:none}
 
+  /* REELS CAROUSEL */
+  .video-root .reels-section{text-align:center}
+  .vc-wrap{width:100%;max-width:900px;margin:0 auto}
+  .vc-stage{display:flex;align-items:center;justify-content:center;gap:20px}
+  .vc-arrow{flex-shrink:0;width:48px;height:48px;border-radius:50%;background:var(--v-card);border:1px solid var(--v-line);color:var(--v-text);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;line-height:1}
+  .vc-arrow:hover{background:var(--v-accent)}
+  .vc-viewer{position:relative;width:min(320px,72vw);aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 16px 48px rgba(0,0,0,.5)}
+  .vc-video{width:100%;height:100%;object-fit:cover;display:block}
+  .vc-label{position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-size:13px;font-weight:600;text-align:left}
+  .vc-dots{display:flex;justify-content:center;gap:8px;margin-top:20px}
+  .vc-dot{width:8px;height:8px;border-radius:50%;background:var(--v-line);border:none;cursor:pointer;transition:background .15s}
+  .vc-dot.active{background:var(--v-accent-light)}
+
   @media(max-width:760px){
     .video-root .stats{gap:28px}
     .video-root .nav-links a:not(.nav-cta){display:none}
     .video-root .grid-2{grid-template-columns:1fr}
+    .vc-arrow{width:38px;height:38px;font-size:16px}
+    .vc-stage{gap:12px}
   }
 `;

@@ -2,22 +2,40 @@
   "quoteEmail": "blake@thedigitaldoorknock.com",
   "nav": {
     "links": [
-      { "label": "Services", "href": "#services" },
-      { "label": "Process", "href": "#process" },
-      { "label": "FAQ", "href": "#faq" }
+      {
+        "label": "Services",
+        "href": "#services"
+      },
+      {
+        "label": "Process",
+        "href": "#process"
+      },
+      {
+        "label": "FAQ",
+        "href": "#faq"
+      }
     ],
     "ctaLabel": "Get a quote"
   },
   "hero": {
-    "heroVideo": "",
+    "heroVideo": "/uploads/hero-reel-web.mp4",
     "kicker": "Video production, Brisbane",
     "heading": "Brisbane video production by the team behind 3,000+ videos.",
     "sub": "One-off shoots and monthly content retainers for brands, businesses and real estate agents. Shot, edited, delivered. No fluff in between.",
     "cta": "Get a quote →",
     "stats": [
-      { "num": "3,000+", "label": "Videos produced" },
-      { "num": "6 yrs", "label": "In production" },
-      { "num": "7 days", "label": "Standard turnaround" }
+      {
+        "num": "3,000+",
+        "label": "Videos produced"
+      },
+      {
+        "num": "6 yrs",
+        "label": "In production"
+      },
+      {
+        "num": "7 days",
+        "label": "Standard turnaround"
+      }
     ]
   },
   "services": {
@@ -44,6 +62,18 @@
           "Priority turnaround, locked monthly rate"
         ]
       }
+    ]
+  },
+  "reels": {
+    "kicker": "Our work",
+    "heading": "What we shoot.",
+    "items": [
+      { "videoFile": "/uploads/reels/DVZG64CD836.mp4", "label": "Harcourts Team Green" },
+      { "videoFile": "/uploads/reels/DO4mzMNgiB8.mp4", "label": "" },
+      { "videoFile": "/uploads/reels/DPVydCEDNsW.mp4", "label": "" },
+      { "videoFile": "/uploads/reels/DPfQWYfgRNE.mp4", "label": "" },
+      { "videoFile": "/uploads/reels/DQ28FJDjqqB.mp4", "label": "" },
+      { "videoFile": "/uploads/reels/jaron-mumby-profile.mp4", "label": "Jaron Mumby" }
     ]
   },
   "agentBanner": {

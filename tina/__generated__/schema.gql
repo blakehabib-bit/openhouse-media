@@ -1037,6 +1037,17 @@ type VideoServices {
   cards: [VideoServicesCards]
 }
 
+type VideoReelsItems {
+  videoFile: String
+  label: String
+}
+
+type VideoReels {
+  kicker: String
+  heading: String
+  items: [VideoReelsItems]
+}
+
 type VideoAgentBanner {
   heading: String
   body: String
@@ -1093,6 +1104,7 @@ type Video implements Node & Document {
   nav: VideoNav
   hero: VideoHero
   services: VideoServices
+  reels: VideoReels
   agentBanner: VideoAgentBanner
   process: VideoProcess
   founder: VideoFounder
@@ -1138,6 +1150,17 @@ input VideoServicesFilter {
   kicker: StringFilter
   heading: StringFilter
   cards: VideoServicesCardsFilter
+}
+
+input VideoReelsItemsFilter {
+  videoFile: StringFilter
+  label: StringFilter
+}
+
+input VideoReelsFilter {
+  kicker: StringFilter
+  heading: StringFilter
+  items: VideoReelsItemsFilter
 }
 
 input VideoAgentBannerFilter {
@@ -1196,6 +1219,7 @@ input VideoFilter {
   nav: VideoNavFilter
   hero: VideoHeroFilter
   services: VideoServicesFilter
+  reels: VideoReelsFilter
   agentBanner: VideoAgentBannerFilter
   process: VideoProcessFilter
   founder: VideoFounderFilter
@@ -1711,6 +1735,17 @@ input VideoServicesMutation {
   cards: [VideoServicesCardsMutation]
 }
 
+input VideoReelsItemsMutation {
+  videoFile: String
+  label: String
+}
+
+input VideoReelsMutation {
+  kicker: String
+  heading: String
+  items: [VideoReelsItemsMutation]
+}
+
 input VideoAgentBannerMutation {
   heading: String
   body: String
@@ -1767,6 +1802,7 @@ input VideoMutation {
   nav: VideoNavMutation
   hero: VideoHeroMutation
   services: VideoServicesMutation
+  reels: VideoReelsMutation
   agentBanner: VideoAgentBannerMutation
   process: VideoProcessMutation
   founder: VideoFounderMutation

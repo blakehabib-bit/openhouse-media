@@ -411,6 +411,16 @@ fragment VideoParts on Video {
       items
     }
   }
+  reels {
+    __typename
+    kicker
+    heading
+    items {
+      __typename
+      videoFile
+      label
+    }
+  }
   agentBanner {
     __typename
     heading

@@ -1215,6 +1215,19 @@ export type VideoServices = {
   cards?: Maybe<Array<Maybe<VideoServicesCards>>>;
 };
 
+export type VideoReelsItems = {
+  __typename?: 'VideoReelsItems';
+  videoFile?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
+export type VideoReels = {
+  __typename?: 'VideoReels';
+  kicker?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  items?: Maybe<Array<Maybe<VideoReelsItems>>>;
+};
+
 export type VideoAgentBanner = {
   __typename?: 'VideoAgentBanner';
   heading?: Maybe<Scalars['String']['output']>;
@@ -1280,6 +1293,7 @@ export type Video = Node & Document & {
   nav?: Maybe<VideoNav>;
   hero?: Maybe<VideoHero>;
   services?: Maybe<VideoServices>;
+  reels?: Maybe<VideoReels>;
   agentBanner?: Maybe<VideoAgentBanner>;
   process?: Maybe<VideoProcess>;
   founder?: Maybe<VideoFounder>;
@@ -1325,6 +1339,17 @@ export type VideoServicesFilter = {
   kicker?: InputMaybe<StringFilter>;
   heading?: InputMaybe<StringFilter>;
   cards?: InputMaybe<VideoServicesCardsFilter>;
+};
+
+export type VideoReelsItemsFilter = {
+  videoFile?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
+export type VideoReelsFilter = {
+  kicker?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  items?: InputMaybe<VideoReelsItemsFilter>;
 };
 
 export type VideoAgentBannerFilter = {
@@ -1383,6 +1408,7 @@ export type VideoFilter = {
   nav?: InputMaybe<VideoNavFilter>;
   hero?: InputMaybe<VideoHeroFilter>;
   services?: InputMaybe<VideoServicesFilter>;
+  reels?: InputMaybe<VideoReelsFilter>;
   agentBanner?: InputMaybe<VideoAgentBannerFilter>;
   process?: InputMaybe<VideoProcessFilter>;
   founder?: InputMaybe<VideoFounderFilter>;
@@ -1970,6 +1996,17 @@ export type VideoServicesMutation = {
   cards?: InputMaybe<Array<InputMaybe<VideoServicesCardsMutation>>>;
 };
 
+export type VideoReelsItemsMutation = {
+  videoFile?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VideoReelsMutation = {
+  kicker?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  items?: InputMaybe<Array<InputMaybe<VideoReelsItemsMutation>>>;
+};
+
 export type VideoAgentBannerMutation = {
   heading?: InputMaybe<Scalars['String']['input']>;
   body?: InputMaybe<Scalars['String']['input']>;
@@ -2026,6 +2063,7 @@ export type VideoMutation = {
   nav?: InputMaybe<VideoNavMutation>;
   hero?: InputMaybe<VideoHeroMutation>;
   services?: InputMaybe<VideoServicesMutation>;
+  reels?: InputMaybe<VideoReelsMutation>;
   agentBanner?: InputMaybe<VideoAgentBannerMutation>;
   process?: InputMaybe<VideoProcessMutation>;
   founder?: InputMaybe<VideoFounderMutation>;
@@ -2038,7 +2076,7 @@ export type PagePartsFragment = { __typename: 'Page', navbar?: { __typename: 'Pa
 
 export type HomePartsFragment = { __typename: 'Home', ctaLabel?: string | null, nav?: { __typename: 'HomeNav', videoLinkLabel?: string | null } | null, hero?: { __typename: 'HomeHero', headlineLead?: string | null, headlineUnderline?: string | null, subhead?: string | null, trust?: Array<string | null> | null } | null, stats?: Array<{ __typename: 'HomeStats', num?: string | null, label?: string | null } | null> | null, problem?: { __typename: 'HomeProblem', heading?: string | null, sub?: string | null, pains?: Array<string | null> | null } | null, proof?: { __typename: 'HomeProof', kicker?: string | null, heading?: string | null, sub?: string | null, videoFile?: string | null, caseBadge?: string | null, caseClient?: string | null, caseStats?: Array<{ __typename: 'HomeProofCaseStats', num?: string | null, label?: string | null } | null> | null } | null, founder?: { __typename: 'HomeFounder', heading?: string | null, quote?: string | null, name?: string | null, title?: string | null, photo?: string | null, creds?: Array<{ __typename: 'HomeFounderCreds', num?: string | null, label?: string | null } | null> | null } | null, ctaBand?: { __typename: 'HomeCtaBand', text?: string | null } | null, system?: { __typename: 'HomeSystem', kicker?: string | null, heading?: string | null, sub?: string | null, pillars?: Array<{ __typename: 'HomeSystemPillars', num?: string | null, name?: string | null, deliverables?: Array<string | null> | null } | null> | null } | null, exclusivity?: { __typename: 'HomeExclusivity', kicker?: string | null, heading?: string | null, body?: string | null } | null, agenda?: { __typename: 'HomeAgenda', kicker?: string | null, heading?: string | null, steps?: Array<{ __typename: 'HomeAgendaSteps', num?: string | null, title?: string | null, body?: string | null } | null> | null } | null, faq?: { __typename: 'HomeFaq', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'HomeFaqItems', q?: string | null, a?: string | null } | null> | null } | null, finalCta?: { __typename: 'HomeFinalCta', heading?: string | null, body?: string | null, trust?: Array<string | null> | null } | null, prefooter?: { __typename: 'HomePrefooter', text?: string | null, linkLabel?: string | null } | null, footer?: { __typename: 'HomeFooter', tagline?: string | null, email?: string | null, copyright?: string | null } | null };
 
-export type VideoPartsFragment = { __typename: 'Video', quoteEmail?: string | null, nav?: { __typename: 'VideoNav', ctaLabel?: string | null, links?: Array<{ __typename: 'VideoNavLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'VideoHero', heroVideo?: string | null, kicker?: string | null, heading?: string | null, sub?: string | null, cta?: string | null, stats?: Array<{ __typename: 'VideoHeroStats', num?: string | null, label?: string | null } | null> | null } | null, services?: { __typename: 'VideoServices', kicker?: string | null, heading?: string | null, cards?: Array<{ __typename: 'VideoServicesCards', title?: string | null, body?: string | null, items?: Array<string | null> | null } | null> | null } | null, agentBanner?: { __typename: 'VideoAgentBanner', heading?: string | null, body?: string | null, linkLabel?: string | null } | null, process?: { __typename: 'VideoProcess', kicker?: string | null, heading?: string | null, steps?: Array<{ __typename: 'VideoProcessSteps', num?: string | null, title?: string | null, body?: string | null } | null> | null } | null, founder?: { __typename: 'VideoFounder', kicker?: string | null, heading?: string | null, body?: string | null, photo?: string | null, name?: string | null, role?: string | null } | null, faq?: { __typename: 'VideoFaq', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'VideoFaqItems', q?: string | null, a?: string | null } | null> | null } | null, quote?: { __typename: 'VideoQuote', heading?: string | null, sub?: string | null, cta?: string | null, agentCta?: string | null } | null, footer?: { __typename: 'VideoFooter', tagline?: string | null, email?: string | null, copyright?: string | null } | null };
+export type VideoPartsFragment = { __typename: 'Video', quoteEmail?: string | null, nav?: { __typename: 'VideoNav', ctaLabel?: string | null, links?: Array<{ __typename: 'VideoNavLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'VideoHero', heroVideo?: string | null, kicker?: string | null, heading?: string | null, sub?: string | null, cta?: string | null, stats?: Array<{ __typename: 'VideoHeroStats', num?: string | null, label?: string | null } | null> | null } | null, services?: { __typename: 'VideoServices', kicker?: string | null, heading?: string | null, cards?: Array<{ __typename: 'VideoServicesCards', title?: string | null, body?: string | null, items?: Array<string | null> | null } | null> | null } | null, reels?: { __typename: 'VideoReels', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'VideoReelsItems', videoFile?: string | null, label?: string | null } | null> | null } | null, agentBanner?: { __typename: 'VideoAgentBanner', heading?: string | null, body?: string | null, linkLabel?: string | null } | null, process?: { __typename: 'VideoProcess', kicker?: string | null, heading?: string | null, steps?: Array<{ __typename: 'VideoProcessSteps', num?: string | null, title?: string | null, body?: string | null } | null> | null } | null, founder?: { __typename: 'VideoFounder', kicker?: string | null, heading?: string | null, body?: string | null, photo?: string | null, name?: string | null, role?: string | null } | null, faq?: { __typename: 'VideoFaq', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'VideoFaqItems', q?: string | null, a?: string | null } | null> | null } | null, quote?: { __typename: 'VideoQuote', heading?: string | null, sub?: string | null, cta?: string | null, agentCta?: string | null } | null, footer?: { __typename: 'VideoFooter', tagline?: string | null, email?: string | null, copyright?: string | null } | null };
 
 export type PageQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -2083,7 +2121,7 @@ export type VideoQueryVariables = Exact<{
 }>;
 
 
-export type VideoQuery = { __typename?: 'Query', video: { __typename: 'Video', id: string, quoteEmail?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, nav?: { __typename: 'VideoNav', ctaLabel?: string | null, links?: Array<{ __typename: 'VideoNavLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'VideoHero', heroVideo?: string | null, kicker?: string | null, heading?: string | null, sub?: string | null, cta?: string | null, stats?: Array<{ __typename: 'VideoHeroStats', num?: string | null, label?: string | null } | null> | null } | null, services?: { __typename: 'VideoServices', kicker?: string | null, heading?: string | null, cards?: Array<{ __typename: 'VideoServicesCards', title?: string | null, body?: string | null, items?: Array<string | null> | null } | null> | null } | null, agentBanner?: { __typename: 'VideoAgentBanner', heading?: string | null, body?: string | null, linkLabel?: string | null } | null, process?: { __typename: 'VideoProcess', kicker?: string | null, heading?: string | null, steps?: Array<{ __typename: 'VideoProcessSteps', num?: string | null, title?: string | null, body?: string | null } | null> | null } | null, founder?: { __typename: 'VideoFounder', kicker?: string | null, heading?: string | null, body?: string | null, photo?: string | null, name?: string | null, role?: string | null } | null, faq?: { __typename: 'VideoFaq', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'VideoFaqItems', q?: string | null, a?: string | null } | null> | null } | null, quote?: { __typename: 'VideoQuote', heading?: string | null, sub?: string | null, cta?: string | null, agentCta?: string | null } | null, footer?: { __typename: 'VideoFooter', tagline?: string | null, email?: string | null, copyright?: string | null } | null } };
+export type VideoQuery = { __typename?: 'Query', video: { __typename: 'Video', id: string, quoteEmail?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, nav?: { __typename: 'VideoNav', ctaLabel?: string | null, links?: Array<{ __typename: 'VideoNavLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'VideoHero', heroVideo?: string | null, kicker?: string | null, heading?: string | null, sub?: string | null, cta?: string | null, stats?: Array<{ __typename: 'VideoHeroStats', num?: string | null, label?: string | null } | null> | null } | null, services?: { __typename: 'VideoServices', kicker?: string | null, heading?: string | null, cards?: Array<{ __typename: 'VideoServicesCards', title?: string | null, body?: string | null, items?: Array<string | null> | null } | null> | null } | null, reels?: { __typename: 'VideoReels', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'VideoReelsItems', videoFile?: string | null, label?: string | null } | null> | null } | null, agentBanner?: { __typename: 'VideoAgentBanner', heading?: string | null, body?: string | null, linkLabel?: string | null } | null, process?: { __typename: 'VideoProcess', kicker?: string | null, heading?: string | null, steps?: Array<{ __typename: 'VideoProcessSteps', num?: string | null, title?: string | null, body?: string | null } | null> | null } | null, founder?: { __typename: 'VideoFounder', kicker?: string | null, heading?: string | null, body?: string | null, photo?: string | null, name?: string | null, role?: string | null } | null, faq?: { __typename: 'VideoFaq', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'VideoFaqItems', q?: string | null, a?: string | null } | null> | null } | null, quote?: { __typename: 'VideoQuote', heading?: string | null, sub?: string | null, cta?: string | null, agentCta?: string | null } | null, footer?: { __typename: 'VideoFooter', tagline?: string | null, email?: string | null, copyright?: string | null } | null } };
 
 export type VideoConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -2095,7 +2133,7 @@ export type VideoConnectionQueryVariables = Exact<{
 }>;
 
 
-export type VideoConnectionQuery = { __typename?: 'Query', videoConnection: { __typename?: 'VideoConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'VideoConnectionEdges', cursor: string, node?: { __typename: 'Video', id: string, quoteEmail?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, nav?: { __typename: 'VideoNav', ctaLabel?: string | null, links?: Array<{ __typename: 'VideoNavLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'VideoHero', heroVideo?: string | null, kicker?: string | null, heading?: string | null, sub?: string | null, cta?: string | null, stats?: Array<{ __typename: 'VideoHeroStats', num?: string | null, label?: string | null } | null> | null } | null, services?: { __typename: 'VideoServices', kicker?: string | null, heading?: string | null, cards?: Array<{ __typename: 'VideoServicesCards', title?: string | null, body?: string | null, items?: Array<string | null> | null } | null> | null } | null, agentBanner?: { __typename: 'VideoAgentBanner', heading?: string | null, body?: string | null, linkLabel?: string | null } | null, process?: { __typename: 'VideoProcess', kicker?: string | null, heading?: string | null, steps?: Array<{ __typename: 'VideoProcessSteps', num?: string | null, title?: string | null, body?: string | null } | null> | null } | null, founder?: { __typename: 'VideoFounder', kicker?: string | null, heading?: string | null, body?: string | null, photo?: string | null, name?: string | null, role?: string | null } | null, faq?: { __typename: 'VideoFaq', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'VideoFaqItems', q?: string | null, a?: string | null } | null> | null } | null, quote?: { __typename: 'VideoQuote', heading?: string | null, sub?: string | null, cta?: string | null, agentCta?: string | null } | null, footer?: { __typename: 'VideoFooter', tagline?: string | null, email?: string | null, copyright?: string | null } | null } | null } | null> | null } };
+export type VideoConnectionQuery = { __typename?: 'Query', videoConnection: { __typename?: 'VideoConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'VideoConnectionEdges', cursor: string, node?: { __typename: 'Video', id: string, quoteEmail?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, nav?: { __typename: 'VideoNav', ctaLabel?: string | null, links?: Array<{ __typename: 'VideoNavLinks', label?: string | null, href?: string | null } | null> | null } | null, hero?: { __typename: 'VideoHero', heroVideo?: string | null, kicker?: string | null, heading?: string | null, sub?: string | null, cta?: string | null, stats?: Array<{ __typename: 'VideoHeroStats', num?: string | null, label?: string | null } | null> | null } | null, services?: { __typename: 'VideoServices', kicker?: string | null, heading?: string | null, cards?: Array<{ __typename: 'VideoServicesCards', title?: string | null, body?: string | null, items?: Array<string | null> | null } | null> | null } | null, reels?: { __typename: 'VideoReels', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'VideoReelsItems', videoFile?: string | null, label?: string | null } | null> | null } | null, agentBanner?: { __typename: 'VideoAgentBanner', heading?: string | null, body?: string | null, linkLabel?: string | null } | null, process?: { __typename: 'VideoProcess', kicker?: string | null, heading?: string | null, steps?: Array<{ __typename: 'VideoProcessSteps', num?: string | null, title?: string | null, body?: string | null } | null> | null } | null, founder?: { __typename: 'VideoFounder', kicker?: string | null, heading?: string | null, body?: string | null, photo?: string | null, name?: string | null, role?: string | null } | null, faq?: { __typename: 'VideoFaq', kicker?: string | null, heading?: string | null, items?: Array<{ __typename: 'VideoFaqItems', q?: string | null, a?: string | null } | null> | null } | null, quote?: { __typename: 'VideoQuote', heading?: string | null, sub?: string | null, cta?: string | null, agentCta?: string | null } | null, footer?: { __typename: 'VideoFooter', tagline?: string | null, email?: string | null, copyright?: string | null } | null } | null } | null> | null } };
 
 export const PagePartsFragmentDoc = gql`
     fragment PageParts on Page {
@@ -2511,6 +2549,16 @@ export const VideoPartsFragmentDoc = gql`
       title
       body
       items
+    }
+  }
+  reels {
+    __typename
+    kicker
+    heading
+    items {
+      __typename
+      videoFile
+      label
     }
   }
   agentBanner {
