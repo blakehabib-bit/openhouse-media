@@ -147,14 +147,17 @@ export default function HomePageV2({ data }: { data: Data }) {
             <div className="proof-single">
               {data.proof.videoFile && (
                 <div className="proof-video">
-                  <video
-                    src={data.proof.videoFile}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    controls
-                  />
+                  {data.proof.videoFile.includes("instagram.com") ? (
+                    <iframe
+                      src={`${data.proof.videoFile.replace(/\/?$/, "").replace(/\/embed$/, "")}/embed/`}
+                      allowFullScreen
+                      scrolling="no"
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                      title="Case study reel"
+                    />
+                  ) : (
+                    <video src={data.proof.videoFile} autoPlay muted loop playsInline controls />
+                  )}
                 </div>
               )}
               <div className="case-card">
@@ -241,32 +244,6 @@ export default function HomePageV2({ data }: { data: Data }) {
               <div className="lock-icon">🔒</div>
               <p>{data.exclusivity.body}</p>
               <CtaButton className="btn btn-block" popupButtonText={cta}>
-                {cta} →
-              </CtaButton>
-            </div>
-          </div>
-        </section>
-
-        {/* WHAT HAPPENS ON THE CALL */}
-        <section className="section agenda-section">
-          <div className="narrow center">
-            <span className="section-tag">{data.agenda.kicker}</span>
-            <h2>{data.agenda.heading}</h2>
-          </div>
-          <div className="narrow">
-            <div className="agenda">
-              {data.agenda.steps.map((s: Data, i: number) => (
-                <div className="agenda-step" key={i}>
-                  <div className="agenda-num">{s.num}</div>
-                  <div>
-                    <h3>{s.title}</h3>
-                    <p>{s.body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="center" style={{ marginTop: "32px" }}>
-              <CtaButton className="btn" popupButtonText={cta}>
                 {cta} →
               </CtaButton>
             </div>
@@ -502,7 +479,7 @@ const css = `
   .v2-root .case .section-tag{color:var(--accent-strong)}
   .v2-root .proof-single{max-width:520px;margin:8px auto 0}
   .v2-root .proof-video{max-width:340px;margin:0 auto 24px;aspect-ratio:9/16;border-radius:var(--radius);overflow:hidden;background:#0a0a0a;box-shadow:0 8px 32px rgba(0,0,0,.18)}
-  .v2-root .proof-video video{width:100%;height:100%;object-fit:cover;display:block}
+  .v2-root .proof-video video,.v2-root .proof-video iframe{width:100%;height:100%;object-fit:cover;display:block;border:none}
   .v2-root .case-card{background:#fff;border:1px solid #e5dfd3;border-radius:var(--radius);padding:28px 24px;box-shadow:0 4px 24px rgba(0,0,0,.05)}
   .v2-root .case-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid #ece5d6}
   .v2-root .case-badge{background:#0a0a0a;color:var(--gold);padding:6px 12px;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
@@ -511,14 +488,6 @@ const css = `
   .v2-root .case-stat{background:#0a0a0a;color:#fff;padding:18px 10px;border-radius:10px;text-align:center}
   .v2-root .case-stat-num{font-size:26px;font-weight:800;color:var(--gold);line-height:1}
   .v2-root .case-stat-label{font-size:10px;color:#a8a8a8;margin-top:6px;text-transform:uppercase;letter-spacing:1px}
-
-  /* WHAT HAPPENS ON THE CALL */
-  .v2-root .agenda-section{background:#0a0a0a}
-  .v2-root .agenda{margin-top:8px;display:flex;flex-direction:column;gap:22px}
-  .v2-root .agenda-step{display:flex;gap:18px;align-items:flex-start}
-  .v2-root .agenda-num{flex-shrink:0;width:42px;height:42px;border-radius:50%;background:var(--accent-strong);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
-  .v2-root .agenda-step h3{font-size:18px;font-weight:700;margin-bottom:6px}
-  .v2-root .agenda-step p{font-size:14px;color:var(--muted);line-height:1.6}
 
   /* FAQ */
   .v2-root .faq{background:#0a0a0a;border-top:1px solid #1a1a1a}
