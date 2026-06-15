@@ -5,6 +5,7 @@
  */
 
 import VideoCarousel from "@/components/VideoCarousel";
+import HeroVideo from "@/components/HeroVideo";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Data = any;
@@ -37,15 +38,7 @@ export default function VideoPage({ data }: { data: Data }) {
       <header className="hero">
         {data.hero.heroVideo && (
           <>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <video
-              className="hero-bg-video"
-              src={data.hero.heroVideo}
-              autoPlay
-              muted
-              loop
-              playsInline
-            />
+            <HeroVideo src={data.hero.heroVideo} />
             <div className="hero-bg-overlay" />
           </>
         )}
