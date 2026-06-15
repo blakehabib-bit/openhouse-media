@@ -291,6 +291,7 @@ fragment HomeParts on Home {
     kicker
     heading
     sub
+    videoFile
     caseBadge
     caseClient
     caseStats {
@@ -326,7 +327,6 @@ fragment HomeParts on Home {
       num
       name
       deliverables
-      goal
     }
   }
   exclusivity {
@@ -389,6 +389,7 @@ fragment VideoParts on Video {
   }
   hero {
     __typename
+    heroVideo
     kicker
     heading
     sub

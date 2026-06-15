@@ -33,7 +33,21 @@ export default function VideoPage({ data }: { data: Data }) {
       </nav>
 
       <header className="hero">
-        <div className="wrap">
+        {data.hero.heroVideo && (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <video
+              className="hero-bg-video"
+              src={data.hero.heroVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+            <div className="hero-bg-overlay" />
+          </>
+        )}
+        <div className="wrap hero-content">
           <p className="kicker">{data.hero.kicker}</p>
           <h1>{data.hero.heading}</h1>
           <p>{data.hero.sub}</p>
@@ -217,7 +231,10 @@ const css = `
   .video-root .nav-links a:hover{color:var(--v-text)}
   .video-root .nav-cta{background:var(--v-accent);color:#fff !important;padding:10px 18px;border-radius:8px;font-weight:600}
 
-  .video-root .hero{text-align:center;padding:96px 0 64px}
+  .video-root .hero{text-align:center;padding:96px 0 64px;position:relative;overflow:hidden}
+  .video-root .hero-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none}
+  .video-root .hero-bg-overlay{position:absolute;inset:0;background:rgba(10,22,18,.62);z-index:1}
+  .video-root .hero-content{position:relative;z-index:2}
   .video-root .hero h1{font-size:clamp(34px,5vw,54px);max-width:820px;margin:0 auto 20px}
   .video-root .hero p{font-size:19px;max-width:640px;margin:0 auto 32px;color:var(--v-muted)}
   .video-root .stats{display:flex;justify-content:center;gap:48px;margin-top:56px;flex-wrap:wrap}

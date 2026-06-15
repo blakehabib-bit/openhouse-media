@@ -754,6 +754,7 @@ type HomeProof {
   kicker: String
   heading: String
   sub: String
+  videoFile: String
   caseBadge: String
   caseClient: String
   caseStats: [HomeProofCaseStats]
@@ -781,7 +782,6 @@ type HomeSystemPillars {
   num: String
   name: String
   deliverables: [String]
-  goal: String
 }
 
 type HomeSystem {
@@ -889,6 +889,7 @@ input HomeProofFilter {
   kicker: StringFilter
   heading: StringFilter
   sub: StringFilter
+  videoFile: StringFilter
   caseBadge: StringFilter
   caseClient: StringFilter
   caseStats: HomeProofCaseStatsFilter
@@ -916,7 +917,6 @@ input HomeSystemPillarsFilter {
   num: StringFilter
   name: StringFilter
   deliverables: StringFilter
-  goal: StringFilter
 }
 
 input HomeSystemFilter {
@@ -1017,6 +1017,7 @@ type VideoHeroStats {
 }
 
 type VideoHero {
+  heroVideo: String
   kicker: String
   heading: String
   sub: String
@@ -1119,6 +1120,7 @@ input VideoHeroStatsFilter {
 }
 
 input VideoHeroFilter {
+  heroVideo: StringFilter
   kicker: StringFilter
   heading: StringFilter
   sub: StringFilter
@@ -1572,6 +1574,7 @@ input HomeProofMutation {
   kicker: String
   heading: String
   sub: String
+  videoFile: String
   caseBadge: String
   caseClient: String
   caseStats: [HomeProofCaseStatsMutation]
@@ -1599,7 +1602,6 @@ input HomeSystemPillarsMutation {
   num: String
   name: String
   deliverables: [String]
-  goal: String
 }
 
 input HomeSystemMutation {
@@ -1689,6 +1691,7 @@ input VideoHeroStatsMutation {
 }
 
 input VideoHeroMutation {
+  heroVideo: String
   kicker: String
   heading: String
   sub: String

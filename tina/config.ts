@@ -749,6 +749,7 @@ export default defineConfig({
             name: "hero",
             label: "Hero",
             fields: [
+              { type: "string", name: "heroVideo", label: "Background video file path (e.g. /uploads/hero-reel.mp4) — leave blank for solid background" },
               { type: "string", name: "kicker", label: "Kicker" },
               { type: "string", name: "heading", label: "Heading" },
               { type: "string", name: "sub", label: "Sub-text", ui: { component: "textarea" } },

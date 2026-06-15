@@ -546,6 +546,7 @@ var config_default = defineConfig({
               { type: "string", name: "kicker", label: "Kicker" },
               { type: "string", name: "heading", label: "Heading" },
               { type: "string", name: "sub", label: "Sub-text", ui: { component: "textarea" } },
+              { type: "string", name: "videoFile", label: "Reel video file path (e.g. /uploads/case-study.mp4) \u2014 leave blank to hide" },
               { type: "string", name: "caseBadge", label: "Case badge" },
               { type: "string", name: "caseClient", label: "Case client" },
               {
@@ -604,8 +605,7 @@ var config_default = defineConfig({
                 fields: [
                   { type: "string", name: "num", label: "Number" },
                   { type: "string", name: "name", label: "Name" },
-                  { type: "string", name: "deliverables", label: "Deliverables", list: true },
-                  { type: "string", name: "goal", label: "Goal" }
+                  { type: "string", name: "deliverables", label: "Deliverables", list: true }
                 ]
               }
             ]
@@ -724,6 +724,7 @@ var config_default = defineConfig({
             name: "hero",
             label: "Hero",
             fields: [
+              { type: "string", name: "heroVideo", label: "Background video file path (e.g. /uploads/hero-reel.mp4) \u2014 leave blank for solid background" },
               { type: "string", name: "kicker", label: "Kicker" },
               { type: "string", name: "heading", label: "Heading" },
               { type: "string", name: "sub", label: "Sub-text", ui: { component: "textarea" } },
