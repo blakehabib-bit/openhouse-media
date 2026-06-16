@@ -267,12 +267,17 @@ export default function HomePageV2({ data }: { data: Data }) {
           <div className="narrow">
             <h2>{data.finalCta.heading}</h2>
             <p className="section-sub">{data.finalCta.body}</p>
+          </div>
+          <div className="calendly-wrap">
             <iframe
               src={CALENDLY_URL}
-              className="calendly-inline-widget"
+              width="100%"
+              height="700"
+              frameBorder={0}
               title="Book a call"
-              loading="lazy"
             />
+          </div>
+          <div className="narrow">
             <div className="trust-row" style={{ marginTop: "24px" }}>
               {data.finalCta.trust.map((t: string, i: number) => (
                 <span key={i}>
@@ -497,8 +502,8 @@ const css = `
   .v2-root .final-cta{background:linear-gradient(180deg,#0a0a0a 0%,#1a0f2e 100%);text-align:center}
   .v2-root .final-cta h2{font-size:34px;margin-bottom:16px}
   .v2-root .final-cta .section-sub{margin-bottom:28px}
-  .v2-root .calendly-inline-widget{min-width:320px;height:680px;margin:0 auto;border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:0 12px 40px rgba(0,0,0,.4)}
-  @media(min-width:760px){.v2-root .calendly-inline-widget{height:720px}}
+  .v2-root .calendly-wrap{max-width:900px;margin:0 auto 8px;padding:0 20px}
+  .v2-root .calendly-wrap iframe{display:block;width:100%;border-radius:var(--radius);box-shadow:0 12px 40px rgba(0,0,0,.4);background:#fff}
 
   /* INLINE CTA BAND */
   .v2-root .cta-band{background:rgba(124,58,237,.08);border-top:1px solid rgba(167,139,250,.15);border-bottom:1px solid rgba(167,139,250,.15);padding:32px 0;text-align:center}
