@@ -1,10 +1,10 @@
 "use client";
 
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import LeadCapturePopup from "@/components/LeadCapturePopup";
 
 const CALENDLY_URL =
-  "https://calendly.com/blakehabib98/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=7c3aed";
+  "https://calendly.com/blakehabib98/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=7c3aed&embed_type=Inline";
 
 /**
  * Homepage (TDDK agent site). Content is driven by content/home/index.json
@@ -42,14 +42,6 @@ function CtaButton({
 export default function HomePageV2({ data }: { data: Data }) {
   const cta: string = data.ctaLabel;
 
-  useEffect(() => {
-    if (document.querySelector('script[data-calendly]')) return;
-    const s = document.createElement("script");
-    s.src = "https://assets.calendly.com/assets/external/widget.js";
-    s.async = true;
-    s.setAttribute("data-calendly", "1");
-    document.body.appendChild(s);
-  }, []);
 
   return (
     <div className="v2-root">
@@ -275,9 +267,11 @@ export default function HomePageV2({ data }: { data: Data }) {
           <div className="narrow">
             <h2>{data.finalCta.heading}</h2>
             <p className="section-sub">{data.finalCta.body}</p>
-            <div
+            <iframe
+              src={CALENDLY_URL}
               className="calendly-inline-widget"
-              data-url={CALENDLY_URL}
+              title="Book a call"
+              loading="lazy"
             />
             <div className="trust-row" style={{ marginTop: "24px" }}>
               {data.finalCta.trust.map((t: string, i: number) => (
