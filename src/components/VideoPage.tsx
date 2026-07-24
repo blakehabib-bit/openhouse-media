@@ -6,13 +6,12 @@
 
 import VideoCarousel from "@/components/VideoCarousel";
 import HeroVideo from "@/components/HeroVideo";
+import QuoteRequestPopup from "@/components/QuoteRequestPopup";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Data = any;
 
 export default function VideoPage({ data }: { data: Data }) {
-  const mailto = `mailto:${data.quoteEmail}?subject=Video%20production%20enquiry`;
-
   return (
     <div className="video-root">
       <style dangerouslySetInnerHTML={{ __html: css }} />
@@ -168,9 +167,7 @@ export default function VideoPage({ data }: { data: Data }) {
           >
             {data.quote.sub}
           </p>
-          <a className="btn" href={mailto}>
-            {data.quote.cta}
-          </a>
+          <QuoteRequestPopup buttonClassName="btn" buttonContent={data.quote.cta} />
           <span style={{ display: "inline-block", width: "12px" }} />
           <a className="btn-ghost" href="/">
             {data.quote.agentCta}
