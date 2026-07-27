@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 /**
  * Full-screen entry gate shown at the site root (/).
@@ -11,12 +12,24 @@ import Link from "next/link";
  * `public/splash-poster.jpg`). Until then the dark background shows through.
  */
 export default function SplashScreen() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    // React doesn't reliably apply the `muted` IDL property from JSX after
+    // hydration, which can silently block autoplay — set it imperatively.
+    v.muted = true;
+    v.play().catch(() => {});
+  }, []);
+
   return (
     <div className="splash-root">
       <style dangerouslySetInnerHTML={{ __html: css }} />
 
       {/* Background video */}
       <video
+        ref={videoRef}
         className="splash-video"
         autoPlay
         muted
@@ -24,9 +37,8 @@ export default function SplashScreen() {
         playsInline
         preload="auto"
         poster="/splash-poster.jpg"
-      >
-        <source src="/splash-bg.mp4" type="video/mp4" />
-      </video>
+        src="/splash-bg.mp4"
+      />
 
       {/* Legibility overlay */}
       <div className="splash-overlay" aria-hidden="true" />
