@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "workLabel": "Our Work",
+    "agentLabel": "Real Estate Agents",
+    "videoLabel": "Video Production",
+    "quoteLabel": "Get a quote"
+  },
+  "hero": {
+    "heroVideo": "",
+    "kicker": "Real Estate + Brand Videography",
+    "heading": "We turn listings and brands into content that gets watched.",
+    "sub": "Property walkthroughs, agent profiles and brand films. Shot, edited and delivered fast."
+  },
+  "portfolio": {
+    "kicker": "Our Work",
+    "heading": "A mix of property and brand video.",
+    "items": [
+      { "category": "Real Estate", "title": "Property walkthrough", "mediaUrl": "", "label": "" },
+      { "category": "Real Estate", "title": "Agent profile video", "mediaUrl": "", "label": "" },
+      { "category": "Real Estate", "title": "Listing launch reel", "mediaUrl": "", "label": "" },
+      { "category": "Brand", "title": "Brand film", "mediaUrl": "", "label": "" },
+      { "category": "Brand", "title": "Business promo", "mediaUrl": "", "label": "" },
+      { "category": "Real Estate", "title": "Open home highlight", "mediaUrl": "", "label": "" }
+    ]
+  },
+  "collaborators": {
+    "heading": "Collaborated with",
+    "logos": []
+  },
+  "cta": {
+    "heading": "Got a property or a brand project?",
+    "sub": "Tell us what you need and we'll come back with a fixed quote and the next available shoot dates.",
+    "quoteLabel": "Get a quote",
+    "agentLabel": "I'm a real estate agent",
+    "videoLabel": "See full video services"
+  },
+  "footer": {
+    "tagline": "Real estate and brand videography, Brisbane and beyond.",
+    "email": "blake@thedigitaldoorknock.com",
+    "copyright": "© 2026 The Digital Door Knock. All rights reserved."
+  }
+}

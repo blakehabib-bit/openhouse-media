@@ -1,7 +1,8 @@
 {
   "ctaLabel": "Check If My Suburb Is Free",
   "nav": {
-    "videoLinkLabel": "Video production"
+    "videoLinkLabel": "Video production",
+    "workLinkLabel": "Our Work"
   },
   "hero": {
     "headlineLead": "The Digital Door Knock System. \nYour suburb's ",

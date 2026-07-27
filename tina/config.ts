@@ -528,6 +528,7 @@ export default defineConfig({
             name: "nav",
             label: "Navigation",
             fields: [
+              { type: "string", name: "workLinkLabel", label: "Work link label" },
               { type: "string", name: "videoLinkLabel", label: "Video link label" },
             ],
           },
@@ -876,6 +877,102 @@ export default defineConfig({
               { type: "string", name: "sub", label: "Sub-text", ui: { component: "textarea" } },
               { type: "string", name: "cta", label: "Quote button label" },
               { type: "string", name: "agentCta", label: "Agent button label" },
+            ],
+          },
+          {
+            type: "object",
+            name: "footer",
+            label: "Footer",
+            fields: [
+              { type: "string", name: "tagline", label: "Tagline" },
+              { type: "string", name: "email", label: "Email" },
+              { type: "string", name: "copyright", label: "Copyright" },
+            ],
+          },
+        ],
+      },
+
+      // ============================================================
+      // REAL ESTATE VIDEO PAGE (/real-estate-video) — content/real-estate-video/index.json
+      // ============================================================
+      {
+        name: "realEstateVideo",
+        label: "Real Estate Video Page",
+        path: "content/real-estate-video",
+        format: "json",
+        ui: { allowedActions: { create: false, delete: false } },
+        fields: [
+          {
+            type: "object",
+            name: "nav",
+            label: "Navigation",
+            fields: [
+              { type: "string", name: "workLabel", label: "Work link label" },
+              { type: "string", name: "agentLabel", label: "Agent link label" },
+              { type: "string", name: "videoLabel", label: "Video services link label" },
+              { type: "string", name: "quoteLabel", label: "Quote button label" },
+            ],
+          },
+          {
+            type: "object",
+            name: "hero",
+            label: "Hero",
+            fields: [
+              { type: "string", name: "heroVideo", label: "Background video file path (e.g. /uploads/hero-reel.mp4) — leave blank for solid background" },
+              { type: "string", name: "kicker", label: "Kicker" },
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "sub", label: "Sub-text", ui: { component: "textarea" } },
+            ],
+          },
+          {
+            type: "object",
+            name: "portfolio",
+            label: "Portfolio",
+            fields: [
+              { type: "string", name: "kicker", label: "Kicker" },
+              { type: "string", name: "heading", label: "Heading" },
+              {
+                type: "object",
+                name: "items",
+                label: "Portfolio items",
+                list: true,
+                fields: [
+                  { type: "string", name: "category", label: "Category (e.g. Real Estate, Brand)" },
+                  { type: "string", name: "title", label: "Title" },
+                  { type: "string", name: "mediaUrl", label: "Instagram reel URL or video file path — leave blank to show a placeholder" },
+                  { type: "image", name: "thumbnail", label: "Thumbnail image (optional)" },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "collaborators",
+            label: "Collaborated With",
+            fields: [
+              { type: "string", name: "heading", label: "Heading" },
+              {
+                type: "object",
+                name: "logos",
+                label: "Logos (leave empty to hide this section)",
+                list: true,
+                fields: [
+                  { type: "image", name: "image", label: "Logo" },
+                  { type: "string", name: "name", label: "Name" },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "cta",
+            label: "CTA",
+            fields: [
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "sub", label: "Sub-text", ui: { component: "textarea" } },
+              { type: "string", name: "quoteLabel", label: "Quote button label" },
+              { type: "string", name: "agentLabel", label: "Agent button label" },
+              { type: "string", name: "videoLabel", label: "Video services link label" },
             ],
           },
           {

@@ -53,6 +53,9 @@ export default function HomePageV2({ data }: { data: Data }) {
             DD<span>.</span>
           </div>
           <div className="nav-right">
+            <a href="/real-estate-video" className="nav-textlink">
+              {data.nav.workLinkLabel}
+            </a>
             <a href="/video" className="nav-textlink">
               {data.nav.videoLinkLabel}
             </a>
