@@ -97,7 +97,7 @@ export default function VideoPage({ data }: { data: Data }) {
               <h3>{data.agentBanner.heading}</h3>
               <p>{data.agentBanner.body}</p>
             </div>
-            <a href="/system">{data.agentBanner.linkLabel}</a>
+            <a href="/">{data.agentBanner.linkLabel}</a>
           </div>
         </div>
       </section>
@@ -169,7 +169,7 @@ export default function VideoPage({ data }: { data: Data }) {
           </p>
           <QuoteRequestPopup buttonClassName="btn" buttonContent={data.quote.cta} />
           <span style={{ display: "inline-block", width: "12px" }} />
-          <a className="btn-ghost" href="/system">
+          <a className="btn-ghost" href="/">
             {data.quote.agentCta}
           </a>
         </div>

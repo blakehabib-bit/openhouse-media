@@ -1,8 +1,10 @@
-import SplashScreen from "@/components/SplashScreen";
+import { promises as fs } from "fs";
+import path from "path";
+import HomePageV2 from "@/components/HomePageV2";
 
-// Entry gate for the site. Full-screen background video with two destinations:
-// "The Digital Door Knock System" (/system) and "Videography" (/video).
-// The agent homepage now lives at /system.
-export default function Home() {
-  return <SplashScreen />;
+// Homepage content is editable via the Tina "home" collection (content/home/index.json).
+export default async function Home() {
+  const filePath = path.join(process.cwd(), "content/home/index.json");
+  const data = JSON.parse(await fs.readFile(filePath, "utf-8"));
+  return <HomePageV2 data={data} />;
 }

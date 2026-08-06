@@ -64,7 +64,7 @@ export default function RealEstateVideoPage({ data }: { data: Data }) {
             DD.
           </a>
           <div className="nav-links">
-            <a href="/system">{data.nav.agentLabel}</a>
+            <a href="/">{data.nav.agentLabel}</a>
             <a href="/video">{data.nav.videoLabel}</a>
             <QuoteRequestPopup buttonClassName="nav-cta" buttonContent={data.nav.quoteLabel} />
           </div>
@@ -119,7 +119,7 @@ export default function RealEstateVideoPage({ data }: { data: Data }) {
           <p className="cta-sub">{data.cta.sub}</p>
           <div className="cta-actions">
             <QuoteRequestPopup buttonClassName="btn" buttonContent={data.cta.quoteLabel} />
-            <a className="btn-ghost" href="/system">
+            <a className="btn-ghost" href="/">
               {data.cta.agentLabel}
             </a>
           </div>

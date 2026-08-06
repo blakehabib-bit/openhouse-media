@@ -394,7 +394,7 @@ function CheckAvailabilityContent() {
 
       <header>
         <nav className="nav">
-          <a href="/system" className="logo">DD<span>.</span></a>
+          <a href="/" className="logo">DD<span>.</span></a>
           <div className="nav-tag">One agent. One suburb.</div>
         </nav>
       </header>
